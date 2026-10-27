@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Die wichtigsten Standard-Tasten für Star-Citizen-Einsteiger (Alpha 4.10, QWERTZ): Top 10, Abläufe für Start, Quantensprung und Landung, durchsuchbare Liste.">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style><title>Star Citizen Einsteiger-Tasten</title>
+<meta name="description" content="Star-Citizen-Einstieg auf Deutsch (Alpha 4.10, QWERTZ): erste Schritte, alle wichtigen Tasten und Mining für Anfänger.">
+<title>Roonys Star Citizen Handbuch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: Flughandbuch-Stil – Kopf mit Patch-Stempel, Top-Tasten-Raster, dann Abläufe und Kategorie-Panels in einem 2-spaltigen Raster */
+/* Layout: Flughandbuch – feste Navigationsleiste, Startseite mit drei Kapitel-Kacheln, jedes Kapitel als eigene Ansicht (#erste-schritte, #tasten, #mining) */
 :root {
   --bg: #eceff2;
   --panel: #ffffff;
@@ -21,231 +21,458 @@
   --key-edge: #b8c2cc;
   --warn: #b3261e;
   --warn-soft: #f9dedc;
+  --ok: #2c7a4b;
+  --ok-soft: #dcefe3;
   --f-display: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
   --f-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme: light;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0c1218; --panel: #131b23; --ink: #e2e8ee; --muted: #8d9aa7; --line: #25313c;
     --accent: #f08a3c; --accent-soft: #3a2414; --key-bg: #1b252f; --key-edge: #3a4856;
-    --warn: #f2948c; --warn-soft: #3b1816; color-scheme: dark;
+    --warn: #f2948c; --warn-soft: #3b1816; --ok: #7fd1a0; --ok-soft: #15301f; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0c1218; --panel: #131b23; --ink: #e2e8ee; --muted: #8d9aa7; --line: #25313c;
   --accent: #f08a3c; --accent-soft: #3a2414; --key-bg: #1b252f; --key-edge: #3a4856;
-  --warn: #f2948c; --warn-soft: #3b1816; color-scheme: dark;
+  --warn: #f2948c; --warn-soft: #3b1816; --ok: #7fd1a0; --ok-soft: #15301f; color-scheme: dark;
 }
 * { box-sizing: border-box; }
-body {
-  background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5;
+html { scroll-padding-top: 72px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.55; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Navigation */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--panel); }
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--panel); border-bottom: 1px solid var(--line);
 }
+.nav-in {
+  max-width: 1120px; margin: 0 auto; display: flex; align-items: center; gap: 16px;
+  padding-block: 10px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.brand {
+  font-family: var(--f-display); font-weight: 700; font-size: 17px; color: var(--ink); text-decoration: none;
+  white-space: nowrap; display: flex; align-items: center; gap: 8px;
+}
+.brand span { color: var(--accent); }
+.tabs { display: flex; gap: 4px; overflow-x: auto; min-width: 0; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs a {
+  font-family: var(--f-display); font-weight: 600; font-size: 14px; letter-spacing: .03em;
+  text-decoration: none; color: var(--muted); padding: 7px 12px; border-radius: 6px; white-space: nowrap;
+}
+.tabs a:hover { color: var(--ink); background: var(--key-bg); }
+.tabs a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); }
+
 .wrap {
   max-width: 1120px; margin: 0 auto;
   padding-block: 32px 64px;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
-  display: flex; flex-direction: column; gap: 36px;
 }
-header { display: flex; flex-direction: column; gap: 12px; }
-.stamp {
-  font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--accent); display: flex; flex-wrap: wrap; gap: 6px 16px;
-}
-h1 {
-  font-family: var(--f-display); font-weight: 700; font-size: clamp(30px, 5vw, 46px);
-  line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -.01em;
-}
-.lede { margin: 0; max-width: 65ch; color: var(--muted); }
-.search { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-.search input {
-  flex: 1 1 260px; min-width: 0; font: inherit; padding: 10px 14px; border-radius: 6px;
-  border: 1px solid var(--line); background: var(--panel); color: var(--ink);
-}
-.search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-.search .count { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.view { display: flex; flex-direction: column; gap: 36px; }
 
+.stamp { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); display: flex; flex-wrap: wrap; gap: 6px 16px; }
+h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(30px, 5vw, 46px); line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+.head { display: flex; flex-direction: column; gap: 12px; }
+.lede { margin: 0; max-width: 65ch; color: var(--muted); font-size: 16px; }
 h2 {
-  font-family: var(--f-display); font-weight: 600; font-size: 13px; letter-spacing: .14em;
-  text-transform: uppercase; margin: 0 0 12px; color: var(--muted);
-  display: flex; align-items: center; gap: 10px;
+  font-family: var(--f-display); font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+  margin: 0 0 12px; color: var(--muted); display: flex; align-items: center; gap: 10px;
 }
 h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 
 kbd {
-  font-family: var(--f-mono); font-weight: 600; font-size: 12.5px; display: inline-block;
-  min-width: 26px; text-align: center; padding: 2px 7px; border-radius: 5px;
-  background: var(--key-bg); color: var(--ink);
-  border: 1px solid var(--key-edge); border-bottom-width: 3px; white-space: nowrap;
+  font-family: var(--f-mono); font-weight: 600; font-size: 12.5px; display: inline-block; min-width: 26px; text-align: center;
+  padding: 1px 7px; border-radius: 5px; background: var(--key-bg); color: var(--ink);
+  border: 1px solid var(--key-edge); border-bottom-width: 3px; white-space: nowrap; line-height: 1.5;
 }
 .plus { color: var(--muted); font-size: 12px; margin: 0 2px; }
-.mod {
-  font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
-  color: var(--accent); background: var(--accent-soft); padding: 1px 6px; border-radius: 3px; margin-left: 4px;
-  white-space: nowrap;
-}
+.mod { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 1px 6px; border-radius: 3px; margin-left: 4px; white-space: nowrap; }
 
-/* Top-Tasten */
-.top { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
-.top .card {
-  background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px;
-  display: flex; flex-direction: column; gap: 8px;
+/* Startseite */
+.hero { display: flex; flex-direction: column; gap: 14px; padding-block: 8px 4px; }
+.hero h1 { font-size: clamp(34px, 6.5vw, 60px); max-width: 14ch; }
+.hero .lede { font-size: 17px; }
+.chapters { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.chapter {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px;
+  display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: var(--ink);
+  transition: border-color .15s, transform .15s;
 }
+.chapter:hover { border-color: var(--accent); transform: translateY(-2px); }
+.chapter .no { font-family: var(--f-mono); font-size: 12px; color: var(--accent); letter-spacing: .08em; }
+.chapter h3 { font-family: var(--f-display); font-size: 24px; font-weight: 600; margin: 0; }
+.chapter p { margin: 0; color: var(--muted); }
+.chapter .go { margin-top: auto; padding-top: 6px; font-family: var(--f-display); font-weight: 600; color: var(--accent); }
+.chapter.first { border-color: var(--accent); }
+.start-tip { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; background: var(--accent-soft); border-radius: 8px; padding: 14px 16px; }
+.start-tip strong { font-family: var(--f-display); }
+.btn {
+  display: inline-block; font-family: var(--f-display); font-weight: 600; font-size: 15px; text-decoration: none;
+  background: var(--accent); color: var(--panel); padding: 9px 16px; border-radius: 6px;
+}
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.fact { border-left: 2px solid var(--accent); padding: 2px 0 2px 14px; }
+.fact strong { display: block; font-family: var(--f-display); font-size: 16px; margin-bottom: 2px; }
+.fact p { margin: 0; color: var(--muted); font-size: 14px; }
+
+/* Tutorial */
+.progress { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.bar { flex: 1 1 200px; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .3s; }
+.progress .count { font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
+.steps { display: flex; flex-direction: column; gap: 16px; }
+.step { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; display: grid; grid-template-columns: 44px 1fr; gap: 6px 16px; }
+.step.done { border-color: var(--ok); }
+.step .num {
+  grid-row: span 3; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+  font-family: var(--f-mono); font-weight: 600; border: 2px solid var(--accent); color: var(--accent);
+}
+.step.done .num { background: var(--ok); border-color: var(--ok); color: var(--panel); }
+.step h3 { font-family: var(--f-display); font-size: 21px; font-weight: 600; margin: 4px 0 0; }
+.step .body { min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.step ol { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.step ol li::marker { color: var(--accent); font-family: var(--f-mono); font-size: 13px; }
+.oops { background: var(--warn-soft); border-radius: 6px; padding: 10px 14px; font-size: 14px; }
+.oops strong { color: var(--warn); }
+.hint { background: var(--key-bg); border-radius: 6px; padding: 10px 14px; font-size: 14px; color: var(--muted); }
+.check { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-display); font-weight: 600; cursor: pointer; user-select: none; }
+.check input { width: 18px; height: 18px; accent-color: var(--ok); }
+details { font-size: 14px; }
+details summary { cursor: pointer; color: var(--accent); font-weight: 500; }
+details p { margin: 8px 0 0; color: var(--muted); }
+
+/* Tasten */
+.top { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+.top .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; display: flex; flex-direction: column; gap: 8px; }
 .top .keys { min-height: 30px; display: flex; align-items: center; flex-wrap: wrap; gap: 2px; }
-.top .keys kbd { font-size: 15px; padding: 3px 9px; }
+.top .keys kbd { font-size: 15px; padding: 2px 9px; }
 .top .what { font-weight: 600; }
 .top .why { font-size: 13px; color: var(--muted); }
-
-/* Abläufe */
-.flows { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
-.flow { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px; min-width: 0; }
-.flow h3 { font-family: var(--f-display); font-size: 19px; margin: 0 0 12px; font-weight: 600; }
-.flow ol { margin: 0; padding: 0; list-style: none; counter-reset: s; display: flex; flex-direction: column; gap: 10px; }
-.flow li { counter-increment: s; display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: start; }
-.flow li::before {
-  content: counter(s); font-family: var(--f-mono); font-size: 12px; font-weight: 600;
-  width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center;
-  border: 1.5px solid var(--accent); color: var(--accent);
-}
-
-/* Kategorien */
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--muted); align-items: center; }
+.search { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.search input { flex: 1 1 260px; min-width: 0; font: inherit; padding: 10px 14px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+.search .count { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 16px; align-items: start; }
 .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 18px 10px; min-width: 0; }
-.panel h3 {
-  font-family: var(--f-display); font-size: 18px; font-weight: 600; margin: 10px 0 4px;
-  display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
-}
+.panel h3 { font-family: var(--f-display); font-size: 18px; font-weight: 600; margin: 10px 0 4px; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
 .panel h3 small { font-family: var(--f-mono); font-size: 11px; color: var(--muted); font-weight: 500; letter-spacing: .05em; }
-.row {
-  display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center;
-  padding: 8px 0; border-top: 1px solid var(--line);
-}
+.row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); }
 .row:first-of-type { border-top: 0; }
 .row .k { text-align: right; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 2px; }
 .row .a { min-width: 0; }
 .row .note { display: block; font-size: 12.5px; color: var(--muted); }
-.row.check .a::after {
-  content: "prüfen"; font-family: var(--f-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
-  margin-left: 6px; padding: 1px 5px; border-radius: 3px; border: 1px dashed var(--muted); color: var(--muted);
-}
+.row.verify .a::after { content: "prüfen"; font-family: var(--f-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; margin-left: 6px; padding: 1px 5px; border-radius: 3px; border: 1px dashed var(--muted); color: var(--muted); }
 .panel.danger { border-color: var(--warn); }
 .panel.danger h3 { color: var(--warn); }
+.tag-verify { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; border: 1px dashed var(--muted); color: var(--muted); padding: 1px 6px; border-radius: 3px; }
 
-.tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-.tip { border-left: 2px solid var(--accent); padding: 2px 0 2px 14px; }
-.tip strong { display: block; font-family: var(--f-display); font-size: 16px; margin-bottom: 2px; }
-.tip p { margin: 0; color: var(--muted); font-size: 14px; }
-code { font-family: var(--f-mono); font-size: 12.5px; background: var(--key-bg); padding: 1px 5px; border-radius: 3px; word-break: break-all; }
+/* Mining */
+.table-wrap { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 14px; }
+th, td { text-align: left; padding: 10px 14px; border-top: 1px solid var(--line); vertical-align: top; }
+thead th { border-top: 0; font-family: var(--f-display); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; background: var(--key-bg); }
+tbody th { font-family: var(--f-display); font-size: 16px; font-weight: 600; white-space: nowrap; }
+tbody th small { display: block; font-family: var(--f-body); font-size: 12px; font-weight: 400; color: var(--muted); }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pill { display: inline-block; font-family: var(--f-mono); font-size: 11px; padding: 1px 7px; border-radius: 10px; white-space: nowrap; }
+.pill.go { background: var(--ok-soft); color: var(--ok); }
+.pill.later { background: var(--accent-soft); color: var(--accent); }
+.pill.no { background: var(--key-bg); color: var(--muted); border: 1px solid var(--line); }
+tr.rec th { color: var(--accent); }
+.gauge { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; display: flex; flex-direction: column; gap: 12px; }
+.gauge h3 { font-family: var(--f-display); font-size: 20px; margin: 0; font-weight: 600; }
+.meter { display: grid; grid-template-columns: 1.2fr 1fr .8fr; height: 28px; border-radius: 6px; overflow: hidden; font-family: var(--f-mono); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.meter span { display: grid; place-items: center; }
+.meter .lo { background: var(--key-bg); color: var(--muted); }
+.meter .mid { background: var(--ok); color: var(--panel); }
+.meter .hi { background: var(--warn); color: var(--panel); }
+.meter-legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px 20px; font-size: 14px; color: var(--muted); }
+.meter-legend b { color: var(--ink); }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; align-items: start; }
+.card-plain { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.card-plain h3 { font-family: var(--f-display); font-size: 21px; font-weight: 600; margin: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.card-plain ol, .card-plain ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.card-plain ol li::marker { color: var(--accent); font-family: var(--f-mono); font-size: 13px; }
+.ores { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+.ore { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; }
+.ore b { font-family: var(--f-display); font-size: 16px; }
+.ore .v { font-family: var(--f-mono); font-size: 13px; font-variant-numeric: tabular-nums; }
+.ore .w { font-size: 12.5px; color: var(--muted); }
+.ore.hot { border-color: var(--warn); }
+.ore.hot .w { color: var(--warn); }
+.small { font-size: 13px; color: var(--muted); margin: 0; }
 
-.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--muted); align-items: center; }
-footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
-footer a { color: var(--accent); }
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (max-width: 560px) {
+  .brand-long { display: none; }
+  .step { grid-template-columns: 1fr; }
+  .step .num { grid-row: auto; }
+}
 </style>
 </head>
 <body>
 
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav-in">
+    <a class="brand" href="#start">SC<span>/</span><span class="brand-long" style="color:inherit">Handbuch</span></a>
+    <div class="tabs" role="list">
+      <a href="#start" role="listitem">Start</a>
+      <a href="#erste-schritte" role="listitem">Erste Schritte</a>
+      <a href="#tasten" role="listitem">Tasten</a>
+      <a href="#mining" role="listitem">Mining</a>
+    </div>
+  </div>
+</nav>
 
-<div class="wrap">
-  <header>
-    <div class="stamp"><span>Standardbelegung Tastatur &amp; Maus</span><span>Stand Alpha 4.10.2</span><span>Oktober 2026</span></div>
-    <h1>Star Citizen Einsteiger-Tasten</h1>
-    <p class="lede">Die Tasten, die du in den ersten Stunden wirklich brauchst: zu Fuß, im Cockpit, beim Quantensprung und wenn es brenzlig wird. Belegungen ändern sich mit Patches, deshalb sind unsichere Einträge markiert.</p>
+<main class="wrap">
+
+<!-- ============ START ============ -->
+<section class="view" id="view-start" data-view="start">
+  <div class="hero">
+    <div class="stamp"><span>Inoffizielles Einsteiger-Handbuch</span><span>Stand Alpha 4.10</span><span>QWERTZ-Tastatur</span></div>
+    <h1>Willkommen im Verse, Roony.</h1>
+    <p class="lede">Alles, was du für deine ersten Abende in Star Citizen brauchst, in drei Kapiteln. Lass die Seite auf dem zweiten Bildschirm oder dem Handy offen und spiel einfach mit.</p>
+  </div>
+
+  <div class="start-tip">
+    <strong>Neu hier?</strong>
+    <span>Fang mit „Erste Schritte“ an. Dort hakst du ab, was du schon geschafft hast.</span>
+    <a class="btn" href="#erste-schritte">Los geht's</a>
+  </div>
+
+  <div class="chapters">
+    <a class="chapter first" href="#erste-schritte">
+      <span class="no">KAPITEL 1</span>
+      <h3>Erste Schritte</h3>
+      <p>Vom Aufwachen im Quartier über den ersten Flug und Quantensprung bis zum ersten bezahlten Auftrag. Sieben Etappen zum Abhaken.</p>
+      <span class="go">Starten →</span>
+    </a>
+    <a class="chapter" href="#tasten">
+      <span class="no">KAPITEL 2</span>
+      <h3>Tasten</h3>
+      <p>Die zehn wichtigsten Tasten auf einen Blick und alle weiteren nach Situation sortiert. Mit Suche.</p>
+      <span class="go">Nachschlagen →</span>
+    </a>
+    <a class="chapter" href="#mining">
+      <span class="no">KAPITEL 3</span>
+      <h3>Mining</h3>
+      <p>Geld verdienen mit Steinen: zu Fuß mit dem Multitool, später mit Golem oder Prospector. Ablauf, Laser, Erze, Verkauf.</p>
+      <span class="go">Abbauen →</span>
+    </a>
+  </div>
+
+  <section>
+    <h2>Gut zu wissen</h2>
+    <div class="facts">
+      <div class="fact"><strong>Es ist eine Alpha</strong><p>Bugs gehören dazu. Hängt etwas, hilft oft neu einloggen oder ein anderer Server.</p></div>
+      <div class="fact"><strong>aUEC ist Spielgeld</strong><p>Alles, was du im Spiel kaufst, kann bei einem großen Patch zurückgesetzt werden. Gekaufte Pledge-Schiffe bleiben.</p></div>
+      <div class="fact"><strong>Nichts überstürzen</strong><p>Erst mieten, dann kaufen. Mieten kostet einen Bruchteil und zeigt dir, ob dir etwas Spaß macht.</p></div>
+      <div class="fact"><strong>F halten hilft fast immer</strong><p>Im Interaktionsmodus zeigt dir das Spiel, was du mit einem Objekt machen kannst.</p></div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ ERSTE SCHRITTE ============ -->
+<section class="view" id="view-erste-schritte" data-view="erste-schritte" hidden>
+  <div class="head">
+    <div class="stamp"><span>Kapitel 1</span><span>Stand Alpha 4.10</span></div>
+    <h1>Erste Schritte</h1>
+    <p class="lede">Sieben Etappen von deinem ersten Login bis zum ersten verdienten Geld. Hak ab, was du geschafft hast. Der Fortschritt bleibt in diesem Browser gespeichert.</p>
+  </div>
+
+  <div class="progress" aria-live="polite">
+    <div class="bar"><i id="bar"></i></div>
+    <span class="count" id="progress-count">0 von 7 geschafft</span>
+  </div>
+
+  <div class="steps" id="steps">
+
+    <article class="step" data-step="1">
+      <span class="num">1</span>
+      <h3>Aufwachen im Quartier</h3>
+      <div class="body">
+        <ol>
+          <li>Du wachst in deinem Quartier (Hab) in einer Stadt oder Station auf.</li>
+          <li><kbd>F1</kbd> öffnet das mobiGlas, dein Handgelenk-Computer für Karte, Aufträge und Inventar.</li>
+          <li><kbd>I</kbd> öffnet dein Inventar. Zieh Rüstung, Helm und Rucksack an, falls sie im Spind liegen.</li>
+          <li>Oben im HUD siehst du Hunger und Durst. Kauf dir zu Beginn etwas zu essen und zu trinken und pack es ins Inventar.</li>
+        </ol>
+        <div class="hint">Tipp: Ein Helm ist im All Pflicht. Ohne Helm stirbst du beim Aussteigen im Vakuum. <kbd>L-Alt</kbd><span class="plus">+</span><kbd>H</kbd> setzt ihn auf.</div>
+        <label class="check"><input type="checkbox" id="s1"> Geschafft</label>
+      </div>
+    </article>
+
+    <article class="step" data-step="2">
+      <span class="num">2</span>
+      <h3>Zum Schiff</h3>
+      <div class="body">
+        <ol>
+          <li>Verlass das Quartier und nimm den Aufzug. Am Bedienfeld mit <kbd>F</kbd> den Raumhafen bzw. die Hangar-Ebene wählen.</li>
+          <li>Am Raumhafen ein <b>ASOP-Terminal</b> suchen und dort dein Schiff anfordern.</li>
+          <li>Das Terminal zeigt dir die Hangar-Nummer. Folge den Schildern und nimm den passenden Aufzug.</li>
+          <li>Ins Schiff: <kbd>F</kbd> halten auf Tür oder Rampe, dann zum Pilotensitz und „Sitz einnehmen“ wählen.</li>
+        </ol>
+        <div class="oops"><strong>Typischer Fehler:</strong> Schiff erscheint nicht? Es kann ein paar Minuten dauern. Wenn es als „zerstört“ gilt, musst du erst einen Versicherungsclaim machen (siehe Etappe 7).</div>
+        <label class="check"><input type="checkbox" id="s2"> Geschafft</label>
+      </div>
+    </article>
+
+    <article class="step" data-step="3">
+      <span class="num">3</span>
+      <h3>Erster Flug</h3>
+      <div class="body">
+        <ol>
+          <li><kbd>R-Alt</kbd><span class="plus">+</span><kbd>R</kbd> Flight Ready. Auf deutschen Tastaturen ist R-Alt die <kbd>AltGr</kbd>-Taste.</li>
+          <li><kbd>L-Alt</kbd><span class="plus">+</span><kbd>N</kbd> fragt die Starterlaubnis an. Die Hangartore öffnen sich.</li>
+          <li><kbd>Leertaste</kbd> zum Abheben, <kbd>N</kbd> Fahrwerk einfahren, mit <kbd>W</kbd> langsam aus dem Hangar.</li>
+          <li>Steuern: Maus für die Richtung, <kbd>Q</kbd><kbd>E</kbd> rollen, <kbd>L-Shift</kbd> Boost, <kbd>X</kbd> bremsen.</li>
+        </ol>
+        <div class="oops"><strong>Typischer Fehler:</strong> Nicht zu schnell im Hangar oder über der Stadt fliegen. In Sperrzonen sind deine Waffen gesperrt, aber Unfälle passieren trotzdem.</div>
+        <label class="check"><input type="checkbox" id="s3"> Geschafft</label>
+      </div>
+    </article>
+
+    <article class="step" data-step="4">
+      <span class="num">4</span>
+      <h3>Quantensprung</h3>
+      <div class="body">
+        <ol>
+          <li>Flieg aus der Sperrzone um Station oder Stadt. Das HUD zeigt dir, wann du raus bist.</li>
+          <li><kbd>F2</kbd> Sternenkarte: Ziel anklicken und „Route setzen“.</li>
+          <li><kbd>B</kbd> <span class="mod">halten</span> bis das HUD „NAV“ zeigt.</li>
+          <li>Schiff auf die Zielmarkierung ausrichten und warten, bis die Kalibrierung fertig ist.</li>
+          <li>Linke Maustaste <span class="mod">halten</span>: Der Antrieb lädt auf und du springst.</li>
+        </ol>
+        <div class="oops"><strong>Typischer Fehler:</strong> In NAV sind Waffen und Schilde aus. Wirst du angegriffen, <kbd>B</kbd> halten und zurück in den Kampfmodus (SCM) wechseln.</div>
+        <details><summary>Warum springt mein Schiff nicht?</summary><p>Häufige Gründe: Ein Planet oder Mond liegt zwischen dir und dem Ziel, du bist noch in der Sperrzone, die Kalibrierung ist noch nicht fertig, oder der Quantum-Treibstoff reicht nicht. Dann zuerst eine nähere Station anfliegen und dort tanken.</p></details>
+        <label class="check"><input type="checkbox" id="s4"> Geschafft</label>
+      </div>
+    </article>
+
+    <article class="step" data-step="5">
+      <span class="num">5</span>
+      <h3>Landen</h3>
+      <div class="body">
+        <ol>
+          <li>Nahe am Ziel <kbd>L-Alt</kbd><span class="plus">+</span><kbd>N</kbd>: Landeerlaubnis anfragen.</li>
+          <li>Der zugewiesene Hangar oder Landeplatz wird im HUD markiert. Langsam anfliegen.</li>
+          <li><kbd>N</kbd> Fahrwerk ausfahren. Über dem Platz <kbd>N</kbd> <span class="mod">halten</span> für die Autolandung.</li>
+          <li><kbd>R-Alt</kbd><span class="plus">+</span><kbd>R</kbd> herunterfahren, <kbd>Z</kbd> <span class="mod">halten</span> zum Aufstehen.</li>
+        </ol>
+        <div class="hint">Tipp: Lass dein Schiff nach dem Landen im Hangar stehen. Einfach weglaufen ist okay, es wird beim Ausloggen gespeichert.</div>
+        <label class="check"><input type="checkbox" id="s5"> Geschafft</label>
+      </div>
+    </article>
+
+    <article class="step" data-step="6">
+      <span class="num">6</span>
+      <h3>Erster Auftrag</h3>
+      <div class="body">
+        <ol>
+          <li><kbd>F1</kbd> mobiGlas öffnen und die App für Verträge (Contracts) aufrufen.</li>
+          <li>Wähle für den Anfang einfache Aufträge wie Lieferungen oder leichte Kampfziele. Achte auf die Schwierigkeitsangabe.</li>
+          <li>Auftrag annehmen und „Verfolgen“ (Track) wählen. Das Ziel erscheint dann in der Sternenkarte und im HUD.</li>
+          <li>Hinfliegen, Aufgabe erledigen. Das Geld wird automatisch überwiesen.</li>
+        </ol>
+        <div class="hint">Lieber Bergbau? Kapitel 3 zeigt dir, wie du ohne Schiff mit dem Multitool anfängst. <a href="#mining">Zum Mining →</a></div>
+        <label class="check"><input type="checkbox" id="s6"> Geschafft</label>
+      </div>
+    </article>
+
+    <article class="step" data-step="7">
+      <span class="num">7</span>
+      <h3>Wenn etwas schiefgeht</h3>
+      <div class="body">
+        <ol>
+          <li><b>Gestorben?</b> Du wachst in einem Krankenhaus bzw. Med-Bett auf. Deine Ausrüstung bleibt bei deinem alten Körper liegen.</li>
+          <li><b>Schiff zerstört?</b> Am ASOP-Terminal einen Versicherungsclaim machen. Nach einer Wartezeit steht es wieder bereit. Gegen Gebühr geht es schneller.</li>
+          <li><b>Feststeckt?</b> Erst neu einloggen. Hilft das nicht, Hilfe im Chat (<kbd>F12</kbd>) fragen. Die Community hilft Neulingen meist gern.</li>
+        </ol>
+        <div class="oops"><strong>Vorsicht:</strong> <kbd>Backspace</kbd> gedrückt halten im Schiff löst die Selbstzerstörung aus. <kbd>Z</kbd> halten ist Aufstehen, <kbd>R-Alt</kbd><span class="plus">+</span><kbd>Z</kbd> ist der Schleudersitz.</div>
+        <label class="check"><input type="checkbox" id="s7"> Geschafft</label>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ TASTEN ============ -->
+<section class="view" id="view-tasten" data-view="tasten" hidden>
+  <div class="head">
+    <div class="stamp"><span>Kapitel 2</span><span>Standardbelegung Alpha 4.10.2</span><span>QWERTZ</span></div>
+    <h1>Tasten</h1>
+    <p class="lede">Die Tasten, die du in den ersten Stunden brauchst. Belegungen ändern sich mit Patches, unsichere Einträge sind markiert.</p>
     <div class="legend">
-      <span>Tasten für <strong>QWERTZ</strong> (deutsche Tastatur): Y und Z gegenüber englischen Guides getauscht</span>
-      <span><kbd>R-Alt</kbd> = rechte Alt-Taste (AltGr)</span>
-      <span><kbd>L-Alt</kbd> = linke Alt-Taste</span>
+      <span>Für <strong>QWERTZ</strong>: Y und Z gegenüber englischen Guides getauscht</span>
+      <span><kbd>R-Alt</kbd> = AltGr</span>
       <span><span class="mod">halten</span> = gedrückt halten</span>
-      <span><span class="mod" style="border:1px dashed var(--muted);background:none;color:var(--muted)">prüfen</span> = Quellen widersprechen sich</span>
+      <span><span class="tag-verify">prüfen</span> = Quellen widersprechen sich</span>
     </div>
     <div class="search">
       <input id="q" type="search" placeholder="Aktion oder Taste suchen, z. B. „landen“ oder „F1“" aria-label="Tastenbelegung suchen">
       <span class="count" id="count"></span>
     </div>
-  </header>
+  </div>
 
   <section>
     <h2>Die 10 wichtigsten Tasten</h2>
     <div class="top">
-      <div class="card"><div class="keys"><kbd>F</kbd></div><div class="what">Interaktion</div><div class="why">Türen, Sitze, Aufzüge, Terminals, Gegenstände. Halten zeigt alle Optionen.</div></div>
-      <div class="card"><div class="keys"><kbd>F1</kbd></div><div class="what">mobiGlas</div><div class="why">Verträge, Inventar, Schiff anfordern (ASOP).</div></div>
+      <div class="card"><div class="keys"><kbd>F</kbd></div><div class="what">Interaktion</div><div class="why">Türen, Sitze, Aufzüge, Terminals. Halten zeigt alle Optionen.</div></div>
+      <div class="card"><div class="keys"><kbd>F1</kbd></div><div class="what">mobiGlas</div><div class="why">Verträge, Inventar, Schiff anfordern.</div></div>
       <div class="card"><div class="keys"><kbd>F2</kbd></div><div class="what">Sternenkarte</div><div class="why">Ziel für den Quantensprung setzen.</div></div>
       <div class="card"><div class="keys"><kbd>I</kbd></div><div class="what">Inventar</div><div class="why">Ausrüstung, Rüstung, Waffen anlegen.</div></div>
       <div class="card"><div class="keys"><kbd>R-Alt</kbd><span class="plus">+</span><kbd>R</kbd></div><div class="what">Flight Ready</div><div class="why">Schiff hochfahren. Ohne das passiert im Cockpit nichts.</div></div>
       <div class="card"><div class="keys"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>N</kbd></div><div class="what">Start-/Landeerlaubnis</div><div class="why">Funkt die Flugkontrolle an, öffnet den Hangar.</div></div>
       <div class="card"><div class="keys"><kbd>N</kbd></div><div class="what">Fahrwerk / Landemodus</div><div class="why">Halten für automatisches Landen.</div></div>
       <div class="card"><div class="keys"><kbd>B</kbd><span class="mod">halten</span></div><div class="what">Master Mode wechseln</div><div class="why">SCM (Kampf) ↔ NAV (Reise, Quantum).</div></div>
-      <div class="card"><div class="keys"><kbd>LMB</kbd><span class="mod">halten</span></div><div class="what">Quantensprung</div><div class="why">Im NAV-Modus mit gesetzter Route: aufladen und springen.</div></div>
+      <div class="card"><div class="keys"><kbd>LMB</kbd><span class="mod">halten</span></div><div class="what">Quantensprung</div><div class="why">Im NAV-Modus mit gesetzter Route.</div></div>
       <div class="card"><div class="keys"><kbd>Z</kbd><span class="mod">halten</span></div><div class="what">Sitz verlassen</div><div class="why">Aufstehen aus Pilotensitz oder Fahrzeug.</div></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Abläufe Schritt für Schritt</h2>
-    <div class="flows">
-      <div class="flow">
-        <h3>Vom Hangar ins All</h3>
-        <ol>
-          <li><span><kbd>F1</kbd> mobiGlas oder ASOP-Terminal: Schiff anfordern, zum Hangar laufen.</span></li>
-          <li><span>Am Pilotensitz <kbd>F</kbd> halten und „Sitz einnehmen“ wählen.</span></li>
-          <li><span><kbd>R-Alt</kbd><span class="plus">+</span><kbd>R</kbd> Flight Ready, Systeme fahren hoch.</span></li>
-          <li><span><kbd>L-Alt</kbd><span class="plus">+</span><kbd>N</kbd> Starterlaubnis, Hangartore öffnen sich.</span></li>
-          <li><span><kbd>Leertaste</kbd> abheben, <kbd>N</kbd> Fahrwerk einfahren, mit <kbd>W</kbd> raus.</span></li>
-        </ol>
-      </div>
-      <div class="flow">
-        <h3>Quantensprung</h3>
-        <ol>
-          <li><span>Aus der Sperrzone um die Station fliegen (Hinweis im HUD).</span></li>
-          <li><span><kbd>F2</kbd> Sternenkarte: Ziel anklicken, „Route setzen“.</span></li>
-          <li><span><kbd>B</kbd> <span class="mod">halten</span> bis das HUD „NAV“ zeigt.</span></li>
-          <li><span>Schiff auf die Zielmarkierung ausrichten, Kalibrierung abwarten.</span></li>
-          <li><span><kbd>LMB</kbd> <span class="mod">halten</span> zum Aufladen und Springen.</span></li>
-        </ol>
-      </div>
-      <div class="flow">
-        <h3>Landen an Station oder Stadt</h3>
-        <ol>
-          <li><span>Nahe am Ziel <kbd>L-Alt</kbd><span class="plus">+</span><kbd>N</kbd>: Landeerlaubnis anfragen.</span></li>
-          <li><span>Der zugewiesene Hangar oder Landeplatz wird im HUD markiert.</span></li>
-          <li><span>Langsam anfliegen, <kbd>N</kbd> Fahrwerk ausfahren.</span></li>
-          <li><span>Über dem Platz <kbd>N</kbd> <span class="mod">halten</span> für Autolandung, oder mit <kbd>Strg</kbd> sanft absenken.</span></li>
-          <li><span><kbd>R-Alt</kbd><span class="plus">+</span><kbd>R</kbd> herunterfahren, <kbd>Z</kbd> <span class="mod">halten</span> aufstehen.</span></li>
-        </ol>
-      </div>
     </div>
   </section>
 
   <section>
     <h2>Alle Tasten nach Situation</h2>
     <div class="grid" id="grid">
-
       <div class="panel">
         <h3>Zu Fuß <small>FPS</small></h3>
         <div class="row"><span class="a">Bewegen</span><span class="k"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></div>
         <div class="row"><span class="a">Sprinten</span><span class="k"><kbd>L-Shift</kbd><span class="mod">halten</span></span></div>
         <div class="row"><span class="a">Springen</span><span class="k"><kbd>Leertaste</kbd></span></div>
-        <div class="row check"><span class="a">Ducken<span class="note">je nach Quelle C oder Strg</span></span><span class="k"><kbd>C</kbd><span class="plus">/</span><kbd>L-Strg</kbd></span></div>
-        <div class="row check"><span class="a">Hinlegen<span class="note">je nach Quelle Strg oder X</span></span><span class="k"><kbd>L-Strg</kbd><span class="plus">/</span><kbd>X</kbd></span></div>
+        <div class="row verify"><span class="a">Ducken<span class="note">je nach Quelle C oder Strg</span></span><span class="k"><kbd>C</kbd><span class="plus">/</span><kbd>L-Strg</kbd></span></div>
+        <div class="row verify"><span class="a">Hinlegen<span class="note">je nach Quelle Strg oder X</span></span><span class="k"><kbd>L-Strg</kbd><span class="plus">/</span><kbd>X</kbd></span></div>
         <div class="row"><span class="a">Um die Ecke lehnen</span><span class="k"><kbd>Q</kbd><kbd>E</kbd></span></div>
         <div class="row"><span class="a">Frei umsehen</span><span class="k"><kbd>Y</kbd><span class="mod">halten</span></span></div>
         <div class="row"><span class="a">Taschenlampe</span><span class="k"><kbd>T</kbd></span></div>
         <div class="row"><span class="a">Helm auf/ab</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>H</kbd></span></div>
       </div>
-
       <div class="panel">
-        <h3>Waffen zu Fuß <small>FPS</small></h3>
-        <div class="row"><span class="a">Schießen</span><span class="k"><kbd>LMB</kbd></span></div>
-        <div class="row"><span class="a">Zielen (Kimme &amp; Korn)</span><span class="k"><kbd>RMB</kbd></span></div>
+        <h3>Waffen &amp; Werkzeug zu Fuß <small>FPS</small></h3>
+        <div class="row"><span class="a">Schießen / Werkzeug benutzen</span><span class="k"><kbd>LMB</kbd></span></div>
+        <div class="row"><span class="a">Zielen / Scannen mit Multitool</span><span class="k"><kbd>RMB</kbd></span></div>
         <div class="row"><span class="a">Nachladen</span><span class="k"><kbd>R</kbd></span></div>
         <div class="row"><span class="a">Waffe wegstecken</span><span class="k"><kbd>R</kbd><span class="mod">halten</span></span></div>
         <div class="row"><span class="a">Waffe wählen<span class="note">Primär, Sekundär, Seitenwaffe</span></span><span class="k"><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd></span></div>
+        <div class="row"><span class="a">Werkzeug / Multitool</span><span class="k"><kbd>4</kbd></span></div>
         <div class="row"><span class="a">Feuermodus wechseln</span><span class="k"><kbd>B</kbd></span></div>
         <div class="row"><span class="a">Granate</span><span class="k"><kbd>G</kbd></span></div>
         <div class="row"><span class="a">Medpen benutzen</span><span class="k"><kbd>C</kbd></span></div>
       </div>
-
       <div class="panel">
         <h3>Menüs &amp; Kommunikation <small>UI</small></h3>
         <div class="row"><span class="a">mobiGlas</span><span class="k"><kbd>F1</kbd></span></div>
@@ -257,7 +484,6 @@ footer a { color: var(--accent); }
         <div class="row"><span class="a">Chat schreiben / senden</span><span class="k"><kbd>Enter</kbd></span></div>
         <div class="row"><span class="a">Sprachchat (Push-to-Talk)</span><span class="k"><kbd>Num +</kbd><span class="mod">halten</span></span></div>
       </div>
-
       <div class="panel">
         <h3>Schiff steuern <small>Flug</small></h3>
         <div class="row"><span class="a">Schub vor / zurück</span><span class="k"><kbd>W</kbd><kbd>S</kbd></span></div>
@@ -269,11 +495,10 @@ footer a { color: var(--accent); }
         <div class="row"><span class="a">Raumbremse</span><span class="k"><kbd>X</kbd></span></div>
         <div class="row"><span class="a">Gekoppelt / Entkoppelt</span><span class="k"><kbd>C</kbd></span></div>
         <div class="row"><span class="a">Tempomat (Cruise)</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>C</kbd></span></div>
-        <div class="row check"><span class="a">Geschwindigkeitsbegrenzer</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>Mausrad</kbd></span></div>
+        <div class="row verify"><span class="a">Geschwindigkeitsbegrenzer</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>Mausrad</kbd></span></div>
         <div class="row"><span class="a">Umsehen im Cockpit</span><span class="k"><kbd>Y</kbd><span class="mod">halten</span></span></div>
         <div class="row"><span class="a">Nach hinten schauen</span><span class="k"><kbd>,</kbd><span class="mod">halten</span></span></div>
       </div>
-
       <div class="panel">
         <h3>Schiff: Start, Landung, Systeme <small>Flug</small></h3>
         <div class="row"><span class="a">Flight Ready (hoch-/runterfahren)</span><span class="k"><kbd>R-Alt</kbd><span class="plus">+</span><kbd>R</kbd></span></div>
@@ -283,17 +508,16 @@ footer a { color: var(--accent); }
         <div class="row"><span class="a">VTOL umschalten</span><span class="k"><kbd>K</kbd></span></div>
         <div class="row"><span class="a">Türen &amp; Luken ver-/entriegeln</span><span class="k"><kbd>R-Alt</kbd><span class="plus">+</span><kbd>K</kbd></span></div>
         <div class="row"><span class="a">Scheinwerfer</span><span class="k"><kbd>L</kbd></span></div>
-        <div class="row"><span class="a">Energie: alles / Antrieb / Schilde / Waffen</span><span class="k"><kbd>U</kbd><kbd>I</kbd><kbd>O</kbd><kbd>P</kbd></span></div>
+        <div class="row"><span class="a">Energie: alles / Antrieb / Schilde / Waffen<span class="note">jeweils an/aus</span></span><span class="k"><kbd>U</kbd><kbd>I</kbd><kbd>O</kbd><kbd>P</kbd></span></div>
         <div class="row"><span class="a">Master Mode SCM ↔ NAV</span><span class="k"><kbd>B</kbd><span class="mod">halten</span></span></div>
         <div class="row"><span class="a">Quantensprung (in NAV)</span><span class="k"><kbd>LMB</kbd><span class="mod">halten</span></span></div>
         <div class="row"><span class="a">Sitz verlassen</span><span class="k"><kbd>Z</kbd><span class="mod">halten</span></span></div>
       </div>
-
       <div class="panel">
         <h3>Schiffskampf <small>nur in SCM</small></h3>
         <div class="row"><span class="a">Waffengruppe 1 / 2 feuern</span><span class="k"><kbd>LMB</kbd><kbd>RMB</kbd></span></div>
         <div class="row"><span class="a">Ziel im Blickfeld wechseln<span class="note">halten: Auto-Zielwahl</span></span><span class="k"><kbd>T</kbd></span></div>
-        <div class="row"><span class="a">Angreifer / Feinde / Freunde durchschalten</span><span class="k"><kbd>4</kbd><kbd>5</kbd><kbd>6</kbd></span></div>
+        <div class="row"><span class="a">Angreifer / Feinde / Freunde</span><span class="k"><kbd>4</kbd><kbd>5</kbd><kbd>6</kbd></span></div>
         <div class="row"><span class="a">Gimbal-Modus wechseln</span><span class="k"><kbd>G</kbd></span></div>
         <div class="row"><span class="a">Raketen-Modus</span><span class="k"><kbd>MMB</kbd></span></div>
         <div class="row"><span class="a">Rakete abfeuern (im Raketen-Modus)</span><span class="k"><kbd>LMB</kbd></span></div>
@@ -301,27 +525,27 @@ footer a { color: var(--accent); }
         <div class="row"><span class="a">Störsignal (Noise)</span><span class="k"><kbd>J</kbd></span></div>
         <div class="row"><span class="a">Mehr Energie auf Schilde</span><span class="k"><kbd>F7</kbd></span></div>
       </div>
-
       <div class="panel">
-        <h3>Scannen &amp; Berufe <small>Mining, Salvage</small></h3>
+        <h3>Scannen &amp; Mining <small>Schiff</small></h3>
         <div class="row"><span class="a">Scan-Modus</span><span class="k"><kbd>V</kbd></span></div>
-        <div class="row"><span class="a">Ziel scannen</span><span class="k"><kbd>LMB</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Ziel genauer scannen</span><span class="k"><kbd>LMB</kbd><span class="mod">halten</span></span></div>
         <div class="row"><span class="a">Radar-Ping</span><span class="k"><kbd>Tab</kbd><span class="mod">halten</span></span></div>
-        <div class="row"><span class="a">Mining-/Salvage-Modus</span><span class="k"><kbd>M</kbd></span></div>
+        <div class="row"><span class="a">Mining-Modus</span><span class="k"><kbd>M</kbd></span></div>
         <div class="row"><span class="a">Laser feuern</span><span class="k"><kbd>LMB</kbd></span></div>
+        <div class="row"><span class="a">Bruch- ↔ Abbau-Laser</span><span class="k"><kbd>RMB</kbd></span></div>
         <div class="row"><span class="a">Laserleistung regeln</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>Mausrad</kbd></span></div>
+        <div class="row"><span class="a">Mining-Module 1–3 aktivieren</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd></span></div>
+        <div class="row"><span class="a">Fracht abwerfen</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>J</kbd></span></div>
       </div>
-
       <div class="panel">
         <h3>Bodenfahrzeuge &amp; EVA <small>Fahren, Schweben</small></h3>
         <div class="row"><span class="a">Fahren / lenken</span><span class="k"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></div>
         <div class="row"><span class="a">Bremse</span><span class="k"><kbd>X</kbd></span></div>
         <div class="row"><span class="a">Boost</span><span class="k"><kbd>L-Shift</kbd></span></div>
-        <div class="row"><span class="a">EVA: rollen in Schwerelosigkeit</span><span class="k"><kbd>Q</kbd><kbd>E</kbd></span></div>
+        <div class="row"><span class="a">EVA: rollen</span><span class="k"><kbd>Q</kbd><kbd>E</kbd></span></div>
         <div class="row"><span class="a">EVA: hoch / runter</span><span class="k"><kbd>Leertaste</kbd><kbd>L-Strg</kbd></span></div>
         <div class="row"><span class="a">Aussteigen</span><span class="k"><kbd>Z</kbd><span class="mod">halten</span></span></div>
       </div>
-
       <div class="panel danger">
         <h3>Vorsicht, Notfall <small>nicht verwechseln</small></h3>
         <div class="row"><span class="a">Sitz normal verlassen</span><span class="k"><kbd>Z</kbd><span class="mod">halten</span></span></div>
@@ -329,33 +553,200 @@ footer a { color: var(--accent); }
         <div class="row"><span class="a">Schleudersitz</span><span class="k"><kbd>R-Alt</kbd><span class="plus">+</span><kbd>Z</kbd></span></div>
         <div class="row"><span class="a">Selbstzerstörung (im Schiff)<span class="note">Schiff ist weg, Versicherungsclaim nötig</span></span><span class="k"><kbd>Backspace</kbd><span class="mod">halten</span></span></div>
       </div>
-
     </div>
     <p class="empty" id="none" hidden>Keine passende Taste gefunden. Versuch einen anderen Begriff.</p>
   </section>
 
   <section>
-    <h2>Tipps für den Start</h2>
-    <div class="tips">
-      <div class="tip"><strong>Belegung sichern</strong><p>Patches setzen Belegungen manchmal zurück. Nach eigenen Änderungen in der Konsole (<kbd>^</kbd>) exportieren: <code>pp_rebindkeys export all meinprofil</code></p></div>
-      <div class="tip"><strong>Im Spiel nachsehen</strong><p>ESC → Optionen → Keybindings hat eine Suche. Bei „prüfen“-Einträgen dort kurz kontrollieren, was dein Build nutzt.</p></div>
-      <div class="tip"><strong>NAV ist kein Kampfmodus</strong><p>In NAV sind Waffen und Schilde aus. Wirst du angegriffen: <kbd>B</kbd> halten, zurück in SCM.</p></div>
-      <div class="tip"><strong>F halten statt raten</strong><p>Im Interaktionsmodus zeigt dir das Spiel, was ein Objekt kann. Das ersetzt viele Tasten, die standardmäßig gar nicht belegt sind.</p></div>
-      <div class="tip"><strong>Rechte Alt-Taste = AltGr</strong><p>Auf deutschen Tastaturen ist R-Alt die AltGr-Taste. Flight Ready ist also <kbd>AltGr</kbd><span class="plus">+</span><kbd>R</kbd>.</p></div>
-      <div class="tip"><strong>Joystick oder HOTAS?</strong><p>Leg dafür ein eigenes Profil an, statt das Tastaturprofil umzubauen.</p></div>
+    <h2>Tipps</h2>
+    <div class="facts">
+      <div class="fact"><strong>Belegung sichern</strong><p>Patches setzen Belegungen manchmal zurück. Nach Änderungen in der Konsole (<kbd>^</kbd>) exportieren: <code style="font-family:var(--f-mono);font-size:12.5px">pp_rebindkeys export all meinprofil</code></p></div>
+      <div class="fact"><strong>Im Spiel nachsehen</strong><p>ESC → Optionen → Keybindings hat eine Suche. Bei „prüfen“-Einträgen dort kontrollieren.</p></div>
+      <div class="fact"><strong>Waffen gehen nicht?</strong><p>Meist ist <kbd>P</kbd> aus oder du bist im NAV-Modus. <kbd>B</kbd> halten bringt dich zurück in SCM.</p></div>
+      <div class="fact"><strong>Joystick oder HOTAS?</strong><p>Leg dafür ein eigenes Profil an, statt das Tastaturprofil umzubauen.</p></div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ MINING ============ -->
+<section class="view" id="view-mining" data-view="mining" hidden>
+  <div class="head">
+    <div class="stamp"><span>Kapitel 3</span><span>Stand Alpha 4.10</span><span>Preise schwanken</span></div>
+    <h1>Mining</h1>
+    <p class="lede">Gestein finden, mit dem Laser aufbrechen, Erz einsammeln, verkaufen. Fang zu Fuß mit dem Multitool an. Das kostet fast nichts und du lernst das Prinzip, das auch im Schiff gilt.</p>
+  </div>
+
+  <section>
+    <h2>Fünf Wege ins Mining</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Weg</th><th>Crew</th><th>Fracht</th><th>Kosten (ca.)</th><th>Gut für</th><th>Für dich</th></tr>
+        </thead>
+        <tbody>
+          <tr class="rec">
+            <th>Zu Fuß<small>Multitool + OreBit</small></th>
+            <td>1</td><td>Rucksack</td><td class="num">gering</td>
+            <td>Edelsteine in Höhlen und am Boden. Lernen ohne Risiko.</td>
+            <td><span class="pill go">Jetzt starten</span></td>
+          </tr>
+          <tr>
+            <th>Greycat ROC<small>Bodenfahrzeug</small></th>
+            <td>1</td><td>klein</td><td class="num">mittel</td>
+            <td>Edelsteine auf Monden. Braucht ein Schiff, das den ROC transportiert.</td>
+            <td><span class="pill no">Überspringen</span></td>
+          </tr>
+          <tr class="rec">
+            <th>Drake Golem<small>Einsteiger-Schiff</small></th>
+            <td>1</td><td class="num">32 SCU</td><td class="num">Miete ~15.900 aUEC/Tag</td>
+            <td>Günstigster Einstieg ins Schiffs-Mining. Schnell und wendig.</td>
+            <td><span class="pill later">Stufe 2</span></td>
+          </tr>
+          <tr class="rec">
+            <th>MISC Prospector<small>Solo-Klassiker</small></th>
+            <td>1</td><td class="num">32 SCU</td><td class="num">Miete ~73.200 aUEC/Tag<br>Kauf ~2–2,9 Mio. aUEC</td>
+            <td>Das Standard-Schiff für Solo-Miner. Stärkerer Laser, austauschbar.</td>
+            <td><span class="pill later">Stufe 3</span></td>
+          </tr>
+          <tr>
+            <th>ARGO MOLE<small>Crew-Schiff</small></th>
+            <td>2–4</td><td>groß</td><td class="num">hoch</td>
+            <td>Drei Laser-Türme. Lohnt sich nur mit Freunden.</td>
+            <td><span class="pill no">Später, mit Crew</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Preise laut Community-Trackern für 4.10, im Spiel am Terminal prüfen. Golem und Prospector fassen beide 32 SCU. Der Prospector hat dafür den stärkeren Laser.</p>
+  </section>
+
+  <section class="gauge">
+    <h3>Das Grundprinzip: grün halten</h3>
+    <p class="small" style="font-size:14px">Egal ob Multitool oder Schiff: Der Laser lädt den Stein mit Energie auf. Du regelst die Leistung so, dass die Anzeige im grünen Bereich bleibt, bis der Bruchsensor 100&nbsp;% erreicht.</p>
+    <div class="meter" role="img" aria-label="Energieanzeige: zu wenig, optimal grün, zu viel rot">
+      <span class="lo">zu wenig</span><span class="mid">optimal</span><span class="hi">zu viel</span>
+    </div>
+    <div class="meter-legend">
+      <span><b>Zu wenig:</b> nichts passiert. Leistung hoch oder näher ran.</span>
+      <span><b>Grün:</b> halten, bis der Stein bricht.</span>
+      <span><b>Rot:</b> Überladung. Erz geht verloren oder der Stein explodiert.</span>
+    </div>
+    <div class="meter-legend">
+      <span><b>Widerstand:</b> hoch heißt, du brauchst mehr Leistung.</span>
+      <span><b>Instabilität:</b> hoch heißt, die Anzeige springt stärker. Vorsichtig regeln.</span>
     </div>
   </section>
 
-  <footer>
-    Zusammengestellt aus <a href="https://starcitizenhelp.com/game-guides/keybinds" target="_blank" rel="noopener">starcitizenhelp.com</a> (Liste für Alpha 4.10.2),
-    <a href="https://citizen-starter-guide.com/star-citizen-keybinds/" target="_blank" rel="noopener">citizen-starter-guide.com</a> (Alpha 4.10) und dem
-    <a href="https://starcitizen.tools/Guide:Controls/keybind" target="_blank" rel="noopener">Star Citizen Wiki</a> (ältere Belegung, nur zum Abgleich).
-    Inoffizielle Fan-Übersicht, Angaben ohne Gewähr. Nicht verbunden mit Cloud Imperium Games oder Roberts Space Industries. Star Citizen® ist eine Marke von Cloud Imperium Rights LLC.
-  </footer>
-</div>
+  <div class="two">
+    <div class="card-plain">
+      <h3>Stufe 1: Zu Fuß <span class="pill go">Jetzt starten</span></h3>
+      <ol>
+        <li><b>Ausrüstung kaufen:</b> Pyro RYT Multitool, OreBit-Mining-Aufsatz und einen Rucksack. Gibt es in Ausrüstungsläden der Städte und Stationen.</li>
+        <li><b>Fundort suchen:</b> Kleine Steine mit farbigen Adern am Boden oder in Höhlen. Gut für den Start sind Monde in Stanton. Höhlen haben oft mehr.</li>
+        <li><kbd>4</kbd> Multitool ziehen. <kbd>RMB</kbd> zielen, bis der Scan die Zusammensetzung zeigt.</li>
+        <li><kbd>LMB</kbd> Laser feuern, Leistung im grünen Bereich halten, bis der Stein bricht.</li>
+        <li>Die Bruchstücke einsammeln: <kbd>F</kbd> und „Verstauen“ (Stow). Sie landen im Rucksack.</li>
+        <li><b>Verkaufen:</b> Edelsteine brauchen keine Raffinerie. Am Handelsterminal oder im Admin-Büro „Verkaufen“ wählen und den Rucksack als Quelle angeben.</li>
+      </ol>
+      <div class="hint">Gute Handabbau-Edelsteine: Aphorit, Dolivin, Hadanit. Hadanit ist selten und bringt am meisten.</div>
+    </div>
+
+    <div class="card-plain">
+      <h3>Stufe 2 und 3: Mit Schiff <span class="pill later">Golem → Prospector</span></h3>
+      <ol>
+        <li><b>Mieten statt kaufen:</b> Am Miet-Terminal im Raumhafen erst den Golem für einen Tag mieten.</li>
+        <li>Zu einem Mond oder Asteroidengürtel fliegen. <kbd>Tab</kbd> <span class="mod">halten</span> für einen Ping. Gesteinssymbole zeigen Fundstellen.</li>
+        <li><kbd>V</kbd> Scan-Modus, auf einen Stein zielen und <kbd>LMB</kbd> <span class="mod">halten</span>. Du siehst Erze, Widerstand und Instabilität.</li>
+        <li><kbd>M</kbd> Mining-Modus, nah heranfliegen. <kbd>LMB</kbd> feuern, mit <kbd>L-Alt</kbd><span class="plus">+</span><kbd>Mausrad</kbd> die Leistung im Grünen halten.</li>
+        <li>Wenn der Stein bricht: Bruchstücke mit lila Rand sind abbaubar. <kbd>RMB</kbd> auf den Abbau-Laser umschalten, <kbd>LMB</kbd> einsaugen.</li>
+        <li><b>Raffinieren:</b> An einer Raffinerie (Rastplätze an Lagrange-Punkten) einen Auftrag starten. Schnelle Methoden liefern weniger, langsame mehr. Später abholen und verkaufen.</li>
+      </ol>
+      <div class="oops"><strong>Wichtig:</strong> Rohes Erz direkt verkaufen bringt nur etwa die Hälfte. Raffinieren lohnt sich fast immer, dauert aber.</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Erze für Einsteiger</h2>
+    <div class="ores">
+      <div class="ore"><b>Laranit</b><span class="v">~30.000 aUEC/SCU</span><span class="w">Solide, gut zu finden</span></div>
+      <div class="ore"><b>Taranit</b><span class="v">~32.000 aUEC/SCU</span><span class="w">Solide</span></div>
+      <div class="ore"><b>Gold</b><span class="v">~37.000 aUEC/SCU</span><span class="w">Gut für den Anfang</span></div>
+      <div class="ore"><b>Bexalit</b><span class="v">~44.000 aUEC/SCU</span><span class="w">Lohnend</span></div>
+      <div class="ore"><b>Diamant</b><span class="v">~65.000 aUEC/SCU</span><span class="w">Selten, sehr lohnend</span></div>
+      <div class="ore hot"><b>Quantanium</b><span class="v">~170.000 aUEC/SCU</span><span class="w">Zerfällt mit der Zeit und kann explodieren. Erst später.</span></div>
+    </div>
+    <p class="small" style="margin-top:8px">Raffinierte Preise laut Community-Daten für 4.10, Größenordnung. Titan, Korund und Agricium sind häufig, aber weniger wert.</p>
+  </section>
+
+  <section>
+    <h2>Gefahren</h2>
+    <div class="facts">
+      <div class="fact"><strong>Überladung</strong><p>Bleibst du zu lange im Roten, explodiert der Stein. Im Schiff kann das Schaden machen. Lieber Leistung runter und neu ansetzen.</p></div>
+      <div class="fact"><strong>Quantanium</strong><p>Wird im Laderaum instabil. Wer zu langsam zur Raffinerie fliegt, verliert die Ladung oder das Schiff.</p></div>
+      <div class="fact"><strong>Piraten</strong><p>Volle Mining-Schiffe sind beliebte Ziele, besonders in Pyro. Für den Anfang in Stanton bleiben.</p></div>
+      <div class="fact"><strong>Hand-Mining in Höhlen</strong><p>Taschenlampe <kbd>T</kbd> an, Essen und Trinken mitnehmen. Manche Höhlen haben Tiere oder andere Spieler.</p></div>
+    </div>
+  </section>
+</section>
+
+<footer>
+  Zusammengestellt aus
+  <a href="https://starcitizenhelp.com/game-guides/keybinds" target="_blank" rel="noopener">starcitizenhelp.com</a>,
+  <a href="https://citizen-starter-guide.com/star-citizen-keybinds/" target="_blank" rel="noopener">citizen-starter-guide.com</a>,
+  <a href="https://citizen-starter-guide.com/star-citizen-mining-material-finder/" target="_blank" rel="noopener">Mining Material Finder</a>,
+  <a href="https://timesaver.gg/blog/star-citizen-mining-guide-alpha-4-10-1" target="_blank" rel="noopener">timesaver.gg</a> und dem
+  <a href="https://starcitizen.tools/Guide:Mining" target="_blank" rel="noopener">Star Citizen Wiki</a>.
+  Inoffizielle Fan-Seite, Angaben ohne Gewähr. Nicht verbunden mit Cloud Imperium Games oder Roberts Space Industries. Star Citizen® ist eine Marke von Cloud Imperium Rights LLC.
+</footer>
+</main>
 
 <script>
 (function () {
+  /* Ansichten per #hash */
+  var views = Array.prototype.slice.call(document.querySelectorAll('[data-view]'));
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs a'));
+  var names = views.map(function (v) { return v.dataset.view; });
+  function show() {
+    var h = (location.hash || '#start').slice(1);
+    if (names.indexOf(h) === -1) h = 'start';
+    views.forEach(function (v) { v.hidden = v.dataset.view !== h; });
+    tabs.forEach(function (a) {
+      if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch' };
+    document.title = titles[h];
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', show);
+  show();
+
+  /* Fortschritt Erste Schritte */
+  var KEY = 'sc-handbuch-steps';
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#steps input[type=checkbox]'));
+  function update() {
+    var done = 0;
+    boxes.forEach(function (b) {
+      var step = b.closest('.step');
+      step.classList.toggle('done', b.checked);
+      if (b.checked) done++;
+    });
+    document.getElementById('bar').style.width = (done / boxes.length * 100) + '%';
+    document.getElementById('progress-count').textContent = done + ' von ' + boxes.length + ' geschafft';
+  }
+  boxes.forEach(function (b) {
+    b.checked = !!saved[b.id];
+    b.addEventListener('change', function () {
+      saved[b.id] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+      update();
+    });
+  });
+  update();
+
+  /* Tastensuche */
   var q = document.getElementById('q');
   var rows = Array.prototype.slice.call(document.querySelectorAll('#grid .row'));
   var panels = Array.prototype.slice.call(document.querySelectorAll('#grid .panel'));
@@ -363,7 +754,7 @@ footer a { color: var(--accent); }
   var none = document.getElementById('none');
   function norm(s) { return s.toLowerCase().replace(/\s+/g, ' '); }
   rows.forEach(function (r) { r.dataset.t = norm(r.textContent); });
-  function apply() {
+  function filter() {
     var v = norm(q.value.trim());
     var shown = 0;
     rows.forEach(function (r) {
@@ -383,10 +774,9 @@ footer a { color: var(--accent); }
     none.hidden = shown > 0;
     count.textContent = v ? shown + ' Treffer' : rows.length + ' Belegungen';
   }
-  q.addEventListener('input', apply);
-  apply();
+  q.addEventListener('input', filter);
+  filter();
 })();
 </script>
-
 </body>
 </html>
