@@ -23,6 +23,7 @@
   --warn-soft: #f9dedc;
   --ok: #2c7a4b;
   --ok-soft: #dcefe3;
+  --mod: #8a3a8c;
   --f-display: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
   --f-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
@@ -34,13 +35,13 @@
   :root:not([data-theme="light"]) {
     --bg: #0c1218; --panel: #131b23; --ink: #e2e8ee; --muted: #8d9aa7; --line: #25313c;
     --accent: #f08a3c; --accent-soft: #3a2414; --key-bg: #1b252f; --key-edge: #3a4856;
-    --warn: #f2948c; --warn-soft: #3b1816; --ok: #7fd1a0; --ok-soft: #15301f; color-scheme: dark;
+    --warn: #f2948c; --warn-soft: #3b1816; --ok: #7fd1a0; --ok-soft: #15301f; --mod: #d99ce0; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0c1218; --panel: #131b23; --ink: #e2e8ee; --muted: #8d9aa7; --line: #25313c;
   --accent: #f08a3c; --accent-soft: #3a2414; --key-bg: #1b252f; --key-edge: #3a4856;
-  --warn: #f2948c; --warn-soft: #3b1816; --ok: #7fd1a0; --ok-soft: #15301f; color-scheme: dark;
+  --warn: #f2948c; --warn-soft: #3b1816; --ok: #7fd1a0; --ok-soft: #15301f; --mod: #d99ce0; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 72px; }
@@ -303,11 +304,27 @@ tr.rec th { color: var(--accent); }
 .ho-sticks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .ho-stick { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px; display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; }
 .ho-stick h3 { font-family: var(--f-display); font-size: 15px; letter-spacing: .2em; text-transform: uppercase; margin: 0; color: var(--muted); }
-.ho-stick svg { width: 100%; max-width: 300px; height: auto; display: block; }
+.ho-stick svg { width: 100%; max-width: 360px; height: auto; display: block; }
 .ho-body { fill: var(--key-bg); stroke: var(--key-edge); stroke-width: 2; }
 .ho-hot { cursor: pointer; outline: none; }
-.ho-hot .s { fill: var(--panel); stroke: var(--muted); stroke-width: 2; transition: fill .12s; }
-.ho-hot text { font: 600 10px var(--f-mono); fill: var(--ink); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.ho-hot .s { fill: var(--panel); stroke: var(--muted); stroke-width: 2.5; transition: fill .12s; }
+.ho-hot text { font: 700 13px var(--f-display); fill: var(--ink); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.ho-btns { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 6px; }
+.ho-btns button { font: 600 13px var(--f-display); padding: 5px 10px; border-radius: 6px; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.ho-btns button:hover { border-color: var(--accent); }
+.ho-btns button.sel { background: var(--accent); border-color: var(--accent); color: var(--panel); }
+.ho-btns button.match { border-color: var(--accent); background: var(--accent-soft); }
+.ho-sec { display: flex; flex-direction: column; gap: 6px; }
+.ho-sec + .ho-sec { border-top: 1px dashed var(--line); padding-top: 8px; }
+.ho-sec > i { font-style: normal; font: 600 11px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.ho-sec > i.m { color: var(--mod); }
+.ho-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 15px; line-height: 1.35; }
+.ho-row .fn { min-width: 0; }
+.ho-row .en { display: block; font-size: 12px; color: var(--muted); }
+.ho-row .how { flex: none; font: 600 11px var(--f-mono); color: var(--mod); border: 1px solid var(--mod); border-radius: 3px; padding: 0 5px; }
+.ho-row.danger { color: var(--warn); font-weight: 700; }
+.ho-row.hit { background: var(--accent-soft); border-radius: 4px; padding: 3px 6px; margin: -3px -6px; }
+.ho-hide-en .en { display: none !important; }
 .ho-hot:hover .s, .ho-hot:focus-visible .s { fill: var(--accent-soft); stroke: var(--accent); }
 .ho-hot.match .s { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 3; }
 .ho-hot.sel .s { fill: var(--accent); stroke: var(--accent); }
@@ -321,15 +338,15 @@ tr.rec th { color: var(--accent); }
 .ho-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; }
 .ho-cell { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; min-width: 0; background: var(--bg); }
 .ho-cell.hl { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
-.ho-cell > b { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.ho-cell > b { font-family: var(--f-display); font-size: 15px; letter-spacing: .04em; color: var(--accent); }
 .ho-fn { display: flex; flex-direction: column; gap: 1px; font-size: 14px; line-height: 1.35; }
 .ho-fn .en { font-size: 11.5px; color: var(--muted); }
 .ho-fn.danger { color: var(--warn); font-weight: 600; }
 .ho-fn.hit { background: var(--accent-soft); border-radius: 4px; padding: 2px 4px; margin: -2px -4px; }
 .ho-none { font-size: 13px; color: var(--muted); font-style: italic; }
 .tg { display: inline-block; font: 600 10px var(--f-mono); letter-spacing: .04em; padding: 0 5px; border-radius: 3px; margin-right: 3px; vertical-align: 1px; border: 1px solid transparent; white-space: nowrap; }
-.tg.mod { background: #a349a4; color: #fff; }
-.tg.how { border-color: #a349a4; color: #a349a4; }
+.tg.mod { background: var(--mod); color: var(--panel); }
+.tg.how { border-color: var(--mod); color: var(--mod); }
 .tg.mode { background: var(--key-bg); color: var(--ink); border-color: var(--key-edge); }
 .tg.role { background: var(--ok-soft); color: var(--ok); }
 .ho-results { display: flex; flex-direction: column; gap: 6px; }
@@ -914,6 +931,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
         <button class="chip" type="button" data-set="schiff" aria-pressed="true">Schiff</button>
         <button class="chip" type="button" data-set="boden" aria-pressed="false">Zu Fuß &amp; Fahrzeug</button>
       </div>
+      <div class="chips" id="horole" role="group" aria-label="Rolle wählen"></div>
+      <label class="check" style="font-family:var(--f-body);font-weight:500;font-size:14px"><input type="checkbox" id="hoen"> Englische Begriffe zeigen</label>
     </div>
     <div class="search">
       <input id="hoq" type="search" placeholder="Funktion suchen, z. B. „Quantensprung“, „Türen“ oder „landing“" aria-label="Funktion am Stick suchen">
@@ -931,10 +950,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <div class="ho-results" id="hores" hidden></div>
 
   <div class="ho-sticks">
-    <div class="ho-stick"><h3>Links</h3><svg id="hoL" viewBox="0 0 260 410" role="group" aria-label="Linker Stick"></svg></div>
-    <div class="ho-stick"><h3>Rechts</h3><svg id="hoR" viewBox="0 0 260 410" role="group" aria-label="Rechter Stick"></svg></div>
+    <div class="ho-stick"><h3>Links</h3><svg id="hoL" viewBox="0 0 260 410" role="group" aria-label="Linker Stick"></svg><div class="ho-btns" id="hobL"></div></div>
+    <div class="ho-stick"><h3>Rechts</h3><svg id="hoR" viewBox="0 0 260 410" role="group" aria-label="Rechter Stick"></svg><div class="ho-btns" id="hobR"></div></div>
   </div>
-  <p class="ho-hint">Schematische Darstellung. Die Namen (L1, R2 …) entsprechen der Buzzzkiller-Karte.</p>
+  <p class="ho-hint">Schematische Darstellung. Die Namen entsprechen der Buzzzkiller-Karte, z. B. H2 am rechten Stick = „4-Way Hat R2“.</p>
 
   <div class="ho-detail" id="hodetail" aria-live="polite"></div>
 </section>
@@ -1693,7 +1712,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 
   /* Sticks zeichnen */
   var BODY = 'M70 22 Q150 0 206 40 Q244 84 228 152 Q218 204 204 244 Q192 284 192 322 L192 352 Q192 366 176 366 L96 366 Q80 366 80 352 L80 312 Q60 262 54 202 Q44 122 50 72 Q55 32 70 22 Z';
-  var hots = { L: {}, R: {} };
+  var hots = { L: {}, R: {} }, btns = { L: {}, R: {} };
   ['L', 'R'].forEach(function (side) {
     var svg = $('ho' + side);
     var g = el('g', side === 'L' ? { transform: 'translate(260 0) scale(-1 1)' } : {}, svg);
@@ -1702,25 +1721,69 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     CTRL.forEach(function (c) {
       var x = side === 'L' ? 260 - c.x : c.x, y = c.y;
       var h = el('g', { class: 'ho-hot', tabindex: '0', role: 'button', 'aria-label': name(c, side) }, svg);
-      if (c.id === 'A') { el('circle', { class: 's', cx: x, cy: y, r: 17 }, h); el('circle', { cx: x, cy: y, r: 11, fill: 'none', stroke: 'var(--key-edge)', 'stroke-width': 1.5 }, h); }
-      else if (c.t === 'hat') el('rect', { class: 's', x: x - 16, y: y - 16, width: 32, height: 32, rx: 7 }, h);
-      else if (c.t === 'w2' || c.t === 'sw') el('rect', { class: 's', x: x - 11, y: y - 19, width: 22, height: 38, rx: 11 }, h);
-      else if (c.t === 'ft' || c.t === 'tr' || c.t === 'br') el('rect', { class: 's', x: x - 20, y: y - 12, width: 40, height: 24, rx: 6 }, h);
-      else if (c.t === 'ax') el('rect', { class: 's', x: x - 24, y: y - 11, width: 48, height: 22, rx: 11 }, h);
-      else el('circle', { class: 's', cx: x, cy: y, r: 15 }, h);
+      if (c.id === 'A') el('circle', { class: 's', cx: x, cy: y, r: 20 }, h);
+      else if (c.t === 'hat') el('rect', { class: 's', x: x - 20, y: y - 20, width: 40, height: 40, rx: 8 }, h);
+      else if (c.t === 'w2' || c.t === 'sw') el('rect', { class: 's', x: x - 17, y: y - 22, width: 34, height: 44, rx: 12 }, h);
+      else if (c.t === 'ft' || c.t === 'tr' || c.t === 'br') el('rect', { class: 's', x: x - 26, y: y - 15, width: 52, height: 30, rx: 7 }, h);
+      else if (c.t === 'ax') el('rect', { class: 's', x: x - 30, y: y - 14, width: 60, height: 28, rx: 14 }, h);
+      else el('circle', { class: 's', cx: x, cy: y, r: 19 }, h);
       var tx = el('text', { x: x, y: y }, h);
       tx.textContent = c.c;
       function go() { pick(side, c.id); }
       h.addEventListener('click', go);
       h.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
       hots[side][c.id] = h;
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = name(c, side).replace('4-Way ', '').replace('Analog ', '');
+      b.addEventListener('click', go);
+      $('hob' + side).appendChild(b);
+      btns[side][c.id] = b;
     });
   });
+  function mark(cls, test) {
+    ['L', 'R'].forEach(function (s) {
+      for (var k in hots[s]) { var on = test(s, k); hots[s][k].classList.toggle(cls, on); btns[s][k].classList.toggle(cls, on); }
+    });
+  }
+
+  /* Rollen-Filter */
+  var ROLES = { schiff: [['pilot', 'Pilot'], ['alle', 'Alles inkl. Turm']], boden: [['fu', 'Zu Fuß / EVA'], ['fz', 'Fahrzeug'], ['tu', 'Turm']] };
+  var role = 'pilot';
+  var MODES = ['g', 'p', 'mi', 'q', 'sc', 'mn', 'sv'];
+  var MODE_NAME = { g: 'Gun', p: 'Präzisions', mi: 'Raketen', q: 'Quantum', sc: 'Scan', mn: 'Mining', sv: 'Salvage' };
+  function visible(tags) {
+    var has = function (t) { return tags.indexOf(t) !== -1; };
+    var mode = MODES.some(has);
+    if (set === 'schiff') return role === 'alle' || !has('tu');
+    if (role === 'fu') return has('fu') || (!has('fz') && !has('tu') && !mode);
+    if (role === 'fz') return has('fz') || (!has('fu') && !has('tu'));
+    return has('tu') || (!has('fu') && !has('fz') && !mode);
+  }
+  function roleFor(tags) {
+    if (set === 'schiff') return tags.indexOf('tu') !== -1 ? 'alle' : role;
+    if (tags.indexOf('fu') !== -1) return 'fu';
+    if (tags.indexOf('fz') !== -1) return 'fz';
+    if (tags.indexOf('tu') !== -1) return 'tu';
+    return role;
+  }
+  var roleBox = $('horole');
+  function roleChips() {
+    roleBox.innerHTML = '';
+    ROLES[set].forEach(function (r) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'chip'; b.textContent = r[1];
+      b.setAttribute('aria-pressed', r[0] === role ? 'true' : 'false');
+      b.addEventListener('click', function () { role = r[0]; roleChips(); render(); });
+      roleBox.appendChild(b);
+    });
+  }
+  $('hoen').addEventListener('change', function () { detail.classList.toggle('ho-hide-en', !this.checked); res.classList.toggle('ho-hide-en', !this.checked); });
+  detail.classList.add('ho-hide-en'); res.classList.add('ho-hide-en');
 
   function ctrl(id) { for (var i = 0; i < CTRL.length; i++) if (CTRL[i].id === id) return CTRL[i]; }
   function pick(side, id, slot, key, scroll) {
     sel = { side: side, id: id }; hitSlot = slot || null; hitKey = key || null;
-    ['L', 'R'].forEach(function (s) { for (var k in hots[s]) hots[s][k].classList.toggle('sel', s === side && k === id); });
+    mark('sel', function (s, k) { return s === side && k === id; });
     render();
     if (scroll !== false && window.innerWidth < 900) detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -1734,13 +1797,33 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     var cls = c.t === 'hat' ? 'ho-cross' : c.t === 'w2' ? 'ho-cross hat-w2' : 'ho-list';
     var html = '<h3>' + name(c, sel.side) + '<small>' + SIDE[sel.side] + ' · ' + (set === 'schiff' ? 'Schiff' : 'Zu Fuß & Fahrzeug') + '</small></h3><div class="' + cls + '">';
     slots.forEach(function (s) {
-      var list = d[s[0]] || [];
+      var list = (d[s[0]] || []).filter(function (str) { return visible(parse(str).tags); });
       html += '<div class="ho-cell' + (hitSlot === s[0] ? ' hl' : '') + '"' + (c.t === 'hat' || c.t === 'w2' ? ' style="grid-area:' + s[0] + '"' : '') + '><b>' + s[1] + '</b>';
-      if (!list.length) html += '<span class="ho-none">nicht belegt</span>';
+      if (!list.length) html += '<span class="ho-none">' + ((d[s[0]] || []).length ? 'in dieser Rolle nicht belegt' : 'nicht belegt') + '</span>';
+      var groups = {}, order = ['n', 'M'].concat(MODES);
       list.forEach(function (str) {
         var f = parse(str);
-        var hit = hitSlot === s[0] && hitKey === str;
-        html += '<span class="ho-fn' + (f.tags.indexOf('!') !== -1 ? ' danger' : '') + (hit ? ' hit' : '') + '"><span>' + tagsHtml(f.tags) + f.de + '</span><span class="en">' + f.en + '</span></span>';
+        var m = MODES.filter(function (x) { return f.tags.indexOf(x) !== -1; })[0];
+        var key = m || (f.tags.indexOf('M') !== -1 ? 'M' : 'n');
+        (groups[key] = groups[key] || []).push({ f: f, str: str, inMode: !!m });
+      });
+      var multi = Object.keys(groups).length > 1;
+      order.forEach(function (k) {
+        if (!groups[k]) return;
+        html += '<div class="ho-sec">';
+        if (multi || k !== 'n') html += k === 'n' ? '<i>Normal</i>' : k === 'M' ? '<i class="m">Mit Modifier · L3 halten</i>' : '<i>Nur im ' + MODE_NAME[k] + '-Modus</i>';
+        groups[k].forEach(function (e) {
+          var t = e.f.tags, how = [];
+          if (e.inMode && t.indexOf('M') !== -1) how.push('M +');
+          if (t.indexOf('T/H') !== -1) how.push('tippen/halten');
+          else { if (t.indexOf('H') !== -1) how.push('halten'); if (t.indexOf('T') !== -1) how.push('tippen'); }
+          if (t.indexOf('D') !== -1) how.push('2× tippen');
+          if (set === 'schiff' && role === 'alle' && t.indexOf('tu') !== -1) how.push('Turm');
+          var hit = hitSlot === s[0] && hitKey === e.str;
+          html += '<div class="ho-row' + (t.indexOf('!') !== -1 ? ' danger' : '') + (hit ? ' hit' : '') + '"><span class="fn">' + e.f.de + '<span class="en">' + e.f.en + '</span></span>' +
+            (how.length ? '<span class="how">' + how.join(' ') + '</span>' : '') + '</div>';
+        });
+        html += '</div>';
       });
       html += '</div>';
     });
@@ -1750,7 +1833,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   /* Suche */
   function search() {
     var v = q.value.trim().toLowerCase();
-    ['L', 'R'].forEach(function (s) { for (var k in hots[s]) hots[s][k].classList.remove('match'); });
+    mark('match', function () { return false; });
     if (v.length < 2) { res.hidden = true; res.innerHTML = ''; cnt.textContent = ''; return; }
     var found = [];
     ['L', 'R'].forEach(function (side) {
@@ -1764,7 +1847,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
         });
       });
     });
-    found.forEach(function (r) { hots[r.side][r.c.id].classList.add('match'); });
+    mark('match', function (s, k) { return found.some(function (r) { return r.side === s && r.c.id === k; }); });
     cnt.textContent = found.length + ' Treffer';
     res.hidden = false;
     if (!found.length) { res.innerHTML = '<p class="empty">Nichts gefunden. Versuch es auf Englisch oder mit einem anderen Wort.</p>'; return; }
@@ -1773,7 +1856,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'ho-res';
       b.innerHTML = '<span>' + tagsHtml(r.f.tags) + r.f.de + '<span class="en">' + r.f.en + '</span></span><span class="where">' + name(r.c, r.side) + ' · ' + r.slot[1] + '</span>';
-      b.addEventListener('click', function () { pick(r.side, r.c.id, r.slot[0], r.str); });
+      b.addEventListener('click', function () { var nr = roleFor(r.f.tags); if (nr !== role) { role = nr; roleChips(); } pick(r.side, r.c.id, r.slot[0], r.str); });
       res.appendChild(b);
     });
   }
@@ -1784,9 +1867,11 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       set = b.dataset.set;
       Array.prototype.forEach.call(all, function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
       hitSlot = hitKey = null;
+      role = ROLES[set][0][0]; roleChips();
       render(); search();
     });
   });
+  roleChips();
   render();
 })();
 </script>
