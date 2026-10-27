@@ -364,7 +364,7 @@ tr.rec th { color: var(--accent); }
 :root { --st1: #d9dee3; --st2: #b3bbc3; --st3: #8a949e; --st4: #5f6973; --st5: #363e46; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --st1: #7b8691; --st2: #626d78; --st3: #4b555f; --st4: #353e47; --st5: #222930; } }
 :root[data-theme="dark"] { --st1: #7b8691; --st2: #626d78; --st3: #4b555f; --st4: #353e47; --st5: #222930; }
-.wrap:has(#view-hotas:not([hidden])) { max-width: 1480px; }
+.wrap:has(#view-hosas:not([hidden])) { max-width: 1480px; }
 .hb { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 16px; align-items: start; }
 .hb-cards { columns: 3 250px; column-gap: 10px; min-width: 0; }
 @media (max-width: 1250px) { .hb { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); } .hb-cards { columns: 2 240px; } }
@@ -426,8 +426,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <a href="#tasten" role="listitem">Tasten</a>
       <a href="#mining" role="listitem">Mining</a>
       <a href="#glossar" role="listitem">Glossar</a>
-      <a href="#hotas" role="listitem">HOTAS</a>
       <a href="#training" role="listitem">Training <span class="beta">Beta</span></a>
+      <a href="#hosas" role="listitem">HOSAS</a>
     </div>
   </div>
 </nav>
@@ -761,7 +761,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <div class="fact"><strong>Belegung sichern</strong><p>Patches setzen Belegungen manchmal zurück. Nach Änderungen in der Konsole (<kbd>^</kbd>) exportieren: <code style="font-family:var(--f-mono);font-size:12.5px">pp_rebindkeys export all meinprofil</code></p></div>
       <div class="fact"><strong>Im Spiel nachsehen</strong><p>ESC → Optionen → Keybindings hat eine Suche. Bei „prüfen“-Einträgen dort kontrollieren.</p></div>
       <div class="fact"><strong>Waffen gehen nicht?</strong><p>Meist ist <kbd>P</kbd> aus oder du bist im NAV-Modus. <kbd>B</kbd> halten bringt dich zurück in SCM.</p></div>
-      <div class="fact"><strong>Joystick oder HOTAS?</strong><p>Leg dafür ein eigenes Profil an, statt das Tastaturprofil umzubauen.</p></div>
+      <div class="fact"><strong>Joystick, HOTAS oder HOSAS?</strong><p>Leg dafür ein eigenes Profil an, statt das Tastaturprofil umzubauen.</p></div>
     </div>
   </section>
 </section>
@@ -964,11 +964,11 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   </div>
 </section>
 
-<!-- ============ HOTAS ============ -->
-<section class="view" id="view-hotas" data-view="hotas" hidden>
+<!-- ============ HOSAS ============ -->
+<section class="view" id="view-hosas" data-view="hosas" hidden>
   <div class="head">
     <div class="stamp"><span>Dual Virpil Alpha Prime</span><span>Buzzzkiller-Profil</span><span>Stand 5. Aug 2026 · Alpha 4.10</span></div>
-    <h1>HOTAS</h1>
+    <h1>HOSAS</h1>
     <p class="lede">Tipp auf einen Knopf am Stick und sieh, was er in jeder Richtung macht. Oder such nach einer Funktion und finde heraus, wo sie liegt.</p>
     <div class="ho-bar">
       <div class="chips" id="hoset" role="group" aria-label="Belegung wählen">
@@ -1012,7 +1012,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <a href="https://citizen-starter-guide.com/star-citizen-mining-material-finder/" target="_blank" rel="noopener">Mining Material Finder</a>,
   <a href="https://timesaver.gg/blog/star-citizen-mining-guide-alpha-4-10-1" target="_blank" rel="noopener">timesaver.gg</a> und dem
   <a href="https://starcitizen.tools/Guide:Mining" target="_blank" rel="noopener">Star Citizen Wiki</a>.
-  HOTAS-Belegung: Dual-Virpil-Alpha-Profil von <a href="https://www.youtube.com/buzzzkiller" target="_blank" rel="noopener">Buzzzkiller</a> (Vorlage u/yogidragon), Stand 5. Aug 2026.
+  HOSAS-Belegung: Dual-Virpil-Alpha-Profil von <a href="https://www.youtube.com/buzzzkiller" target="_blank" rel="noopener">Buzzzkiller</a> (Vorlage u/yogidragon), Stand 5. Aug 2026.
   Inoffizielle Fan-Seite, Angaben ohne Gewähr. Nicht verbunden mit Cloud Imperium Games oder Roberts Space Industries. Star Citizen® ist eine Marke von Cloud Imperium Rights LLC.
 </footer>
 </main>
@@ -1025,13 +1025,14 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   var names = views.map(function (v) { return v.dataset.view; });
   function show() {
     var h = (location.hash || '#start').slice(1);
+    if (h === 'hotas') h = 'hosas';
     if (names.indexOf(h) === -1) h = 'start';
     views.forEach(function (v) { v.hidden = v.dataset.view !== h; });
     tabs.forEach(function (a) {
       if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     });
-    var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', glossar: 'Glossar · SC Handbuch', training: 'Training · SC Handbuch', hotas: 'HOTAS · SC Handbuch' };
+    var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', glossar: 'Glossar · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
     document.title = titles[h];
     window.scrollTo(0, 0);
     document.dispatchEvent(new CustomEvent('viewchange', { detail: h }));
@@ -1901,7 +1902,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       bar(); render();
     });
   });
-  var view = $('view-hotas');
+  var view = $('view-hosas');
   view.classList.add('ho-hide-en');
   $('hoen').addEventListener('change', function () { view.classList.toggle('ho-hide-en', !this.checked); });
   $('hom').addEventListener('change', function () { showM = this.checked; render(); });
