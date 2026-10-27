@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Die wichtigsten Standard-Tasten für Star-Citizen-Einsteiger (Alpha 4.10, QWERTZ): Top 10, Abläufe für Start, Quantensprung und Landung, durchsuchbare Liste.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style><title>Star Citizen Einsteiger-Tasten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: Flughandbuch-Stil – Kopf mit Patch-Stempel, Top-Tasten-Raster, dann Abläufe und Kategorie-Panels in einem 2-spaltigen Raster */
+:root {
+  --bg: #eceff2;
+  --panel: #ffffff;
+  --ink: #13212d;
+  --muted: #586775;
+  --line: #d2d9e0;
+  --accent: #c85a14;
+  --accent-soft: #f7e3d4;
+  --key-bg: #f6f8fa;
+  --key-edge: #b8c2cc;
+  --warn: #b3261e;
+  --warn-soft: #f9dedc;
+  --f-display: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1218; --panel: #131b23; --ink: #e2e8ee; --muted: #8d9aa7; --line: #25313c;
+    --accent: #f08a3c; --accent-soft: #3a2414; --key-bg: #1b252f; --key-edge: #3a4856;
+    --warn: #f2948c; --warn-soft: #3b1816; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1218; --panel: #131b23; --ink: #e2e8ee; --muted: #8d9aa7; --line: #25313c;
+  --accent: #f08a3c; --accent-soft: #3a2414; --key-bg: #1b252f; --key-edge: #3a4856;
+  --warn: #f2948c; --warn-soft: #3b1816; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5;
+}
+.wrap {
+  max-width: 1120px; margin: 0 auto;
+  padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 36px;
+}
+header { display: flex; flex-direction: column; gap: 12px; }
+.stamp {
+  font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); display: flex; flex-wrap: wrap; gap: 6px 16px;
+}
+h1 {
+  font-family: var(--f-display); font-weight: 700; font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -.01em;
+}
+.lede { margin: 0; max-width: 65ch; color: var(--muted); }
+.search { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.search input {
+  flex: 1 1 260px; min-width: 0; font: inherit; padding: 10px 14px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+}
+.search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.search .count { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+
+h2 {
+  font-family: var(--f-display); font-weight: 600; font-size: 13px; letter-spacing: .14em;
+  text-transform: uppercase; margin: 0 0 12px; color: var(--muted);
+  display: flex; align-items: center; gap: 10px;
+}
+h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+kbd {
+  font-family: var(--f-mono); font-weight: 600; font-size: 12.5px; display: inline-block;
+  min-width: 26px; text-align: center; padding: 2px 7px; border-radius: 5px;
+  background: var(--key-bg); color: var(--ink);
+  border: 1px solid var(--key-edge); border-bottom-width: 3px; white-space: nowrap;
+}
+.plus { color: var(--muted); font-size: 12px; margin: 0 2px; }
+.mod {
+  font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--accent); background: var(--accent-soft); padding: 1px 6px; border-radius: 3px; margin-left: 4px;
+  white-space: nowrap;
+}
+
+/* Top-Tasten */
+.top { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+.top .card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.top .keys { min-height: 30px; display: flex; align-items: center; flex-wrap: wrap; gap: 2px; }
+.top .keys kbd { font-size: 15px; padding: 3px 9px; }
+.top .what { font-weight: 600; }
+.top .why { font-size: 13px; color: var(--muted); }
+
+/* Abläufe */
+.flows { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.flow { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px; min-width: 0; }
+.flow h3 { font-family: var(--f-display); font-size: 19px; margin: 0 0 12px; font-weight: 600; }
+.flow ol { margin: 0; padding: 0; list-style: none; counter-reset: s; display: flex; flex-direction: column; gap: 10px; }
+.flow li { counter-increment: s; display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: start; }
+.flow li::before {
+  content: counter(s); font-family: var(--f-mono); font-size: 12px; font-weight: 600;
+  width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center;
+  border: 1.5px solid var(--accent); color: var(--accent);
+}
+
+/* Kategorien */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 16px; align-items: start; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 18px 10px; min-width: 0; }
+.panel h3 {
+  font-family: var(--f-display); font-size: 18px; font-weight: 600; margin: 10px 0 4px;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+}
+.panel h3 small { font-family: var(--f-mono); font-size: 11px; color: var(--muted); font-weight: 500; letter-spacing: .05em; }
+.row {
+  display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center;
+  padding: 8px 0; border-top: 1px solid var(--line);
+}
+.row:first-of-type { border-top: 0; }
+.row .k { text-align: right; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 2px; }
+.row .a { min-width: 0; }
+.row .note { display: block; font-size: 12.5px; color: var(--muted); }
+.row.check .a::after {
+  content: "prüfen"; font-family: var(--f-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+  margin-left: 6px; padding: 1px 5px; border-radius: 3px; border: 1px dashed var(--muted); color: var(--muted);
+}
+.panel.danger { border-color: var(--warn); }
+.panel.danger h3 { color: var(--warn); }
+
+.tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.tip { border-left: 2px solid var(--accent); padding: 2px 0 2px 14px; }
+.tip strong { display: block; font-family: var(--f-display); font-size: 16px; margin-bottom: 2px; }
+.tip p { margin: 0; color: var(--muted); font-size: 14px; }
+code { font-family: var(--f-mono); font-size: 12.5px; background: var(--key-bg); padding: 1px 5px; border-radius: 3px; word-break: break-all; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--muted); align-items: center; }
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+footer a { color: var(--accent); }
+.empty { color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header>
+    <div class="stamp"><span>Standardbelegung Tastatur &amp; Maus</span><span>Stand Alpha 4.10.2</span><span>Oktober 2026</span></div>
+    <h1>Star Citizen Einsteiger-Tasten</h1>
+    <p class="lede">Die Tasten, die du in den ersten Stunden wirklich brauchst: zu Fuß, im Cockpit, beim Quantensprung und wenn es brenzlig wird. Belegungen ändern sich mit Patches, deshalb sind unsichere Einträge markiert.</p>
+    <div class="legend">
+      <span>Tasten für <strong>QWERTZ</strong> (deutsche Tastatur): Y und Z gegenüber englischen Guides getauscht</span>
+      <span><kbd>R-Alt</kbd> = rechte Alt-Taste (AltGr)</span>
+      <span><kbd>L-Alt</kbd> = linke Alt-Taste</span>
+      <span><span class="mod">halten</span> = gedrückt halten</span>
+      <span><span class="mod" style="border:1px dashed var(--muted);background:none;color:var(--muted)">prüfen</span> = Quellen widersprechen sich</span>
+    </div>
+    <div class="search">
+      <input id="q" type="search" placeholder="Aktion oder Taste suchen, z. B. „landen“ oder „F1“" aria-label="Tastenbelegung suchen">
+      <span class="count" id="count"></span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Die 10 wichtigsten Tasten</h2>
+    <div class="top">
+      <div class="card"><div class="keys"><kbd>F</kbd></div><div class="what">Interaktion</div><div class="why">Türen, Sitze, Aufzüge, Terminals, Gegenstände. Halten zeigt alle Optionen.</div></div>
+      <div class="card"><div class="keys"><kbd>F1</kbd></div><div class="what">mobiGlas</div><div class="why">Verträge, Inventar, Schiff anfordern (ASOP).</div></div>
+      <div class="card"><div class="keys"><kbd>F2</kbd></div><div class="what">Sternenkarte</div><div class="why">Ziel für den Quantensprung setzen.</div></div>
+      <div class="card"><div class="keys"><kbd>I</kbd></div><div class="what">Inventar</div><div class="why">Ausrüstung, Rüstung, Waffen anlegen.</div></div>
+      <div class="card"><div class="keys"><kbd>R-Alt</kbd><span class="plus">+</span><kbd>R</kbd></div><div class="what">Flight Ready</div><div class="why">Schiff hochfahren. Ohne das passiert im Cockpit nichts.</div></div>
+      <div class="card"><div class="keys"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>N</kbd></div><div class="what">Start-/Landeerlaubnis</div><div class="why">Funkt die Flugkontrolle an, öffnet den Hangar.</div></div>
+      <div class="card"><div class="keys"><kbd>N</kbd></div><div class="what">Fahrwerk / Landemodus</div><div class="why">Halten für automatisches Landen.</div></div>
+      <div class="card"><div class="keys"><kbd>B</kbd><span class="mod">halten</span></div><div class="what">Master Mode wechseln</div><div class="why">SCM (Kampf) ↔ NAV (Reise, Quantum).</div></div>
+      <div class="card"><div class="keys"><kbd>LMB</kbd><span class="mod">halten</span></div><div class="what">Quantensprung</div><div class="why">Im NAV-Modus mit gesetzter Route: aufladen und springen.</div></div>
+      <div class="card"><div class="keys"><kbd>Z</kbd><span class="mod">halten</span></div><div class="what">Sitz verlassen</div><div class="why">Aufstehen aus Pilotensitz oder Fahrzeug.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Abläufe Schritt für Schritt</h2>
+    <div class="flows">
+      <div class="flow">
+        <h3>Vom Hangar ins All</h3>
+        <ol>
+          <li><span><kbd>F1</kbd> mobiGlas oder ASOP-Terminal: Schiff anfordern, zum Hangar laufen.</span></li>
+          <li><span>Am Pilotensitz <kbd>F</kbd> halten und „Sitz einnehmen“ wählen.</span></li>
+          <li><span><kbd>R-Alt</kbd><span class="plus">+</span><kbd>R</kbd> Flight Ready, Systeme fahren hoch.</span></li>
+          <li><span><kbd>L-Alt</kbd><span class="plus">+</span><kbd>N</kbd> Starterlaubnis, Hangartore öffnen sich.</span></li>
+          <li><span><kbd>Leertaste</kbd> abheben, <kbd>N</kbd> Fahrwerk einfahren, mit <kbd>W</kbd> raus.</span></li>
+        </ol>
+      </div>
+      <div class="flow">
+        <h3>Quantensprung</h3>
+        <ol>
+          <li><span>Aus der Sperrzone um die Station fliegen (Hinweis im HUD).</span></li>
+          <li><span><kbd>F2</kbd> Sternenkarte: Ziel anklicken, „Route setzen“.</span></li>
+          <li><span><kbd>B</kbd> <span class="mod">halten</span> bis das HUD „NAV“ zeigt.</span></li>
+          <li><span>Schiff auf die Zielmarkierung ausrichten, Kalibrierung abwarten.</span></li>
+          <li><span><kbd>LMB</kbd> <span class="mod">halten</span> zum Aufladen und Springen.</span></li>
+        </ol>
+      </div>
+      <div class="flow">
+        <h3>Landen an Station oder Stadt</h3>
+        <ol>
+          <li><span>Nahe am Ziel <kbd>L-Alt</kbd><span class="plus">+</span><kbd>N</kbd>: Landeerlaubnis anfragen.</span></li>
+          <li><span>Der zugewiesene Hangar oder Landeplatz wird im HUD markiert.</span></li>
+          <li><span>Langsam anfliegen, <kbd>N</kbd> Fahrwerk ausfahren.</span></li>
+          <li><span>Über dem Platz <kbd>N</kbd> <span class="mod">halten</span> für Autolandung, oder mit <kbd>Strg</kbd> sanft absenken.</span></li>
+          <li><span><kbd>R-Alt</kbd><span class="plus">+</span><kbd>R</kbd> herunterfahren, <kbd>Z</kbd> <span class="mod">halten</span> aufstehen.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Alle Tasten nach Situation</h2>
+    <div class="grid" id="grid">
+
+      <div class="panel">
+        <h3>Zu Fuß <small>FPS</small></h3>
+        <div class="row"><span class="a">Bewegen</span><span class="k"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></div>
+        <div class="row"><span class="a">Sprinten</span><span class="k"><kbd>L-Shift</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Springen</span><span class="k"><kbd>Leertaste</kbd></span></div>
+        <div class="row check"><span class="a">Ducken<span class="note">je nach Quelle C oder Strg</span></span><span class="k"><kbd>C</kbd><span class="plus">/</span><kbd>L-Strg</kbd></span></div>
+        <div class="row check"><span class="a">Hinlegen<span class="note">je nach Quelle Strg oder X</span></span><span class="k"><kbd>L-Strg</kbd><span class="plus">/</span><kbd>X</kbd></span></div>
+        <div class="row"><span class="a">Um die Ecke lehnen</span><span class="k"><kbd>Q</kbd><kbd>E</kbd></span></div>
+        <div class="row"><span class="a">Frei umsehen</span><span class="k"><kbd>Y</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Taschenlampe</span><span class="k"><kbd>T</kbd></span></div>
+        <div class="row"><span class="a">Helm auf/ab</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>H</kbd></span></div>
+      </div>
+
+      <div class="panel">
+        <h3>Waffen zu Fuß <small>FPS</small></h3>
+        <div class="row"><span class="a">Schießen</span><span class="k"><kbd>LMB</kbd></span></div>
+        <div class="row"><span class="a">Zielen (Kimme &amp; Korn)</span><span class="k"><kbd>RMB</kbd></span></div>
+        <div class="row"><span class="a">Nachladen</span><span class="k"><kbd>R</kbd></span></div>
+        <div class="row"><span class="a">Waffe wegstecken</span><span class="k"><kbd>R</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Waffe wählen<span class="note">Primär, Sekundär, Seitenwaffe</span></span><span class="k"><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd></span></div>
+        <div class="row"><span class="a">Feuermodus wechseln</span><span class="k"><kbd>B</kbd></span></div>
+        <div class="row"><span class="a">Granate</span><span class="k"><kbd>G</kbd></span></div>
+        <div class="row"><span class="a">Medpen benutzen</span><span class="k"><kbd>C</kbd></span></div>
+      </div>
+
+      <div class="panel">
+        <h3>Menüs &amp; Kommunikation <small>UI</small></h3>
+        <div class="row"><span class="a">mobiGlas</span><span class="k"><kbd>F1</kbd></span></div>
+        <div class="row"><span class="a">Sternenkarte</span><span class="k"><kbd>F2</kbd></span></div>
+        <div class="row"><span class="a">Inventar<span class="note">halten: Plündern-Ansicht</span></span><span class="k"><kbd>I</kbd></span></div>
+        <div class="row"><span class="a">Kamera wechseln (3rd Person)</span><span class="k"><kbd>F4</kbd></span></div>
+        <div class="row"><span class="a">Kontakte / Commlink</span><span class="k"><kbd>F11</kbd></span></div>
+        <div class="row"><span class="a">Chat ein/aus</span><span class="k"><kbd>F12</kbd></span></div>
+        <div class="row"><span class="a">Chat schreiben / senden</span><span class="k"><kbd>Enter</kbd></span></div>
+        <div class="row"><span class="a">Sprachchat (Push-to-Talk)</span><span class="k"><kbd>Num +</kbd><span class="mod">halten</span></span></div>
+      </div>
+
+      <div class="panel">
+        <h3>Schiff steuern <small>Flug</small></h3>
+        <div class="row"><span class="a">Schub vor / zurück</span><span class="k"><kbd>W</kbd><kbd>S</kbd></span></div>
+        <div class="row"><span class="a">Seitlich gleiten</span><span class="k"><kbd>A</kbd><kbd>D</kbd></span></div>
+        <div class="row"><span class="a">Hoch / runter gleiten</span><span class="k"><kbd>Leertaste</kbd><kbd>L-Strg</kbd></span></div>
+        <div class="row"><span class="a">Rollen</span><span class="k"><kbd>Q</kbd><kbd>E</kbd></span></div>
+        <div class="row"><span class="a">Nicken &amp; Gieren</span><span class="k"><kbd>Maus</kbd></span></div>
+        <div class="row"><span class="a">Boost</span><span class="k"><kbd>L-Shift</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Raumbremse</span><span class="k"><kbd>X</kbd></span></div>
+        <div class="row"><span class="a">Gekoppelt / Entkoppelt</span><span class="k"><kbd>C</kbd></span></div>
+        <div class="row"><span class="a">Tempomat (Cruise)</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>C</kbd></span></div>
+        <div class="row check"><span class="a">Geschwindigkeitsbegrenzer</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>Mausrad</kbd></span></div>
+        <div class="row"><span class="a">Umsehen im Cockpit</span><span class="k"><kbd>Y</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Nach hinten schauen</span><span class="k"><kbd>,</kbd><span class="mod">halten</span></span></div>
+      </div>
+
+      <div class="panel">
+        <h3>Schiff: Start, Landung, Systeme <small>Flug</small></h3>
+        <div class="row"><span class="a">Flight Ready (hoch-/runterfahren)</span><span class="k"><kbd>R-Alt</kbd><span class="plus">+</span><kbd>R</kbd></span></div>
+        <div class="row"><span class="a">Start-/Landeerlaubnis (ATC)</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>N</kbd></span></div>
+        <div class="row"><span class="a">Fahrwerk / Landemodus</span><span class="k"><kbd>N</kbd></span></div>
+        <div class="row"><span class="a">Autolandung</span><span class="k"><kbd>N</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">VTOL umschalten</span><span class="k"><kbd>K</kbd></span></div>
+        <div class="row"><span class="a">Türen &amp; Luken ver-/entriegeln</span><span class="k"><kbd>R-Alt</kbd><span class="plus">+</span><kbd>K</kbd></span></div>
+        <div class="row"><span class="a">Scheinwerfer</span><span class="k"><kbd>L</kbd></span></div>
+        <div class="row"><span class="a">Energie: alles / Antrieb / Schilde / Waffen</span><span class="k"><kbd>U</kbd><kbd>I</kbd><kbd>O</kbd><kbd>P</kbd></span></div>
+        <div class="row"><span class="a">Master Mode SCM ↔ NAV</span><span class="k"><kbd>B</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Quantensprung (in NAV)</span><span class="k"><kbd>LMB</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Sitz verlassen</span><span class="k"><kbd>Z</kbd><span class="mod">halten</span></span></div>
+      </div>
+
+      <div class="panel">
+        <h3>Schiffskampf <small>nur in SCM</small></h3>
+        <div class="row"><span class="a">Waffengruppe 1 / 2 feuern</span><span class="k"><kbd>LMB</kbd><kbd>RMB</kbd></span></div>
+        <div class="row"><span class="a">Ziel im Blickfeld wechseln<span class="note">halten: Auto-Zielwahl</span></span><span class="k"><kbd>T</kbd></span></div>
+        <div class="row"><span class="a">Angreifer / Feinde / Freunde durchschalten</span><span class="k"><kbd>4</kbd><kbd>5</kbd><kbd>6</kbd></span></div>
+        <div class="row"><span class="a">Gimbal-Modus wechseln</span><span class="k"><kbd>G</kbd></span></div>
+        <div class="row"><span class="a">Raketen-Modus</span><span class="k"><kbd>MMB</kbd></span></div>
+        <div class="row"><span class="a">Rakete abfeuern (im Raketen-Modus)</span><span class="k"><kbd>LMB</kbd></span></div>
+        <div class="row"><span class="a">Täuschkörper (Decoy)<span class="note">halten: Dauerausstoß</span></span><span class="k"><kbd>H</kbd></span></div>
+        <div class="row"><span class="a">Störsignal (Noise)</span><span class="k"><kbd>J</kbd></span></div>
+        <div class="row"><span class="a">Mehr Energie auf Schilde</span><span class="k"><kbd>F7</kbd></span></div>
+      </div>
+
+      <div class="panel">
+        <h3>Scannen &amp; Berufe <small>Mining, Salvage</small></h3>
+        <div class="row"><span class="a">Scan-Modus</span><span class="k"><kbd>V</kbd></span></div>
+        <div class="row"><span class="a">Ziel scannen</span><span class="k"><kbd>LMB</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Radar-Ping</span><span class="k"><kbd>Tab</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Mining-/Salvage-Modus</span><span class="k"><kbd>M</kbd></span></div>
+        <div class="row"><span class="a">Laser feuern</span><span class="k"><kbd>LMB</kbd></span></div>
+        <div class="row"><span class="a">Laserleistung regeln</span><span class="k"><kbd>L-Alt</kbd><span class="plus">+</span><kbd>Mausrad</kbd></span></div>
+      </div>
+
+      <div class="panel">
+        <h3>Bodenfahrzeuge &amp; EVA <small>Fahren, Schweben</small></h3>
+        <div class="row"><span class="a">Fahren / lenken</span><span class="k"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></div>
+        <div class="row"><span class="a">Bremse</span><span class="k"><kbd>X</kbd></span></div>
+        <div class="row"><span class="a">Boost</span><span class="k"><kbd>L-Shift</kbd></span></div>
+        <div class="row"><span class="a">EVA: rollen in Schwerelosigkeit</span><span class="k"><kbd>Q</kbd><kbd>E</kbd></span></div>
+        <div class="row"><span class="a">EVA: hoch / runter</span><span class="k"><kbd>Leertaste</kbd><kbd>L-Strg</kbd></span></div>
+        <div class="row"><span class="a">Aussteigen</span><span class="k"><kbd>Z</kbd><span class="mod">halten</span></span></div>
+      </div>
+
+      <div class="panel danger">
+        <h3>Vorsicht, Notfall <small>nicht verwechseln</small></h3>
+        <div class="row"><span class="a">Sitz normal verlassen</span><span class="k"><kbd>Z</kbd><span class="mod">halten</span></span></div>
+        <div class="row"><span class="a">Notausstieg</span><span class="k"><kbd>L-Shift</kbd><span class="plus">+</span><kbd>U</kbd></span></div>
+        <div class="row"><span class="a">Schleudersitz</span><span class="k"><kbd>R-Alt</kbd><span class="plus">+</span><kbd>Z</kbd></span></div>
+        <div class="row"><span class="a">Selbstzerstörung (im Schiff)<span class="note">Schiff ist weg, Versicherungsclaim nötig</span></span><span class="k"><kbd>Backspace</kbd><span class="mod">halten</span></span></div>
+      </div>
+
+    </div>
+    <p class="empty" id="none" hidden>Keine passende Taste gefunden. Versuch einen anderen Begriff.</p>
+  </section>
+
+  <section>
+    <h2>Tipps für den Start</h2>
+    <div class="tips">
+      <div class="tip"><strong>Belegung sichern</strong><p>Patches setzen Belegungen manchmal zurück. Nach eigenen Änderungen in der Konsole (<kbd>^</kbd>) exportieren: <code>pp_rebindkeys export all meinprofil</code></p></div>
+      <div class="tip"><strong>Im Spiel nachsehen</strong><p>ESC → Optionen → Keybindings hat eine Suche. Bei „prüfen“-Einträgen dort kurz kontrollieren, was dein Build nutzt.</p></div>
+      <div class="tip"><strong>NAV ist kein Kampfmodus</strong><p>In NAV sind Waffen und Schilde aus. Wirst du angegriffen: <kbd>B</kbd> halten, zurück in SCM.</p></div>
+      <div class="tip"><strong>F halten statt raten</strong><p>Im Interaktionsmodus zeigt dir das Spiel, was ein Objekt kann. Das ersetzt viele Tasten, die standardmäßig gar nicht belegt sind.</p></div>
+      <div class="tip"><strong>Rechte Alt-Taste = AltGr</strong><p>Auf deutschen Tastaturen ist R-Alt die AltGr-Taste. Flight Ready ist also <kbd>AltGr</kbd><span class="plus">+</span><kbd>R</kbd>.</p></div>
+      <div class="tip"><strong>Joystick oder HOTAS?</strong><p>Leg dafür ein eigenes Profil an, statt das Tastaturprofil umzubauen.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    Zusammengestellt aus <a href="https://starcitizenhelp.com/game-guides/keybinds" target="_blank" rel="noopener">starcitizenhelp.com</a> (Liste für Alpha 4.10.2),
+    <a href="https://citizen-starter-guide.com/star-citizen-keybinds/" target="_blank" rel="noopener">citizen-starter-guide.com</a> (Alpha 4.10) und dem
+    <a href="https://starcitizen.tools/Guide:Controls/keybind" target="_blank" rel="noopener">Star Citizen Wiki</a> (ältere Belegung, nur zum Abgleich).
+    Inoffizielle Fan-Übersicht, Angaben ohne Gewähr. Nicht verbunden mit Cloud Imperium Games oder Roberts Space Industries. Star Citizen® ist eine Marke von Cloud Imperium Rights LLC.
+  </footer>
+</div>
+
+<script>
+(function () {
+  var q = document.getElementById('q');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#grid .row'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('#grid .panel'));
+  var count = document.getElementById('count');
+  var none = document.getElementById('none');
+  function norm(s) { return s.toLowerCase().replace(/\s+/g, ' '); }
+  rows.forEach(function (r) { r.dataset.t = norm(r.textContent); });
+  function apply() {
+    var v = norm(q.value.trim());
+    var shown = 0;
+    rows.forEach(function (r) {
+      var hit = !v || r.dataset.t.indexOf(v) !== -1;
+      r.hidden = !hit;
+      if (hit) shown++;
+    });
+    panels.forEach(function (p) {
+      var head = norm(p.querySelector('h3').textContent);
+      var any = p.querySelectorAll('.row:not([hidden])').length > 0;
+      if (v && head.indexOf(v) !== -1) {
+        p.querySelectorAll('.row').forEach(function (r) { if (r.hidden) { r.hidden = false; shown++; } });
+        any = true;
+      }
+      p.hidden = !any;
+    });
+    none.hidden = shown > 0;
+    count.textContent = v ? shown + ' Treffer' : rows.length + ' Belegungen';
+  }
+  q.addEventListener('input', apply);
+  apply();
+})();
+</script>
+
+</body>
+</html>
