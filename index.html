@@ -216,6 +216,88 @@ tr.rec th { color: var(--accent); }
 .ore.hot .w { color: var(--warn); }
 .small { font-size: 13px; color: var(--muted); margin: 0; }
 
+/* Glossar */
+.beta { font-family: var(--f-mono); font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase; border: 1px solid currentColor; border-radius: 3px; padding: 0 4px; margin-left: 3px; vertical-align: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  font: 500 13px var(--f-body); padding: 5px 12px; border-radius: 14px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--panel); color: var(--muted);
+}
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--panel); }
+.gloss { display: flex; flex-direction: column; gap: 24px; }
+.gloss-group { display: grid; grid-template-columns: 44px 1fr; gap: 12px; }
+.gloss-letter { font-family: var(--f-display); font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1; padding-top: 10px; }
+.gloss-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; min-width: 0; }
+.term { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.term b { font-family: var(--f-display); font-size: 17px; font-weight: 600; display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.term b small { font-family: var(--f-mono); font-size: 10.5px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.term span { font-size: 14px; color: var(--muted); }
+.term em { font-style: normal; color: var(--ink); }
+
+/* Training */
+.beta-note { background: var(--accent-soft); border-radius: 8px; padding: 12px 16px; font-size: 14px; }
+.train { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.train > h3 { font-family: var(--f-display); font-size: 22px; font-weight: 600; margin: 0; }
+.train > p { margin: 0; color: var(--muted); font-size: 14px; max-width: 70ch; }
+.kb-scroll { overflow-x: auto; padding-bottom: 6px; }
+.kb { --u: 42px; display: inline-flex; gap: 14px; align-items: flex-start; }
+.kb-main { display: flex; flex-direction: column; gap: 4px; }
+.kb-row { display: flex; gap: 4px; }
+.kb-row.fn { margin-bottom: 8px; }
+.kk {
+  width: calc(var(--u) * var(--w, 1) + 4px * (var(--w, 1) - 1)); height: var(--u); flex: none;
+  font: 600 12px var(--f-mono); border-radius: 6px; cursor: pointer; padding: 0 4px;
+  background: var(--key-bg); color: var(--muted); border: 1px solid var(--line); border-bottom-width: 3px;
+}
+.kk.sp { visibility: hidden; }
+.kk.on { background: var(--accent-soft); color: var(--ink); border-color: var(--accent); }
+.kk.bad { background: var(--warn-soft); border-color: var(--warn); color: var(--ink); }
+.kk.sel { background: var(--accent); color: var(--panel); border-color: var(--accent); }
+.kk:focus-visible { outline: 2px solid var(--ink); }
+.mouse { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; width: 104px; }
+.mouse .kk { width: 100%; height: 54px; }
+.mouse .wheel { grid-column: span 2; height: var(--u); }
+.mouse .mid { grid-column: span 2; height: var(--u); }
+.kb-info { min-height: 64px; border-left: 3px solid var(--accent); padding: 8px 14px; background: var(--key-bg); border-radius: 0 6px 6px 0; }
+.kb-info b { font-family: var(--f-display); font-size: 18px; display: block; }
+.kb-info span { color: var(--muted); font-size: 14px; }
+.tr-box {
+  border: 2px dashed var(--line); border-radius: 10px; padding: 24px; text-align: center; cursor: pointer;
+  display: flex; flex-direction: column; gap: 10px; align-items: center; outline: none;
+}
+.tr-box.active { border-style: solid; border-color: var(--accent); cursor: default; }
+.tr-q { font-family: var(--f-display); font-size: clamp(20px, 3.5vw, 28px); font-weight: 600; text-wrap: balance; }
+.tr-fb { min-height: 24px; font-size: 15px; }
+.tr-fb.ok { color: var(--ok); font-weight: 600; }
+.tr-fb.no { color: var(--warn); }
+.tr-meta { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.tr-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.btn2 { font: 600 14px var(--f-display); padding: 7px 14px; border-radius: 6px; cursor: pointer; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+.btn2.primary { background: var(--accent); border-color: var(--accent); color: var(--panel); }
+.mg { display: flex; flex-direction: column; gap: 14px; user-select: none; }
+.mg-area { border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 14px; background: var(--key-bg); }
+.mg-top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; }
+.mg-top b { font-family: var(--f-display); font-size: 18px; }
+.mg-stat { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; }
+.mg-meter { position: relative; height: 34px; border-radius: 6px; overflow: hidden; display: flex; }
+.mg-meter .z { height: 100%; }
+.mg-meter .z1 { background: var(--line); }
+.mg-meter .z2 { background: var(--ok); opacity: .85; }
+.mg-meter .z3 { background: var(--warn); opacity: .85; }
+.mg-needle { position: absolute; top: -2px; bottom: -2px; width: 4px; margin-left: -2px; background: var(--ink); border-radius: 2px; box-shadow: 0 0 0 2px var(--panel); left: 0; }
+.mg-bars { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mg-bar { display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; color: var(--muted); font-family: var(--f-mono); }
+.mg-bar div { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.mg-bar i { display: block; height: 100%; width: 0; }
+.mg-bar.f i { background: var(--ok); }
+.mg-bar.o i { background: var(--warn); }
+.mg-ctrl { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mg-ctrl input[type=range] { flex: 1 1 200px; accent-color: var(--accent); min-width: 0; }
+.mg-ctrl .pw { font-family: var(--f-mono); font-size: 14px; min-width: 88px; }
+.mg-msg { font-family: var(--f-display); font-size: 18px; font-weight: 600; min-height: 27px; }
+.mg-msg.win { color: var(--ok); }
+.mg-msg.boom { color: var(--warn); }
+
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -236,6 +318,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <a href="#erste-schritte" role="listitem">Erste Schritte</a>
       <a href="#tasten" role="listitem">Tasten</a>
       <a href="#mining" role="listitem">Mining</a>
+      <a href="#glossar" role="listitem">Glossar</a>
+      <a href="#training" role="listitem">Training <span class="beta">Beta</span></a>
     </div>
   </div>
 </nav>
@@ -274,6 +358,12 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <h3>Mining</h3>
       <p>Geld verdienen mit Steinen: zu Fuß mit dem Multitool, später mit Golem oder Prospector. Ablauf, Laser, Erze, Verkauf.</p>
       <span class="go">Abbauen →</span>
+    </a>
+    <a class="chapter" href="#glossar">
+      <span class="no">NACHSCHLAGEN</span>
+      <h3>Glossar</h3>
+      <p>aUEC, SCU, NAV, ASOP, Pledge, Wipe: Was die ganzen Abkürzungen bedeuten, kurz erklärt.</p>
+      <span class="go">Begriffe →</span>
     </a>
   </div>
 
@@ -689,6 +779,83 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   </section>
 </section>
 
+<!-- ============ GLOSSAR ============ -->
+<section class="view" id="view-glossar" data-view="glossar" hidden>
+  <div class="head">
+    <div class="stamp"><span>Nachschlagen</span><span>Stand Alpha 4.10</span></div>
+    <h1>Glossar</h1>
+    <p class="lede">Die Begriffe und Abkürzungen, über die du in den ersten Wochen stolperst, kurz erklärt.</p>
+    <div class="search">
+      <input id="gq" type="search" placeholder="Begriff suchen, z. B. „SCU“ oder „Versicherung“" aria-label="Glossar durchsuchen">
+      <span class="count" id="gcount"></span>
+    </div>
+    <div class="chips" id="gchips" role="group" aria-label="Kategorie filtern"></div>
+  </div>
+  <div class="gloss" id="gloss"></div>
+  <p class="empty" id="gnone" hidden>Nichts gefunden. Fehlt ein Begriff? Sag Bescheid, dann kommt er dazu.</p>
+</section>
+
+<!-- ============ TRAINING ============ -->
+<section class="view" id="view-training" data-view="training" hidden>
+  <div class="head">
+    <div class="stamp"><span>Testbereich</span><span>Beta</span><span>am PC mit Tastatur</span></div>
+    <h1>Training</h1>
+    <p class="lede">Tasten lernen, bevor du im Cockpit sitzt. Drei Übungen zum Ausprobieren.</p>
+  </div>
+  <div class="beta-note"><b>Beta:</b> Dieser Bereich ist neu und wird noch getestet. Wenn etwas komisch reagiert, sag Bescheid.</div>
+
+  <div class="train">
+    <h3>Tastatur-Karte</h3>
+    <p>Wähl eine Situation und fahr über die Tasten oder tipp sie an. Markierte Tasten sind belegt.</p>
+    <div class="chips" id="kbmodes" role="group" aria-label="Situation wählen">
+      <button class="chip" type="button" data-mode="fuss" aria-pressed="true">Zu Fuß</button>
+      <button class="chip" type="button" data-mode="schiff" aria-pressed="false">Im Schiff</button>
+      <button class="chip" type="button" data-mode="mining" aria-pressed="false">Mining</button>
+    </div>
+    <div class="kb-info" id="kbinfo" aria-live="polite"><b>Taste wählen</b><span>Fahr mit der Maus über eine markierte Taste.</span></div>
+    <div class="kb-scroll"><div class="kb" id="kb"></div></div>
+  </div>
+
+  <div class="train">
+    <h3>Tasten-Trainer</h3>
+    <p>Die Seite fragt, du drückst die echte Taste. Bei „halten“ etwa eine halbe Sekunde gedrückt halten. Funktioniert nur mit physischer Tastatur.</p>
+    <div class="tr-box" id="trbox" tabindex="0" role="application" aria-label="Tasten-Trainer">
+      <div class="tr-q" id="trq">Klick hier, um zu starten</div>
+      <div class="tr-fb" id="trfb" aria-live="assertive"></div>
+      <div class="tr-meta"><span id="trnum"></span><span id="trscore"></span></div>
+      <div class="tr-actions" id="tracts" hidden>
+        <button class="btn2" type="button" id="trhint">Lösung zeigen</button>
+        <button class="btn2" type="button" id="trskip">Überspringen</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="train">
+    <h3>Mining-Übung</h3>
+    <p>Regle die Laserleistung so, dass die Nadel im grünen Bereich bleibt, bis der Stein bricht. Mausrad über dem Feld, Pfeiltasten oder Schieberegler. Bleibst du zu lange im Roten, explodiert der Stein.</p>
+    <div class="mg">
+      <div class="chips" id="mgrocks" role="group" aria-label="Stein wählen"></div>
+      <div class="mg-area" id="mgarea" tabindex="0" aria-label="Mining-Übung, Pfeiltasten regeln die Leistung">
+        <div class="mg-top"><b id="mgname">Weicher Stein</b><span class="mg-stat"><span id="mgres"></span><span id="mginst"></span><span id="mgtime"></span></span></div>
+        <div class="mg-meter" aria-hidden="true">
+          <span class="z z1" style="width:50%"></span><span class="z z2" style="width:22.7%"></span><span class="z z3" style="width:27.3%"></span>
+          <span class="mg-needle" id="mgneedle"></span>
+        </div>
+        <div class="mg-bars">
+          <div class="mg-bar f"><span id="mgfl">Bruch 0 %</span><div><i id="mgf"></i></div></div>
+          <div class="mg-bar o"><span id="mgol">Überladung 0 %</span><div><i id="mgo"></i></div></div>
+        </div>
+        <div class="mg-ctrl">
+          <label for="mgpower" class="pw" id="mgpw">Leistung 0 %</label>
+          <input type="range" id="mgpower" min="0" max="100" step="1" value="0">
+          <button class="btn2 primary" type="button" id="mgstart">Laser an</button>
+        </div>
+        <div class="mg-msg" id="mgmsg" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   Zusammengestellt aus
   <a href="https://starcitizenhelp.com/game-guides/keybinds" target="_blank" rel="noopener">starcitizenhelp.com</a>,
@@ -714,9 +881,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     });
-    var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch' };
+    var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', glossar: 'Glossar · SC Handbuch', training: 'Training · SC Handbuch' };
     document.title = titles[h];
     window.scrollTo(0, 0);
+    document.dispatchEvent(new CustomEvent('viewchange', { detail: h }));
   }
   window.addEventListener('hashchange', show);
   show();
@@ -776,6 +944,422 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   }
   q.addEventListener('input', filter);
   filter();
+})();
+</script>
+
+<script>
+/* ---------- Glossar ---------- */
+(function () {
+  var CATS = { basis: 'Grundlagen', geld: 'Geld & Handel', flug: 'Fliegen', orte: 'Orte', spiel: 'Spiel & Entwicklung', szene: 'Spieler-Sprache' };
+  var G = [
+    ['aUEC', 'geld', 'Alpha-UEC. Die Spielwährung im Persistent Universe. Wird bei großen Wipes zurückgesetzt.'],
+    ['UEC', 'geld', 'United Earth Credits. Im Pledge-Store mit Echtgeld kaufbar, für Ingame-Käufe im Spiel ist aUEC entscheidend.'],
+    ['SCU', 'geld', 'Standard Cargo Unit. Maßeinheit für Fracht. Ein SCU ist ein Würfel von 1,25 m Kantenlänge. Golem und Prospector fassen je 32 SCU.'],
+    ['TDD', 'geld', 'Trade & Development Division. Große Handelsbörsen in den Städten, dort verkauft man raffiniertes Erz und Fracht.'],
+    ['Raffinerie', 'geld', 'Verarbeitet rohes Erz zu reinem Material. Bringt deutlich mehr Geld als rohes Erz, dauert aber eine Weile.'],
+    ['Vertrag', 'geld', 'Auftrag (Contract) aus dem mobiGlas. Lieferungen, Kopfgeld, Bergung und mehr. Die Hauptquelle für Geld am Anfang.'],
+    ['mobiGlas', 'basis', 'Computer am Handgelenk. Öffnest du mit <em>F1</em>. Verträge, Karte, Inventar, Schiffe.'],
+    ['Hab', 'basis', 'Dein Quartier in einer Stadt oder Station. Dort wachst du nach dem Einloggen auf.'],
+    ['ASOP', 'basis', 'Terminal im Raumhafen, an dem du dein Schiff anforderst oder einen Versicherungsclaim machst.'],
+    ['Claim', 'basis', 'Versicherungsanspruch. Ist dein Schiff zerstört, holst du es per Claim am ASOP-Terminal zurück. Gegen Gebühr schneller (Expedite).'],
+    ['Med-Bett', 'basis', 'Wiedereinstiegspunkt nach dem Tod. Krankenhäuser in Städten oder Med-Betten in größeren Schiffen.'],
+    ['Interaktionsmodus', 'basis', '<em>F</em> halten. Zeigt alle Aktionen, die ein Objekt anbietet, z. B. Tür öffnen oder Sitz nehmen.'],
+    ['Inventar', 'basis', '<em>I</em>. Was du am Körper trägst, im Rucksack hast oder im lokalen Lager liegt. Lager sind ortsgebunden.'],
+    ['EVA', 'basis', 'Extra-Vehicular Activity. Raumspaziergang in der Schwerelosigkeit.'],
+    ['Flight Ready', 'flug', 'Schiff hochfahren. <em>AltGr + R</em>. Ohne das reagiert kein System.'],
+    ['SCM', 'flug', 'Space Combat Maneuvering. Kampfmodus: Waffen und Schilde an, dafür langsamer.'],
+    ['NAV', 'flug', 'Navigationsmodus. Schnell und quantum-bereit, aber Waffen und Schilde aus. Wechsel mit <em>B</em> halten.'],
+    ['Master Mode', 'flug', 'Oberbegriff für SCM und NAV. Bestimmt, welche Systeme gerade aktiv sind.'],
+    ['Quantensprung', 'flug', 'Auch QT. Überlichtschnelle Reise zwischen Planeten, Monden und Stationen. Ziel per Sternenkarte setzen.'],
+    ['ATC', 'flug', 'Air Traffic Control, die Flugkontrolle. Erteilt Start- und Landeerlaubnis über <em>L-Alt + N</em>.'],
+    ['Sperrzone', 'flug', 'Bereich um Städte und Stationen (Armistice Zone). Waffen sind gesperrt, Quantensprung nicht möglich.'],
+    ['Gekoppelt / Entkoppelt', 'flug', 'Coupled: Das Schiff bremst automatisch ab. Decoupled: Es gleitet weiter wie im echten All. Umschalten mit <em>C</em>.'],
+    ['Gimbal', 'flug', 'Schwenkbare Waffenhalterung. Waffen folgen dem Mauszeiger statt starr nach vorn zu schießen.'],
+    ['VTOL', 'flug', 'Senkrechtstart und -landung. Manche Schiffe schwenken dafür ihre Triebwerke. Taste <em>K</em>.'],
+    ['Interdiction', 'flug', 'Jemand reißt dich aus dem Quantensprung, oft Piraten. Dann: Schilde hoch, weg oder kämpfen.'],
+    ['Stanton', 'orte', 'Das Startsystem mit den Planeten Hurston, Crusader, ArcCorp und microTech. Relativ sicher.'],
+    ['Pyro', 'orte', 'Gesetzloses Nachbarsystem. Lohnender, aber voller Piraten. Für den Anfang meiden.'],
+    ['Nyx', 'orte', 'Drittes System, erreichbar über Sprungpunkte. Eher etwas für Fortgeschrittene.'],
+    ['Lorville', 'orte', 'Industriestadt auf Hurston. Grau, laut, gut zum Einkaufen von Ausrüstung.'],
+    ['Area18', 'orte', 'Stadt auf ArcCorp. Neonlichter, viele Läden, große Handelsbörse.'],
+    ['Orison', 'orte', 'Schwebende Stadt in den Wolken von Crusader. Schön zum Starten, gute Raumhäfen.'],
+    ['New Babbage', 'orte', 'Hightech-Stadt auf dem Eisplaneten microTech.'],
+    ['Grim Hex', 'orte', 'Piratenstation bei Yela. Hier landen Spieler mit Crimestat. Mit Vorsicht genießen.'],
+    ['Rastplatz', 'orte', 'Raumstation an einem Lagrange-Punkt (L1 bis L5). Tanken, reparieren, oft mit Raffinerie.'],
+    ['PU', 'spiel', 'Persistent Universe. Die offene Spielwelt, in der du dich bewegst.'],
+    ['Arena Commander', 'spiel', 'Separater Spielmodus für Dogfights und Rennen. Gut zum Üben, ohne Verluste.'],
+    ['Pledge', 'spiel', 'Mit Echtgeld gekauftes Schiff oder Paket. Bleibt bei Wipes erhalten.'],
+    ['LTI', 'spiel', 'Lifetime Insurance. Lebenslange Versicherung für ein Pledge-Schiff.'],
+    ['Wipe', 'spiel', 'Zurücksetzen von aUEC und im Spiel gekauften Sachen bei großen Patches. Pledges bleiben.'],
+    ['Patch', 'spiel', 'Spielupdate mit Versionsnummer, z. B. Alpha 4.10. Tasten und Preise können sich ändern.'],
+    ['PTU', 'spiel', 'Public Test Universe. Testserver für kommende Patches. Fortschritt zählt dort nicht.'],
+    ['CIG', 'spiel', 'Cloud Imperium Games, das Entwicklerstudio hinter Star Citizen.'],
+    ['RSI', 'spiel', 'Roberts Space Industries. Die offizielle Website (robertsspaceindustries.com) und ein Schiffshersteller im Spiel.'],
+    ['Spectrum', 'spiel', 'Das offizielle Forum und Chat-System von RSI.'],
+    ['Server Meshing', 'spiel', 'Technik, mit der mehrere Server eine gemeinsame Welt bilden. Ermöglicht mehr Spieler pro Instanz.'],
+    ['30k', 'szene', 'Server-Absturz, benannt nach dem alten Fehlercode 30000. Man landet wieder im Menü.'],
+    ['Crimestat', 'szene', 'Fahndungsstufe nach Straftaten. Mit hohem Crimestat wirst du von Polizei und Kopfgeldjägern gejagt.'],
+    ['Org', 'szene', 'Organisation, also ein Spieler-Clan.'],
+    ['Verse', 'szene', 'Kurz für das Universum von Star Citizen.'],
+    ['o7', 'szene', 'Gruß unter Spielern. Sieht aus wie ein salutierendes Männchen.'],
+    ['Bedlog', 'szene', 'In einem Schiffsbett ausloggen. Beim nächsten Login wachst du dort auf, wenn das Schiff noch existiert.'],
+    ['Box-Mission', 'szene', 'Spitzname für einfache Lieferaufträge. Guter Einstieg ins Geldverdienen.']
+  ];
+  G.sort(function (a, b) { return a[0].localeCompare(b[0], 'de'); });
+  var box = document.getElementById('gloss');
+  var gq = document.getElementById('gq');
+  var chips = document.getElementById('gchips');
+  var gcount = document.getElementById('gcount');
+  var gnone = document.getElementById('gnone');
+  var cat = 'alle';
+  function chip(id, label) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.textContent = label; b.dataset.cat = id;
+    b.setAttribute('aria-pressed', id === cat ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      cat = id;
+      Array.prototype.forEach.call(chips.children, function (c) { c.setAttribute('aria-pressed', c.dataset.cat === cat ? 'true' : 'false'); });
+      render();
+    });
+    chips.appendChild(b);
+  }
+  chip('alle', 'Alle');
+  Object.keys(CATS).forEach(function (k) { chip(k, CATS[k]); });
+  function strip(s) { return s.replace(/<[^>]+>/g, ''); }
+  function render() {
+    var v = gq.value.trim().toLowerCase();
+    var groups = {};
+    var n = 0;
+    G.forEach(function (e) {
+      if (cat !== 'alle' && e[1] !== cat) return;
+      if (v && (e[0] + ' ' + strip(e[2])).toLowerCase().indexOf(v) === -1) return;
+      var L = e[0].charAt(0).toUpperCase();
+      if (/[0-9]/.test(L)) L = '#';
+      (groups[L] = groups[L] || []).push(e);
+      n++;
+    });
+    box.innerHTML = Object.keys(groups).map(function (L) {
+      return '<div class="gloss-group"><div class="gloss-letter">' + L + '</div><div class="gloss-list">' +
+        groups[L].map(function (e) {
+          return '<div class="term"><b>' + e[0] + '<small>' + CATS[e[1]] + '</small></b><span>' + e[2] + '</span></div>';
+        }).join('') + '</div></div>';
+    }).join('');
+    gnone.hidden = n > 0;
+    gcount.textContent = n + ' Begriffe';
+  }
+  gq.addEventListener('input', render);
+  render();
+})();
+
+/* ---------- Tastatur-Karte ---------- */
+(function () {
+  var ROWS = [
+    [['Esc'], [' ', 1, 'sp'], ['F1'], ['F2'], ['F3'], ['F4'], [' ', .5, 'sp'], ['F5'], ['F6'], ['F7'], ['F8'], [' ', .5, 'sp'], ['F9'], ['F10'], ['F11'], ['F12']],
+    [['^'], ['1'], ['2'], ['3'], ['4'], ['5'], ['6'], ['7'], ['8'], ['9'], ['0'], ['ß'], ['´'], ['Back', 2, '', '⌫ Rück']],
+    [['Tab', 1.5, '', 'Tab ↹'], ['Q'], ['W'], ['E'], ['R'], ['T'], ['Z'], ['U'], ['I'], ['O'], ['P'], ['Ü'], ['+'], ['Enter', 1.5, '', 'Enter']],
+    [['Caps', 1.75, '', 'Feststell'], ['A'], ['S'], ['D'], ['F'], ['G'], ['H'], ['J'], ['K'], ['L'], ['Ö'], ['Ä'], ['#'], [' ', 1.25, 'sp']],
+    [['LShift', 1.25, '', '⇧'], ['<'], ['Y'], ['X'], ['C'], ['V'], ['B'], ['N'], ['M'], [','], ['.'], ['-'], ['RShift', 2.75, '', '⇧ Shift']],
+    [['LCtrl', 1.5, '', 'Strg'], ['Win', 1.25, '', 'Win'], ['LAlt', 1.25, '', 'Alt'], ['Space', 7, '', 'Leertaste'], ['AltGr', 1.25, '', 'AltGr'], ['Menu', 1.25, '', '☰'], ['RCtrl', 1.5, '', 'Strg']]
+  ];
+  var MOUSE = [['LMB', 'Links'], ['RMB', 'Rechts'], ['MMB', 'Mitte'], ['Wheel', 'Mausrad']];
+  var NAMES = { LShift: 'Linke Shift-Taste', LCtrl: 'Linke Strg-Taste', LAlt: 'Linke Alt-Taste', AltGr: 'AltGr (rechte Alt-Taste)', Space: 'Leertaste', Back: 'Rücktaste (Backspace)', Tab: 'Tab', LMB: 'Linke Maustaste', RMB: 'Rechte Maustaste', MMB: 'Mittlere Maustaste', Wheel: 'Mausrad', Enter: 'Enter', ',': 'Komma' };
+  var MAP = {
+    fuss: {
+      W: 'Vorwärts laufen', A: 'Nach links', S: 'Rückwärts', D: 'Nach rechts', LShift: 'Sprinten (halten)', Space: 'Springen',
+      C: 'Ducken (prüfen) · auch Medpen', LCtrl: 'Hinlegen (prüfen)', X: 'Hinlegen laut älteren Quellen (prüfen)', Q: 'Nach links lehnen', E: 'Nach rechts lehnen',
+      Y: 'Frei umsehen (halten)', T: 'Taschenlampe', F: 'Interaktion · halten: alle Optionen', I: 'Inventar · halten: Plündern',
+      R: 'Nachladen · halten: Waffe wegstecken', '1': 'Primärwaffe', '2': 'Sekundärwaffe', '3': 'Seitenwaffe', '4': 'Werkzeug / Multitool',
+      G: 'Granate', B: 'Feuermodus wechseln', H: 'L-Alt + H: Helm auf/ab', LAlt: 'Modifikator, z. B. L-Alt + H für den Helm',
+      F1: 'mobiGlas', F2: 'Sternenkarte', F4: 'Kamera wechseln (3rd Person)', F11: 'Kontakte / Commlink', F12: 'Chat ein/aus', Enter: 'Chat schreiben / senden',
+      LMB: 'Schießen / Werkzeug benutzen', RMB: 'Zielen / mit Multitool scannen'
+    },
+    schiff: {
+      W: 'Schub vorwärts', S: 'Schub rückwärts', A: 'Seitlich nach links', D: 'Seitlich nach rechts', Space: 'Nach oben gleiten · abheben', LCtrl: 'Nach unten gleiten',
+      Q: 'Nach links rollen', E: 'Nach rechts rollen', LShift: 'Boost (halten) · L-Shift + U: Notausstieg', X: 'Raumbremse',
+      C: 'Gekoppelt ↔ Entkoppelt · L-Alt + C: Tempomat', N: 'Fahrwerk · halten: Autolandung · L-Alt + N: Start-/Landeerlaubnis',
+      K: 'VTOL · AltGr + K: Türen ver-/entriegeln', L: 'Scheinwerfer', U: 'Energie: alle Systeme an/aus', I: 'Energie: Antrieb an/aus', O: 'Energie: Schilde an/aus', P: 'Energie: Waffen an/aus',
+      B: 'Halten: Master Mode SCM ↔ NAV', R: 'AltGr + R: Flight Ready (hoch-/runterfahren)', T: 'Ziel im Blickfeld wechseln', G: 'Gimbal-Modus · Raketen scharf machen',
+      H: 'Täuschkörper (Decoy)', J: 'Störsignal (Noise)', V: 'Scan-Modus', Tab: 'Halten: Radar-Ping', M: 'Mining-/Salvage-Modus',
+      Z: 'Halten: Sitz verlassen · AltGr + Z: Schleudersitz!', Y: 'Halten: im Cockpit umsehen', ',': 'Halten: nach hinten schauen', F7: 'Mehr Energie auf Schilde',
+      '4': 'Angreifer durchschalten', '5': 'Feinde durchschalten', '6': 'Freunde durchschalten', F1: 'mobiGlas', F2: 'Sternenkarte', F4: 'Kamera wechseln',
+      Back: 'Halten: SELBSTZERSTÖRUNG. Finger weg!', LAlt: 'Modifikator für Landeerlaubnis, Tempomat, Speed-Limiter', AltGr: 'Modifikator für Flight Ready, Türen, Schleudersitz',
+      LMB: 'Waffengruppe 1 · in NAV halten: Quantensprung', RMB: 'Waffengruppe 2', MMB: 'Raketen-Modus', Wheel: 'L-Alt + Rad: Geschwindigkeitsbegrenzer (prüfen)'
+    },
+    mining: {
+      M: 'Mining-Modus an/aus', V: 'Scan-Modus', Tab: 'Halten: Ping, zeigt Gestein in der Nähe', W: 'Schub, langsam an den Stein heran', S: 'Schub zurück, Abstand halten',
+      G: 'Laser-Gimbal wechseln', LAlt: 'Modifikator für Leistung, Module, Fracht', '1': 'L-Alt + 1: Mining-Modul 1', '2': 'L-Alt + 2: Mining-Modul 2', '3': 'L-Alt + 3: Mining-Modul 3',
+      J: 'L-Alt + J: Fracht abwerfen', '4': 'Zu Fuß: Multitool ziehen', F: 'Zu Fuß: Bruchstücke verstauen (Stow)', X: 'Raumbremse, Position halten',
+      LMB: 'Laser feuern · im Scan-Modus halten: Stein scannen', RMB: 'Bruch-Laser ↔ Abbau-Laser · zu Fuß: zielen und scannen', Wheel: 'L-Alt + Rad: Laserleistung hoch/runter'
+    }
+  };
+  var DANGER = { Back: 1 };
+  var kb = document.getElementById('kb');
+  var info = document.getElementById('kbinfo');
+  var mode = 'fuss';
+  var main = document.createElement('div'); main.className = 'kb-main';
+  ROWS.forEach(function (r, i) {
+    var row = document.createElement('div'); row.className = 'kb-row' + (i === 0 ? ' fn' : '');
+    r.forEach(function (k) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'kk' + (k[2] ? ' ' + k[2] : '');
+      b.style.setProperty('--w', k[1] || 1);
+      b.textContent = k[3] || k[0];
+      if (k[2] === 'sp') { b.tabIndex = -1; b.setAttribute('aria-hidden', 'true'); } else b.dataset.k = k[0];
+      row.appendChild(b);
+    });
+    main.appendChild(row);
+  });
+  var mouse = document.createElement('div'); mouse.className = 'mouse';
+  MOUSE.forEach(function (m) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'kk' + (m[0] === 'MMB' ? ' mid' : m[0] === 'Wheel' ? ' wheel' : '');
+    b.textContent = m[1]; b.dataset.k = m[0];
+    mouse.appendChild(b);
+  });
+  kb.appendChild(main); kb.appendChild(mouse);
+  var keys = Array.prototype.slice.call(kb.querySelectorAll('[data-k]'));
+  function label(k) { return NAMES[k] || ('Taste ' + k); }
+  function paint() {
+    keys.forEach(function (b) {
+      var has = !!MAP[mode][b.dataset.k];
+      b.classList.toggle('on', has && !DANGER[b.dataset.k]);
+      b.classList.toggle('bad', has && !!DANGER[b.dataset.k]);
+      b.classList.remove('sel');
+      b.setAttribute('aria-label', label(b.dataset.k) + (has ? ': ' + MAP[mode][b.dataset.k] : ': nicht belegt'));
+    });
+    info.innerHTML = '<b>Taste wählen</b><span>' + Object.keys(MAP[mode]).length + ' belegte Tasten. Fahr mit der Maus über eine markierte Taste.</span>';
+  }
+  function pick(b) {
+    keys.forEach(function (x) { x.classList.remove('sel'); });
+    var d = MAP[mode][b.dataset.k];
+    b.classList.add('sel');
+    info.innerHTML = '<b>' + label(b.dataset.k) + '</b><span>' + (d || 'In dieser Situation nicht belegt.') + '</span>';
+  }
+  keys.forEach(function (b) {
+    b.addEventListener('mouseenter', function () { pick(b); });
+    b.addEventListener('focus', function () { pick(b); });
+    b.addEventListener('click', function () { pick(b); });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('#kbmodes .chip'), function (c, i, all) {
+    c.addEventListener('click', function () {
+      mode = c.dataset.mode;
+      Array.prototype.forEach.call(all, function (x) { x.setAttribute('aria-pressed', x === c ? 'true' : 'false'); });
+      paint();
+    });
+  });
+  paint();
+})();
+
+/* ---------- Tasten-Trainer ---------- */
+(function () {
+  var POOL = [
+    { q: 'Schiff hochfahren (Flight Ready)', k: 'R', m: 'AltGr', a: 'AltGr + R' },
+    { q: 'Start- oder Landeerlaubnis anfragen', k: 'N', m: 'LAlt', a: 'L-Alt + N' },
+    { q: 'Fahrwerk aus- oder einfahren', k: 'N', a: 'N' },
+    { q: 'Automatisch landen', k: 'N', h: 1, a: 'N halten' },
+    { q: 'In den NAV-Modus wechseln', k: 'B', h: 1, a: 'B halten' },
+    { q: 'Aus dem Pilotensitz aufstehen', k: 'Z', h: 1, a: 'Z halten' },
+    { q: 'Schleudersitz auslösen', k: 'Z', m: 'AltGr', a: 'AltGr + Z' },
+    { q: 'mobiGlas öffnen', k: 'F1', a: 'F1' },
+    { q: 'Sternenkarte öffnen', k: 'F2', a: 'F2' },
+    { q: 'Inventar öffnen', k: 'I', a: 'I' },
+    { q: 'Mit einer Tür oder einem Terminal interagieren', k: 'F', a: 'F' },
+    { q: 'Raumbremse ziehen', k: 'X', a: 'X' },
+    { q: 'Boost zünden', k: 'LShift', h: 1, a: 'Linke Shift-Taste halten' },
+    { q: 'Scan-Modus einschalten', k: 'V', a: 'V' },
+    { q: 'Radar-Ping senden', k: 'Tab', h: 1, a: 'Tab halten' },
+    { q: 'Mining-Modus einschalten', k: 'M', a: 'M' },
+    { q: 'Scheinwerfer an', k: 'L', a: 'L' },
+    { q: 'Waffen mit Energie versorgen', k: 'P', a: 'P' },
+    { q: 'Täuschkörper gegen Raketen abwerfen', k: 'H', a: 'H' },
+    { q: 'Entkoppelten Flug umschalten', k: 'C', a: 'C' },
+    { q: 'Helm aufsetzen', k: 'H', m: 'LAlt', a: 'L-Alt + H' },
+    { q: 'Waffe nachladen', k: 'R', a: 'R' },
+    { q: 'Taschenlampe einschalten', k: 'T', a: 'T' },
+    { q: 'Multitool ziehen', k: '4', a: '4' }
+  ];
+  var MODS = ['LShift', 'LCtrl', 'LAlt', 'AltGr', 'RShift', 'RCtrl'];
+  function codeLabel(c) {
+    if (c === 'KeyY') return 'Z';
+    if (c === 'KeyZ') return 'Y';
+    if (/^Key[A-Z]$/.test(c)) return c.slice(3);
+    if (/^Digit[0-9]$/.test(c)) return c.slice(5);
+    if (/^F([1-9]|1[0-2])$/.test(c)) return c;
+    return ({ ShiftLeft: 'LShift', ShiftRight: 'RShift', ControlLeft: 'LCtrl', ControlRight: 'RCtrl', AltLeft: 'LAlt', AltRight: 'AltGr',
+      Space: 'Leertaste', Tab: 'Tab', Backspace: 'Rücktaste', Enter: 'Enter', Comma: ',', Escape: 'Esc' })[c] || c;
+  }
+  var NICE = { LShift: 'L-Shift', RShift: 'R-Shift', LCtrl: 'Strg', RCtrl: 'Strg', LAlt: 'L-Alt', AltGr: 'AltGr' };
+  var box = document.getElementById('trbox'), qEl = document.getElementById('trq'), fb = document.getElementById('trfb');
+  var num = document.getElementById('trnum'), sc = document.getElementById('trscore'), acts = document.getElementById('tracts');
+  var active = false, list = [], i = 0, score = 0, tries = 0, held = {}, pend = null, view = (location.hash || '#start').slice(1), lock = false;
+  function shuffle(a) { for (var j = a.length - 1; j > 0; j--) { var r = Math.floor(Math.random() * (j + 1)); var t = a[j]; a[j] = a[r]; a[r] = t; } return a; }
+  function start() {
+    list = shuffle(POOL.slice()).slice(0, 12); i = 0; score = 0; active = true;
+    box.classList.add('active'); acts.hidden = false; box.focus(); ask();
+  }
+  function ask() {
+    tries = 0; pend = null; lock = false;
+    if (i >= list.length) return done();
+    var it = list[i];
+    qEl.textContent = it.q + (it.h ? ' (halten)' : '');
+    fb.textContent = ''; fb.className = 'tr-fb';
+    num.textContent = 'Frage ' + (i + 1) + ' von ' + list.length;
+    sc.textContent = score + ' auf Anhieb richtig';
+  }
+  function done() {
+    active = false; acts.hidden = true; box.classList.remove('active');
+    qEl.textContent = score + ' von ' + list.length + ' auf Anhieb richtig';
+    fb.className = 'tr-fb ok';
+    fb.textContent = score >= 10 ? 'Starke Leistung, du bist bereit fürs Cockpit.' : score >= 6 ? 'Gut! Noch eine Runde, dann sitzt es.' : 'Übung macht den Piloten. Klick für eine neue Runde.';
+    num.textContent = ''; sc.textContent = 'Klick hier für eine neue Runde';
+  }
+  function next(ok) {
+    if (ok && tries === 0) score++;
+    fb.className = 'tr-fb ok'; fb.textContent = 'Richtig: ' + list[i].a;
+    lock = true;
+    setTimeout(function () { i++; ask(); }, 900);
+  }
+  function wrong(txt) {
+    tries++;
+    fb.className = 'tr-fb no';
+    fb.textContent = txt + (tries >= 2 ? ' Kommst du nicht drauf? „Lösung zeigen“ hilft.' : ' Versuch es nochmal.');
+  }
+  function modsOk(it) {
+    var alt = held.LAlt, gr = held.AltGr;
+    if (it.m === 'AltGr') return gr;
+    if (it.m === 'LAlt') return alt && !gr;
+    return !alt && !gr;
+  }
+  document.addEventListener('viewchange', function (e) { view = e.detail; });
+  box.addEventListener('click', function () { if (!active) start(); });
+  box.addEventListener('keydown', function (e) {
+    if (!active && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); start(); }
+  });
+  document.getElementById('trskip').addEventListener('click', function (e) { e.stopPropagation(); fb.className = 'tr-fb'; fb.textContent = 'Lösung: ' + list[i].a; tries = 1; lock = true; setTimeout(function () { i++; ask(); }, 1400); box.focus(); });
+  document.getElementById('trhint').addEventListener('click', function (e) { e.stopPropagation(); tries = Math.max(tries, 1); fb.className = 'tr-fb'; fb.textContent = 'Lösung: ' + list[i].a + '. Jetzt drücken!'; box.focus(); });
+  window.addEventListener('blur', function () { held = {}; pend = null; });
+  window.addEventListener('keydown', function (e) {
+    if (!active || view !== 'training') return;
+    if (e.code === 'Escape') { active = false; box.classList.remove('active'); acts.hidden = true; qEl.textContent = 'Pausiert. Klick hier für eine neue Runde'; fb.textContent = ''; return; }
+    e.preventDefault();
+    var L = codeLabel(e.code);
+    if (e.repeat) return;
+    held[L] = true;
+    if (lock) return;
+    var it = list[i];
+    if (MODS.indexOf(L) !== -1 && L !== it.k) return;
+    if (L === it.k && modsOk(it)) {
+      if (it.h) { pend = { k: L, t: performance.now() }; fb.className = 'tr-fb'; fb.textContent = 'Halten …'; }
+      else next(true);
+    } else {
+      var combo = (held.AltGr ? 'AltGr + ' : held.LAlt ? 'L-Alt + ' : '') + (NICE[L] || L);
+      wrong('Das war ' + combo + '.');
+    }
+  });
+  window.addEventListener('keyup', function (e) {
+    var L = codeLabel(e.code);
+    delete held[L];
+    if (L === 'AltGr') delete held.LCtrl;
+    if (!active || view !== 'training' || !pend || L !== pend.k) return;
+    var dur = performance.now() - pend.t; pend = null;
+    if (dur >= 450) next(true); else wrong('Etwas länger halten.');
+  });
+})();
+
+/* ---------- Mining-Übung ---------- */
+(function () {
+  var ROCKS = [
+    { n: 'Weicher Stein', r: .15, i: .25 },
+    { n: 'Laranit-Brocken', r: .3, i: .45 },
+    { n: 'Zäher Brocken', r: .5, i: .3 },
+    { n: 'Instabiler Brocken', r: .25, i: .95 }
+  ];
+  var MAX = 110, LO = 55, HI = 80;
+  var $ = function (id) { return document.getElementById(id); };
+  var area = $('mgarea'), needle = $('mgneedle'), power = $('mgpower'), btn = $('mgstart'), msg = $('mgmsg');
+  var rocksBox = $('mgrocks');
+  var s, rock = ROCKS[0], raf = null, last = 0;
+  ROCKS.forEach(function (r, idx) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.textContent = r.n;
+    b.setAttribute('aria-pressed', idx === 0 ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      rock = r;
+      Array.prototype.forEach.call(rocksBox.children, function (c) { c.setAttribute('aria-pressed', c === b ? 'true' : 'false'); });
+      reset();
+    });
+    rocksBox.appendChild(b);
+  });
+  function reset() {
+    stop();
+    s = { p: 0, e: 0, d: 0, f: 0, o: 0, t: 0, run: false, end: '' };
+    power.value = 0;
+    $('mgname').textContent = rock.n;
+    $('mgres').textContent = 'Widerstand ' + Math.round(rock.r * 100) + ' %';
+    $('mginst').textContent = 'Instabilität ' + Math.round(rock.i * 100) + ' %';
+    msg.textContent = ''; msg.className = 'mg-msg';
+    btn.textContent = 'Laser an';
+    draw();
+  }
+  function setPower(v) {
+    s.p = Math.max(0, Math.min(100, v));
+    power.value = Math.round(s.p);
+    draw();
+  }
+  function step(dt) {
+    var k = 1.35 - rock.r;
+    var target = s.p * k;
+    s.d += (Math.random() - .5) * rock.i * 90 * dt;
+    s.d *= 1 - Math.min(1, dt * .9);
+    s.d = Math.max(-28 * rock.i, Math.min(28 * rock.i, s.d));
+    s.e += (target + s.d - s.e) * Math.min(1, dt * 2.2);
+    s.e = Math.max(0, Math.min(MAX, s.e));
+    s.t += dt;
+    if (s.e >= LO && s.e <= HI) { s.f += dt * 20; s.o = Math.max(0, s.o - dt * 15); }
+    else if (s.e > HI) { s.o += dt * (35 + (s.e - HI) * 1.5); }
+    else { s.o = Math.max(0, s.o - dt * 25); }
+    if (s.o >= 100) { s.o = 100; finish('boom'); }
+    else if (s.f >= 100) { s.f = 100; finish('win'); }
+  }
+  function finish(r) {
+    s.run = false; s.end = r; stop();
+    btn.textContent = 'Nochmal';
+    if (r === 'win') { msg.className = 'mg-msg win'; msg.textContent = 'Stein gebrochen in ' + s.t.toFixed(1) + ' s! Jetzt auf den Abbau-Laser umschalten.'; }
+    else { msg.className = 'mg-msg boom'; msg.textContent = 'Boom. Zu lange überladen, das Erz ist weg.'; }
+    draw();
+  }
+  function draw() {
+    needle.style.left = (s.e / MAX * 100) + '%';
+    $('mgf').style.width = s.f + '%'; $('mgfl').textContent = 'Bruch ' + Math.round(s.f) + ' %';
+    $('mgo').style.width = s.o + '%'; $('mgol').textContent = 'Überladung ' + Math.round(s.o) + ' %';
+    $('mgpw').textContent = 'Leistung ' + Math.round(s.p) + ' %';
+    $('mgtime').textContent = s.t ? s.t.toFixed(1) + ' s' : '';
+  }
+  function loop(now) {
+    var dt = Math.min(.1, (now - last) / 1000); last = now;
+    if (s.run) { step(dt); draw(); }
+    if (s.run) raf = requestAnimationFrame(loop);
+  }
+  function stop() { if (raf) cancelAnimationFrame(raf); raf = null; }
+  btn.addEventListener('click', function () {
+    if (s.end) { reset(); }
+    if (s.run) { s.run = false; stop(); btn.textContent = 'Laser an'; msg.textContent = 'Pausiert'; msg.className = 'mg-msg'; return; }
+    s.run = true; msg.textContent = ''; btn.textContent = 'Laser aus';
+    last = performance.now(); raf = requestAnimationFrame(loop);
+    area.focus();
+  });
+  power.addEventListener('input', function () { setPower(+power.value); });
+  area.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    setPower(s.p + (e.deltaY < 0 ? 3 : -3));
+  }, { passive: false });
+  area.addEventListener('keydown', function (e) {
+    if (e.target === power) return;
+    if (e.key === 'ArrowUp' || e.key === 'ArrowRight') { e.preventDefault(); setPower(s.p + 3); }
+    if (e.key === 'ArrowDown' || e.key === 'ArrowLeft') { e.preventDefault(); setPower(s.p - 3); }
+  });
+  document.addEventListener('viewchange', function (e) { if (e.detail !== 'training' && s.run) { s.run = false; stop(); btn.textContent = 'Laser an'; } });
+  reset();
 })();
 </script>
 </body>
