@@ -364,8 +364,10 @@ tr.rec th { color: var(--accent); }
 :root { --st1: #d9dee3; --st2: #b3bbc3; --st3: #8a949e; --st4: #5f6973; --st5: #363e46; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --st1: #7b8691; --st2: #626d78; --st3: #4b555f; --st4: #353e47; --st5: #222930; } }
 :root[data-theme="dark"] { --st1: #7b8691; --st2: #626d78; --st3: #4b555f; --st4: #353e47; --st5: #222930; }
-.hb { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
-.hb-cards { columns: 2 240px; column-gap: 10px; min-width: 0; }
+.wrap:has(#view-hotas:not([hidden])) { max-width: 1480px; }
+.hb { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 16px; align-items: start; }
+.hb-cards { columns: 3 250px; column-gap: 10px; min-width: 0; }
+@media (max-width: 1250px) { .hb { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); } .hb-cards { columns: 2 240px; } }
 .hb-cards .hc { break-inside: avoid; margin-bottom: 10px; }
 .hr .sp { color: var(--muted); margin: 0 5px; }
 .hr .it { white-space: normal; }
