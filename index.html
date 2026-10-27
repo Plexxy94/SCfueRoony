@@ -364,15 +364,21 @@ tr.rec th { color: var(--accent); }
 :root { --st1: #d9dee3; --st2: #b3bbc3; --st3: #8a949e; --st4: #5f6973; --st5: #363e46; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --st1: #7b8691; --st2: #626d78; --st3: #4b555f; --st4: #353e47; --st5: #222930; } }
 :root[data-theme="dark"] { --st1: #7b8691; --st2: #626d78; --st3: #4b555f; --st4: #353e47; --st5: #222930; }
-.hb { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 1.15fr) minmax(0, 1fr); gap: 14px; align-items: start; }
-.hb-col { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.hb { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.hb-cards { columns: 2 240px; column-gap: 10px; min-width: 0; }
+.hb-cards .hc { break-inside: avoid; margin-bottom: 10px; }
+.hr .sp { color: var(--muted); margin: 0 5px; }
+.hr .it { white-space: normal; }
+.hr .it.danger { color: var(--warn); font-weight: 700; }
+.hr .it.hit { background: var(--accent-soft); border-radius: 3px; box-shadow: 0 0 0 2px var(--accent-soft); }
+.hr .xi { font: 600 10px var(--f-mono); color: var(--mod); margin-left: 3px; white-space: nowrap; }
 .hb-fig { position: sticky; top: calc(64px + env(safe-area-inset-top, 0px)); min-width: 0; }
 .hb-fig svg { width: 100%; height: auto; display: block; }
 .st-a { fill: var(--st1); } .st-b { fill: var(--st2); } .st-c { fill: var(--st3); } .st-d { fill: var(--st4); } .st-e { fill: var(--st5); }
 .mk { cursor: pointer; }
 .mk circle { fill: var(--accent); stroke: var(--panel); stroke-width: 4; transition: r .12s; }
-.mk text { font: 700 19px var(--f-display); fill: #fff; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
-.mk.on circle { r: 24; fill: var(--ink); }
+.mk text { font: 700 30px var(--f-display); fill: #fff; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.mk.on circle { r: 38; fill: var(--ink); }
 .mk.on text { fill: var(--panel); }
 .mk.dim { opacity: .25; }
 .hc { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px 10px; display: flex; flex-direction: column; gap: 4px; min-width: 0; transition: opacity .15s, border-color .15s; }
@@ -381,7 +387,7 @@ tr.rec th { color: var(--accent); }
 .hc h4 { margin: 0 0 2px; display: flex; align-items: center; gap: 8px; font: 600 15px var(--f-display); }
 .hc h4 .no { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 12px; }
 .hc h4 small { margin-left: auto; font: 500 11px var(--f-mono); color: var(--muted); }
-.hr { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 2px 6px; align-items: baseline; font-size: 13.5px; line-height: 1.3; padding: 1px 0; }
+.hr { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 2px 6px; align-items: baseline; font-size: 13.5px; line-height: 1.35; padding: 2px 0; }
 .hr .k { font: 600 12px var(--f-mono); color: var(--muted); text-align: center; }
 .hr .f { min-width: 0; }
 .hr .f .en { display: block; font-size: 11px; color: var(--muted); }
@@ -392,13 +398,9 @@ tr.rec th { color: var(--accent); }
 .hr.danger .f { color: var(--warn); font-weight: 700; }
 .hr.hit { background: var(--accent-soft); border-radius: 4px; }
 .hr .none { color: var(--muted); font-style: italic; }
-.hb-ax { grid-column: 1 / -1; }
-@media (max-width: 1000px) {
-  .hb { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-  .hb-fig { grid-column: 1 / -1; grid-row: 1; position: static; max-width: 520px; margin: 0 auto; width: 100%; }
-}
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .hb { grid-template-columns: minmax(0, 1fr); }
+  .hb-fig { position: static; max-width: 620px; margin: 0 auto; width: 100%; }
 }
 
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
@@ -1791,10 +1793,11 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       list.sort(function (a, b) { return rank(a.tags) - rank(b.tags); });
       var g = GLYPH[c.t][sl];
       if (!list.length) {
-        rows += '<div class="hr' + (si ? ' sep' : '') + '"><span class="k">' + g + '</span><span class="f none">' + ((d[sl] || []).length ? 'hier ausgeblendet' : 'frei') + '</span><span></span></div>';
+        rows += '<div class="hr' + (si ? ' sep' : '') + '"><span class="k">' + g + '</span><span class="f none">' + ((d[sl] || []).length ? 'hier ausgeblendet' : 'frei') + '</span></div>';
         return;
       }
-      list.forEach(function (f, i) {
+      /* alle Funktionen einer Richtung in einer Zeile */
+      var items = list.map(function (f) {
         var t = f.tags, how = [], pre = '';
         if (has(t, 'M')) pre += '<span class="bm">M</span>';
         var m = modeOf(t);
@@ -1802,14 +1805,14 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
         if (set === 'schiff' && has(t, 'tu')) pre += '<span class="bo">Turm</span>';
         if (has(t, 'T/H')) how.push('tipp/halt');
         else { if (has(t, 'H')) how.push('halten'); if (has(t, 'T')) how.push('tippen'); }
-        if (has(t, 'D')) how.push('2× tippen');
-        rows += '<div class="hr' + (i === 0 && si ? ' sep' : '') + (has(t, '!') ? ' danger' : '') + (f.hit ? ' hit' : '') + '">' +
-          '<span class="k">' + (i === 0 ? g : '') + '</span><span class="f">' + pre + f.de + '<span class="en">' + f.en + '</span></span>' +
-          '<span class="x">' + how.join(' ') + '</span></div>';
+        if (has(t, 'D')) how.push('2×');
+        return '<span class="it' + (has(t, '!') ? ' danger' : '') + (f.hit ? ' hit' : '') + '">' + pre + f.de +
+          (how.length ? '<span class="xi">' + how.join(' ') + '</span>' : '') + '<span class="en">' + f.en + '</span></span>';
       });
+      rows += '<div class="hr' + (si ? ' sep' : '') + '"><span class="k">' + g + '</span><span class="f">' + items.join('<span class="sp">·</span>') + '</span></div>';
     });
     var div = document.createElement('div');
-    div.className = 'hc' + (c.id === 'AX' ? ' hb-ax' : '') + (v && !hits ? ' dim' : '');
+    div.className = 'hc' + (v && !hits ? ' dim' : '');
     div.innerHTML = '<h4>' + (no ? '<span class="no">' + no + '</span>' : '') + name(c, side) + '</h4>' + rows;
     return { el: div, hits: hits };
   }
@@ -1835,23 +1838,21 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       var a = ANCH[side][c.id], p = PLACE[side][a[0]];
       return { c: c, x: p[0] + a[1], y: p[1] + a[2] };
     });
-    var byX = pts.slice().sort(function (a, b) { return a.x - b.x; });
-    var left = byX.slice(0, 6).sort(function (a, b) { return a.y - b.y; });
-    var right = byX.slice(6).sort(function (a, b) { return a.y - b.y; });
-    var colL = document.createElement('div'); colL.className = 'hb-col';
-    var colR = document.createElement('div'); colR.className = 'hb-col';
+    /* Nummern von oben nach unten: erst der Kopf, dann Trigger & Basis */
+    pts.sort(function (a, b) { return (ANCH[side][a.c.id][0] === 'side') - (ANCH[side][b.c.id][0] === 'side') || a.y - b.y || a.x - b.x; });
+    var cardsBox = document.createElement('div'); cardsBox.className = 'hb-cards';
     var fig = document.createElement('div'); fig.className = 'hb-fig';
     var svg = figure(side); fig.appendChild(svg);
     var total = 0, marks = {}, cards = {};
     function link(id, on) { if (marks[id]) marks[id].classList.toggle('on', on); if (cards[id]) cards[id].classList.toggle('on', on); }
-    left.concat(right).forEach(function (pt, i) {
+    pts.forEach(function (pt, i) {
       var no = i + 1;
       var r = card(side, pt.c, no, v); total += r.hits;
       cards[pt.c.id] = r.el;
-      (i < left.length ? colL : colR).appendChild(r.el);
+      cardsBox.appendChild(r.el);
       var m = el('g', { class: 'mk' + (v && !r.hits ? ' dim' : ''), tabindex: '0', role: 'button', 'aria-label': no + ': ' + name(pt.c, side) }, svg);
-      el('circle', { cx: pt.x, cy: pt.y, r: 19 }, m);
-      el('text', { x: pt.x, y: pt.y + 1 }, m).textContent = no;
+      el('circle', { cx: pt.x, cy: pt.y, r: 28 }, m);
+      el('text', { x: pt.x, y: pt.y + 2 }, m).textContent = no;
       marks[pt.c.id] = m;
       var id = pt.c.id;
       r.el.addEventListener('mouseenter', function () { link(id, true); });
@@ -1862,9 +1863,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       m.addEventListener('click', jump);
       m.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); jump(); } });
     });
-    box.appendChild(colL); box.appendChild(fig); box.appendChild(colR);
     var ax = card(side, CTRL[CTRL.length - 1], 0, v); total += ax.hits;
-    box.appendChild(ax.el);
+    cardsBox.appendChild(ax.el);
+    box.appendChild(fig); box.appendChild(cardsBox);
     return total;
   }
 
