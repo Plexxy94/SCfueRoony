@@ -406,18 +406,18 @@ tr.rec th { color: var(--accent); }
 }
 
 /* Schiffe */
-.sh-banner { border-radius: 10px; overflow: hidden; aspect-ratio: 3 / 1; max-width: 100%; background: var(--key-bg); }
-.sh-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .sh-opts { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 14px; }
 .sh-opts .check { font-family: var(--f-body); font-weight: 500; }
 .sh-sel { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); }
 .sh-sel select { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; }
 .sh-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 12px; }
-.sh { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.sh { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.sh-img { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: var(--key-bg); }
+.sh-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sh-mcode { position: absolute; left: 8px; top: 8px; font: 700 11px var(--f-mono); letter-spacing: .08em; padding: 2px 7px; border-radius: 4px; background: rgba(8, 12, 16, .7); color: #e6edf3; }
+.sh-body { padding: 12px 16px 14px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.sh-base { font-size: 12px; }
 .sh.tip { border-color: var(--ok); }
-.sh-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; min-height: 40px; }
-.sh-logo { height: 34px; width: auto; max-width: 120px; object-fit: contain; object-position: left center; }
-.sh-mtext { font: 700 13px var(--f-display); letter-spacing: .08em; color: var(--muted); }
 .sh h3 { font-family: var(--f-display); font-size: 20px; font-weight: 600; margin: 0; line-height: 1.15; }
 .sh .mn { font-size: 12.5px; color: var(--muted); }
 .sh-tags { display: flex; flex-wrap: wrap; gap: 4px; }
@@ -444,7 +444,6 @@ tr.rec th { color: var(--accent); }
 .sh-3d-stage { position: relative; height: min(560px, 65vh); border-radius: 8px; overflow: hidden; background: #0b1117; }
 .sh-3d-stage canvas { display: block; width: 100%; height: 100%; touch-action: none; }
 .sh-3d-msg { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; color: #c9d3dc; font-family: var(--f-display); }
-.sh-3d-cl { position: absolute; left: 12px; bottom: 12px; opacity: .75; pointer-events: none; }
 .legal { display: flex; gap: 14px; align-items: center; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
 .legal img { flex: none; height: auto; }
 .legal p { margin: 0; font-size: 13px; }
@@ -515,7 +514,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <a class="chapter" href="#schiffe">
       <span class="no">NACHSCHLAGEN</span>
       <h3>Schiffe</h3>
-      <p>Alle flugfähigen Schiffe mit Einsatzzweck, Fracht, Crew und Preisen im Spiel. 14 davon in 3D zum Drehen.</p>
+      <p>Alle flugfähigen Schiffe mit Einsatzzweck, Fracht, Crew und Preisen im Spiel. Mit Bild und 3D-Modell zum Drehen.</p>
       <span class="go">Hangar öffnen →</span>
     </a>
     <a class="chapter" href="#glossar">
@@ -940,11 +939,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 
 <!-- ============ SCHIFFE ============ -->
 <section class="view" id="view-schiffe" data-view="schiffe" hidden>
-  <div class="sh-banner"><img src="assets/ships-banner.jpg" alt="RSI-Schiffe über einer Landeplattform in einer Schlucht (RSI-Fankit)" width="1500" height="500" loading="lazy"></div>
   <div class="head">
     <div class="stamp"><span>Nachschlagen</span><span>Spielversion 4.10.2</span><span>Preise in aUEC</span></div>
     <h1>Schiffe</h1>
-    <p class="lede">Alle flugfähigen Schiffe und Fahrzeuge mit Einsatzzweck, Fracht, Crew und Preisen im Spiel. Schiffe mit dem Würfel kannst du in 3D drehen.</p>
+    <p class="lede">Alle flugfähigen Schiffe und Fahrzeuge mit Einsatzzweck, Fracht, Crew und Preisen im Spiel. Jedes Schiff kannst du in 3D drehen.</p>
     <div class="search">
       <input id="shq" type="search" placeholder="Schiff oder Hersteller suchen, z. B. „Cutlass“ oder „Drake“" aria-label="Schiffe durchsuchen">
       <span class="count" id="shcount"></span>
@@ -953,7 +951,6 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <div class="sh-opts">
       <label class="check"><input type="checkbox" id="shtip"> Nur Einsteiger-Tipps</label>
       <label class="check"><input type="checkbox" id="shbuy"> Im Spiel kaufbar</label>
-      <label class="check"><input type="checkbox" id="sh3d"> Mit 3D-Modell</label>
       <label class="check"><input type="checkbox" id="shveh"> Bodenfahrzeuge zeigen</label>
       <label class="sh-sel">Crew
         <select id="shcrew"><option value="">egal</option><option value="1">solo</option><option value="3">bis 3</option><option value="4">4 und mehr</option></select>
@@ -972,9 +969,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <div class="sh-3d-head"><b id="sh3d-title">3D</b><button type="button" class="btn2" id="sh3d-close">Schließen</button></div>
   <div class="sh-3d-stage" id="sh3d-stage">
     <p class="sh-3d-msg" id="sh3d-msg">Modell wird geladen …</p>
-    <img class="sh-3d-cl" src="assets/community-l.png" alt="Made by the Community" width="90">
   </div>
-  <p class="small">Ziehen zum Drehen, Mausrad oder zwei Finger zum Zoomen. Holoviewer-Modell aus dem RSI-Fankit.</p>
+  <p class="small" id="sh3d-note">Ziehen zum Drehen, Mausrad oder zwei Finger zum Zoomen. 3D-Modell © Cloud Imperium, bereitgestellt über FleetYards.net.</p>
 </dialog>
 
 <!-- ============ GLOSSAR ============ -->
@@ -1104,12 +1100,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <a href="https://starcitizen.tools/Guide:Mining" target="_blank" rel="noopener">Star Citizen Wiki</a>.
   HOSAS-Belegung: Dual-Virpil-Alpha-Profil von <a href="https://www.youtube.com/buzzzkiller" target="_blank" rel="noopener">Buzzzkiller</a> (Vorlage u/yogidragon), Stand 5. Aug 2026.
   Schiffsdaten: <a href="https://api.star-citizen.wiki" target="_blank" rel="noopener">Star Citizen Wiki API</a> (Spielversion 4.10.2), Preise im Spiel über <a href="https://uexcorp.space" target="_blank" rel="noopener">UEX</a>.
-  Logos, Wallpaper und 3D-Modelle aus dem offiziellen <a href="https://robertsspaceindustries.com/fankit" target="_blank" rel="noopener">RSI-Fankit</a>.
+  Schiffsbilder und 3D-Modelle werden von <a href="https://fleetyards.net" target="_blank" rel="noopener">FleetYards.net</a> geladen.
   Angaben ohne Gewähr.
   <div class="legal">
-    <img class="lg-d" src="assets/community-d.png" alt="Made by the Community" width="110">
-    <img class="lg-l" src="assets/community-l.png" alt="Made by the Community" width="110">
-    <p>This site is not endorsed by or affiliated with the Cloud Imperium or Roberts Space Industries group of companies. All game content and materials are copyright Cloud Imperium Rights LLC and Cloud Imperium Rights Ltd.. Star Citizen®, Squadron 42®, Roberts Space Industries®, and Cloud Imperium® are registered trademarks of Cloud Imperium Rights LLC. All rights reserved.</p>
+    <p>Inoffizielle, nicht-kommerzielle Fan-Seite. Nicht verbunden mit Cloud Imperium Games oder Roberts Space Industries. Alle Spielinhalte, Schiffsbilder und 3D-Modelle © Cloud Imperium Rights LLC und Cloud Imperium Rights Ltd. Star Citizen®, Squadron 42®, Roberts Space Industries® und Cloud Imperium® sind eingetragene Marken von Cloud Imperium Rights LLC.</p>
   </div>
 </footer>
 </main>
@@ -2013,7 +2007,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 <script>
 /* ---------- Schiffe ---------- */
 (function () {
-  var SH = window.SHIPS || [], LOGOS = window.SHIP_LOGOS || {};
+  var SH = window.SHIPS || [];
   var $ = function (id) { return document.getElementById(id); };
   var grid = $('shgrid'), q = $('shq'), cnt = $('shcount'), none = $('shnone');
   var CATS = ['Alle', 'Kampf', 'Fracht', 'Industrie', 'Erkundung', 'Allrounder', 'Support', 'Rennen', 'Einsteiger', 'Bodenfahrzeug'];
@@ -2040,8 +2034,6 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   SH.forEach(function (s, i) {
     var el = document.createElement('article');
     el.className = 'sh' + (s.tip ? ' tip' : '');
-    var lg = LOGOS[s.m];
-    var logo = lg ? '<img class="sh-logo lg-d" src="' + lg.d + '" alt="' + esc(s.mn) + '" loading="lazy"><img class="sh-logo lg-l" src="' + lg.l + '" alt="' + esc(s.mn) + '" loading="lazy">' : '<span class="sh-mtext">' + esc(s.m || '') + '</span>';
     var tags = '<span class="sh-tag cat">' + esc(s.c) + '</span>' + s.f.slice(0, 2).map(function (f) { return '<span class="sh-tag">' + esc(f) + '</span>'; }).join('') + (s.tip ? '<span class="sh-tag tip">Einsteiger-Tipp</span>' : '');
     var cargo = s.ore ? '<b>' + fmt(s.ore) + '</b><span>Erz-SCU</span>' : '<b>' + fmt(s.scu) + '</b><span>Fracht-SCU</span>';
     var crew = s.cr[0] === s.cr[1] ? s.cr[0] : s.cr[0] + '–' + s.cr[1];
@@ -2049,14 +2041,21 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     if (s.b) price += '<span>Kauf ab <b>' + fmt(s.b[0]) + ' aUEC</b></span><span class="where">' + esc(s.b[1]) + (s.nb > 1 ? ' · +' + (s.nb - 1) + ' weitere' : '') + '</span>';
     if (s.r) price += '<span>Miete ab <b>' + fmt(s.r[0]) + ' aUEC</b>/Tag</span><span class="where">' + esc(s.r[1]) + '</span>';
     if (!price) price = '<span class="where">Im Spiel nicht kaufbar (Pledge oder Belohnung)</span>';
-    el.innerHTML = '<div class="sh-top">' + logo + '</div>' +
+    el.innerHTML =
+      '<div class="sh-img">' + (s.img ? '<img src="' + esc(s.img) + '" alt="' + esc(s.full) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer">' : '') +
+      '<span class="sh-mcode">' + esc(s.m || '') + '</span></div>' +
+      '<div class="sh-body">' +
       '<div><h3>' + esc(s.n) + '</h3><span class="mn">' + esc(s.mn) + '</span></div>' +
       '<div class="sh-tags">' + tags + '</div>' +
       (s.tip ? '<span class="sh-note">' + esc(s.tip) + '</span>' : '') +
       '<div class="sh-stats"><div>' + cargo + '</div><div><b>' + crew + '</b><span>Crew</span></div><div><b>' + (SIZE[s.s] || '–') + '</b><span>Größe</span></div></div>' +
       '<div class="sh-price">' + price + '</div>' +
-      '<div class="sh-act">' + (s.mod ? '<button type="button" class="d3" data-i="' + i + '">3D ansehen</button>' : '') +
-      (s.u ? '<a href="' + esc(s.u) + '" target="_blank" rel="noopener">RSI-Seite ↗</a>' : '') + '</div>';
+      (s.base ? '<span class="where sh-base">Bild und 3D zeigen das Grundmodell ' + esc(s.base) + '</span>' : '') +
+      '<div class="sh-act">' + (s.glb ? '<button type="button" class="d3" data-i="' + i + '">3D ansehen</button>' : '') +
+      (s.u ? '<a href="' + esc(s.u) + '" target="_blank" rel="noopener">RSI-Seite ↗</a>' : '') +
+      (s.fy ? '<a href="' + esc(s.fy) + '" target="_blank" rel="noopener">FleetYards ↗</a>' : '') + '</div></div>';
+    var im = el.querySelector('img');
+    if (im) im.addEventListener('error', function () { im.remove(); });
     s._el = el;
     s._t = (s.n + ' ' + s.full + ' ' + s.mn + ' ' + s.m + ' ' + s.c + ' ' + s.f.join(' ')).toLowerCase();
     grid.appendChild(el);
@@ -2064,16 +2063,15 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 
   function apply() {
     var v = q.value.trim().toLowerCase();
-    var tip = $('shtip').checked, buy = $('shbuy').checked, d3 = $('sh3d').checked, veh = $('shveh').checked;
+    var tip = $('shtip').checked, buy = $('shbuy').checked, veh = $('shveh').checked;
     var crew = $('shcrew').value, sort = $('shsort').value;
     var shown = SH.filter(function (s) {
       if (v && s._t.indexOf(v) === -1) return false;
       if (cat === 'Einsteiger') { if (!s.tip) return false; }
       else if (cat !== 'Alle' && s.c !== cat) return false;
-      if (s.veh && !veh && !d3) return false;
+      if (s.veh && !veh) return false;
       if (tip && !s.tip) return false;
       if (buy && !s.b) return false;
-      if (d3 && !s.mod) return false;
       if (crew === '1' && s.cr[0] > 1) return false;
       if (crew === '3' && s.cr[0] > 3) return false;
       if (crew === '4' && s.cr[1] < 4) return false;
@@ -2092,23 +2090,20 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     cnt.textContent = shown.length + ' von ' + SH.length;
     none.hidden = shown.length > 0;
   }
-  [q, $('shtip'), $('shbuy'), $('sh3d'), $('shveh'), $('shcrew'), $('shsort')].forEach(function (e) { e.addEventListener(e === q ? 'input' : 'change', apply); });
+  [q, $('shtip'), $('shbuy'), $('shveh'), $('shcrew'), $('shsort')].forEach(function (e) { e.addEventListener(e === q ? 'input' : 'change', apply); });
   apply();
 
-  /* 3D-Viewer: three.js r105 + CTM-Loader werden erst beim ersten Öffnen geladen */
+  /* 3D-Viewer: three.js r147 mit glTF- und Draco-Loader, erst beim ersten Öffnen geladen */
   var dlg = $('sh3d-dlg'), stage = $('sh3d-stage'), msg = $('sh3d-msg');
-  var LIBS = ['https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js',
-    'https://cdn.jsdelivr.net/npm/three@0.105.0/examples/js/loaders/ctm/lzma.js',
-    'https://cdn.jsdelivr.net/npm/three@0.105.0/examples/js/loaders/ctm/ctm.js',
-    'https://cdn.jsdelivr.net/npm/three@0.105.0/examples/js/loaders/ctm/CTMLoader.js',
-    'https://cdn.jsdelivr.net/npm/three@0.105.0/examples/js/controls/OrbitControls.js'];
+  var CDN = 'https://cdn.jsdelivr.net/npm/three@0.147.0/';
+  var LIBS = ['build/three.min.js', 'examples/js/loaders/DRACOLoader.js', 'examples/js/loaders/GLTFLoader.js', 'examples/js/controls/OrbitControls.js'];
   var libsReady = null, view3d = null;
   function loadLibs() {
     if (libsReady) return libsReady;
     libsReady = LIBS.reduce(function (p, src) {
       return p.then(function () {
         return new Promise(function (ok, fail) {
-          var sc = document.createElement('script'); sc.src = src; sc.onload = ok; sc.onerror = function () { fail(new Error(src)); };
+          var sc = document.createElement('script'); sc.src = CDN + src; sc.onload = ok; sc.onerror = function () { fail(new Error(src)); };
           document.head.appendChild(sc);
         });
       });
@@ -2119,17 +2114,21 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     var T = window.THREE;
     var renderer = new T.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+    renderer.outputEncoding = T.sRGBEncoding;
     stage.insertBefore(renderer.domElement, stage.firstChild);
     var scene = new T.Scene();
     scene.background = new T.Color(0x0b1117);
     var cam = new T.PerspectiveCamera(40, 1, 0.1, 5000);
-    scene.add(new T.HemisphereLight(0xcfd8e2, 0x10161c, 0.75));
-    var key = new T.DirectionalLight(0xffffff, 0.75); key.position.set(3, 5, 4); scene.add(key);
+    scene.add(new T.HemisphereLight(0xcfd8e2, 0x10161c, 0.8));
+    var key = new T.DirectionalLight(0xffffff, 0.8); key.position.set(3, 5, 4); scene.add(key);
     var rim = new T.DirectionalLight(0x9fc4ff, 0.5); rim.position.set(-4, 2, -5); scene.add(rim);
     var ctl = new T.OrbitControls(cam, renderer.domElement);
     ctl.enableDamping = true; ctl.dampingFactor = 0.12; ctl.autoRotate = true; ctl.autoRotateSpeed = 1.2;
     renderer.domElement.addEventListener('pointerdown', function () { ctl.autoRotate = false; });
-    var mesh = null;
+    var draco = new T.DRACOLoader(); draco.setDecoderPath(CDN + 'examples/js/libs/draco/gltf/');
+    var loader = new T.GLTFLoader(); loader.setDRACOLoader(draco);
+    var mat = new T.MeshStandardMaterial({ color: 0x8e99a4, metalness: 0.45, roughness: 0.5 });
+    var obj = null, token = 0;
     function size() {
       var w = stage.clientWidth, h = stage.clientHeight;
       renderer.setSize(w, h, false); cam.aspect = w / Math.max(1, h); cam.updateProjectionMatrix();
@@ -2137,34 +2136,39 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     function loop() { if (!dlg.open) return; ctl.update(); renderer.render(scene, cam); requestAnimationFrame(loop); }
     window.addEventListener('resize', function () { if (dlg.open) size(); });
     return {
-      show: function (slug) {
+      show: function (url) {
         size();
-        if (mesh) { scene.remove(mesh); mesh.geometry.dispose(); mesh = null; }
+        var my = ++token;
+        if (obj) { scene.remove(obj); obj.traverse(function (o) { if (o.geometry) o.geometry.dispose(); }); obj = null; }
         msg.hidden = false; msg.textContent = 'Modell wird geladen …';
-        new T.CTMLoader().load('assets/models/' + slug + '.ctm', function (geo) {
-          geo.computeVertexNormals();
-          geo.computeBoundingBox();
-          var bb = geo.boundingBox, c = new T.Vector3(), sz = new T.Vector3();
+        loader.load(url, function (gltf) {
+          if (my !== token) return;
+          obj = gltf.scene;
+          obj.traverse(function (o) { if (o.isMesh) { o.material = mat; if (!o.geometry.attributes.normal) o.geometry.computeVertexNormals(); } });
+          var bb = new T.Box3().setFromObject(obj), c = new T.Vector3(), sz = new T.Vector3();
           bb.getCenter(c); bb.getSize(sz);
-          geo.translate(-c.x, -c.y, -c.z);
-          var r = Math.max(sz.x, sz.y, sz.z);
-          mesh = new T.Mesh(geo, new T.MeshStandardMaterial({ color: 0x8e99a4, metalness: 0.45, roughness: 0.5 }));
-          scene.add(mesh);
+          obj.position.sub(c);
+          scene.add(obj);
+          var r = Math.max(sz.x, sz.y, sz.z) || 1;
           cam.position.set(r * 0.62, r * 0.38, r * 0.78); cam.near = r / 100; cam.far = r * 20; cam.updateProjectionMatrix();
           ctl.target.set(0, 0, 0); ctl.autoRotate = true; ctl.update();
           msg.hidden = true;
-        }, { useWorker: false });
+        }, function (ev) {
+          if (my === token && ev.lengthComputable) msg.textContent = 'Modell wird geladen … ' + Math.round(ev.loaded / ev.total * 100) + ' %';
+        }, function () {
+          if (my === token) msg.textContent = 'Dieses Modell konnte nicht geladen werden.';
+        });
         requestAnimationFrame(loop);
       }
     };
   }
   function open3d(s) {
-    $('sh3d-title').textContent = s.full;
+    $('sh3d-title').textContent = s.full + (s.base ? ' (Grundmodell ' + s.base + ')' : '');
     if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
     msg.hidden = false; msg.textContent = '3D-Ansicht wird vorbereitet …';
     loadLibs().then(function () {
       if (!view3d) view3d = setup();
-      view3d.show(s.mod);
+      view3d.show(s.glb);
     }).catch(function () {
       msg.hidden = false; msg.textContent = '3D-Ansicht konnte nicht geladen werden. Prüf deine Internetverbindung.';
     });
