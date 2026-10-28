@@ -2070,7 +2070,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       if (v && s._t.indexOf(v) === -1) return false;
       if (cat === 'Einsteiger') { if (!s.tip) return false; }
       else if (cat !== 'Alle' && s.c !== cat) return false;
-      if (s.veh && !veh) return false;
+      if (s.veh && !veh && !d3) return false;
       if (tip && !s.tip) return false;
       if (buy && !s.b) return false;
       if (d3 && !s.mod) return false;
@@ -2123,8 +2123,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     var scene = new T.Scene();
     scene.background = new T.Color(0x0b1117);
     var cam = new T.PerspectiveCamera(40, 1, 0.1, 5000);
-    scene.add(new T.HemisphereLight(0xdfe8f0, 0x1a222a, 1.0));
-    var key = new T.DirectionalLight(0xffffff, 0.9); key.position.set(3, 5, 4); scene.add(key);
+    scene.add(new T.HemisphereLight(0xcfd8e2, 0x10161c, 0.75));
+    var key = new T.DirectionalLight(0xffffff, 0.75); key.position.set(3, 5, 4); scene.add(key);
     var rim = new T.DirectionalLight(0x9fc4ff, 0.5); rim.position.set(-4, 2, -5); scene.add(rim);
     var ctl = new T.OrbitControls(cam, renderer.domElement);
     ctl.enableDamping = true; ctl.dampingFactor = 0.12; ctl.autoRotate = true; ctl.autoRotateSpeed = 1.2;
@@ -2148,9 +2148,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
           bb.getCenter(c); bb.getSize(sz);
           geo.translate(-c.x, -c.y, -c.z);
           var r = Math.max(sz.x, sz.y, sz.z);
-          mesh = new T.Mesh(geo, new T.MeshStandardMaterial({ color: 0xaab4be, metalness: 0.35, roughness: 0.5 }));
+          mesh = new T.Mesh(geo, new T.MeshStandardMaterial({ color: 0x8e99a4, metalness: 0.45, roughness: 0.5 }));
           scene.add(mesh);
-          cam.position.set(r * 0.9, r * 0.55, r * 1.1); cam.near = r / 100; cam.far = r * 20; cam.updateProjectionMatrix();
+          cam.position.set(r * 0.62, r * 0.38, r * 0.78); cam.near = r / 100; cam.far = r * 20; cam.updateProjectionMatrix();
           ctl.target.set(0, 0, 0); ctl.autoRotate = true; ctl.update();
           msg.hidden = true;
         }, { useWorker: false });
