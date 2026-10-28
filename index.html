@@ -418,6 +418,9 @@ tr.rec th { color: var(--accent); }
 .sh-body { padding: 12px 16px 14px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .sh-base { font-size: 12px; }
 .sh.tip { border-color: var(--ok); }
+.sh.later { border-color: var(--accent); }
+.sh-tag.later { background: var(--accent-soft); border-color: transparent; color: var(--accent); }
+.sh-note.later { color: var(--accent); }
 .sh h3 { font-family: var(--f-display); font-size: 20px; font-weight: 600; margin: 0; line-height: 1.15; }
 .sh .mn { font-size: 12.5px; color: var(--muted); }
 .sh-tags { display: flex; flex-wrap: wrap; gap: 4px; }
@@ -2003,7 +2006,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 })();
 </script>
 
-<script src="ships.js?v=20261028c"></script>
+<script src="ships.js?v=20261028d"></script>
 <script>
 /* ---------- Schiffe ---------- */
 (function () {
@@ -2033,8 +2036,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   /* Karten einmal bauen */
   SH.forEach(function (s, i) {
     var el = document.createElement('article');
-    el.className = 'sh' + (s.tip ? ' tip' : '');
-    var tags = '<span class="sh-tag cat">' + esc(s.c) + '</span>' + s.f.slice(0, 2).map(function (f) { return '<span class="sh-tag">' + esc(f) + '</span>'; }).join('') + (s.tip ? '<span class="sh-tag tip">Einsteiger-Tipp</span>' : '');
+    el.className = 'sh' + (s.tip ? ' tip' : s.later ? ' later' : '');
+    var tags = '<span class="sh-tag cat">' + esc(s.c) + '</span>' + s.f.slice(0, 2).map(function (f) { return '<span class="sh-tag">' + esc(f) + '</span>'; }).join('') +
+      (s.tip ? '<span class="sh-tag tip">Einsteiger-Tipp</span>' : s.later ? '<span class="sh-tag later">Tipp für später</span>' : '');
     var cargo = s.ore ? '<b>' + fmt(s.ore) + '</b><span>Erz-SCU</span>' : '<b>' + fmt(s.scu) + '</b><span>Fracht-SCU</span>';
     var crew = s.cr[0] === s.cr[1] ? s.cr[0] : s.cr[0] + '–' + s.cr[1];
     var price = '';
@@ -2047,7 +2051,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       '<div class="sh-body">' +
       '<div><h3>' + esc(s.n) + '</h3><span class="mn">' + esc(s.mn) + '</span></div>' +
       '<div class="sh-tags">' + tags + '</div>' +
-      (s.tip ? '<span class="sh-note">' + esc(s.tip) + '</span>' : '') +
+      (s.tip ? '<span class="sh-note">' + esc(s.tip) + '</span>' : s.later ? '<span class="sh-note later">' + esc(s.later) + '</span>' : '') +
       '<div class="sh-stats"><div>' + cargo + '</div><div><b>' + crew + '</b><span>Crew</span></div><div><b>' + (SIZE[s.s] || '–') + '</b><span>Größe</span></div></div>' +
       '<div class="sh-price">' + price + '</div>' +
       (s.base ? '<span class="where sh-base">Bild und 3D zeigen das Grundmodell ' + esc(s.base) + '</span>' : '') +
