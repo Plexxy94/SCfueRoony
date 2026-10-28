@@ -2149,8 +2149,12 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
           bb.getCenter(c); bb.getSize(sz);
           obj.position.sub(c);
           scene.add(obj);
-          var r = Math.max(sz.x, sz.y, sz.z) || 1;
-          cam.position.set(r * 0.62, r * 0.38, r * 0.78); cam.near = r / 100; cam.far = r * 20; cam.updateProjectionMatrix();
+          /* Abstand so wählen, dass die Hüllkugel auch im Hochformat ganz ins Bild passt */
+          var r = (sz.length() / 2) || 1;
+          var vf = cam.fov * Math.PI / 180, hf = 2 * Math.atan(Math.tan(vf / 2) * cam.aspect);
+          var dist = r / Math.sin(Math.min(vf, hf) / 2) * 1.02;
+          cam.position.set(0.62, 0.38, 0.78).normalize().multiplyScalar(dist);
+          cam.near = dist / 100; cam.far = dist * 10; cam.updateProjectionMatrix();
           ctl.target.set(0, 0, 0); ctl.autoRotate = true; ctl.update();
           msg.hidden = true;
         }, function (ev) {
