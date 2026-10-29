@@ -453,6 +453,11 @@ tr.rec th { color: var(--accent); }
 
 .gb { font: 500 0.82em var(--f-mono); font-style: normal; color: var(--muted); white-space: nowrap; }
 
+.rs-out { display: flex; flex-direction: column; gap: 6px; }
+.rs-hit { display: flex; justify-content: space-between; gap: 10px; padding: 8px 12px; border-radius: 6px; background: var(--key-bg); border: 1px solid var(--line); font-size: 14px; }
+.rs-hit b { font-family: var(--f-display); font-size: 16px; }
+.rs-hit.top { border-color: var(--ok); background: var(--ok-soft); }
+
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -920,23 +925,138 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
         <li><kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf einen Stein zielen und <kbd>LMB</kbd> <span class="mod">halten</span>. Du siehst Erze, Widerstand und Instabilität.</li>
         <li><kbd>M</kbd> Mining-Modus <i class="gb">Mining Mode</i>, nah heranfliegen. <kbd>LMB</kbd> feuern, mit <kbd>L-Alt</kbd><span class="plus">+</span><kbd>Mausrad</kbd> die Leistung im Grünen halten.</li>
         <li>Wenn der Stein bricht: Bruchstücke mit lila Rand sind abbaubar. <kbd>RMB</kbd> auf den Abbau-Laser <i class="gb">Extraction Laser</i> umschalten, <kbd>LMB</kbd> einsaugen.</li>
-        <li><b>Raffinieren:</b> An einer Raffinerie <i class="gb">Refinery</i> (Rastplätze <i class="gb">Rest Stops</i> an Lagrange-Punkten) einen Auftrag <i class="gb">Work Order</i> starten. Schnelle Methoden liefern weniger, langsame mehr. Später abholen und verkaufen.</li>
+        <li><b>Raffinieren:</b> An einer Raffinerie <i class="gb">Refinery</i> (Rastplätze <i class="gb">Rest Stops</i> an Lagrange-Punkten) einen Auftrag <i class="gb">Work Order</i> starten. Schnelle Methoden liefern weniger, langsame mehr. Später abholen und verkaufen. Wie das genau geht, steht unten unter „Raffinieren“.</li>
       </ol>
       <div class="oops"><strong>Wichtig:</strong> Rohes Erz direkt verkaufen bringt nur etwa die Hälfte. Raffinieren lohnt sich fast immer, dauert aber.</div>
     </div>
   </div>
 
   <section>
-    <h2>Erze für Einsteiger</h2>
-    <div class="ores">
-      <div class="ore"><b>Laranit <i class="gb">Laranite</i></b><span class="v">~30.000 aUEC/SCU</span><span class="w">Solide, gut zu finden</span></div>
-      <div class="ore"><b>Taranit <i class="gb">Taranite</i></b><span class="v">~32.000 aUEC/SCU</span><span class="w">Solide</span></div>
-      <div class="ore"><b>Gold</b><span class="v">~37.000 aUEC/SCU</span><span class="w">Gut für den Anfang</span></div>
-      <div class="ore"><b>Bexalit <i class="gb">Bexalite</i></b><span class="v">~44.000 aUEC/SCU</span><span class="w">Lohnend</span></div>
-      <div class="ore"><b>Diamant <i class="gb">Diamond</i></b><span class="v">~65.000 aUEC/SCU</span><span class="w">Selten, sehr lohnend</span></div>
-      <div class="ore hot"><b>Quantanium <i class="gb">Quantainium</i></b><span class="v">~170.000 aUEC/SCU</span><span class="w">Zerfällt mit der Zeit und kann explodieren. Erst später.</span></div>
+    <h2>Scannen: Steine finden und einschätzen</h2>
+    <div class="two">
+      <div class="card-plain">
+        <h3>So findest du Gestein</h3>
+        <ol>
+          <li>Im Schiff <kbd>Tab</kbd> <span class="mod">halten</span>: Ping <i class="gb">Ping</i>. An den Fundstellen erscheinen Zahlen im HUD, die Signatur <i class="gb">Radar Signature (RS)</i>.</li>
+          <li><b>Zahl lesen:</b> Signatur = Grundwert des Hauptminerals × Anzahl Steine. 7.170 heißt zum Beispiel 2 × 3.585, also zwei Gold-Steine.</li>
+          <li>Hinfliegen, <kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf den Stein zielen und <kbd>LMB</kbd> <span class="mod">halten</span>. Jetzt siehst du Zusammensetzung <i class="gb">Composition</i> in Prozent, Masse <i class="gb">Mass</i>, Widerstand und Instabilität.</li>
+          <li><b>Entscheiden:</b> Viel wertvolles Erz und ein Widerstand, den dein Laser schafft? Abbauen. Sonst weiterfliegen.</li>
+        </ol>
+        <div class="hint">Am Boden gilt etwas anderes: 3.000 ist ein kleines Vorkommen für Handabbau, 4.000 ein großes für den ROC. Welches Edelstein-Mineral drin ist, zeigt erst der Scan. Im All bedeutet 3.000 dagegen Trümmer eines großen Wracks.</div>
+      </div>
+      <div class="card-plain">
+        <h3>RS-Rechner</h3>
+        <p class="small" style="font-size:14px">Tipp die Zahl aus dem HUD ein. Der Rechner zeigt, welches Mineral und wie viele Steine dahinterstecken können.</p>
+        <div class="search"><input id="rsq" type="text" inputmode="numeric" placeholder="z. B. 7170 oder 12.680" aria-label="Signatur aus dem HUD"></div>
+        <div id="rsout" class="rs-out" aria-live="polite"><span class="small">Noch keine Zahl eingegeben.</span></div>
+      </div>
     </div>
-    <p class="small" style="margin-top:8px">Raffinierte Preise laut Community-Daten für 4.10, Größenordnung. Titan <i class="gb">Titanium</i>, Korund <i class="gb">Corundum</i> und Agricium sind häufig, aber weniger wert.</p>
+    <div class="table-wrap" style="margin-top:12px">
+      <table>
+        <thead><tr><th>Signatur</th><th>Mineral</th><th>Wert pro SCU</th><th>Einstufung</th></tr></thead>
+        <tbody>
+          <tr><td class="num"><b>3.170</b></td><th>Quantanium <small>Quantainium</small></th><td class="num">200.000 aUEC</td><td><span class="pill no">flüchtig</span></td></tr>
+          <tr><td class="num"><b>3.185</b></td><th>Stileron <small>Stileron</small></th><td class="num">140.000 aUEC</td><td><span class="pill go">legendär</span></td></tr>
+          <tr><td class="num"><b>3.200</b></td><th>Savrilium <small>Savrilium</small></th><td class="num">–</td><td><span class="pill no">flüchtig</span></td></tr>
+          <tr><td class="num"><b>3.370</b></td><th>Ouratit <small>Ouratite</small></th><td class="num">–</td><td><span class="pill go">episch</span></td></tr>
+          <tr><td class="num"><b>3.385</b></td><th>Riccit <small>Riccite</small></th><td class="num">66.000 aUEC</td><td><span class="pill go">episch</span></td></tr>
+          <tr><td class="num"><b>3.400</b></td><th>Lindinium <small>Lindinium</small></th><td class="num">24.000 aUEC</td><td><span class="pill go">episch</span></td></tr>
+          <tr><td class="num"><b>3.540</b></td><th>Beryll <small>Beryl</small></th><td class="num">4.700 aUEC</td><td><span class="pill later">selten</span></td></tr>
+          <tr><td class="num"><b>3.555</b></td><th>Taranit <small>Taranite</small></th><td class="num">22.000 aUEC</td><td><span class="pill later">selten</span></td></tr>
+          <tr><td class="num"><b>3.570</b></td><th>Borase <small>Borase</small></th><td class="num">25.000 aUEC</td><td><span class="pill later">selten</span></td></tr>
+          <tr><td class="num"><b>3.585</b></td><th>Gold <small>Gold</small></th><td class="num">32.000 aUEC</td><td><span class="pill later">selten</span></td></tr>
+          <tr><td class="num"><b>3.600</b></td><th>Bexalit <small>Bexalite</small></th><td class="num">18.000 aUEC</td><td><span class="pill later">selten</span></td></tr>
+          <tr><td class="num"><b>3.825</b></td><th>Laranit <small>Laranite</small></th><td class="num">9.100 aUEC</td><td><span class="pill no">ungewöhnlich</span></td></tr>
+          <tr><td class="num"><b>3.840</b></td><th>Aslarit <small>Aslarite</small></th><td class="num">–</td><td><span class="pill no">ungewöhnlich</span></td></tr>
+          <tr><td class="num"><b>3.855</b></td><th>Titan <small>Titanium</small></th><td class="num">8.300 aUEC</td><td><span class="pill no">ungewöhnlich</span></td></tr>
+          <tr><td class="num"><b>3.870</b></td><th>Wolfram <small>Tungsten</small></th><td class="num">10.000 aUEC</td><td><span class="pill no">ungewöhnlich</span></td></tr>
+          <tr><td class="num"><b>3.885</b></td><th>Agricium <small>Agricium</small></th><td class="num">11.000 aUEC</td><td><span class="pill no">ungewöhnlich</span></td></tr>
+          <tr><td class="num"><b>3.900</b></td><th>Torit <small>Torite</small></th><td class="num">7.900 aUEC</td><td><span class="pill no">ungewöhnlich</span></td></tr>
+          <tr><td class="num"><b>4.180</b></td><th>Hephaestanit <small>Hephaestanite</small></th><td class="num">4.000 aUEC</td><td><span class="pill no">häufig</span></td></tr>
+          <tr><td class="num"><b>4.195</b></td><th>Zinn <small>Tin</small></th><td class="num">4.000 aUEC</td><td><span class="pill no">häufig</span></td></tr>
+          <tr><td class="num"><b>4.210</b></td><th>Quarz <small>Quartz</small></th><td class="num">1.700 aUEC</td><td><span class="pill no">häufig</span></td></tr>
+          <tr><td class="num"><b>4.225</b></td><th>Korund <small>Corundum</small></th><td class="num">3.700 aUEC</td><td><span class="pill no">häufig</span></td></tr>
+          <tr><td class="num"><b>4.240</b></td><th>Kupfer <small>Copper</small></th><td class="num">3.700 aUEC</td><td><span class="pill no">häufig</span></td></tr>
+          <tr><td class="num"><b>4.255</b></td><th>Silizium <small>Silicon</small></th><td class="num">2.200 aUEC</td><td><span class="pill no">häufig</span></td></tr>
+          <tr><td class="num"><b>4.270</b></td><th>Eisen <small>Iron</small></th><td class="num">3.400 aUEC</td><td><span class="pill no">häufig</span></td></tr>
+          <tr><td class="num"><b>4.285</b></td><th>Aluminium <small>Aluminum</small></th><td class="num">3.800 aUEC</td><td><span class="pill no">häufig</span></td></tr>
+          <tr><td class="num"><b>4.300</b></td><th>Eis <small>Ice</small></th><td class="num">5.100 aUEC</td><td><span class="pill no">häufig</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Grundwerte und Basispreise pro SCU laut Community-Datenbanken mit Spieldaten von Patch 4.10.2 (Stand 9. Oktober 2026). Der Basispreis ist kein garantierter Verkaufserlös. Faustregel: <b>3.100–3.600</b> ist wertvoll, <b>3.800–3.900</b> solide, <b>4.180–4.300</b> billige Masse. Flüchtige Erze werden im Laderaum instabil.</p>
+  </section>
+
+  <section>
+    <h2>Wo baust du was ab?</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gebiet</th><th>Typische Erze</th><th>Nächste Raffinerie</th><th>Für dich</th></tr></thead>
+        <tbody>
+          <tr class="rec"><th>Daymar<small>Mond von Crusader</small></th><td>Quarz, Silizium, Hephaestanit, dazu Handabbau</td><td>CRU-L1</td><td><span class="pill go">zum Üben</span></td></tr>
+          <tr class="rec"><th>Aberdeen, Arial<small>Monde von Hurston</small></th><td>Agricium, Titan, Aslarit, selten Quantanium</td><td>HUR-L1, HUR-L2</td><td><span class="pill go">gut</span></td></tr>
+          <tr class="rec"><th>Cellin<small>Mond von Crusader</small></th><td>Taranit, Agricium, Titan</td><td>CRU-L1</td><td><span class="pill go">gut</span></td></tr>
+          <tr class="rec"><th>Wala<small>Mond von ArcCorp</small></th><td>Laranit, Wolfram, Beryll</td><td>ARC-L1, ARC-L2, ARC-L4</td><td><span class="pill go">gut</span></td></tr>
+          <tr><th>Clio, Calliope, Euterpe<small>Monde von microTech</small></th><td>Taranit, Eis, selten Quantanium</td><td>MIC-L1, MIC-L5</td><td><span class="pill later">gut, aber kalt</span></td></tr>
+          <tr><th>Hurston<small>Planet</small></th><td>Zinn, Aluminium, Kupfer, Korund</td><td>HUR-L1</td><td><span class="pill no">einfach, wenig wert</span></td></tr>
+          <tr><th>Aaron Halo<small>Asteroidengürtel in Stanton</small></th><td>Quantanium, Beryll</td><td>nächste L-Station</td><td><span class="pill later">später</span></td></tr>
+          <tr><th>Pyro III, Pyro IV<small>System Pyro</small></th><td>Gold, Borase, Bexalit, Riccit</td><td>Orbituary, Checkmate, Ruin Station</td><td><span class="pill no">nur zu zweit</span></td></tr>
+          <tr><th>Akiro Cluster<small>System Pyro</small></th><td>Stileron, Riccit</td><td>Pyro-Stationen</td><td><span class="pill no">gefährlich</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Fundorte laut Community-Datenbanken (Patch 4.10.2). Die Raffinerie-Zuordnung ist die nächstgelegene Station am selben Planeten. Raffinerien gibt es in Stanton auf ARC-L1, ARC-L2, ARC-L4, CRU-L1, HUR-L1, HUR-L2, MIC-L1 und MIC-L5, dazu in Pyro und Nyx unter anderem Levski, Orbituary, Checkmate, Ruin Station und den Gateway-Stationen.</p>
+  </section>
+
+  <section>
+    <h2>Raffinieren: so funktioniert ein Work Order</h2>
+    <div class="two">
+      <div class="card-plain">
+        <h3>Schritt für Schritt</h3>
+        <ol>
+          <li>Mit dem Erz im Schiff an einer Station mit Raffinerie <i class="gb">Refinery Deck</i> landen.</li>
+          <li>Im Verarbeitungsbereich <i class="gb">Processing Center</i> zum Raffinerie-Terminal <i class="gb">Refinery Terminal</i> gehen.</li>
+          <li>Das Schiff mit dem Erz auswählen. Erz aus dem Rucksack liegt im Lager der Station und lässt sich dort auch auswählen.</li>
+          <li>Erze ankreuzen und eine Methode <i class="gb">Method</i> wählen.</li>
+          <li>Angebot <i class="gb">Quote</i> anfordern: Es zeigt Ausbeute, Kosten und Dauer. Passt alles, bestätigen.</li>
+          <li><b>Warten:</b> Der Auftrag läuft in Echtzeit weiter, auch wenn du ausloggst.</li>
+          <li>Fertig: Am Terminal abholen und über den Frachtaufzug <i class="gb">Freight Elevator</i> in ein Schiff laden.</li>
+          <li>Am Handelsterminal <i class="gb">Commodity Kiosk</i> verkaufen. Die Raffinerie zahlt nichts automatisch aus.</li>
+        </ol>
+      </div>
+      <div class="card-plain">
+        <h3>Welche Methode?</h3>
+        <ul>
+          <li><b>Standard, wenn du warten kannst:</b> Dinyx Solventation. Höchste Ausbeute, günstig, aber sehr lang. Ideal über Nacht.</li>
+          <li><b>Beste Mischung:</b> Ferron Exchange. Fast so viel Ausbeute, deutlich schneller.</li>
+          <li><b>Wenn es eilt:</b> Gaskin Process oder Cormack Method. Schnell, aber du verlierst mehr Erz.</li>
+          <li><b>Meiden:</b> XCR Reaction und Kazen Winnowing. Wenig Ausbeute.</li>
+        </ul>
+        <div class="oops"><strong>Achtung:</strong> Die Anzeigen zu Tempo, Kosten und Ausbeute im Spiel stimmen laut Wiki nicht immer. Verlass dich auf das Angebot (Quote), bevor du bestätigst.</div>
+      </div>
+    </div>
+    <div class="table-wrap" style="margin-top:12px">
+      <table>
+        <thead><tr><th>Methode</th><th>Ausbeute</th><th>Dauer</th><th>Kosten</th><th>Wann</th></tr></thead>
+        <tbody>
+          <tr class="rec"><th>Dinyx Solventation</th><td>hoch, ~93 %</td><td>sehr lang</td><td>niedrig</td><td>Standard, über Nacht</td></tr>
+          <tr class="rec"><th>Ferron Exchange</th><td>hoch, ~90 %</td><td>lang</td><td>mittel</td><td>gute Mischung</td></tr>
+          <tr><th>Pyrometric Chromalysis</th><td>hoch, ~88 %</td><td>lang</td><td>hoch</td><td>lohnt selten</td></tr>
+          <tr><th>Electrostarolysis</th><td>mittel, ~85 %</td><td>mittel</td><td>mittel</td><td>Kompromiss</td></tr>
+          <tr><th>Thermonatic Deposition</th><td>mittel, ~83 %</td><td>lang</td><td>niedrig</td><td>günstig, aber langsam</td></tr>
+          <tr><th>Gaskin Process</th><td>mittel, ~80 %</td><td>kurz</td><td>hoch</td><td>wenn es eilt</td></tr>
+          <tr><th>Cormack Method</th><td>niedrig</td><td>kurz</td><td>mittel</td><td>nur bei Zeitdruck</td></tr>
+          <tr><th>Kazen Winnowing</th><td>niedrig</td><td>mittel</td><td>niedrig</td><td>meiden</td></tr>
+          <tr><th>XCR Reaction</th><td>niedrig</td><td>kurz</td><td>hoch</td><td>meiden</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="facts" style="margin-top:12px">
+      <div class="fact"><strong>Roh verkaufen lohnt sich, wenn …</strong><p>du das Geld sofort brauchst, das Erz wenig wert ist (z. B. Quarz, Silizium, Eisen) oder du kein Schiff hast, um das fertige Material später abzuholen.</p></div>
+      <div class="fact"><strong>Raffinieren lohnt sich bei …</strong><p>wertvollem Erz wie Quantanium, Gold, Taranit oder Bexalit. Roh bekommst du dafür oft nur etwa die Hälfte.</p></div>
+      <div class="fact"><strong>Gilt auch für Salvage</strong><p>Baumaterial aus der Strukturbergung läuft genauso über einen Work Order. <a href="#salvage">Zum Salvage-Kapitel →</a></p></div>
+    </div>
+    <p class="small" style="margin-top:8px">Methoden und Ausbeute laut Star Citizen Wiki und Community-Guides für 4.10.1. Genaue Gebühren und Zeiten zeigt nur das Angebot im Spiel.</p>
   </section>
 
   <section>
@@ -1083,7 +1203,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
         <ol>
           <li>Zerlegtes Material landet im Laderaum. Roh lässt es sich nicht verkaufen.</li>
           <li>Zu einer Raffinerie <i class="gb">Refinery Deck</i> fliegen, meist auf Rastplätzen <i class="gb">Rest Stops</i> an den Lagrange-Punkten.</li>
-          <li>Am Terminal einen Raffinerie-Auftrag <i class="gb">Work Order</i> starten. Die Raffinerie behält einen Anteil, und es dauert eine Weile.</li>
+          <li>Am Terminal einen Raffinerie-Auftrag <i class="gb">Work Order</i> starten. Die Raffinerie behält einen Anteil, und es dauert eine Weile. Ablauf und Methoden: <a href="#mining">Mining-Kapitel, „Raffinieren“</a>.</li>
           <li>Fertiges Material abholen und beim TDD in der Stadt verkaufen (in Lorville beim CBD).</li>
         </ol>
         <div class="hint">Grim Hex und Schrottplätze kaufen auch, zahlen aber weniger und sind unsicherer.</div>
@@ -2364,6 +2484,31 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     open3d(SH[+b.dataset.i]);
   });
   $('sh3d-close').addEventListener('click', function () { dlg.close(); });
+})();
+</script>
+<script>
+/* ---------- RS-Rechner (Mining) ---------- */
+(function () {
+  var ORES = [[3170,"Quantanium","Quantainium",200000],[3185,"Stileron","Stileron",140000],[3200,"Savrilium","Savrilium",0],[3370,"Ouratit","Ouratite",0],[3385,"Riccit","Riccite",66000],[3400,"Lindinium","Lindinium",24000],[3540,"Beryll","Beryl",4700],[3555,"Taranit","Taranite",22000],[3570,"Borase","Borase",25000],[3585,"Gold","Gold",32000],[3600,"Bexalit","Bexalite",18000],[3825,"Laranit","Laranite",9100],[3840,"Aslarit","Aslarite",0],[3855,"Titan","Titanium",8300],[3870,"Wolfram","Tungsten",10000],[3885,"Agricium","Agricium",11000],[3900,"Torit","Torite",7900],[4180,"Hephaestanit","Hephaestanite",4000],[4195,"Zinn","Tin",4000],[4210,"Quarz","Quartz",1700],[4225,"Korund","Corundum",3700],[4240,"Kupfer","Copper",3700],[4255,"Silizium","Silicon",2200],[4270,"Eisen","Iron",3400],[4285,"Aluminium","Aluminum",3800],[4300,"Eis","Ice",5100]];
+  var GROUND = [[3000, 'Kleines Vorkommen (Handabbau)', 'FPS deposit'], [4000, 'Großes Vorkommen (ROC)', 'ROC deposit']];
+  var inp = document.getElementById('rsq'), out = document.getElementById('rsout');
+  if (!inp) return;
+  var fmt = function (n) { return n.toLocaleString('de-DE'); };
+  inp.addEventListener('input', function () {
+    var v = parseInt(inp.value.replace(/[^0-9]/g, ''), 10);
+    if (!v) { out.innerHTML = '<span class="small">Noch keine Zahl eingegeben.</span>'; return; }
+    var hits = [];
+    ORES.concat(GROUND.map(function (x) { return [x[0], x[1], x[2], 0, 1]; })).forEach(function (o) {
+      var n = Math.round(v / o[0]);
+      if (n >= 1 && n <= 40 && Math.abs(n * o[0] - v) <= 3) hits.push({ n: n, o: o });
+    });
+    hits.sort(function (a, b) { return a.n - b.n; });
+    if (!hits.length) { out.innerHTML = '<span class="small">Kein bekanntes Mineral passt genau. Prüf die Zahl noch einmal, oder es ist kein Gestein (z. B. ein Schiff oder Trümmer).</span>'; return; }
+    out.innerHTML = hits.slice(0, 4).map(function (h, i) {
+      var o = h.o, val = o[3] ? 'Basiswert ' + fmt(o[3]) + ' aUEC/SCU' : (o[4] ? 'Mineral zeigt erst der Scan' : 'Basiswert unbekannt');
+      return '<div class="rs-hit' + (i === 0 ? ' top' : '') + '"><span><b>' + h.n + ' × ' + o[1] + '</b> <i class="gb">' + o[2] + '</i><br><span class="small">Grundwert ' + fmt(o[0]) + ' · ' + val + '</span></span></div>';
+    }).join('') + (hits.length > 1 ? '<span class="small">Mehrere Möglichkeiten: Der Detail-Scan (V, linke Maustaste halten) klärt es.</span>' : '');
+  });
 })();
 </script>
 </body>
