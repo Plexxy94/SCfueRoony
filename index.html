@@ -527,6 +527,25 @@ details.ref summary { cursor: pointer; font-family: var(--f-display); font-weigh
 .cr-mats { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
 .q-meter { grid-template-columns: 1fr .5fr 1fr; }
 
+.status-banner { display: flex; gap: 10px; align-items: center; padding: 12px 16px; border-radius: 8px; background: var(--warn-soft); color: var(--ink); border: 1px solid var(--warn); text-decoration: none; font-weight: 600; }
+.status-banner::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--warn); flex: none; }
+.nw-status { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.nw-sys { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; align-items: center; gap: 10px; }
+.nw-dot { width: 14px; height: 14px; border-radius: 50%; flex: none; background: var(--muted); box-shadow: 0 0 0 4px var(--key-bg); }
+.nw-dot.ok { background: var(--ok); } .nw-dot.warn { background: var(--accent); } .nw-dot.bad { background: var(--warn); }
+.nw-sys b { font-family: var(--f-display); font-size: 16px; display: block; }
+.nw-sys span { font-size: 13px; color: var(--muted); }
+.nw-list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.nw-item { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 4px 14px; align-items: start; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; text-decoration: none; color: var(--ink); }
+.nw-item:hover { border-color: var(--accent); }
+.nw-date { font: 600 12px var(--f-mono); color: var(--muted); padding-top: 3px; }
+.nw-date small { display: block; font-weight: 500; }
+.nw-title { font-size: 15.5px; font-weight: 600; line-height: 1.35; }
+.nw-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+.nw-new { font: 700 10px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; background: var(--accent); color: var(--panel); border-radius: 3px; padding: 1px 6px; }
+.nw-item.patch { border-color: var(--ok); background: linear-gradient(0deg, var(--ok-soft), var(--ok-soft)) padding-box; }
+.nw-more { display: flex; gap: 12px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -544,6 +563,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <a class="brand" href="#start">SC<span>/</span><span class="brand-long" style="color:inherit">Handbuch</span></a>
     <div class="tabs" role="list">
       <a href="#start" role="listitem">Start</a>
+      <a href="#news" role="listitem">News</a>
       <a href="#erste-schritte" role="listitem">Erste Schritte</a>
       <a href="#tasten" role="listitem">Tasten</a>
       <a href="#mining" role="listitem">Mining</a>
@@ -561,6 +581,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 
 <!-- ============ START ============ -->
 <section class="view" id="view-start" data-view="start">
+  <a class="status-banner" id="statusbanner" href="#news" hidden></a>
   <div class="hero">
     <div class="stamp"><span>Inoffizielles Einsteiger-Handbuch</span><span>Stand Alpha 4.10</span><span>QWERTZ-Tastatur</span></div>
     <h1>Willkommen im Verse, Roony.</h1>
@@ -1512,6 +1533,34 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   </section>
 </section>
 
+<!-- ============ NEWS ============ -->
+<section class="view" id="view-news" data-view="news" hidden>
+  <div class="head">
+    <div class="stamp"><span>Aktualisiert sich selbst</span><span>Quellen: RSI, YouTube</span></div>
+    <h1>News</h1>
+    <p class="lede">Offizielle Ankündigungen von RSI, der aktuelle Server-Status und die neuesten Videos. Die Titel sind im englischen Original, ein Klick öffnet den Beitrag bei RSI oder YouTube.</p>
+  </div>
+
+  <section>
+    <h2>Server-Status</h2>
+    <div class="nw-status" id="nwstatus"><span class="small">Status wird geladen …</span></div>
+  </section>
+
+  <section>
+    <h2>Neues von RSI</h2>
+    <div class="chips" id="nwcats" role="group" aria-label="Kategorie"></div>
+    <div class="nw-list" id="nwlist" aria-live="polite"><p class="small">News werden geladen …</p></div>
+    <div class="nw-more"><button type="button" class="btn2" id="nwmore" hidden>Ältere laden</button><span class="small" id="nwsrc"></span></div>
+  </section>
+
+  <section>
+    <h2>Neue Videos</h2>
+    <div class="nw-list" id="nwvideos"><p class="small">Videos werden geladen …</p></div>
+  </section>
+
+  <p class="small">RSI-Beiträge kommen live über die <a href="https://api.star-citizen.wiki" target="_blank" rel="noopener">Star Citizen Wiki API</a>. Server-Status und Videos holt ein automatischer Job jede Stunde ab. Die Einordnung in Kategorien macht die Seite anhand des Titels. Inhalte © Cloud Imperium.</p>
+</section>
+
 <!-- ============ SCHIFFE ============ -->
 <section class="view" id="view-schiffe" data-view="schiffe" hidden>
   <div class="head">
@@ -1705,7 +1754,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     });
-    var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', crafting: 'Crafting · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
+    var titles = { start: 'Roonys Star Citizen Handbuch', news: 'News · SC Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', crafting: 'Crafting · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
     document.title = titles[h];
     if (!keepScroll) window.scrollTo(0, 0);
     document.dispatchEvent(new CustomEvent('viewchange', { detail: h }));
@@ -2962,6 +3011,135 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     b.addEventListener('click', function () { inp.value = v; inp.dispatchEvent(new Event('input')); });
     ex.appendChild(b);
   });
+})();
+</script>
+<script>
+/* ---------- News ---------- */
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var KEY = 'sc-news-seen';
+  var lastSeen = 0;
+  try { lastSeen = +localStorage.getItem(KEY) || 0; } catch (e) {}
+  var DAY = 864e5, now = Date.now();
+  function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function when(iso) {
+    var d = new Date(iso), days = Math.floor((now - d) / DAY);
+    var rel = days <= 0 ? 'heute' : days === 1 ? 'gestern' : 'vor ' + days + ' Tagen';
+    return d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' }) + '<small>' + rel + '</small>';
+  }
+  /* Kategorie anhand des Titels */
+  var CATS = [['alle', 'Alle'], ['patch', 'Patch & Release'], ['roadmap', 'Roadmap'], ['woche', 'Wochenüberblick'], ['monat', 'Monatsbericht'], ['schiffe', 'Schiffe'], ['events', 'Events & Aktionen'], ['lore', 'Lore'], ['community', 'Community'], ['sonst', 'Sonstiges']];
+  function cat(c) {
+    var t = (c.title || '') + ' ' + (c.series || '');
+    if (/patch notes|release info|alpha \d|hotfix|\bptu\b|evocati/i.test(t)) return 'patch';
+    if (/roadmap/i.test(t)) return 'roadmap';
+    if (/this week in star citizen/i.test(t)) return 'woche';
+    if (/monthly report/i.test(t)) return 'monat';
+    if (/q&a|behind the ships|ship|concept/i.test(t)) return 'schiffe';
+    if (/event|drops|free fly|iae|invictus|luminalia|vara|showdown|festival|week|sale|faq|month/i.test(t)) return 'events';
+    if (c.category === 'Lore' || /lore|galactapedia|portfolio|whitley|spectrum dispatch/i.test(t)) return 'lore';
+    if (/community|citizen spotlight|10 from/i.test(t)) return 'community';
+    return 'sonst';
+  }
+  var LABEL = {}; CATS.forEach(function (c) { LABEL[c[0]] = c[1]; });
+  var items = [], current = 'alle', page = 0, source = '';
+
+  function draw() {
+    var list = items.filter(function (c) { return current === 'alle' || c.k === current; });
+    $('nwlist').innerHTML = list.length ? list.map(function (c) {
+      var isNew = lastSeen && new Date(c.date).getTime() > lastSeen;
+      return '<a class="nw-item' + (c.k === 'patch' ? ' patch' : '') + '" href="' + esc(c.url) + '" target="_blank" rel="noopener">' +
+        '<span class="nw-date">' + when(c.date) + '</span><span><span class="nw-title">' + esc(c.title) + '</span>' +
+        '<span class="nw-meta">' + (isNew ? '<span class="nw-new">Neu</span>' : '') + '<span class="sh-tag' + (c.k === 'patch' ? ' tip' : ' cat') + '">' + LABEL[c.k] + '</span></span></span></a>';
+    }).join('') : '<p class="small">In dieser Kategorie gibt es gerade nichts.</p>';
+    $('nwsrc').textContent = source;
+  }
+  function chips() {
+    var box = $('nwcats'); box.innerHTML = '';
+    CATS.forEach(function (c) {
+      if (c[0] !== 'alle' && !items.some(function (i) { return i.k === c[0]; })) return;
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.textContent = c[1];
+      b.setAttribute('aria-pressed', c[0] === current ? 'true' : 'false');
+      b.addEventListener('click', function () { current = c[0]; chips(); draw(); });
+      box.appendChild(b);
+    });
+  }
+  function add(rows) {
+    var seen = {}; items.forEach(function (i) { seen[i.id] = 1; });
+    rows.forEach(function (c) {
+      if (seen[c.id]) return;
+      items.push({ id: c.id, title: c.title, url: c.url || c.rsi_url, date: c.date || c.created_at, series: c.series, category: c.category });
+    });
+    items.forEach(function (i) { i.k = cat(i); });
+    items.sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
+  }
+  function fetchPage(n) {
+    return fetch('https://api.star-citizen.wiki/api/v2/comm-links?limit=30&page=' + n).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+  }
+  /* Live: so viele Seiten laden, bis 30 Tage abgedeckt sind */
+  function loadLive() {
+    var cutoff = now - 30 * DAY;
+    function next() {
+      page++;
+      return fetchPage(page).then(function (d) {
+        var rows = d.data || []; add(rows);
+        var oldest = Math.min.apply(null, rows.map(function (c) { return new Date(c.created_at).getTime(); }));
+        if (rows.length && oldest > cutoff && page < 4) return next();
+      });
+    }
+    return next().then(function () {
+      items = items.filter(function (i) { return new Date(i.date).getTime() >= cutoff; });
+      source = 'Live geladen · letzte 30 Tage';
+      $('nwmore').hidden = false;
+    });
+  }
+  $('nwmore').addEventListener('click', function () {
+    var btn = this; btn.disabled = true; btn.textContent = 'Lädt …';
+    page++;
+    fetchPage(page).then(function (d) { add(d.data || []); source = 'Live geladen · inklusive älterer Beiträge'; chips(); draw(); })
+      .catch(function () { source = 'Ältere Beiträge konnten nicht geladen werden.'; draw(); })
+      .then(function () { btn.disabled = false; btn.textContent = 'Ältere laden'; });
+  });
+
+  /* news.json: Status, Videos und Rückfall für die News */
+  var newsData = fetch('news.json?t=' + Math.floor(now / 6e4)).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+
+  var STAT = { operational: ['ok', 'Läuft normal'], ok: ['ok', 'Läuft normal'], degraded: ['warn', 'Eingeschränkt'], disrupted: ['warn', 'Gestört'],
+    notice: ['warn', 'Hinweis'], maintenance: ['warn', 'Wartung'], partial: ['warn', 'Teilweise gestört'], down: ['bad', 'Ausgefallen'], major: ['bad', 'Großer Ausfall'] };
+  function stat(s) { return STAT[String(s || '').toLowerCase()] || ['warn', s || 'unbekannt']; }
+
+  newsData.then(function (d) {
+    var st = d.status;
+    if (st) {
+      var upd = d.updated ? new Date(d.updated).toLocaleString('de-DE', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }) : '';
+      $('nwstatus').innerHTML = (st.systems || []).map(function (s) {
+        var x = stat(s.status);
+        return '<div class="nw-sys"><span class="nw-dot ' + x[0] + '"></span><span><b>' + esc(s.name) + '</b><span>' + x[1] + '</span></span></div>';
+      }).join('') + '<p class="small" style="grid-column:1/-1;margin:0">Stand der letzten Änderung: ' + upd + ' · <a href="' + esc(st.url) + '" target="_blank" rel="noopener">Offizielle Statusseite ↗</a></p>';
+      /* Hinweis auf der Startseite nur bei Störungen */
+      if (String(st.summary).toLowerCase() !== 'operational') {
+        var bad = (st.systems || []).filter(function (s) { return String(s.status).toLowerCase() !== 'operational'; })
+          .map(function (s) { return s.name + ': ' + stat(s.status)[1]; }).join(', ');
+        var bn = $('statusbanner'); bn.textContent = 'Server-Störung bei RSI' + (bad ? ' · ' + bad : '') + ' · Details im News-Tab'; bn.hidden = false;
+      }
+    } else {
+      $('nwstatus').innerHTML = '<p class="small">Der Server-Status ist gerade nicht verfügbar. <a href="https://status.robertsspaceindustries.com/" target="_blank" rel="noopener">Offizielle Statusseite ↗</a></p>';
+    }
+    var v = d.videos || [];
+    $('nwvideos').innerHTML = v.length ? v.map(function (x) {
+      return '<a class="nw-item" href="' + esc(x.url) + '" target="_blank" rel="noopener"><span class="nw-date">' + when(x.date) + '</span><span><span class="nw-title">' + esc(x.title) + '</span><span class="nw-meta"><span class="sh-tag">YouTube</span></span></span></a>';
+    }).join('') : '<p class="small">Gerade keine Videos verfügbar.</p>';
+  });
+
+  var started = false;
+  function start() {
+    if (started) return; started = true;
+    loadLive().catch(function () {
+      return newsData.then(function (d) { add(d.commlinks || []); source = 'Live-Abruf nicht möglich, zeige gespeicherten Stand.'; });
+    }).then(function () { chips(); draw(); try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {} });
+  }
+  document.addEventListener('viewchange', function (e) { if (e.detail === 'news') start(); });
+  if ((location.hash || '') === '#news') start();
 })();
 </script>
 </body>
