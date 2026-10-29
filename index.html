@@ -458,6 +458,14 @@ tr.rec th { color: var(--accent); }
 .rs-hit b { font-family: var(--f-display); font-size: 16px; }
 .rs-hit.top { border-color: var(--ok); background: var(--ok-soft); }
 
+.flow { display: flex; flex-direction: column; gap: 10px; }
+.flow-lane { display: flex; flex-direction: column; gap: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+.flow-lane .pill { align-self: flex-start; }
+.flow-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.flow-step { background: var(--key-bg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; font-size: 14px; font-weight: 600; }
+.flow-arrow { color: var(--accent); font-weight: 700; }
+.sub-h { font-family: var(--f-display); font-size: 19px; font-weight: 600; margin: 18px 0 8px; }
+
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -1166,13 +1174,59 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
         <li><b>Auftrag holen:</b> <kbd>F1</kbd> mobiGlas → Verträge <i class="gb">Contracts</i> → Reiter Salvage. Bergungsaufträge kosten keine Gebühr und markieren ein Wrack.</li>
         <li><b>Besitzer prüfen</b> <i class="gb">Owner</i><b>:</b> <kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf das Wrack zielen, <kbd>LMB</kbd> halten. Steht als Besitzer „Gamerules“, ist es frei. Steht dort ein Spielername: Finger weg.</li>
         <li><b>Hülle abkratzen:</b> <kbd>M</kbd> Bergungsmodus <i class="gb">Salvage Mode</i>, nah ran, <kbd>LMB</kbd> feuern. Die Schilde des Wracks müssen aus sein.</li>
-        <li><b>Puffer leeren</b> <i class="gb">Buffer</i><b>:</b> Ist der Puffer voll, füllst du das RMC in Frachtkisten <i class="gb">Cargo Containers</i> um.</li>
+        <li><b>Puffer leeren</b> <i class="gb">Buffer</i><b>:</b> Ist der Puffer voll, kommt das Material in Kisten. Wie das bei deinem Schiff geht, steht unten unter „Verarbeitung“.</li>
         <li><b>Struktur zerlegen</b> <i class="gb">Structural Salvage</i><b>:</b> Erst Bauteile abnehmen und abkratzen, dann das Wrack zerbrechen <i class="gb">Fracture</i> und die Teile zerlegen <i class="gb">Disintegrate</i>.</li>
-        <li><b>Verkaufen:</b> RMC beim TDD in der Stadt (in Lorville beim CBD) oder an Admin-Terminals <i class="gb">Admin Office</i>. Zerlegtes Material vorher in die Raffinerie <i class="gb">Refinery</i> bringen.</li>
+        <li><b>Verkaufen:</b> RMC direkt, Baumaterial erst nach der Raffinerie. Den Ablauf findest du unten unter „Verarbeitung“.</li>
       </ol>
       <div class="hint">Erst mieten: Die Salvation gibt es schon ab etwa 31.000 aUEC am Tag. So merkst du, ob dir Bergung Spaß macht, bevor du Millionen ausgibst.</div>
     </div>
   </div>
+
+  <section>
+    <h2>Verarbeitung: vom Wrack zum Geld</h2>
+    <p class="small" style="font-size:14px">Es gibt zwei Wege, je nachdem, was du geborgen hast. RMC verkaufst du direkt, Baumaterial muss erst in die Raffinerie.</p>
+    <div class="flow">
+      <div class="flow-lane"><span class="pill go">Weg A · RMC</span><div class="flow-row"><div class="flow-step">Hülle abkratzen <i class="gb">Hull Scraping</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Puffer <i class="gb">Buffer</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Kisten <i class="gb">SCU Boxes</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">landen &amp; verkaufen <i class="gb">Commodity Kiosk</i></div></div></div>
+      <div class="flow-lane"><span class="pill later">Weg B · Baumaterial</span><div class="flow-row"><div class="flow-step">zerbrechen &amp; zerlegen <i class="gb">Fracture / Disintegrate</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">rohes Material in Kisten</div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Raffinerie <i class="gb">Work Order</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">abholen <i class="gb">Freight Elevator</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">verkaufen <i class="gb">TDD</i></div></div></div>
+    </div>
+
+    <div class="two" style="margin-top:12px">
+      <div class="card-plain">
+        <h3>Weg A: RMC verkaufen <span class="pill go">ohne Raffinerie</span></h3>
+        <ol>
+          <li>RMC braucht keine Raffinerie. Du kannst es direkt verkaufen.</li>
+          <li><b>Vorher prüfen:</b> Nicht jedes Terminal kauft RMC. Die besten Orte stehen unten unter „Wo RMC am meisten bringt“.</li>
+          <li>Dort landen. Das Schiff mit den Kisten bleibt im Hangar oder auf dem Landeplatz.</li>
+          <li>Am Handelsterminal <i class="gb">Commodity Kiosk</i> oder beim TDD „Verkaufen“ <i class="gb">Sell</i> wählen und dein Schiff als Quelle angeben. Das Terminal muss auf die Fracht deines Schiffs zugreifen können.</li>
+          <li>Menge wählen und verkaufen. Das Geld ist sofort da.</li>
+        </ol>
+      </div>
+      <div class="card-plain">
+        <h3>Weg B: Baumaterial verkaufen <span class="pill later">mit Raffinerie</span></h3>
+        <ol>
+          <li>Rohes Baumaterial lässt sich nicht verkaufen.</li>
+          <li>Zu einer Raffinerie fliegen, meist auf den Rastplätzen <i class="gb">Rest Stops</i> an den Lagrange-Punkten.</li>
+          <li>Am Raffinerie-Terminal dein Schiff auswählen. Alternativ die Kisten vorher über den Frachtaufzug <i class="gb">Freight Elevator</i> ins Lager der Station bringen.</li>
+          <li>Work Order starten: Methode wählen, Angebot <i class="gb">Quote</i> prüfen, bestätigen. Welche Methode passt, steht im <a href="#mining">Mining-Kapitel unter „Raffinieren“</a>.</li>
+          <li>Wenn der Auftrag fertig ist: abholen und über den Frachtaufzug in dein Schiff laden.</li>
+          <li>Beim TDD in einer Stadt verkaufen, in Lorville beim CBD.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3 class="sub-h">So kommt das Material aus dem Puffer in Kisten</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Schiff</th><th>Puffer → Kisten</th><th>Gut zu wissen</th></tr></thead>
+        <tbody>
+          <tr><th>RSI Salvation<small>6 SCU</small></th><td>Das geborgene Material wird in den hinteren Laderaum ausgegeben, bis zu 6 SCU.</td><td>Kleiner Laderaum, also oft verkaufen fliegen.</td></tr>
+          <tr><th>MISC Fortune<small>16 SCU</small></th><td>Ein Spender außen am Schiff <i class="gb">Dispenser</i> fasst bis zu 12 Kisten à 1 SCU. Dazu kommen 4 SCU auf dem Heck-Lift. Laut Spielern füllen sich die Kisten von selbst.</td><td>Am wenigsten Handarbeit, darum für Solo-Spieler beliebt.</td></tr>
+          <tr><th>Drake Vulture<small>12 SCU + 13 Puffer</small></th><td>Im Heck an einem Wand-Panel den Rohstoff wählen und in 1-SCU-Kisten auswerfen lassen. Es gibt auch eine Automatik, die den Puffer nach und nach leert. Die Kisten stellst du mit dem Traktorstrahl <i class="gb">Tractor Beam</i> auf das Frachtgitter <i class="gb">Cargo Grid</i>.</td><td>Dafür brauchst du ein Multitool mit TruHold-Aufsatz oder den MaxLift-Traktorstrahl.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Angaben laut Star Citizen Wiki und Spielerberichten. Der Vulture-Ablauf stammt aus einer älteren Anleitung (Patch 3.22). Diese Mechanik ändert sich öfter mit Patches, also beim ersten Mal im Spiel genau hinschauen.</p>
+  </section>
 
   <section>
     <h2>Wo RMC am meisten bringt</h2>
@@ -1187,7 +1241,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   </section>
 
   <section>
-    <h2>Baumaterial: vom Wrack zum Geld</h2>
+    <h2>Baumaterial im Detail</h2>
     <div class="two">
       <div class="card-plain">
         <h3>Was das ist <i class="gb">Construction Materials</i></h3>
@@ -1199,13 +1253,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
         </ul>
       </div>
       <div class="card-plain">
-        <h3>So machst du Geld daraus</h3>
-        <ol>
-          <li>Zerlegtes Material landet im Laderaum. Roh lässt es sich nicht verkaufen.</li>
-          <li>Zu einer Raffinerie <i class="gb">Refinery Deck</i> fliegen, meist auf Rastplätzen <i class="gb">Rest Stops</i> an den Lagrange-Punkten.</li>
-          <li>Am Terminal einen Raffinerie-Auftrag <i class="gb">Work Order</i> starten. Die Raffinerie behält einen Anteil, und es dauert eine Weile. Ablauf und Methoden: <a href="#mining">Mining-Kapitel, „Raffinieren“</a>.</li>
-          <li>Fertiges Material abholen und beim TDD in der Stadt verkaufen (in Lorville beim CBD).</li>
-        </ol>
+        <h3>Verkaufen</h3>
+        <p class="small" style="font-size:14px">Roh lässt sich Baumaterial nicht verkaufen. Den ganzen Weg über die Raffinerie bis zum Terminal findest du oben unter „Verarbeitung“ (Weg B).</p>
         <div class="hint">Grim Hex und Schrottplätze kaufen auch, zahlen aber weniger und sind unsicherer.</div>
       </div>
     </div>
