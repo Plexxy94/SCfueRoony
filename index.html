@@ -504,6 +504,21 @@ tr.rec th { color: var(--accent); }
 .loc-bar { display: inline-block; width: 46px; height: 6px; border-radius: 3px; background: var(--line); margin-right: 6px; vertical-align: middle; overflow: hidden; }
 .loc-bar i { display: block; height: 100%; background: var(--accent); }
 
+.tool { border: 2px solid var(--accent); background: var(--panel); border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 0 0 5px var(--accent-soft); min-width: 0; }
+.tool-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.tool-head h3 { font-family: var(--f-display); font-size: clamp(20px, 3vw, 26px); font-weight: 700; margin: 0; }
+.tool-tag { font: 700 11px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; background: var(--accent); color: var(--panel); padding: 3px 8px; border-radius: 4px; }
+.tool-lede { margin: 0; font-size: 15px; max-width: 70ch; }
+.search input.tool-input { font: 600 20px var(--f-mono); padding: 12px 16px; border: 2px solid var(--line); border-radius: 8px; }
+.search input.tool-input:focus { border-color: var(--accent); outline: none; }
+.rs-scale { display: flex; flex-wrap: wrap; gap: 6px; }
+.rs-hit { padding: 10px 14px; font-size: 15px; }
+.rs-hit b { font-size: 20px; }
+.rs-hit.top { border-width: 2px; padding: 14px 16px; }
+.rs-hit.top b { font-size: 26px; }
+details.ref { margin-top: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; }
+details.ref summary { cursor: pointer; font-family: var(--f-display); font-weight: 600; font-size: 15px; color: var(--accent); }
+
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -979,8 +994,15 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 
   <section>
     <h2>Scannen: Steine finden und einschätzen</h2>
-    <div class="two">
-      <div class="card-plain">
+    <div class="tool" id="rs-tool">
+      <div class="tool-head"><span class="tool-tag">Werkzeug</span><h3>RS-Rechner: Signatur auswerten</h3></div>
+      <p class="tool-lede">Nach dem Ping (<kbd>Tab</kbd> halten) stehen Zahlen im HUD. Tipp eine davon ein, und du siehst sofort, welches Erz und wie viele Steine dahinterstecken und was es wert ist.</p>
+      <div class="search"><input id="rsq" class="tool-input" type="text" inputmode="numeric" placeholder="Signatur eingeben, z. B. 7170" aria-label="Signatur aus dem HUD"></div>
+      <div class="chips" id="rsex" aria-label="Beispiele"><span class="small">Beispiele:</span></div>
+      <div id="rsout" class="rs-out" aria-live="polite"><span class="small">Noch keine Zahl eingegeben.</span></div>
+      <div class="rs-scale"><span class="pill go">3.100–3.600 wertvoll</span><span class="pill later">3.800–3.900 solide</span><span class="pill no">4.180–4.300 billige Masse</span><span class="pill no">3.000 / 4.000 Handabbau / ROC</span></div>
+    </div>
+    <div class="card-plain" style="margin-top:14px">
         <h3>So findest du Gestein</h3>
         <ol>
           <li>Im Schiff <kbd>Tab</kbd> <span class="mod">halten</span>: Ping <i class="gb">Ping</i>. An den Fundstellen erscheinen Zahlen im HUD, die Signatur <i class="gb">Radar Signature (RS)</i>.</li>
@@ -989,15 +1011,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
           <li><b>Entscheiden:</b> Viel wertvolles Erz und ein Widerstand, den dein Laser schafft? Abbauen. Sonst weiterfliegen.</li>
         </ol>
         <div class="hint">Am Boden gilt etwas anderes: 3.000 ist ein kleines Vorkommen für Handabbau, 4.000 ein großes für den ROC. Welches Edelstein-Mineral drin ist, zeigt erst der Scan. Im All bedeutet 3.000 dagegen Trümmer eines großen Wracks.</div>
-      </div>
-      <div class="card-plain">
-        <h3>RS-Rechner</h3>
-        <p class="small" style="font-size:14px">Tipp die Zahl aus dem HUD ein. Der Rechner zeigt, welches Mineral und wie viele Steine dahinterstecken können.</p>
-        <div class="search"><input id="rsq" type="text" inputmode="numeric" placeholder="z. B. 7170 oder 12.680" aria-label="Signatur aus dem HUD"></div>
-        <div id="rsout" class="rs-out" aria-live="polite"><span class="small">Noch keine Zahl eingegeben.</span></div>
-      </div>
     </div>
-    <div class="table-wrap" style="margin-top:12px">
+    <details class="ref">
+      <summary>Alle 26 Signaturwerte als Tabelle anzeigen</summary>
+    <div class="table-wrap" style="margin-top:10px">
       <table>
         <thead><tr><th>Signatur</th><th>Mineral</th><th>Wert pro SCU</th><th>Einstufung</th></tr></thead>
         <tbody>
@@ -1031,6 +1048,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       </table>
     </div>
     <p class="small" style="margin-top:8px">Grundwerte und Basispreise pro SCU laut Community-Datenbanken mit Spieldaten von Patch 4.10.2 (Stand 9. Oktober 2026). Der Basispreis ist kein garantierter Verkaufserlös. Faustregel: <b>3.100–3.600</b> ist wertvoll, <b>3.800–3.900</b> solide, <b>4.180–4.300</b> billige Masse. Flüchtige Erze werden im Laderaum instabil.</p>
+    </details>
   </section>
 
   <section>
@@ -1056,9 +1074,11 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 
   <section>
     <h2>Alle Fundorte durchsuchen</h2>
+    <div class="tool" id="loc-tool">
+    <div class="tool-head"><span class="tool-tag">Werkzeug</span><h3>Fundort-Suche: Wo finde ich …?</h3></div>
     <div class="head" style="gap:10px">
       <div class="search">
-        <input id="locq" type="search" placeholder="Erz oder Ort suchen, z. B. „Hadanit“, „Gold“ oder „Daymar“" aria-label="Fundorte durchsuchen">
+        <input id="locq" class="tool-input" type="search" placeholder="Erz oder Ort suchen, z. B. „Hadanit“, „Gold“ oder „Daymar“" aria-label="Fundorte durchsuchen">
         <span class="count" id="loccount"></span>
       </div>
       <div class="chips" id="locsys" role="group" aria-label="System"></div>
@@ -1076,6 +1096,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     </div>
     <p class="empty" id="locnone" hidden>Nichts gefunden. Versuch den englischen Namen oder einen anderen Ort.</p>
     <p class="small" style="margin-top:8px">Häufigkeit = Anteil dieses Erzes an den Vorkommen dort. Sortiert nach Wert, dann nach Häufigkeit. Schiffs-Erze laut scminer.rocks (Spieldaten 4.10.2, Stand 9. Oktober 2026), Handabbau und ROC laut citizen-starter-guide.com (jeweils die besten Fundorte). Die Raffinerie-Spalte zeigt die nächstgelegenen Stationen mit Raffinerie. Edelsteine aus dem Handabbau verkaufst du direkt.</p>
+    </div>
   </section>
 
   <section>
@@ -2786,6 +2807,16 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   }
   q.addEventListener('input', draw);
   draw();
+})();
+</script>
+<script>
+(function () {
+  var ex = document.getElementById('rsex'), inp = document.getElementById('rsq'); if (!ex || !inp) return;
+  ['7.170', '12.680', '11.475', '8.000'].forEach(function (v) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.textContent = v;
+    b.addEventListener('click', function () { inp.value = v; inp.dispatchEvent(new Event('input')); });
+    ex.appendChild(b);
+  });
 })();
 </script>
 </body>
