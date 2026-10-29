@@ -466,6 +466,36 @@ tr.rec th { color: var(--accent); }
 .flow-arrow { color: var(--accent); font-weight: 700; }
 .sub-h { font-family: var(--f-display); font-size: 19px; font-weight: 600; margin: 18px 0 8px; }
 
+.sh.clickable { cursor: pointer; transition: border-color .15s, transform .15s; }
+.sh.clickable:hover { border-color: var(--accent); transform: translateY(-2px); }
+.sh-link { color: inherit; text-decoration: none; }
+.sh-link:hover, .sh-link:focus-visible { color: var(--accent); }
+.ship-a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.ship-a:hover { color: var(--accent); }
+.sh-dt { width: min(980px, calc(100vw - 24px)); max-height: calc(100vh - 24px); padding: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--ink); overflow: hidden; }
+.sh-dt::backdrop { background: rgba(5, 10, 15, .7); }
+.sh-dt-body { max-height: calc(100vh - 26px); overflow-y: auto; }
+.dt-hero { position: relative; aspect-ratio: 16 / 7; max-width: 100%; background: var(--key-bg); }
+.dt-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.dt-close { position: absolute; top: 12px; right: 12px; background: rgba(8, 12, 16, .75); color: #e6edf3; border-color: transparent; }
+.dt-main { padding: 18px 22px 22px; display: flex; flex-direction: column; gap: 14px; }
+.dt-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px 20px; flex-wrap: wrap; }
+.dt-head h2 { font-family: var(--f-display); font-size: clamp(24px, 4vw, 34px); font-weight: 700; margin: 0; letter-spacing: 0; text-transform: none; color: var(--ink); display: block; }
+.dt-head h2::after { display: none; }
+.dt-profile { margin: 0; font-size: 15.5px; max-width: 70ch; }
+.dt-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.dt-stat { background: var(--key-bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.dt-stat span { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.dt-stat b { font: 600 17px var(--f-display); font-variant-numeric: tabular-nums; }
+.dt-stat b small { font-size: 12px; color: var(--muted); font-weight: 500; }
+.dt-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.dt-cols h3 { font-family: var(--f-display); font-size: 18px; font-weight: 600; margin: 0 0 6px; }
+.dt-list { width: 100%; min-width: 0; border-collapse: collapse; font-size: 13.5px; }
+.dt-list td { padding: 6px 8px; border-top: 1px solid var(--line); }
+.dt-list td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.dt-list tr.best td { color: var(--ok); font-weight: 600; }
+.dt-act { margin-top: 0; }
+
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -865,25 +895,25 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
             <td><span class="pill go">Jetzt starten</span></td>
           </tr>
           <tr>
-            <th>Greycat ROC<small>Bodenfahrzeug</small></th>
+            <th><a class="ship-a" href="#s-grin-roc">Greycat ROC</a><small>Bodenfahrzeug</small></th>
             <td>1</td><td>klein</td><td class="num">mittel</td>
             <td>Edelsteine auf Monden. Braucht ein Schiff, das den ROC transportiert.</td>
             <td><span class="pill no">Überspringen</span></td>
           </tr>
           <tr class="rec">
-            <th>Drake Golem<small>Einsteiger-Schiff</small></th>
+            <th><a class="ship-a" href="#s-drak-golem">Drake Golem</a><small>Einsteiger-Schiff</small></th>
             <td>1</td><td class="num">32 SCU</td><td class="num">Miete ~15.900 aUEC/Tag</td>
             <td>Günstigster Einstieg ins Schiffs-Mining. Schnell und wendig.</td>
             <td><span class="pill later">Stufe 2</span></td>
           </tr>
           <tr class="rec">
-            <th>MISC Prospector<small>Solo-Klassiker</small></th>
+            <th><a class="ship-a" href="#s-misc-prospector">MISC Prospector</a><small>Solo-Klassiker</small></th>
             <td>1</td><td class="num">32 SCU</td><td class="num">Miete ~73.200 aUEC/Tag<br>Kauf ~2–2,9 Mio. aUEC</td>
             <td>Das Standard-Schiff für Solo-Miner. Stärkerer Laser, austauschbar.</td>
             <td><span class="pill later">Stufe 3</span></td>
           </tr>
           <tr>
-            <th>ARGO MOLE<small>Crew-Schiff</small></th>
+            <th><a class="ship-a" href="#s-argo-mole">ARGO MOLE</a><small>Crew-Schiff</small></th>
             <td>2–4</td><td>groß</td><td class="num">hoch</td>
             <td>Drei Laser-Türme. Lohnt sich nur mit Freunden.</td>
             <td><span class="pill no">Später, mit Crew</span></td>
@@ -926,9 +956,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     </div>
 
     <div class="card-plain">
-      <h3>Stufe 2 und 3: Mit Schiff <span class="pill later">Golem → Prospector</span></h3>
+      <h3>Stufe 2 und 3: Mit Schiff <span class="pill later"><a class="ship-a" href="#s-drak-golem">Golem</a> → <a class="ship-a" href="#s-misc-prospector">Prospector</a></span></h3>
       <ol>
-        <li><b>Mieten statt kaufen:</b> Am Miet-Terminal <i class="gb">Ship Rental</i> im Raumhafen erst den Golem für einen Tag mieten.</li>
+        <li><b>Mieten statt kaufen:</b> Am Miet-Terminal <i class="gb">Ship Rental</i> im Raumhafen erst den <a class="ship-a" href="#s-drak-golem">Golem</a> für einen Tag mieten.</li>
         <li>Zu einem Mond oder Asteroidengürtel fliegen. <kbd>Tab</kbd> <span class="mod">halten</span> für einen Ping <i class="gb">Ping</i>. Gesteinssymbole zeigen Fundstellen.</li>
         <li><kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf einen Stein zielen und <kbd>LMB</kbd> <span class="mod">halten</span>. Du siehst Erze, Widerstand und Instabilität.</li>
         <li><kbd>M</kbd> Mining-Modus <i class="gb">Mining Mode</i>, nah heranfliegen. <kbd>LMB</kbd> feuern, mit <kbd>L-Alt</kbd><span class="plus">+</span><kbd>Mausrad</kbd> die Leistung im Grünen halten.</li>
@@ -1120,31 +1150,31 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
             <td><span class="pill go">Jetzt starten</span></td>
           </tr>
           <tr class="rec">
-            <th>RSI Salvation<small>Einsteiger-Schiff</small></th>
+            <th><a class="ship-a" href="#s-rsi-salvation">RSI Salvation</a><small>Einsteiger-Schiff</small></th>
             <td>1</td><td class="num">6 SCU</td><td class="num">Miete ~31.200 aUEC/Tag<br>Kauf ~1,19 Mio. aUEC</td>
             <td>Abkratzen und Zerlegen bis Freelancer-Größe. Günstigster Einstieg.</td>
             <td><span class="pill later">Stufe 2</span></td>
           </tr>
           <tr>
-            <th>MISC Fortune<small>Solo-Bergung</small></th>
+            <th><a class="ship-a" href="#s-misc-fortune">MISC Fortune</a><small>Solo-Bergung</small></th>
             <td>1</td><td class="num">16 SCU</td><td class="num">Miete ~28.400 aUEC/Tag<br>Kauf ~1,80 Mio. aUEC</td>
             <td>Füllt RMC in 1-SCU-Kisten, die sie außen auswirft. Praktisch beim Verkaufen.</td>
             <td><span class="pill later">Alternative</span></td>
           </tr>
           <tr class="rec">
-            <th>Drake Vulture<small>Solo-Klassiker</small></th>
+            <th><a class="ship-a" href="#s-drak-vulture">Drake Vulture</a><small>Solo-Klassiker</small></th>
             <td>1</td><td class="num">12 SCU<br>+13 Puffer <i class="gb">Buffer</i></td><td class="num">Miete ~69.500 aUEC/Tag<br>Kauf ~2,51 Mio. aUEC</td>
             <td>Abkratzen und Zerlegen bis Mercury-Star-Runner-Größe. Das Standard-Schiff für Solo-Bergung.</td>
             <td><span class="pill later">Stufe 3</span></td>
           </tr>
           <tr>
-            <th>ARGO MOTH<small>Crew-Schiff</small></th>
+            <th><a class="ship-a" href="#s-argo-moth">ARGO MOTH</a><small>Crew-Schiff</small></th>
             <td>4</td><td class="num">~224 SCU</td><td class="num">Miete ~223.000 aUEC/Tag<br>Kauf ~8,48 Mio. aUEC</td>
             <td>Drei Bergungstürme, zerlegt bis 600i-Größe.</td>
             <td><span class="pill no">Später, mit Crew</span></td>
           </tr>
           <tr>
-            <th>Aegis Reclaimer<small>Großbergung</small></th>
+            <th><a class="ship-a" href="#s-aegs-reclaimer">Aegis Reclaimer</a><small>Großbergung</small></th>
             <td>5–12</td><td class="num">420 SCU</td><td class="num">Kauf ~30,2 Mio. aUEC</td>
             <td>Mit Greifklaue für jedes Schiff, egal wie groß.</td>
             <td><span class="pill no">Org-Projekt</span></td>
@@ -1169,7 +1199,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     </div>
 
     <div class="card-plain">
-      <h3>Stufe 2 und 3: Mit Schiff <span class="pill later">Salvation → Vulture</span></h3>
+      <h3>Stufe 2 und 3: Mit Schiff <span class="pill later"><a class="ship-a" href="#s-rsi-salvation">Salvation</a> → <a class="ship-a" href="#s-drak-vulture">Vulture</a></span></h3>
       <ol>
         <li><b>Auftrag holen:</b> <kbd>F1</kbd> mobiGlas → Verträge <i class="gb">Contracts</i> → Reiter Salvage. Bergungsaufträge kosten keine Gebühr und markieren ein Wrack.</li>
         <li><b>Besitzer prüfen</b> <i class="gb">Owner</i><b>:</b> <kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf das Wrack zielen, <kbd>LMB</kbd> halten. Steht als Besitzer „Gamerules“, ist es frei. Steht dort ein Spielername: Finger weg.</li>
@@ -1178,7 +1208,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
         <li><b>Struktur zerlegen</b> <i class="gb">Structural Salvage</i><b>:</b> Erst Bauteile abnehmen und abkratzen, dann das Wrack zerbrechen <i class="gb">Fracture</i> und die Teile zerlegen <i class="gb">Disintegrate</i>.</li>
         <li><b>Verkaufen:</b> RMC direkt, Baumaterial erst nach der Raffinerie. Den Ablauf findest du unten unter „Verarbeitung“.</li>
       </ol>
-      <div class="hint">Erst mieten: Die Salvation gibt es schon ab etwa 31.000 aUEC am Tag. So merkst du, ob dir Bergung Spaß macht, bevor du Millionen ausgibst.</div>
+      <div class="hint">Erst mieten: Die <a class="ship-a" href="#s-rsi-salvation">Salvation</a> gibt es schon ab etwa 31.000 aUEC am Tag. So merkst du, ob dir Bergung Spaß macht, bevor du Millionen ausgibst.</div>
     </div>
   </div>
 
@@ -1219,9 +1249,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <table>
         <thead><tr><th>Schiff</th><th>Puffer → Kisten</th><th>Gut zu wissen</th></tr></thead>
         <tbody>
-          <tr><th>RSI Salvation<small>6 SCU</small></th><td>Das geborgene Material wird in den hinteren Laderaum ausgegeben, bis zu 6 SCU.</td><td>Kleiner Laderaum, also oft verkaufen fliegen.</td></tr>
-          <tr><th>MISC Fortune<small>16 SCU</small></th><td>Ein Spender außen am Schiff <i class="gb">Dispenser</i> fasst bis zu 12 Kisten à 1 SCU. Dazu kommen 4 SCU auf dem Heck-Lift. Laut Spielern füllen sich die Kisten von selbst.</td><td>Am wenigsten Handarbeit, darum für Solo-Spieler beliebt.</td></tr>
-          <tr><th>Drake Vulture<small>12 SCU + 13 Puffer</small></th><td>Im Heck an einem Wand-Panel den Rohstoff wählen und in 1-SCU-Kisten auswerfen lassen. Es gibt auch eine Automatik, die den Puffer nach und nach leert. Die Kisten stellst du mit dem Traktorstrahl <i class="gb">Tractor Beam</i> auf das Frachtgitter <i class="gb">Cargo Grid</i>.</td><td>Dafür brauchst du ein Multitool mit TruHold-Aufsatz oder den MaxLift-Traktorstrahl.</td></tr>
+          <tr><th><a class="ship-a" href="#s-rsi-salvation">RSI Salvation</a><small>6 SCU</small></th><td>Das geborgene Material wird in den hinteren Laderaum ausgegeben, bis zu 6 SCU.</td><td>Kleiner Laderaum, also oft verkaufen fliegen.</td></tr>
+          <tr><th><a class="ship-a" href="#s-misc-fortune">MISC Fortune</a><small>16 SCU</small></th><td>Ein Spender außen am Schiff <i class="gb">Dispenser</i> fasst bis zu 12 Kisten à 1 SCU. Dazu kommen 4 SCU auf dem Heck-Lift. Laut Spielern füllen sich die Kisten von selbst.</td><td>Am wenigsten Handarbeit, darum für Solo-Spieler beliebt.</td></tr>
+          <tr><th><a class="ship-a" href="#s-drak-vulture">Drake Vulture</a><small>12 SCU + 13 Puffer</small></th><td>Im Heck an einem Wand-Panel den Rohstoff wählen und in 1-SCU-Kisten auswerfen lassen. Es gibt auch eine Automatik, die den Puffer nach und nach leert. Die Kisten stellst du mit dem Traktorstrahl <i class="gb">Tractor Beam</i> auf das Frachtgitter <i class="gb">Cargo Grid</i>.</td><td>Dafür brauchst du ein Multitool mit TruHold-Aufsatz oder den MaxLift-Traktorstrahl.</td></tr>
         </tbody>
       </table>
     </div>
@@ -1321,6 +1351,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <p class="sh-3d-msg" id="sh3d-msg">Modell wird geladen …</p>
   </div>
   <p class="small" id="sh3d-note">Ziehen zum Drehen, Mausrad oder zwei Finger zum Zoomen. 3D-Modell © Cloud Imperium, bereitgestellt über FleetYards.net.</p>
+</dialog>
+
+<dialog class="sh-dt" id="shdt" aria-labelledby="shdt-title">
+  <div class="sh-dt-body" id="shdt-body"></div>
 </dialog>
 
 <!-- ============ GLOSSAR ============ -->
@@ -1467,6 +1501,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   function show() {
     var h = (location.hash || '#start').slice(1);
     if (h === 'hotas') h = 'hosas';
+    /* #s-<slug> öffnet ein Schiff in der Schiffsübersicht */
+    var keepScroll = false;
+    if (h.indexOf('s-') === 0) { keepScroll = !document.getElementById('view-schiffe').hidden; h = 'schiffe'; }
     if (names.indexOf(h) === -1) h = 'start';
     views.forEach(function (v) { v.hidden = v.dataset.view !== h; });
     tabs.forEach(function (a) {
@@ -1475,7 +1512,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     });
     var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
     document.title = titles[h];
-    window.scrollTo(0, 0);
+    if (!keepScroll) window.scrollTo(0, 0);
     document.dispatchEvent(new CustomEvent('viewchange', { detail: h }));
   }
   window.addEventListener('hashchange', show);
@@ -2353,7 +2390,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 })();
 </script>
 
-<script src="ships.js?v=20261029a"></script>
+<script src="ships.js?v=20261029b"></script>
 <script>
 /* ---------- Schiffe ---------- */
 (function () {
@@ -2396,7 +2433,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       '<div class="sh-img">' + (s.img ? '<img src="' + esc(s.img) + '" alt="' + esc(s.full) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer">' : '') +
       '<span class="sh-mcode">' + esc(s.m || '') + '</span></div>' +
       '<div class="sh-body">' +
-      '<div><h3>' + esc(s.n) + '</h3><span class="mn">' + esc(s.mn) + '</span></div>' +
+      '<div><h3><a class="sh-link" href="#s-' + esc(s.slug) + '">' + esc(s.n) + '</a></h3><span class="mn">' + esc(s.mn) + '</span></div>' +
       '<div class="sh-tags">' + tags + '</div>' +
       (s.tip ? '<span class="sh-note">' + esc(s.tip) + '</span>' : s.later ? '<span class="sh-note later">' + esc(s.later) + '</span>' : '') +
       '<div class="sh-stats"><div>' + cargo + '</div><div><b>' + crew + '</b><span>Crew</span></div><div><b>' + (SIZE[s.s] || '–') + '</b><span>Größe</span></div></div>' +
@@ -2529,10 +2566,116 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     });
   }
   grid.addEventListener('click', function (e) {
-    var b = e.target.closest('button.d3'); if (!b) return;
-    open3d(SH[+b.dataset.i]);
+    var b = e.target.closest('button.d3');
+    if (b) { open3d(SH[+b.dataset.i]); return; }
+    if (e.target.closest('a')) return;
+    var card = e.target.closest('.sh');
+    if (card) location.hash = '#s-' + card.dataset.slug;
   });
   $('sh3d-close').addEventListener('click', function () { dlg.close(); });
+
+  /* ---------- Detailansicht: #s-<slug> ---------- */
+  var dt = $('shdt'), dtBody = $('shdt-body');
+  var bySlug = {};
+  SH.forEach(function (s) { bySlug[s.slug] = s; s._el.dataset.slug = s.slug; s._el.classList.add('clickable'); });
+  var detailReady = null;
+  function loadDetail() {
+    if (detailReady) return detailReady;
+    detailReady = new Promise(function (ok) {
+      var sc = document.createElement('script');
+      sc.src = 'ships-detail.js?v=20261029b'; sc.onload = ok; sc.onerror = ok;
+      document.head.appendChild(sc);
+    });
+    return detailReady;
+  }
+  var CREWWORD = function (c) { return c[0] === c[1] ? (c[0] === 1 ? '1 Person' : c[0] + ' Personen') : c[0] + ' bis ' + c[1] + ' Personen'; };
+  function profile(s, d) {
+    /* eigenes Kurzprofil aus den Daten */
+    var ADJ = { 1: 'sehr kleines', 2: 'kleines', 3: 'mittelgroßes', 4: 'großes', 5: 'sehr großes', 6: 'riesiges Capital-' };
+    var adj = ADJ[s.s] || '';
+    var t = 'Ein ' + (adj ? adj + (adj.slice(-1) === '-' ? '' : ' ') : '') + (s.veh ? 'Fahrzeug' : 'Schiff') + ' von ' + s.mn + ' für ' + CREWWORD(s.cr) + '. ';
+    t += 'Einsatz: ' + s.c + (s.f.length ? ' (' + s.f.join(', ') + ')' : '') + '. ';
+    if (s.ore) t += 'Es fasst ' + fmt(s.ore) + ' SCU Erz. ';
+    else if (s.scu) t += 'Es fasst ' + fmt(s.scu) + ' SCU Fracht. ';
+    if (s.b) t += 'Im Spiel kaufbar ab ' + fmt(s.b[0]) + ' aUEC' + (s.nb > 1 ? ' an ' + s.nb + ' Orten' : '') + '. ';
+    if (s.r) t += 'Mieten ab ' + fmt(s.r[0]) + ' aUEC pro Tag. ';
+    if (!s.b && !s.r) t += 'Im Spiel derzeit nicht kaufbar. ';
+    return t;
+  }
+  function stat(label, val, unit) {
+    if (val === null || val === undefined || val === '' || val === 0 && unit !== 'SCU') return '';
+    return '<div class="dt-stat"><span>' + label + '</span><b>' + val + (unit ? ' <small>' + unit + '</small>' : '') + '</b></div>';
+  }
+  function num(n, dig) { return n === null || n === undefined ? null : Number(n).toLocaleString('de-DE', { maximumFractionDigits: dig || 0 }); }
+  function list(rows, unit) {
+    if (!rows || !rows.length) return '<p class="small">Keine bekannten Händler.</p>';
+    return '<table class="dt-list"><tbody>' + rows.map(function (r, i) {
+      return '<tr' + (i === 0 ? ' class="best"' : '') + '><td>' + esc(r[1]) + '</td><td class="num">' + fmt(r[0]) + ' aUEC' + (unit || '') + '</td></tr>';
+    }).join('') + '</tbody></table>';
+  }
+  function render(s, d) {
+    d = d || {};
+    var img = d.imgL || s.img;
+    var crew = s.cr[0] === s.cr[1] ? s.cr[0] : s.cr[0] + '–' + s.cr[1];
+    var dim = d.dim && d.dim[0] ? num(d.dim[0], 1) + ' × ' + num(d.dim[1], 1) + ' × ' + num(d.dim[2], 1) : null;
+    var tags = '<span class="sh-tag cat">' + esc(s.c) + '</span>' + s.f.map(function (f) { return '<span class="sh-tag">' + esc(f) + '</span>'; }).join('') +
+      (s.tip ? '<span class="sh-tag tip">Einsteiger-Tipp</span>' : s.later ? '<span class="sh-tag later">Tipp für später</span>' : '');
+    dtBody.innerHTML =
+      '<div class="dt-hero">' + (img ? '<img src="' + esc(img) + '" alt="' + esc(s.full) + '" referrerpolicy="no-referrer">' : '') +
+      '<button type="button" class="btn2 dt-close" id="shdt-close">Schließen</button></div>' +
+      '<div class="dt-main">' +
+      '<div class="dt-head"><div><h2 id="shdt-title">' + esc(s.full) + '</h2><span class="mn">' + esc(s.mn) + '</span></div><div class="sh-tags">' + tags + '</div></div>' +
+      (s.tip || s.later ? '<p class="sh-note' + (s.tip ? '' : ' later') + '">' + esc(s.tip || s.later) + '</p>' : '') +
+      '<p class="dt-profile">' + esc(profile(s, d)) + '</p>' +
+      (s.base ? '<p class="small">Bild und 3D zeigen das Grundmodell ' + esc(s.base) + '.</p>' : '') +
+      '<div class="dt-stats">' +
+        stat(s.ore ? 'Erz' : 'Fracht', fmt(s.ore || s.scu), 'SCU') + stat('Crew', crew, '') + stat('Größe', SIZE[s.s] || '–', '') +
+        stat('Maße L × B × H', dim, 'm') + stat('Masse', d.mass ? num(d.mass / 1000, 0) : null, 't') +
+        stat('Tempo (SCM)', num(d.scm), 'm/s') + stat('Höchsttempo', num(d.max), 'm/s') +
+        stat('Schild', num(d.shield), 'HP') + stat('Hülle', num(d.hull), 'HP') + stat('Feuerkraft Pilot', num(d.dps), 'DPS') +
+        stat('Quantum-Reichweite', d.qr ? num(d.qr / 1e9, 0) : null, 'Gm') +
+        stat('Versicherung', d.claim ? num(d.claim, 1) : null, 'Min.') + stat('Eilclaim', d.exp ? num(d.exp, 1) + ' Min. · ' + num(d.expc) : null, 'aUEC') +
+      '</div>' +
+      '<div class="dt-cols">' +
+        '<div><h3>Kaufen ' + '<i class="gb">Buy</i></h3>' + list(d.buys || (s.b ? [s.b] : [])) + '</div>' +
+        '<div><h3>Mieten ' + '<i class="gb">Rent</i></h3>' + list(d.rents || (s.r ? [s.r] : []), '/Tag') + '</div>' +
+      '</div>' +
+      '<div class="sh-act dt-act">' + (s.glb ? '<button type="button" class="d3" id="shdt-3d">3D ansehen</button>' : '') +
+        (s.u ? '<a href="' + esc(s.u) + '" target="_blank" rel="noopener">RSI-Seite ↗</a>' : '') +
+        (s.fy ? '<a href="' + esc(s.fy) + '" target="_blank" rel="noopener">FleetYards ↗</a>' : '') +
+        '<button type="button" id="shdt-copy">Link kopieren</button></div>' +
+      '<p class="small">Werte laut Star Citizen Wiki (Spielversion 4.10.2), Preise über UEX. Der grün markierte Händler ist der günstigste.</p>' +
+      '</div>';
+    $('shdt-close').addEventListener('click', function () { dt.close(); });
+    var b3 = $('shdt-3d'); if (b3) b3.addEventListener('click', function () { open3d(s); });
+    $('shdt-copy').addEventListener('click', function () {
+      var url = location.href.split('#')[0] + '#s-' + s.slug, btn = this;
+      var done = function () { btn.textContent = 'Link kopiert'; setTimeout(function () { btn.textContent = 'Link kopieren'; }, 1600); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt('Link:', url); });
+      else prompt('Link:', url);
+    });
+  }
+  function openDetail(slug) {
+    var s = bySlug[slug];
+    if (!s) return;
+    render(s, null);
+    if (!dt.open) { if (typeof dt.showModal === 'function') dt.showModal(); else dt.setAttribute('open', ''); }
+    dtBody.scrollTop = 0;
+    loadDetail().then(function () {
+      if (dt.open && location.hash === '#s-' + slug) render(s, (window.SHIP_DETAIL || {})[slug]);
+    });
+  }
+  function fromHash() {
+    var h = location.hash;
+    if (h.indexOf('#s-') === 0) openDetail(h.slice(3));
+    else if (dt.open) dt.close();
+  }
+  dt.addEventListener('close', function () {
+    if (location.hash.indexOf('#s-') === 0) history.replaceState(null, '', '#schiffe');
+  });
+  dt.addEventListener('click', function (e) { if (e.target === dt) dt.close(); });
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
 })();
 </script>
 <script>
