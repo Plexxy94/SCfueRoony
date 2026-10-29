@@ -940,7 +940,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   </div>
 
   <section>
-    <h2>Fünf Wege ins Mining</h2>
+    <h2>Sechs Wege ins Mining</h2>
     <div class="table-wrap">
       <table>
         <thead>
@@ -963,6 +963,12 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
             <th>Zu Fuß<small>Multitool + OreBit</small></th>
             <td>1</td><td>Rucksack</td><td class="num">gering</td>
             <td>Edelsteine in Höhlen und am Boden. Lernen ohne Risiko.</td>
+            <td><span class="pill later">Nebenbei</span></td>
+          </tr>
+          <tr>
+            <th><a class="ship-a" href="#s-argo-atls-geo">ARGO ATLS GEO</a><small>Mining-Anzug <i class="gb">Power Suit</i></small></th>
+            <td>1</td><td>0,1 SCU</td><td class="num">Kauf ~86.000 aUEC</td>
+            <td>Laser am rechten Arm, Jetpack im Rücken. Baut Handabbau- und ROC-Vorkommen ab, für kleine Steine lässt sich die Leistung drosseln. Nur am Boden, nicht im All.</td>
             <td><span class="pill later">Nebenbei</span></td>
           </tr>
           <tr>
@@ -1046,7 +1052,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
           <li>Hinfliegen, <kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf den Stein zielen und <kbd>LMB</kbd> <span class="mod">halten</span>. Jetzt siehst du Zusammensetzung <i class="gb">Composition</i> in Prozent, Masse <i class="gb">Mass</i>, Widerstand und Instabilität.</li>
           <li><b>Entscheiden:</b> Viel wertvolles Erz und ein Widerstand, den dein Laser schafft? Abbauen. Sonst weiterfliegen.</li>
         </ol>
-        <div class="hint">Am Boden gilt etwas anderes: 3.000 ist ein kleines Vorkommen für Handabbau, 4.000 ein großes für den ROC. Welches Edelstein-Mineral drin ist, zeigt erst der Scan. Im All bedeutet 3.000 dagegen Trümmer eines großen Wracks.</div>
+        <div class="hint">Am Boden gilt etwas anderes: 3.000 ist ein kleines Vorkommen für Handabbau, 4.000 ein großes für den ROC oder die ATLS GEO. Welches Edelstein-Mineral drin ist, zeigt erst der Scan. Im All bedeutet 3.000 dagegen Trümmer eines großen Wracks.</div>
     </div>
     <details class="ref">
       <summary>Alle 26 Signaturwerte als Tabelle anzeigen</summary>
@@ -2940,7 +2946,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 /* ---------- RS-Rechner (Mining) ---------- */
 (function () {
   var ORES = [[3170,"Quantanium","Quantainium",200000],[3185,"Stileron","Stileron",140000],[3200,"Savrilium","Savrilium",0],[3370,"Ouratit","Ouratite",0],[3385,"Riccit","Riccite",66000],[3400,"Lindinium","Lindinium",24000],[3540,"Beryll","Beryl",4700],[3555,"Taranit","Taranite",22000],[3570,"Borase","Borase",25000],[3585,"Gold","Gold",32000],[3600,"Bexalit","Bexalite",18000],[3825,"Laranit","Laranite",9100],[3840,"Aslarit","Aslarite",0],[3855,"Titan","Titanium",8300],[3870,"Wolfram","Tungsten",10000],[3885,"Agricium","Agricium",11000],[3900,"Torit","Torite",7900],[4180,"Hephaestanit","Hephaestanite",4000],[4195,"Zinn","Tin",4000],[4210,"Quarz","Quartz",1700],[4225,"Korund","Corundum",3700],[4240,"Kupfer","Copper",3700],[4255,"Silizium","Silicon",2200],[4270,"Eisen","Iron",3400],[4285,"Aluminium","Aluminum",3800],[4300,"Eis","Ice",5100]];
-  var GROUND = [[3000, 'Kleines Vorkommen (Handabbau)', 'FPS deposit'], [4000, 'Großes Vorkommen (ROC)', 'ROC deposit']];
+  var GROUND = [[3000, 'Kleines Vorkommen (Handabbau)', 'FPS deposit'], [4000, 'Großes Vorkommen (ROC oder ATLS GEO)', 'ROC deposit']];
   var inp = document.getElementById('rsq'), out = document.getElementById('rsout');
   if (!inp) return;
   var fmt = function (n) { return n.toLocaleString('de-DE'); };
