@@ -471,6 +471,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <a href="#erste-schritte" role="listitem">Erste Schritte</a>
       <a href="#tasten" role="listitem">Tasten</a>
       <a href="#mining" role="listitem">Mining</a>
+      <a href="#salvage" role="listitem">Salvage</a>
       <a href="#schiffe" role="listitem">Schiffe</a>
       <a href="#glossar" role="listitem">Glossar</a>
       <a href="#training" role="listitem">Training <span class="beta">Beta</span></a>
@@ -513,6 +514,12 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <h3>Mining</h3>
       <p>Geld verdienen mit Steinen: zu Fuß mit dem Multitool, später mit Golem oder Prospector. Ablauf, Laser, Erze, Verkauf.</p>
       <span class="go">Abbauen →</span>
+    </a>
+    <a class="chapter" href="#salvage">
+      <span class="no">KAPITEL 4</span>
+      <h3>Salvage</h3>
+      <p>Geld verdienen mit Wracks: Hüllen abkratzen, Schiffe zerlegen, Teile verkaufen. Ruhiger als Mining und gut allein machbar.</p>
+      <span class="go">Bergen →</span>
     </a>
     <a class="chapter" href="#schiffe">
       <span class="no">NACHSCHLAGEN</span>
@@ -940,6 +947,142 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   </section>
 </section>
 
+<!-- ============ SALVAGE ============ -->
+<section class="view" id="view-salvage" data-view="salvage" hidden>
+  <div class="head">
+    <div class="stamp"><span>Kapitel 4</span><span>Stand Alpha 4.10.1</span><span>Preise schwanken</span></div>
+    <h1>Salvage</h1>
+    <p class="lede">Bergung heißt: Wracks finden, die Hülle zu Recycling-Material abkratzen, den Rest zerlegen und alles verkaufen. Nichts kann explodieren, Aufträge kosten keine Gebühr, und ein Schiff reicht für eine Person.</p>
+  </div>
+
+  <section>
+    <h2>Was du dabei gewinnst</h2>
+    <div class="two">
+      <div class="card-plain">
+        <h3>RMC <span class="pill go">Hülle abkratzen</span></h3>
+        <p class="small" style="font-size:14px">Recycled Material Composite. Entsteht, wenn du mit dem Bergungsstrahl die Außenhaut eines Wracks abträgst. Wird in Frachtkisten gelagert und direkt verkauft.</p>
+      </div>
+      <div class="card-plain">
+        <h3>Baumaterial <span class="pill later">Struktur zerlegen</span></h3>
+        <p class="small" style="font-size:14px">Ist die Hülle runter, brichst du das Wrack in Stücke und zerlegst sie. Das Rohmaterial musst du erst in der Raffinerie verarbeiten lassen. Leichte Schiffe ergeben „Rubble“ (schnell, wenig), schwere Schiffe „Salvage“ (langsam, viel).</p>
+      </div>
+      <div class="card-plain">
+        <h3>Bauteile <span class="pill no">abmontieren</span></h3>
+        <p class="small" style="font-size:14px">Waffen und Halterungen, bei manchen Schiffen auch Schildgenerator, Kraftwerk, Kühler und Quantenantrieb. Mit dem Traktorstrahl abnehmen und dort verkaufen, wo es dieses Bauteil zu kaufen gibt.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sechs Wege ins Salvage</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Weg</th><th>Crew</th><th>Fracht</th><th>Kosten (ca.)</th><th>Kann</th><th>Für dich</th></tr>
+        </thead>
+        <tbody>
+          <tr class="rec">
+            <th>Zu Fuß<small>Multitool + Cambio-Lite SRT</small></th>
+            <td>1</td><td>Kanister</td><td class="num">gering</td>
+            <td>Hülle abkratzen und Bauteile abmontieren. Gut zum Üben und Reparieren.</td>
+            <td><span class="pill go">Jetzt starten</span></td>
+          </tr>
+          <tr class="rec">
+            <th>RSI Salvation<small>Einsteiger-Schiff</small></th>
+            <td>1</td><td class="num">6 SCU</td><td class="num">Miete ~31.200 aUEC/Tag<br>Kauf ~1,19 Mio. aUEC</td>
+            <td>Abkratzen und Zerlegen bis Freelancer-Größe. Günstigster Einstieg.</td>
+            <td><span class="pill later">Stufe 2</span></td>
+          </tr>
+          <tr>
+            <th>MISC Fortune<small>Solo-Bergung</small></th>
+            <td>1</td><td class="num">16 SCU</td><td class="num">Miete ~28.400 aUEC/Tag<br>Kauf ~1,80 Mio. aUEC</td>
+            <td>Füllt RMC in 1-SCU-Kisten, die sie außen auswirft. Praktisch beim Verkaufen.</td>
+            <td><span class="pill later">Alternative</span></td>
+          </tr>
+          <tr class="rec">
+            <th>Drake Vulture<small>Solo-Klassiker</small></th>
+            <td>1</td><td class="num">12 SCU<br>+13 Puffer</td><td class="num">Miete ~69.500 aUEC/Tag<br>Kauf ~2,51 Mio. aUEC</td>
+            <td>Abkratzen und Zerlegen bis Mercury-Star-Runner-Größe. Das Standard-Schiff für Solo-Bergung.</td>
+            <td><span class="pill later">Stufe 3</span></td>
+          </tr>
+          <tr>
+            <th>ARGO MOTH<small>Crew-Schiff</small></th>
+            <td>4</td><td class="num">~224 SCU</td><td class="num">Miete ~223.000 aUEC/Tag<br>Kauf ~8,48 Mio. aUEC</td>
+            <td>Drei Bergungstürme, zerlegt bis 600i-Größe.</td>
+            <td><span class="pill no">Später, mit Crew</span></td>
+          </tr>
+          <tr>
+            <th>Aegis Reclaimer<small>Großbergung</small></th>
+            <td>5–12</td><td class="num">420 SCU</td><td class="num">Kauf ~30,2 Mio. aUEC</td>
+            <td>Mit Greifklaue für jedes Schiff, egal wie groß.</td>
+            <td><span class="pill no">Org-Projekt</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Preise aus unseren Schiffsdaten (günstigster bekannter Händler, Patch 4.10.2). Alle Schiffe mit Bild und 3D findest du im Tab <a href="#schiffe">Schiffe</a>.</p>
+  </section>
+
+  <div class="two">
+    <div class="card-plain">
+      <h3>Stufe 1: Zu Fuß <span class="pill go">Jetzt starten</span></h3>
+      <ol>
+        <li><b>Ausrüstung kaufen:</b> Pyro RYT Multitool mit Cambio-Lite-SRT-Aufsatz (Bergung) und TruHold-Aufsatz (Traktorstrahl).</li>
+        <li><b>Wrack suchen:</b> zerstörte Schiffe nach Kämpfen, an Absturzstellen oder aus Bergungsaufträgen.</li>
+        <li><kbd>4</kbd> Multitool ziehen, auf die Hülle zielen, <kbd>LMB</kbd> halten. Das RMC landet in einem Kanister.</li>
+        <li><b>Bauteile abnehmen:</b> Mit dem Traktorstrahl Waffen und andere Teile lösen und mitnehmen.</li>
+        <li><b>Verkaufen:</b> Bauteile in Läden, die sie auch anbieten.</li>
+      </ol>
+      <div class="oops"><strong>Wichtig:</strong> RMC aus dem Kanister zu verkaufen lohnt sich nicht. Der Kanister ist zum Reparieren eurer eigenen Hülle gedacht. Das Geld steckt zu Fuß in den Bauteilen.</div>
+    </div>
+
+    <div class="card-plain">
+      <h3>Stufe 2 und 3: Mit Schiff <span class="pill later">Salvation → Vulture</span></h3>
+      <ol>
+        <li><b>Auftrag holen:</b> <kbd>F1</kbd> mobiGlas → Verträge → Reiter Salvage. Bergungsaufträge kosten keine Gebühr und markieren ein Wrack.</li>
+        <li><b>Besitzer prüfen:</b> <kbd>V</kbd> Scan-Modus, auf das Wrack zielen, <kbd>LMB</kbd> halten. Steht als Besitzer „Gamerules“, ist es frei. Steht dort ein Spielername: Finger weg.</li>
+        <li><b>Hülle abkratzen:</b> <kbd>M</kbd> Bergungsmodus, nah ran, <kbd>LMB</kbd> feuern. Die Schilde des Wracks müssen aus sein.</li>
+        <li><b>Puffer leeren:</b> Ist der Puffer voll, füllst du das RMC in Frachtkisten um.</li>
+        <li><b>Struktur zerlegen:</b> Erst Bauteile abnehmen und abkratzen, dann das Wrack zerbrechen und die Teile zerlegen.</li>
+        <li><b>Verkaufen:</b> RMC beim TDD in der Stadt (in Lorville beim CBD) oder an Admin-Terminals. Zerlegtes Material vorher in die Raffinerie bringen.</li>
+      </ol>
+      <div class="hint">Erst mieten: Die Salvation gibt es schon ab etwa 31.000 aUEC am Tag. So merkst du, ob dir Bergung Spaß macht, bevor du Millionen ausgibst.</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Wo RMC am meisten bringt</h2>
+    <div class="ores">
+      <div class="ore"><b>Pyro, Admin</b><span class="v">~7.700 aUEC/SCU</span><span class="w">Endgame, Patch City, Starlight Service. Bester Preis, aber gefährlich.</span></div>
+      <div class="ore"><b>Ruin Station</b><span class="v">~7.200 aUEC/SCU</span><span class="w">Pyro</span></div>
+      <div class="ore"><b>Orison, TDD</b><span class="v">~7.100 aUEC/SCU</span><span class="w">Cloudview Center. Bester Preis in Stanton.</span></div>
+      <div class="ore"><b>Lorville, CBD</b><span class="v">~6.800 aUEC/SCU</span><span class="w">Stanton</span></div>
+      <div class="ore"><b>New Babbage, TDD</b><span class="v">~6.000 aUEC/SCU</span><span class="w">Commons. Stanton</span></div>
+    </div>
+    <p class="small" style="margin-top:8px">Stand Ende August und Anfang September 2026 laut Community-Daten. Nicht jedes Terminal kauft RMC, und ein angezeigter Kaufpreis ist nicht das, was du beim Verkauf bekommst. Vor dem Flug im Spiel nachsehen.</p>
+  </section>
+
+  <section>
+    <h2>Gefahren und Regeln</h2>
+    <div class="facts">
+      <div class="fact"><strong>Spielerschiffe</strong><p>Wer das Schiff eines anderen Spielers abkratzt oder zerlegt, bekommt einen Crimestat. Immer erst den Besitzer scannen.</p></div>
+      <div class="fact"><strong>Sperrzonen</strong><p>Bergung in der Sperrzone um Städte und Stationen gilt als Verstoß, auch bei verlassenen Schiffen. Das gibt Strafe und Crimestat.</p></div>
+      <div class="fact"><strong>Zeitdruck bei Aufträgen</strong><p>Nach einer Weile tauchen Sicherheitskräfte am Wrack auf. Zügig arbeiten und rechtzeitig abfliegen.</p></div>
+      <div class="fact"><strong>Zerbrechen ist endgültig</strong><p>Beim Zerbrechen sterben alle Insassen, und nicht abmontierte Bauteile gehen verloren. Deshalb immer erst Teile abnehmen und abkratzen.</p></div>
+      <div class="fact"><strong>Abstürze</strong><p>Loses RMC im Laderaum übersteht einen Server-Absturz nicht sicher. Lieber oft verkaufen und nicht mit vollem Laderaum ausloggen.</p></div>
+      <div class="fact"><strong>Piraten</strong><p>Wracks ziehen auch andere an. In Pyro besonders vorsichtig sein.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Salvage oder Mining?</h2>
+    <div class="two">
+      <div class="card-plain"><h3>Salvage passt, wenn …</h3><ul><li>du lieber ruhig und ohne Explosionsgefahr arbeitest</li><li>du allein spielst und Aufträge ohne Gebühr magst</li><li>du gern mit Bauteilen handelst</li></ul></div>
+      <div class="card-plain"><h3>Mining passt, wenn …</h3><ul><li>dir das Feintuning mit dem Laser Spaß macht</li><li>du auf seltene, wertvolle Erze aus bist</li><li>du schon zu Fuß in Höhlen loslegen willst</li></ul><p class="small"><a href="#mining">Zum Mining-Kapitel →</a></p></div>
+    </div>
+  </section>
+</section>
+
 <!-- ============ SCHIFFE ============ -->
 <section class="view" id="view-schiffe" data-view="schiffe" hidden>
   <div class="head">
@@ -1126,7 +1269,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     });
-    var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
+    var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
     document.title = titles[h];
     window.scrollTo(0, 0);
     document.dispatchEvent(new CustomEvent('viewchange', { detail: h }));
@@ -2006,7 +2149,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 })();
 </script>
 
-<script src="ships.js?v=20261028d"></script>
+<script src="ships.js?v=20261029a"></script>
 <script>
 /* ---------- Schiffe ---------- */
 (function () {
