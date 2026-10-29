@@ -2763,7 +2763,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
         '</td><td class="pct"><span class="loc-bar"><i style="width:' + Math.min(100, r[5]) + '%"></i></span>' + fmt(r[5]) + ' %</td><td class="num">' +
         (r[6] ? fmt(r[6]) + ' aUEC' : '–') + '</td><td>' + esc(r[7]) + '</td></tr>';
     }).join('');
-    cnt.textContent = list.length + ' Fundorte';
+    cnt.textContent = list.length + (list.length === 1 ? ' Fundort' : ' Fundorte');
     none.hidden = list.length > 0;
   }
   q.addEventListener('input', draw);
