@@ -1872,7 +1872,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
         }).join('') + '</div></div>';
     }).join('');
     gnone.hidden = n > 0;
-    gcount.textContent = n + ' Begriffe';
+    gcount.textContent = n + (n === 1 ? ' Begriff' : ' Begriffe');
   }
   gq.addEventListener('input', render);
   render();
