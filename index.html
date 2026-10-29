@@ -497,6 +497,8 @@ tr.rec th { color: var(--accent); }
 .dt-act { margin-top: 0; }
 
 .loc-table td, .loc-table th { white-space: nowrap; }
+.loc-start { background: var(--panel); border: 1px dashed var(--line); border-radius: 10px; padding: 14px 16px; margin-top: 10px; display: flex; flex-direction: column; gap: 10px; }
+.loc-start p { margin: 0; color: var(--muted); font-size: 14px; }
 .loc-table tbody th { font-size: 15px; }
 .loc-table .pct { font-variant-numeric: tabular-nums; }
 .loc-bar { display: inline-block; width: 46px; height: 6px; border-radius: 3px; background: var(--line); margin-right: 6px; vertical-align: middle; overflow: hidden; }
@@ -1062,7 +1064,11 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <div class="chips" id="locsys" role="group" aria-label="System"></div>
       <div class="chips" id="locmeth" role="group" aria-label="Abbauart"></div>
     </div>
-    <div class="table-wrap" style="margin-top:10px">
+    <div class="loc-start" id="locstart">
+      <p>Such nach einem Erz oder Ort, oder wähl oben ein System oder eine Abbauart. Schnellstart:</p>
+      <div class="chips" id="locsugg"></div>
+    </div>
+    <div class="table-wrap" id="locwrap" style="margin-top:10px" hidden>
       <table class="loc-table">
         <thead><tr><th>Erz</th><th>Abbau</th><th>Ort</th><th>System</th><th>Häufigkeit</th><th>Wert pro SCU</th><th>Raffinerie</th></tr></thead>
         <tbody id="locbody"></tbody>
@@ -2751,8 +2757,19 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   chips(document.getElementById('locsys'), [['alle', 'Alle Systeme'], ['stanton', 'Stanton'], ['pyro', 'Pyro'], ['nyx', 'Nyx']], function () { return sys; }, function (v) { sys = v; });
   chips(document.getElementById('locmeth'), [['alle', 'Alle Abbauarten'], ['ship', 'Schiff'], ['fps', 'Handabbau'], ['roc', 'ROC']], function () { return meth; }, function (v) { meth = v; });
   ROWS.forEach(function (r) { r.t = (r[0] + ' ' + r[1] + ' ' + r[3] + ' ' + SYS[r[4]] + ' ' + METH[r[2]]).toLowerCase(); });
+  var wrap = document.getElementById('locwrap'), start = document.getElementById('locstart');
+  /* Vorschläge: ein Klick füllt die Suche */
+  ['Quantanium', 'Gold', 'Taranit', 'Hadanit', 'Daymar', 'Aaron Halo', 'Pyro IV'].forEach(function (w) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.textContent = w;
+    b.addEventListener('click', function () { q.value = w; draw(); q.focus(); });
+    document.getElementById('locsugg').appendChild(b);
+  });
   function draw() {
     var v = q.value.trim().toLowerCase();
+    /* Liste erst zeigen, wenn gesucht oder gefiltert wird */
+    var active = v.length >= 2 || sys !== 'alle' || meth !== 'alle';
+    wrap.hidden = !active; start.hidden = active;
+    if (!active) { body.innerHTML = ''; cnt.textContent = ROWS.length + ' Fundorte in der Datenbank'; none.hidden = true; return; }
     var list = ROWS.filter(function (r) {
       if (sys !== 'alle' && r[4] !== sys) return false;
       if (meth !== 'alle' && r[2] !== meth) return false;
@@ -2765,6 +2782,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     }).join('');
     cnt.textContent = list.length + (list.length === 1 ? ' Fundort' : ' Fundorte');
     none.hidden = list.length > 0;
+    wrap.hidden = list.length === 0;
   }
   q.addEventListener('input', draw);
   draw();
