@@ -2901,22 +2901,34 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       else prompt('Link:', url);
     });
   }
+  var current = null;
   function openDetail(slug) {
     var s = bySlug[slug];
     if (!s) return;
+    current = slug;
     render(s, null);
     if (!dt.open) { if (typeof dt.showModal === 'function') dt.showModal(); else dt.setAttribute('open', ''); }
     dtBody.scrollTop = 0;
     loadDetail().then(function () {
-      if (dt.open && location.hash === '#s-' + slug) render(s, (window.SHIP_DETAIL || {})[slug]);
+      if (dt.open && current === slug) render(s, (window.SHIP_DETAIL || {})[slug]);
     });
   }
+  /* Schiffslinks in anderen Kapiteln öffnen das Overlay an Ort und Stelle, ohne die Seite zu wechseln */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#s-"]');
+    if (!a || !document.getElementById('view-schiffe').hidden || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    var slug = a.getAttribute('href').slice(3);
+    if (!bySlug[slug]) return;
+    e.preventDefault();
+    openDetail(slug);
+  });
   function fromHash() {
     var h = location.hash;
     if (h.indexOf('#s-') === 0) openDetail(h.slice(3));
     else if (dt.open) dt.close();
   }
   dt.addEventListener('close', function () {
+    current = null;
     if (location.hash.indexOf('#s-') === 0) history.replaceState(null, '', '#schiffe');
   });
   dt.addEventListener('click', function (e) { if (e.target === dt) dt.close(); });
