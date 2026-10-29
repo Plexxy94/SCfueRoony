@@ -519,6 +519,14 @@ tr.rec th { color: var(--accent); }
 details.ref { margin-top: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; }
 details.ref summary { cursor: pointer; font-family: var(--f-display); font-weight: 600; font-size: 15px; color: var(--accent); }
 
+.cr-bars { display: flex; flex-direction: column; gap: 8px; }
+.cr-bar { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) 44px; gap: 10px; align-items: center; font-size: 14px; }
+.cr-bar div { height: 10px; background: var(--line); border-radius: 5px; overflow: hidden; }
+.cr-bar i { display: block; height: 100%; background: var(--accent); }
+.cr-bar b { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--f-display); }
+.cr-mats { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.q-meter { grid-template-columns: 1fr .5fr 1fr; }
+
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -540,6 +548,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <a href="#tasten" role="listitem">Tasten</a>
       <a href="#mining" role="listitem">Mining</a>
       <a href="#salvage" role="listitem">Salvage</a>
+      <a href="#crafting" role="listitem">Crafting</a>
       <a href="#schiffe" role="listitem">Schiffe</a>
       <a href="#glossar" role="listitem">Glossar</a>
       <a href="#training" role="listitem">Training <span class="beta">Beta</span></a>
@@ -588,6 +597,12 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <h3>Salvage</h3>
       <p>Geld verdienen mit Wracks: Hüllen abkratzen, Schiffe zerlegen, Teile verkaufen. Ruhiger als Mining und gut allein machbar.</p>
       <span class="go">Bergen →</span>
+    </a>
+    <a class="chapter" href="#crafting">
+      <span class="no">KAPITEL 5</span>
+      <h3>Crafting</h3>
+      <p>Waffen, Rüstung und Schiffsteile selbst bauen: Blueprints verdienen, Material sammeln, am Fabricator herstellen.</p>
+      <span class="go">Bauen →</span>
     </a>
     <a class="chapter" href="#schiffe">
       <span class="no">NACHSCHLAGEN</span>
@@ -1370,6 +1385,133 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   </section>
 </section>
 
+<!-- ============ CRAFTING ============ -->
+<section class="view" id="view-crafting" data-view="crafting" hidden>
+  <div class="head">
+    <div class="stamp"><span>Kapitel 5</span><span>Stand Alpha 4.10.2</span><span>Crafting seit 4.7</span></div>
+    <h1>Crafting</h1>
+    <p class="lede">Seit Alpha 4.7 kannst du Waffen, Rüstung, Munition und Schiffsteile selbst herstellen. Du brauchst drei Dinge: einen Bauplan, das passende Material und eine Werkbank. Je besser das Material, desto besser das Ergebnis.</p>
+    <p class="small">Grau dahinter steht jeweils der englische Begriff, wie er im Spiel heißt.</p>
+  </div>
+
+  <section>
+    <h2>Was du brauchst</h2>
+    <div class="two">
+      <div class="card-plain">
+        <h3>Bauplan <i class="gb">Blueprint</i></h3>
+        <p class="small" style="font-size:14px">Das Rezept für einen Gegenstand. Ein paar hast du von Anfang an, zum Beispiel für das P4-AR-Gewehr. Weitere bekommst du als Belohnung für Aufträge <i class="gb">Contracts</i>. Ein Bauplan wird beim Herstellen nicht verbraucht und gehört deinem Konto.</p>
+      </div>
+      <div class="card-plain">
+        <h3>Material <i class="gb">Materials</i></h3>
+        <p class="small" style="font-size:14px">Raffinierte Erze und Stoffe aus Mining, Salvage oder vom Händler. Jedes Material hat eine Qualität <i class="gb">Quality</i> von 0 bis 1000. Sie bleibt beim Raffinieren erhalten.</p>
+      </div>
+      <div class="card-plain">
+        <h3>Werkbank <i class="gb">Item Fabricator</i></h3>
+        <p class="small" style="font-size:14px">Eine Maschine, die du kaufst und aufstellst: im eigenen Hangar oder auf dem Frachtgitter eines ausreichend großen Schiffs. Dort wählst du Bauplan und Material und startest den Auftrag.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Der Ablauf im Überblick</h2>
+    <div class="flow">
+      <div class="flow-lane"><span class="pill go">Vom Auftrag zum fertigen Gegenstand</span><div class="flow-row"><div class="flow-step">Auftrag erledigen <i class="gb">Contract</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Bauplan erhalten <i class="gb">Blueprint</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Material besorgen <i class="gb">Mining / Salvage</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Fabricator aufstellen <i class="gb">Item Fabricator</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Job starten <i class="gb">Craft</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Gegenstand abholen</div></div></div>
+    </div>
+  </section>
+
+  <div class="two">
+    <div class="card-plain">
+      <h3>1. Bauplan bekommen</h3>
+      <ol>
+        <li><kbd>F1</kbd> mobiGlas → Verträge <i class="gb">Contracts</i>. Viele Aufträge haben einen Pool an Bauplänen als Belohnung.</li>
+        <li>Pro abgeschlossenem Auftrag gibt es <b>einen zufälligen Bauplan</b> aus diesem Pool. Für einen bestimmten Bauplan musst du den Auftrag eventuell mehrmals machen.</li>
+        <li>Manche Baupläne setzen Ruf <i class="gb">Reputation</i> bei einer Fraktion voraus.</li>
+        <li>Deine Baupläne siehst du in der Bibliothek am Fabricator <i class="gb">Blueprint Library</i>.</li>
+      </ol>
+      <div class="hint">Welcher Auftrag welchen Bauplan gibt, zeigen Community-Tools wie der Blueprint Finder (Link unten).</div>
+    </div>
+    <div class="card-plain">
+      <h3>2. Fabricator aufstellen</h3>
+      <ol>
+        <li><b>Kaufen:</b> bei Kel-To und Dumper's Depot in Stanton oder in den Raffinerie-Shops in Pyro. Das Angebot kann wechseln.</li>
+        <li><b>Abholen:</b> über den Frachtaufzug <i class="gb">Freight Elevator</i>.</li>
+        <li><b>Aufstellen:</b> im eigenen Hangar oder auf dem Frachtgitter <i class="gb">Cargo Grid</i> eines Schiffs, das groß genug ist.</li>
+        <li><b>Bewegen:</b> mit dem Traktorstrahl <i class="gb">Tractor Beam</i>. Vorher die Tür des Fabricators schließen.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card-plain" style="margin-top:16px">
+    <h3>3. Am Fabricator herstellen</h3>
+    <ol>
+      <li>Fabricator öffnen und einen Bauplan auswählen.</li>
+      <li>Für jede Zutat Menge und Mindestqualität <i class="gb">Minimum Quality</i> prüfen.</li>
+      <li>Material von Hand zuweisen oder automatisch füllen lassen <i class="gb">Auto-Fill</i>.</li>
+      <li>Die vorhergesagten Werte ansehen: Was bewirkt dein Material?</li>
+      <li>Lieferort <i class="gb">Delivery Location</i> wählen.</li>
+      <li>Job starten und in der Warteschlange <i class="gb">Queue</i> verfolgen. Ein Job dauert im Schnitt etwa 3 bis 4 Minuten.</li>
+      <li>Gegenstand abholen und prüfen.</li>
+    </ol>
+    <div class="oops"><strong>Achtung:</strong> Material unter der Mindestqualität nimmt der Fabricator nicht an, auch wenn Sorte und Menge stimmen.</div>
+  </div>
+
+  <section>
+    <h2>Qualität: was dein Material bewirkt</h2>
+    <div class="gauge">
+      <h3>500 ist neutral</h3>
+      <div class="meter q-meter" role="img" aria-label="Qualitätsskala 0 bis 1000, 500 ist neutral">
+        <span class="hi">0–499 schlechter</span><span class="lo">500 normal</span><span class="mid">501–1000 besser</span>
+      </div>
+      <div class="meter-legend">
+        <span><b>Unter 500:</b> Der Gegenstand wird schlechter als die normale Version.</span>
+        <span><b>500:</b> genau wie ein gekaufter Gegenstand.</span>
+        <span><b>1000:</b> voller Bonus.</span>
+      </div>
+      <div class="meter-legend">
+        <span><b>Jeder Slot zählt einzeln:</b> Jede Zutat hat ihre eigene Qualität und beeinflusst bestimmte Werte. Beim P4-AR steuern Rahmen und Schaft den Rückstoß, der Lauf Schaden und Feuerrate.</span>
+        <span><b>Beispiel:</b> P4-AR mit perfektem Material: +7,5 % Schaden und +12 % Feuerrate. Zusammen etwa +20 % Schaden pro Sekunde, von 162 auf 195.</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Was du bauen kannst</h2>
+    <div class="two">
+      <div class="card-plain">
+        <h3>1.606 Baupläne nach Art</h3>
+        <div class="cr-bars">
+        <div class="cr-bar"><span>Rüstung <i class="gb">Armor</i></span><div><i style="width:100%"></i></div><b>880</b></div>
+        <div class="cr-bar"><span>Schiffskomponenten <i class="gb">Ship Components</i></span><div><i style="width:43%"></i></div><b>381</b></div>
+        <div class="cr-bar"><span>Persönliche Waffen <i class="gb">Personal Weapons</i></span><div><i style="width:20%"></i></div><b>174</b></div>
+        <div class="cr-bar"><span>Schiffswaffen <i class="gb">Ship Weapons</i></span><div><i style="width:11%"></i></div><b>95</b></div>
+        <div class="cr-bar"><span>Munition <i class="gb">Ammunition</i></span><div><i style="width:4%"></i></div><b>36</b></div>
+        <div class="cr-bar"><span>Flug- und Unteranzüge <i class="gb">Flight Suits / Undersuits</i></span><div><i style="width:4%"></i></div><b>36</b></div>
+        <div class="cr-bar"><span>Missionsgegenstände <i class="gb">Mission Items</i></span><div><i style="width:0%"></i></div><b>4</b></div>
+        </div>
+        <p class="small">Neu in 4.10: fünf Erzbehälter <i class="gb">Ore Pods</i> und fünf Mining-Module.</p>
+      </div>
+      <div class="card-plain">
+        <h3>Am häufigsten gebraucht</h3>
+        <div class="ores cr-mats"><div class="ore"><b>Aslarit <i class="gb">Aslarite</i></b><span class="w">in 856 von 1.606 Material-Slots</span></div><div class="ore"><b>Ouratit <i class="gb">Ouratite</i></b><span class="w">häufig gebraucht</span></div><div class="ore"><b>Laranit <i class="gb">Laranite</i></b><span class="w">häufig gebraucht</span></div><div class="ore"><b>Wolfram <i class="gb">Tungsten</i></b><span class="w">häufig gebraucht</span></div><div class="ore"><b>Eisen <i class="gb">Iron</i></b><span class="w">häufig gebraucht</span></div><div class="ore"><b>Agricium <i class="gb">Agricium</i></b><span class="w">häufig gebraucht</span></div></div>
+        <p class="small">Wo du diese Erze findest, zeigt die <a href="#mining">Fundort-Suche im Mining-Kapitel</a>. Wer viel craften will, legt sich zuerst einen Vorrat Aslarit an.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tipps und Grenzen</h2>
+    <div class="facts">
+      <div class="fact"><strong>Mit Munition anfangen</strong><p>Munition ist billig herzustellen. So lernst du den ganzen Ablauf, bevor du teures Material in eine Waffe steckst.</p></div>
+      <div class="fact"><strong>Baupläne bleiben</strong><p>Verdiente Baupläne gehören deinem Konto und überstehen den Tod. Den Wipe in 4.8 haben sie auch überstanden. Ob das bei künftigen Wipes so bleibt, ist nicht garantiert.</p></div>
+      <div class="fact"><strong>Zerlegen lohnt nur halb</strong><p>Zerlegst du einen Gegenstand, bekommst du nur einen Teil des Materials zurück, beim P4-AR etwa die Hälfte.</p></div>
+      <div class="fact"><strong>Werte im Inventar</strong><p>Bekannter Fehler: Die verbesserten Werte erscheinen im Inventar manchmal nicht. Gegenstand ausrüsten, dann die Beschreibung erneut prüfen.</p></div>
+      <div class="fact"><strong>Schiffe bauen?</strong><p>Noch nicht. Schiffe selbst herstellen ist von CIG geplant, aber nicht Teil des aktuellen Systems.</p></div>
+      <div class="fact"><strong>Komponenten vorher prüfen</strong><p>Bevor du ein Schiffsteil herstellst, mit einem Loadout-Planer prüfen, was der Tausch an deinem Schiff verändert.</p></div>
+    </div>
+    <p class="small" style="margin-top:10px">Stand laut Community-Guides für Alpha 4.10.2. Baupläne, Belohnungen und Mindestqualitäten ändern sich mit Patches. Nützliche Tools: <a href="https://citizen-starter-guide.com/star-citizen-blueprint-finder/" target="_blank" rel="noopener">Blueprint Finder</a> und die Crafting-Datenbank <a href="https://robertsspaceindustries.com/community-hub/post/sc-craft-tools-the-complete-crafting-database-XXVPC6JqS5s6K" target="_blank" rel="noopener">SC-Craft.Tools</a>.</p>
+  </section>
+</section>
+
 <!-- ============ SCHIFFE ============ -->
 <section class="view" id="view-schiffe" data-view="schiffe" hidden>
   <div class="head">
@@ -1563,7 +1705,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     });
-    var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
+    var titles = { start: 'Roonys Star Citizen Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', crafting: 'Crafting · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
     document.title = titles[h];
     if (!keepScroll) window.scrollTo(0, 0);
     document.dispatchEvent(new CustomEvent('viewchange', { detail: h }));
@@ -1639,6 +1781,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     ['SCU', 'geld', 'Standard Cargo Unit. Maßeinheit für Fracht. Ein SCU ist ein Würfel von 1,25 m Kantenlänge. Golem und Prospector fassen je 32 SCU.'],
     ['TDD', 'geld', 'Trade & Development Division. Große Handelsbörsen in den Städten, dort verkauft man raffiniertes Erz und Fracht.'],
     ['Raffinerie', 'geld', 'Verarbeitet rohes Erz zu reinem Material. Bringt deutlich mehr Geld als rohes Erz, dauert aber eine Weile.'],
+    ['Blueprint', 'spiel', 'Bauplan fürs Crafting. Gibt es als Auftragsbelohnung, bleibt beim Herstellen erhalten und gehört deinem Konto.'],
+    ['Item Fabricator', 'spiel', 'Werkbank fürs Crafting. Wird gekauft und im Hangar oder auf dem Frachtgitter eines Schiffs aufgestellt.'],
+    ['Materialqualität', 'spiel', 'Wert von 0 bis 1000 bei Crafting-Materialien. 500 ist neutral, darüber wird der Gegenstand besser, darunter schlechter.'],
     ['Vertrag', 'geld', 'Auftrag (Contract) aus dem mobiGlas. Lieferungen, Kopfgeld, Bergung und mehr. Die Hauptquelle für Geld am Anfang.'],
     ['mobiGlas', 'basis', 'Computer am Handgelenk. Öffnest du mit <em>F1</em>. Verträge, Karte, Inventar, Schiffe.'],
     ['Hab', 'basis', 'Dein Quartier in einer Stadt oder Station. Dort wachst du nach dem Einloggen auf.'],
