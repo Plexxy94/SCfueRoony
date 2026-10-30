@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Star-Citizen-Einstieg auf Deutsch (Alpha 4.10, QWERTZ): erste Schritte, alle wichtigen Tasten und Mining für Anfänger.">
-<title>Roonys Star Citizen Handbuch</title>
+<title>Star Citizen Handbuch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
@@ -562,6 +562,28 @@ details.ref summary { cursor: pointer; font-family: var(--f-display); font-weigh
 .pc li::before { position: absolute; left: 2px; top: 0; font: 700 15px var(--f-mono); }
 .pc .pro::before { content: "+"; color: var(--ok); }
 .pc .con::before { content: "−"; color: var(--warn); }
+.subnav { border-top: 1px solid var(--line); background: var(--panel); }
+.subnav.float { position: absolute; left: 0; right: 0; top: 100%; border-bottom: 1px solid var(--line); box-shadow: 0 10px 18px rgba(0, 0, 0, .10); }
+.subnav-in { max-width: 1120px; margin: 0 auto; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; padding: 6px max(16px, env(safe-area-inset-right, 0px)) 6px max(16px, env(safe-area-inset-left, 0px)); }
+.subnav-in::-webkit-scrollbar { display: none; }
+.subnav a { font-family: var(--f-display); font-weight: 600; font-size: 13px; letter-spacing: .03em; text-decoration: none; color: var(--muted); padding: 5px 10px; border-radius: 6px; white-space: nowrap; }
+.subnav a:hover { color: var(--ink); background: var(--key-bg); }
+.subnav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); }
+.tabs a.has-sub::after { content: "▾"; margin-left: 5px; font-size: 10px; }
+.learn { display: flex; gap: 10px 12px; align-items: baseline; flex-wrap: wrap; background: var(--key-bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; font-size: 14px; }
+.learn strong { font-family: var(--f-display); }
+.learn .btn { margin-left: auto; }
+.ore-card { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; background: var(--key-bg); display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+.oc-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.oc-head b { font-family: var(--f-display); font-size: 22px; }
+.oc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+.oc-grid h4 { margin: 0 0 6px; font: 600 11px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.oc-grid ol { margin: 0; padding-left: 18px; font-size: 14px; display: flex; flex-direction: column; gap: 3px; }
+.oc-grid p { margin: 6px 0 0; }
+.oc-grid .up { color: var(--ok); }
+.oc-grid .down { color: var(--warn); }
+.ore-link { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px; }
+.ore-link:hover { color: var(--accent); }
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -580,15 +602,25 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <div class="tabs" role="list">
       <a href="#start" role="listitem">Start</a>
       <a href="#news" role="listitem">News</a>
-      <a href="#erste-schritte" role="listitem">Erste Schritte</a>
+      <a href="#tutorial" role="listitem" class="has-sub" id="tut-tab" aria-haspopup="true" aria-controls="subnav">Tutorials</a>
       <a href="#tasten" role="listitem">Tasten</a>
       <a href="#mining" role="listitem">Mining</a>
       <a href="#salvage" role="listitem">Salvage</a>
       <a href="#crafting" role="listitem">Crafting</a>
       <a href="#schiffe" role="listitem">Schiffe</a>
       <a href="#glossar" role="listitem">Glossar</a>
-      <a href="#training" role="listitem">Training <span class="beta">Beta</span></a>
       <a href="#hosas" role="listitem">HOSAS</a>
+    </div>
+  </div>
+  <div class="subnav" id="subnav" hidden>
+    <div class="subnav-in" role="list" aria-label="Tutorials">
+      <a href="#tutorial" role="listitem">Übersicht</a>
+      <a href="#erste-schritte" role="listitem">Erste Schritte</a>
+      <a href="#heimat" role="listitem">Heimatstadt</a>
+      <a href="#t-mining" role="listitem">Mining lernen</a>
+      <a href="#t-salvage" role="listitem">Salvage lernen</a>
+      <a href="#t-crafting" role="listitem">Crafting lernen</a>
+      <a href="#training" role="listitem">Training <span class="beta">Beta</span></a>
     </div>
   </div>
 </nav>
@@ -600,45 +632,45 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <a class="status-banner" id="statusbanner" href="#news" hidden></a>
   <div class="hero">
     <div class="stamp"><span>Inoffizielles Einsteiger-Handbuch</span><span>Stand Alpha 4.10</span><span>QWERTZ-Tastatur</span></div>
-    <h1>Willkommen im Verse, Roony.</h1>
-    <p class="lede">Alles, was du für deine ersten Abende in Star Citizen brauchst, in drei Kapiteln. Lass die Seite auf dem zweiten Bildschirm oder dem Handy offen und spiel einfach mit.</p>
+    <h1>Willkommen im Verse.</h1>
+    <p class="lede">Tutorials für den Einstieg und ein Nachschlagewerk für später: Tasten, Mining, Salvage, Crafting und Schiffe. Lass die Seite auf dem zweiten Bildschirm oder dem Handy offen und spiel einfach mit.</p>
   </div>
 
   <div class="start-tip">
     <strong>Neu hier?</strong>
-    <span>Fang mit „Erste Schritte“ an. Dort hakst du ab, was du schon geschafft hast.</span>
+    <span>Fang mit dem Tutorial „Erste Schritte“ an. Dort hakst du ab, was du schon geschafft hast.</span>
     <a class="btn" href="#erste-schritte">Los geht's</a>
   </div>
 
   <div class="chapters">
-    <a class="chapter first" href="#erste-schritte">
-      <span class="no">KAPITEL 1</span>
-      <h3>Erste Schritte</h3>
-      <p>Vom Aufwachen im Quartier über den ersten Flug und Quantensprung bis zum ersten bezahlten Auftrag. Sieben Etappen zum Abhaken.</p>
-      <span class="go">Starten →</span>
+    <a class="chapter first" href="#tutorial">
+      <span class="no">LERNEN</span>
+      <h3>Tutorials</h3>
+      <p>Schritt für Schritt: Erste Schritte, Heimatstadt wählen, Mining, Salvage und Crafting lernen, dazu Übungen im Training.</p>
+      <span class="go">Loslegen →</span>
     </a>
     <a class="chapter" href="#tasten">
-      <span class="no">KAPITEL 2</span>
+      <span class="no">NACHSCHLAGEN</span>
       <h3>Tasten</h3>
       <p>Die zehn wichtigsten Tasten auf einen Blick und alle weiteren nach Situation sortiert. Mit Suche.</p>
       <span class="go">Nachschlagen →</span>
     </a>
     <a class="chapter" href="#mining">
-      <span class="no">KAPITEL 3</span>
+      <span class="no">NACHSCHLAGEN</span>
       <h3>Mining</h3>
-      <p>Geld verdienen mit Steinen: mit deinem Golem, nebenbei auch zu Fuß mit dem Multitool. Ablauf, Laser, Erze, Verkauf.</p>
+      <p>RS-Rechner, Erz- und Fundort-Suche mit den besten Raffinerien und Verkaufsorten, Schiffe und Methoden im Vergleich.</p>
       <span class="go">Abbauen →</span>
     </a>
     <a class="chapter" href="#salvage">
-      <span class="no">KAPITEL 4</span>
+      <span class="no">NACHSCHLAGEN</span>
       <h3>Salvage</h3>
-      <p>Geld verdienen mit Wracks: Hüllen abkratzen, Schiffe zerlegen, Teile verkaufen. Ruhiger als Mining und gut allein machbar.</p>
+      <p>Schiffe und Puffer, wo RMC am meisten bringt, Baumaterial, Bricking und Regeln.</p>
       <span class="go">Bergen →</span>
     </a>
     <a class="chapter" href="#crafting">
-      <span class="no">KAPITEL 5</span>
+      <span class="no">NACHSCHLAGEN</span>
       <h3>Crafting</h3>
-      <p>Waffen, Rüstung und Schiffsteile selbst bauen: Blueprints verdienen, Material sammeln, am Fabricator herstellen.</p>
+      <p>Baupläne, Material und Qualität: was du bauen kannst und was dein Material bewirkt.</p>
       <span class="go">Bauen →</span>
     </a>
     <a class="chapter" href="#schiffe">
@@ -670,7 +702,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 <!-- ============ ERSTE SCHRITTE ============ -->
 <section class="view" id="view-erste-schritte" data-view="erste-schritte" hidden>
   <div class="head">
-    <div class="stamp"><span>Kapitel 1</span><span>Stand Alpha 4.10</span></div>
+    <div class="stamp"><span>Tutorial</span><span>Stand Alpha 4.10.2</span></div>
     <h1>Erste Schritte</h1>
     <p class="lede">Sieben Etappen von deinem ersten Login bis zum ersten verdienten Geld. Hak ab, was du geschafft hast. Der Fortschritt bleibt in diesem Browser gespeichert.</p>
   </div>
@@ -770,7 +802,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
           <li>Auftrag annehmen und „Verfolgen“ (Track) wählen. Das Ziel erscheint dann in der Sternenkarte und im HUD.</li>
           <li>Hinfliegen, Aufgabe erledigen. Das Geld wird automatisch überwiesen.</li>
         </ol>
-        <div class="hint">Lieber Bergbau? Kapitel 3 zeigt dir, wie du mit deinem Golem loslegst. <a href="#mining">Zum Mining →</a></div>
+        <div class="hint">Lieber Bergbau oder Bergung? <a href="#t-mining">Mining lernen →</a> · <a href="#t-salvage">Salvage lernen →</a></div>
         <label class="check"><input type="checkbox" id="s6"> Geschafft</label>
       </div>
     </article>
@@ -790,10 +822,64 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     </article>
 
   </div>
+</section>
 
-  <section class="home" id="wohnort">
-    <h2>Wo soll ich wohnen?</h2>
-    <p class="lede-sm">Beim ersten Login wählst du deine Heimatstadt <i class="gb">Primary Residence</i>. Dort wachst du nach dem Einloggen auf, dort liegt dein Inventar, und dorthin schickt das Spiel Belohnungen. Wechseln kannst du laut Wiki nur beim ersten Login nach einem neuen Patch. Der nächste ist 4.10.3, der gerade getestet wird.</p>
+<!-- ============ TUTORIALS: ÜBERSICHT ============ -->
+<section class="view" id="view-tutorial" data-view="tutorial" hidden>
+  <div class="head">
+    <div class="stamp"><span>Tutorials</span><span>Stand Alpha 4.10.2</span><span>QWERTZ</span></div>
+    <h1>Tutorials</h1>
+    <p class="lede">Schritt-für-Schritt-Anleitungen für den Einstieg. Wenn du weißt, wie es geht, findest du Werkzeuge und Nachschlage-Infos in den Kapiteln Mining, Salvage und Crafting.</p>
+  </div>
+  <div class="chapters">
+    <a class="chapter first" href="#erste-schritte">
+      <span class="no">START HIER</span>
+      <h3>Erste Schritte</h3>
+      <p>Vom Aufwachen im Quartier über den ersten Flug und Quantensprung bis zum ersten bezahlten Auftrag. Sieben Etappen zum Abhaken.</p>
+      <span class="go">Starten →</span>
+    </a>
+    <a class="chapter" href="#heimat">
+      <span class="no">VOR DEM START</span>
+      <h3>Heimatstadt wählen</h3>
+      <p>Die vier Städte in Stanton im Vergleich: Wege, Raffinerien, Läden, Preise und aktuelle Bug-Warnungen.</p>
+      <span class="go">Vergleichen →</span>
+    </a>
+    <a class="chapter" href="#t-mining">
+      <span class="no">GELD VERDIENEN</span>
+      <h3>Mining lernen</h3>
+      <p>Eine ganze Runde mit dem Golem: Scannen, Stein brechen, Erz einsaugen, raffinieren, verkaufen. Dazu Handabbau zu Fuß.</p>
+      <span class="go">Abbauen →</span>
+    </a>
+    <a class="chapter" href="#t-salvage">
+      <span class="no">GELD VERDIENEN</span>
+      <h3>Salvage lernen</h3>
+      <p>Eine ganze Runde mit der Salvation: Auftrag, Hülle abkratzen, Wrack zerlegen, RMC und Baumaterial zu Geld machen.</p>
+      <span class="go">Bergen →</span>
+    </a>
+    <a class="chapter" href="#t-crafting">
+      <span class="no">HERSTELLEN</span>
+      <h3>Crafting lernen</h3>
+      <p>Bauplan bekommen, Fabricator aufstellen, Material einsetzen, Gegenstand abholen.</p>
+      <span class="go">Bauen →</span>
+    </a>
+    <a class="chapter" href="#training">
+      <span class="no">ÜBEN · BETA</span>
+      <h3>Training</h3>
+      <p>Tastatur-Karte, Tasten-Trainer und eine Mining-Übung zum Ausprobieren, bevor du im Cockpit sitzt.</p>
+      <span class="go">Üben →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ TUTORIAL: HEIMATSTADT ============ -->
+<section class="view" id="view-heimat" data-view="heimat" hidden>
+  <div class="head">
+    <div class="stamp"><span>Tutorial</span><span>Stand 30. Okt. 2026</span><span>Patch 4.10.2</span></div>
+    <h1>Heimatstadt wählen</h1>
+    <p class="lede">Beim ersten Login wählst du deine Heimatstadt <i class="gb">Primary Residence</i>. Dort wachst du nach dem Einloggen auf, dort liegt dein Inventar, und dorthin schickt das Spiel Belohnungen. Wechseln kannst du laut Wiki nur beim ersten Login nach einem neuen Patch. Der nächste ist 4.10.3, der gerade getestet wird.</p>
+  </div>
+
+  <section class="home">
 
     <div class="table-wrap">
       <table>
@@ -875,13 +961,13 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     </div>
 
     <div class="tool" style="margin-top:18px">
-      <div class="tool-head"><span class="tool-tag">Empfehlung</span><h3>Für dich: Orison</h3></div>
+      <div class="tool-head"><span class="tool-tag">Empfehlung</span><h3>Für Mining und Salvage: Orison</h3></div>
       <ul class="pc">
         <li class="pro"><b>Salvage mit der <a class="ship-a" href="#s-rsi-salvation">Salvation</a>:</b> In keiner Stadt bekommst du mehr für RMC.</li>
         <li class="pro"><b>Mining mit dem <a class="ship-a" href="#s-drak-golem">Golem</a>:</b> Daymar und Cellin liegen direkt nebenan, die Raffinerie CRU-L1 ist nur ein kurzer Quantensprung entfernt.</li>
         <li class="pro"><b>Im Moment</b> kommen aus Orison die wenigsten Bug-Meldungen.</li>
       </ul>
-      <p class="small" style="margin:0">Alternative: Lorville, wenn dir kurze Wege und der große Schiffshändler wichtiger sind. Dort hakt es aber gerade bei Hangars und ASOP.</p>
+      <p class="small" style="margin:0">Alternative: Lorville, wenn dir kurze Wege und der große Schiffshändler wichtiger sind. Für Kampf und Handel ist Area18 eine gute Wahl. Dort hakt es aber gerade bei Hangars und ASOP.</p>
     </div>
 
     <div class="card-plain" style="margin-top:18px">
@@ -898,10 +984,224 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   </section>
 </section>
 
+<!-- ============ TUTORIAL: MINING ============ -->
+<section class="view" id="view-t-mining" data-view="t-mining" hidden>
+  <div class="head">
+    <div class="stamp"><span>Tutorial</span><span>Stand Alpha 4.10.2</span></div>
+    <h1>Mining lernen</h1>
+    <p class="lede">Eine ganze Runde vom ersten Ping bis zum Geld auf dem Konto. Am einfachsten mit dem Golem, zu Fuß mit dem Multitool geht es auch.</p>
+    <p class="small">Grau dahinter steht jeweils der englische Begriff, wie er im Spiel heißt. Werkzeuge wie den RS-Rechner und die Erz-Suche findest du im <a href="#mining">Mining-Kapitel</a>.</p>
+  </div>
+
+  <section class="gauge">
+    <h3>Das Grundprinzip: grün halten</h3>
+    <p class="small" style="font-size:14px">Egal ob Schiff oder Multitool: Der Laser lädt den Stein mit Energie auf. Du regelst die Leistung so, dass die Anzeige im grünen Bereich bleibt, bis der Bruchsensor 100&nbsp;% erreicht.</p>
+    <div class="meter" role="img" aria-label="Energieanzeige: zu wenig, optimal grün, zu viel rot">
+      <span class="lo">zu wenig</span><span class="mid">optimal</span><span class="hi">zu viel</span>
+    </div>
+    <div class="meter-legend">
+      <span><b>Zu wenig:</b> nichts passiert. Leistung hoch oder näher ran.</span>
+      <span><b>Grün</b> <i class="gb">Optimal Charge Window</i>: halten, bis der Stein bricht.</span>
+      <span><b>Rot</b> <i class="gb">Overcharge</i>: Überladung. Erz geht verloren oder der Stein explodiert.</span>
+    </div>
+    <div class="meter-legend">
+      <span><b>Widerstand</b> <i class="gb">Resistance</i>: hoch heißt, du brauchst mehr Leistung.</span>
+      <span><b>Instabilität</b> <i class="gb">Instability</i>: hoch heißt, die Anzeige springt stärker. Vorsichtig regeln.</span>
+    </div>
+  </section>
+
+  <div class="two">
+    <div class="card-plain">
+      <h3>Eine Runde mit dem <a class="ship-a" href="#s-drak-golem">Golem</a> <span class="pill go">Einstieg</span></h3>
+      <ol>
+        <li><b>Schiff holen:</b> Am Schiffsterminal <i class="gb">ASOP Terminal</i> im Raumhafen den <a class="ship-a" href="#s-drak-golem">Golem</a> anfordern. Noch keiner da? Für etwa 15.000 aUEC am Tag kannst du ihn mieten <i class="gb">Ship Rental</i>.</li>
+        <li>Zu einem Mond oder Asteroidengürtel fliegen. <kbd>Tab</kbd> <span class="mod">halten</span> für einen Ping <i class="gb">Ping</i>. Gesteinssymbole zeigen Fundstellen.</li>
+        <li><kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf einen Stein zielen und <kbd>LMB</kbd> <span class="mod">halten</span>. Du siehst Erze, Widerstand und Instabilität.</li>
+        <li><kbd>M</kbd> Mining-Modus <i class="gb">Mining Mode</i>, nah heranfliegen. <kbd>LMB</kbd> feuern, mit <kbd>L-Alt</kbd><span class="plus">+</span><kbd>Mausrad</kbd> die Leistung im Grünen halten.</li>
+        <li>Wenn der Stein bricht: Bruchstücke mit lila Rand sind abbaubar. <kbd>RMB</kbd> auf den Abbau-Laser <i class="gb">Extraction Laser</i> umschalten, <kbd>LMB</kbd> einsaugen.</li>
+        <li><b>Raffinieren:</b> An einer Raffinerie <i class="gb">Refinery</i> (Rastplätze <i class="gb">Rest Stops</i> an Lagrange-Punkten) einen Auftrag <i class="gb">Work Order</i> starten. Schnelle Methoden liefern weniger, langsame mehr. Später abholen und verkaufen. Wie das genau geht, steht unten unter „Raffinieren“.</li>
+      </ol>
+      <div class="oops"><strong>Wichtig:</strong> Rohes Erz direkt verkaufen bringt nur etwa die Hälfte. Raffinieren lohnt sich fast immer, dauert aber.</div>
+    </div>
+
+    <div class="card-plain">
+      <h3>Nebenbei: Handabbau zu Fuß <span class="pill later">optional</span></h3>
+      <ol>
+        <li><b>Ausrüstung kaufen:</b> Pyro RYT Multitool, OreBit-Mining-Aufsatz <i class="gb">OreBit Mining Attachment</i> und einen Rucksack <i class="gb">Backpack</i>. Gibt es in Ausrüstungsläden der Städte und Stationen.</li>
+        <li><b>Fundort suchen:</b> Kleine Steine mit farbigen Adern am Boden oder in Höhlen. Gut für den Start sind Monde in Stanton. Höhlen haben oft mehr.</li>
+        <li><kbd>4</kbd> Multitool ziehen. <kbd>RMB</kbd> zielen, bis der Scan die Zusammensetzung zeigt.</li>
+        <li><kbd>LMB</kbd> Laser feuern, Leistung im grünen Bereich halten, bis der Stein bricht.</li>
+        <li>Die Bruchstücke einsammeln: <kbd>F</kbd> und „Verstauen“ (Stow). Sie landen im Rucksack.</li>
+        <li><b>Verkaufen:</b> Edelsteine brauchen keine Raffinerie. Am Handelsterminal <i class="gb">Commodity Kiosk</i> oder im Admin-Büro <i class="gb">Admin Office</i> „Verkaufen“ <i class="gb">Sell</i> wählen und den Rucksack als Quelle angeben.</li>
+      </ol>
+      <div class="hint">Gute Handabbau-Edelsteine: Aphorit <i class="gb">Aphorite</i>, Dolivin <i class="gb">Dolivine</i>, Hadanit <i class="gb">Hadanite</i>. Hadanit ist selten und bringt am meisten.</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Scannen: Steine finden und einschätzen</h2>
+    <div class="card-plain">
+        <h3>So findest du Gestein</h3>
+        <ol>
+          <li>Im Schiff <kbd>Tab</kbd> <span class="mod">halten</span>: Ping <i class="gb">Ping</i>. An den Fundstellen erscheinen Zahlen im HUD, die Signatur <i class="gb">Radar Signature (RS)</i>.</li>
+          <li><b>Zahl lesen:</b> Signatur = Grundwert des Hauptminerals × Anzahl Steine. 7.170 heißt zum Beispiel 2 × 3.585, also zwei Gold-Steine.</li>
+          <li>Hinfliegen, <kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf den Stein zielen und <kbd>LMB</kbd> <span class="mod">halten</span>. Jetzt siehst du Zusammensetzung <i class="gb">Composition</i> in Prozent, Masse <i class="gb">Mass</i>, Widerstand und Instabilität.</li>
+          <li><b>Entscheiden:</b> Viel wertvolles Erz und ein Widerstand, den dein Laser schafft? Abbauen. Sonst weiterfliegen.</li>
+        </ol>
+        <div class="hint">Am Boden gilt etwas anderes: 3.000 ist ein kleines Vorkommen für Handabbau, 4.000 ein großes für den ROC oder die ATLS GEO. Welches Edelstein-Mineral drin ist, zeigt erst der Scan. Im All bedeutet 3.000 dagegen Trümmer eines großen Wracks.</div>
+    </div>
+    <p class="small" style="margin-top:8px">Die Zahl aus dem HUD kannst du im <a href="#mining">RS-Rechner im Mining-Kapitel</a> eintippen. Er sagt dir sofort, welches Erz dahintersteckt.</p>
+  </section>
+
+  <section>
+    <h2>Raffinieren: so funktioniert ein Work Order</h2>
+    <div class="card-plain">
+        <h3>Schritt für Schritt</h3>
+        <ol>
+          <li>Mit dem Erz im Schiff an einer Station mit Raffinerie <i class="gb">Refinery Deck</i> landen.</li>
+          <li>Im Verarbeitungsbereich <i class="gb">Processing Center</i> zum Raffinerie-Terminal <i class="gb">Refinery Terminal</i> gehen.</li>
+          <li>Das Schiff mit dem Erz auswählen. Erz aus dem Rucksack liegt im Lager der Station und lässt sich dort auch auswählen.</li>
+          <li>Erze ankreuzen und eine Methode <i class="gb">Method</i> wählen.</li>
+          <li>Angebot <i class="gb">Quote</i> anfordern: Es zeigt Ausbeute, Kosten und Dauer. Passt alles, bestätigen.</li>
+          <li><b>Warten:</b> Der Auftrag läuft in Echtzeit weiter, auch wenn du ausloggst.</li>
+          <li>Fertig: Am Terminal abholen und über den Frachtaufzug <i class="gb">Freight Elevator</i> in ein Schiff laden.</li>
+          <li>Am Handelsterminal <i class="gb">Commodity Kiosk</i> verkaufen. Die Raffinerie zahlt nichts automatisch aus.</li>
+        </ol>
+      </div>
+    <p class="small" style="margin-top:8px">Welche Methode du wählen solltest und welche Station bei welchem Erz einen Bonus gibt, steht im <a href="#mining">Mining-Kapitel</a>.</p>
+  </section>
+
+  <div class="learn"><strong>Üben ohne Risiko?</strong> <span>Im Training kannst du den Laser im grünen Bereich halten, bevor du es im Spiel versuchst.</span> <a class="btn" href="#training">Zum Training</a></div>
+</section>
+
+<!-- ============ TUTORIAL: SALVAGE ============ -->
+<section class="view" id="view-t-salvage" data-view="t-salvage" hidden>
+  <div class="head">
+    <div class="stamp"><span>Tutorial</span><span>Stand Alpha 4.10.2</span></div>
+    <h1>Salvage lernen</h1>
+    <p class="lede">Eine ganze Runde mit der Salvation: Auftrag holen, Wrack prüfen, Hülle abkratzen, zerlegen und verkaufen. Nichts kann explodieren, und Bergungsaufträge kosten keine Gebühr.</p>
+    <p class="small">Grau dahinter steht jeweils der englische Begriff, wie er im Spiel heißt. Preise, Schiffe und Regeln findest du im <a href="#salvage">Salvage-Kapitel</a>.</p>
+  </div>
+
+  <div class="two">
+    <div class="card-plain">
+      <h3>Eine Runde mit der <a class="ship-a" href="#s-rsi-salvation">Salvation</a> <span class="pill go">Einstieg</span></h3>
+      <ol>
+        <li><b>Auftrag holen:</b> <kbd>F1</kbd> mobiGlas → Verträge <i class="gb">Contracts</i> → Reiter Salvage. Bergungsaufträge kosten keine Gebühr und markieren ein Wrack.</li>
+        <li><b>Besitzer prüfen</b> <i class="gb">Owner</i><b>:</b> <kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf das Wrack zielen, <kbd>LMB</kbd> halten. Steht als Besitzer „Gamerules“, ist es frei. Steht dort ein Spielername: Finger weg.</li>
+        <li><b>Hülle abkratzen:</b> <kbd>M</kbd> Bergungsmodus <i class="gb">Salvage Mode</i>, nah ran, <kbd>LMB</kbd> feuern. Die Schilde des Wracks müssen aus sein.</li>
+        <li><b>Puffer leeren</b> <i class="gb">Buffer</i><b>:</b> Ist der Puffer voll, kommt das Material in Kisten. Wie das bei deinem Schiff geht, steht im <a href="#salvage">Salvage-Kapitel unter „Puffer leeren“</a>.</li>
+        <li><b>Struktur zerlegen</b> <i class="gb">Structural Salvage</i><b>:</b> Erst Bauteile abnehmen und abkratzen, dann das Wrack zerbrechen <i class="gb">Fracture</i> und die Teile zerlegen <i class="gb">Disintegrate</i>.</li>
+        <li><b>Verkaufen:</b> RMC direkt, Baumaterial erst nach der Raffinerie. Den Ablauf findest du unten unter „Verarbeitung“.</li>
+      </ol>
+    </div>
+
+    <div class="card-plain">
+      <h3>Nebenbei: Bergung zu Fuß <span class="pill later">optional</span></h3>
+      <ol>
+        <li><b>Ausrüstung kaufen:</b> Pyro RYT Multitool mit Cambio-Lite-SRT-Aufsatz (Bergung) und TruHold-Aufsatz (Traktorstrahl <i class="gb">Tractor Beam</i>).</li>
+        <li><b>Wrack suchen:</b> zerstörte Schiffe nach Kämpfen, an Absturzstellen oder aus Bergungsaufträgen <i class="gb">Salvage Contracts</i>.</li>
+        <li><kbd>4</kbd> Multitool ziehen, auf die Hülle zielen, <kbd>LMB</kbd> halten. Das RMC landet in einem Kanister.</li>
+        <li><b>Bauteile abnehmen:</b> Mit dem Traktorstrahl Waffen und andere Teile lösen und mitnehmen. Bei Wracks mit Besitzer „Gamerules“ sind die Teile meist gebrickt <i class="gb">Bricked</i> und wertlos. Mehr dazu im <a href="#salvage">Salvage-Kapitel</a>.</li>
+        <li><b>Verkaufen:</b> Bauteile in Läden, die sie auch anbieten.</li>
+      </ol>
+      <div class="oops"><strong>Wichtig:</strong> RMC aus dem Kanister zu verkaufen lohnt sich nicht. Der Kanister ist zum Reparieren eurer eigenen Hülle gedacht. Das Geld steckt zu Fuß in den Bauteilen.</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Verarbeitung: vom Wrack zum Geld</h2>
+    <p class="small" style="font-size:14px">Es gibt zwei Wege, je nachdem, was du geborgen hast. RMC verkaufst du direkt, Baumaterial muss erst in die Raffinerie.</p>
+    <div class="flow">
+      <div class="flow-lane"><span class="pill go">Weg A · RMC</span><div class="flow-row"><div class="flow-step">Hülle abkratzen <i class="gb">Hull Scraping</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Puffer <i class="gb">Buffer</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Kisten <i class="gb">SCU Boxes</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">landen &amp; verkaufen <i class="gb">Commodity Kiosk</i></div></div></div>
+      <div class="flow-lane"><span class="pill later">Weg B · Baumaterial</span><div class="flow-row"><div class="flow-step">zerbrechen &amp; zerlegen <i class="gb">Fracture / Disintegrate</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">rohes Material in Kisten</div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Raffinerie <i class="gb">Work Order</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">abholen <i class="gb">Freight Elevator</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">verkaufen <i class="gb">TDD</i></div></div></div>
+    </div>
+
+    <div class="two" style="margin-top:12px">
+      <div class="card-plain">
+        <h3>Weg A: RMC verkaufen <span class="pill go">ohne Raffinerie</span></h3>
+        <ol>
+          <li>RMC braucht keine Raffinerie. Du kannst es direkt verkaufen.</li>
+          <li><b>Vorher prüfen:</b> Nicht jedes Terminal kauft RMC. Die besten Orte stehen im <a href="#salvage">Salvage-Kapitel unter „Wo RMC am meisten bringt“</a>.</li>
+          <li>Dort landen. Das Schiff mit den Kisten bleibt im Hangar oder auf dem Landeplatz.</li>
+          <li>Am Handelsterminal <i class="gb">Commodity Kiosk</i> oder beim TDD „Verkaufen“ <i class="gb">Sell</i> wählen und dein Schiff als Quelle angeben. Das Terminal muss auf die Fracht deines Schiffs zugreifen können.</li>
+          <li>Menge wählen und verkaufen. Das Geld ist sofort da.</li>
+        </ol>
+      </div>
+      <div class="card-plain">
+        <h3>Weg B: Baumaterial verkaufen <span class="pill later">mit Raffinerie</span></h3>
+        <ol>
+          <li>Rohes Baumaterial lässt sich nicht verkaufen.</li>
+          <li>Zu einer Raffinerie fliegen, meist auf den Rastplätzen <i class="gb">Rest Stops</i> an den Lagrange-Punkten.</li>
+          <li>Am Raffinerie-Terminal dein Schiff auswählen. Alternativ die Kisten vorher über den Frachtaufzug <i class="gb">Freight Elevator</i> ins Lager der Station bringen.</li>
+          <li>Work Order starten: Methode wählen, Angebot <i class="gb">Quote</i> prüfen, bestätigen. Welche Methode passt, steht im <a href="#mining">Mining-Kapitel unter „Raffinieren“</a>.</li>
+          <li>Wenn der Auftrag fertig ist: abholen und über den Frachtaufzug in dein Schiff laden.</li>
+          <li>Beim TDD in einer Stadt verkaufen, in Lorville beim CBD.</li>
+        </ol>
+      </div>
+    </div>
+
+  </section>
+</section>
+
+<!-- ============ TUTORIAL: CRAFTING ============ -->
+<section class="view" id="view-t-crafting" data-view="t-crafting" hidden>
+  <div class="head">
+    <div class="stamp"><span>Tutorial</span><span>Stand Alpha 4.10.2</span></div>
+    <h1>Crafting lernen</h1>
+    <p class="lede">Vom Bauplan bis zum fertigen Gegenstand in drei Schritten.</p>
+    <p class="small">Grau dahinter steht jeweils der englische Begriff, wie er im Spiel heißt. Was Qualität bewirkt und was du alles bauen kannst, steht im <a href="#crafting">Crafting-Kapitel</a>.</p>
+  </div>
+
+  <section>
+    <h2>Der Ablauf im Überblick</h2>
+    <div class="flow">
+      <div class="flow-lane"><span class="pill go">Vom Auftrag zum fertigen Gegenstand</span><div class="flow-row"><div class="flow-step">Auftrag erledigen <i class="gb">Contract</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Bauplan erhalten <i class="gb">Blueprint</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Material besorgen <i class="gb">Mining / Salvage</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Fabricator aufstellen <i class="gb">Item Fabricator</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Job starten <i class="gb">Craft</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Gegenstand abholen</div></div></div>
+    </div>
+  </section>
+
+  <div class="two">
+    <div class="card-plain">
+      <h3>1. Bauplan bekommen</h3>
+      <ol>
+        <li><kbd>F1</kbd> mobiGlas → Verträge <i class="gb">Contracts</i>. Viele Aufträge haben einen Pool an Bauplänen als Belohnung.</li>
+        <li>Pro abgeschlossenem Auftrag gibt es <b>einen zufälligen Bauplan</b> aus diesem Pool. Für einen bestimmten Bauplan musst du den Auftrag eventuell mehrmals machen.</li>
+        <li>Manche Baupläne setzen Ruf <i class="gb">Reputation</i> bei einer Fraktion voraus.</li>
+        <li>Deine Baupläne siehst du in der Bibliothek am Fabricator <i class="gb">Blueprint Library</i>.</li>
+      </ol>
+      <div class="hint">Welcher Auftrag welchen Bauplan gibt, zeigen Community-Tools wie der Blueprint Finder (Link unten).</div>
+    </div>
+    <div class="card-plain">
+      <h3>2. Fabricator aufstellen</h3>
+      <ol>
+        <li><b>Kaufen:</b> bei Kel-To und Dumper's Depot in Stanton oder in den Raffinerie-Shops in Pyro. Das Angebot kann wechseln.</li>
+        <li><b>Abholen:</b> über den Frachtaufzug <i class="gb">Freight Elevator</i>.</li>
+        <li><b>Aufstellen:</b> im eigenen Hangar oder auf dem Frachtgitter <i class="gb">Cargo Grid</i> eines Schiffs, das groß genug ist.</li>
+        <li><b>Bewegen:</b> mit dem Traktorstrahl <i class="gb">Tractor Beam</i>. Vorher die Tür des Fabricators schließen.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card-plain" style="margin-top:16px">
+    <h3>3. Am Fabricator herstellen</h3>
+    <ol>
+      <li>Fabricator öffnen und einen Bauplan auswählen.</li>
+      <li>Für jede Zutat Menge und Mindestqualität <i class="gb">Minimum Quality</i> prüfen.</li>
+      <li>Material von Hand zuweisen oder automatisch füllen lassen <i class="gb">Auto-Fill</i>.</li>
+      <li>Die vorhergesagten Werte ansehen: Was bewirkt dein Material?</li>
+      <li>Lieferort <i class="gb">Delivery Location</i> wählen.</li>
+      <li>Job starten und in der Warteschlange <i class="gb">Queue</i> verfolgen. Ein Job dauert im Schnitt etwa 3 bis 4 Minuten.</li>
+      <li>Gegenstand abholen und prüfen.</li>
+    </ol>
+    <div class="oops"><strong>Achtung:</strong> Material unter der Mindestqualität nimmt der Fabricator nicht an, auch wenn Sorte und Menge stimmen.</div>
+  </div>
+
+</section>
+
 <!-- ============ TASTEN ============ -->
 <section class="view" id="view-tasten" data-view="tasten" hidden>
   <div class="head">
-    <div class="stamp"><span>Kapitel 2</span><span>Standardbelegung Alpha 4.10.2</span><span>QWERTZ</span></div>
+    <div class="stamp"><span>Nachschlagen</span><span>Standardbelegung Alpha 4.10.2</span><span>QWERTZ</span></div>
     <h1>Tasten</h1>
     <p class="lede">Die Tasten, die du in den ersten Stunden brauchst. Belegungen ändern sich mit Patches, unsichere Einträge sind markiert.</p>
     <div class="legend">
@@ -1057,25 +1357,26 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 <!-- ============ MINING ============ -->
 <section class="view" id="view-mining" data-view="mining" hidden>
   <div class="head">
-    <div class="stamp"><span>Kapitel 3</span><span>Stand Alpha 4.10</span><span>Preise schwanken</span></div>
+    <div class="stamp"><span>Nachschlagen</span><span>Stand Alpha 4.10.2</span><span>Preise schwanken</span></div>
     <h1>Mining</h1>
-    <p class="lede">Gestein finden, mit dem Laser aufbrechen, Erz einsammeln, raffinieren, verkaufen. Du startest direkt mit deinem Golem. Zu Fuß mit dem Multitool geht es nebenbei auch, zum Beispiel in Höhlen.</p>
+    <p class="lede">Werkzeuge und Infos fürs Mining: Signaturen auswerten, Erze und Fundorte suchen, die besten Raffinerien und Verkaufsorte finden, Schiffe und Methoden vergleichen.</p>
     <p class="small">Grau dahinter steht jeweils der englische Begriff, wie er im Spiel heißt.</p>
   </div>
+  <div class="learn"><strong>Neu im Mining?</strong> <span>Das Tutorial zeigt dir Schritt für Schritt eine ganze Runde mit dem Golem, vom Scannen bis zum Verkauf.</span> <a class="btn" href="#t-mining">Mining lernen</a></div>
 
   <section>
     <h2>Sechs Wege ins Mining</h2>
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>Weg</th><th>Crew</th><th>Fracht</th><th>Kosten (ca.)</th><th>Gut für</th><th>Für dich</th></tr>
+          <tr><th>Weg</th><th>Crew</th><th>Fracht</th><th>Kosten (ca.)</th><th>Gut für</th><th>Einstufung</th></tr>
         </thead>
         <tbody>
           <tr class="rec">
             <th><a class="ship-a" href="#s-drak-golem">Drake Golem</a><small>Einsteiger-Schiff</small></th>
             <td>1</td><td class="num">32 SCU</td><td class="num">Miete ~15.100 aUEC/Tag<br>Kauf ~1,01 Mio. aUEC</td>
             <td>Günstigster Einstieg ins Schiffs-Mining. Schnell und wendig.</td>
-            <td><span class="pill go">Hast du, hier starten</span></td>
+            <td><span class="pill go">Einstieg</span></td>
           </tr>
           <tr class="rec">
             <th><a class="ship-a" href="#s-misc-prospector">MISC Prospector</a><small>Solo-Klassiker</small></th>
@@ -1113,51 +1414,6 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <p class="small" style="margin-top:8px">Preise aus unseren Schiffsdaten (günstigster bekannter Händler laut UEX, Patch 4.10.2), im Spiel am Terminal prüfen. Golem und Prospector fassen beide 32 SCU. Der Prospector hat dafür den stärkeren Laser.</p>
   </section>
 
-  <section class="gauge">
-    <h3>Das Grundprinzip: grün halten</h3>
-    <p class="small" style="font-size:14px">Egal ob Schiff oder Multitool: Der Laser lädt den Stein mit Energie auf. Du regelst die Leistung so, dass die Anzeige im grünen Bereich bleibt, bis der Bruchsensor 100&nbsp;% erreicht.</p>
-    <div class="meter" role="img" aria-label="Energieanzeige: zu wenig, optimal grün, zu viel rot">
-      <span class="lo">zu wenig</span><span class="mid">optimal</span><span class="hi">zu viel</span>
-    </div>
-    <div class="meter-legend">
-      <span><b>Zu wenig:</b> nichts passiert. Leistung hoch oder näher ran.</span>
-      <span><b>Grün</b> <i class="gb">Optimal Charge Window</i>: halten, bis der Stein bricht.</span>
-      <span><b>Rot</b> <i class="gb">Overcharge</i>: Überladung. Erz geht verloren oder der Stein explodiert.</span>
-    </div>
-    <div class="meter-legend">
-      <span><b>Widerstand</b> <i class="gb">Resistance</i>: hoch heißt, du brauchst mehr Leistung.</span>
-      <span><b>Instabilität</b> <i class="gb">Instability</i>: hoch heißt, die Anzeige springt stärker. Vorsichtig regeln.</span>
-    </div>
-  </section>
-
-  <div class="two">
-    <div class="card-plain">
-      <h3>Los geht’s mit deinem <a class="ship-a" href="#s-drak-golem">Golem</a> <span class="pill go">hier starten</span></h3>
-      <ol>
-        <li><b>Schiff holen:</b> Am Schiffsterminal <i class="gb">ASOP Terminal</i> im Raumhafen deinen <a class="ship-a" href="#s-drak-golem">Golem</a> anfordern.</li>
-        <li>Zu einem Mond oder Asteroidengürtel fliegen. <kbd>Tab</kbd> <span class="mod">halten</span> für einen Ping <i class="gb">Ping</i>. Gesteinssymbole zeigen Fundstellen.</li>
-        <li><kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf einen Stein zielen und <kbd>LMB</kbd> <span class="mod">halten</span>. Du siehst Erze, Widerstand und Instabilität.</li>
-        <li><kbd>M</kbd> Mining-Modus <i class="gb">Mining Mode</i>, nah heranfliegen. <kbd>LMB</kbd> feuern, mit <kbd>L-Alt</kbd><span class="plus">+</span><kbd>Mausrad</kbd> die Leistung im Grünen halten.</li>
-        <li>Wenn der Stein bricht: Bruchstücke mit lila Rand sind abbaubar. <kbd>RMB</kbd> auf den Abbau-Laser <i class="gb">Extraction Laser</i> umschalten, <kbd>LMB</kbd> einsaugen.</li>
-        <li><b>Raffinieren:</b> An einer Raffinerie <i class="gb">Refinery</i> (Rastplätze <i class="gb">Rest Stops</i> an Lagrange-Punkten) einen Auftrag <i class="gb">Work Order</i> starten. Schnelle Methoden liefern weniger, langsame mehr. Später abholen und verkaufen. Wie das genau geht, steht unten unter „Raffinieren“.</li>
-      </ol>
-      <div class="oops"><strong>Wichtig:</strong> Rohes Erz direkt verkaufen bringt nur etwa die Hälfte. Raffinieren lohnt sich fast immer, dauert aber.</div>
-    </div>
-
-    <div class="card-plain">
-      <h3>Nebenbei: Handabbau zu Fuß <span class="pill later">optional</span></h3>
-      <ol>
-        <li><b>Ausrüstung kaufen:</b> Pyro RYT Multitool, OreBit-Mining-Aufsatz <i class="gb">OreBit Mining Attachment</i> und einen Rucksack <i class="gb">Backpack</i>. Gibt es in Ausrüstungsläden der Städte und Stationen.</li>
-        <li><b>Fundort suchen:</b> Kleine Steine mit farbigen Adern am Boden oder in Höhlen. Gut für den Start sind Monde in Stanton. Höhlen haben oft mehr.</li>
-        <li><kbd>4</kbd> Multitool ziehen. <kbd>RMB</kbd> zielen, bis der Scan die Zusammensetzung zeigt.</li>
-        <li><kbd>LMB</kbd> Laser feuern, Leistung im grünen Bereich halten, bis der Stein bricht.</li>
-        <li>Die Bruchstücke einsammeln: <kbd>F</kbd> und „Verstauen“ (Stow). Sie landen im Rucksack.</li>
-        <li><b>Verkaufen:</b> Edelsteine brauchen keine Raffinerie. Am Handelsterminal <i class="gb">Commodity Kiosk</i> oder im Admin-Büro <i class="gb">Admin Office</i> „Verkaufen“ <i class="gb">Sell</i> wählen und den Rucksack als Quelle angeben.</li>
-      </ol>
-      <div class="hint">Gute Handabbau-Edelsteine: Aphorit <i class="gb">Aphorite</i>, Dolivin <i class="gb">Dolivine</i>, Hadanit <i class="gb">Hadanite</i>. Hadanit ist selten und bringt am meisten.</div>
-    </div>
-  </div>
-
   <section>
     <h2>Scannen: Steine finden und einschätzen</h2>
     <div class="tool" id="rs-tool">
@@ -1167,16 +1423,6 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <div class="chips" id="rsex" aria-label="Beispiele"><span class="small">Beispiele:</span></div>
       <div id="rsout" class="rs-out" aria-live="polite"><span class="small">Noch keine Zahl eingegeben.</span></div>
       <div class="rs-scale"><span class="pill go">3.100–3.600 wertvoll</span><span class="pill later">3.800–3.900 solide</span><span class="pill no">4.180–4.300 billige Masse</span><span class="pill no">3.000 / 4.000 Handabbau / ROC</span></div>
-    </div>
-    <div class="card-plain" style="margin-top:14px">
-        <h3>So findest du Gestein</h3>
-        <ol>
-          <li>Im Schiff <kbd>Tab</kbd> <span class="mod">halten</span>: Ping <i class="gb">Ping</i>. An den Fundstellen erscheinen Zahlen im HUD, die Signatur <i class="gb">Radar Signature (RS)</i>.</li>
-          <li><b>Zahl lesen:</b> Signatur = Grundwert des Hauptminerals × Anzahl Steine. 7.170 heißt zum Beispiel 2 × 3.585, also zwei Gold-Steine.</li>
-          <li>Hinfliegen, <kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf den Stein zielen und <kbd>LMB</kbd> <span class="mod">halten</span>. Jetzt siehst du Zusammensetzung <i class="gb">Composition</i> in Prozent, Masse <i class="gb">Mass</i>, Widerstand und Instabilität.</li>
-          <li><b>Entscheiden:</b> Viel wertvolles Erz und ein Widerstand, den dein Laser schafft? Abbauen. Sonst weiterfliegen.</li>
-        </ol>
-        <div class="hint">Am Boden gilt etwas anderes: 3.000 ist ein kleines Vorkommen für Handabbau, 4.000 ein großes für den ROC oder die ATLS GEO. Welches Edelstein-Mineral drin ist, zeigt erst der Scan. Im All bedeutet 3.000 dagegen Trümmer eines großen Wracks.</div>
     </div>
     <details class="ref">
       <summary>Alle 26 Signaturwerte als Tabelle anzeigen</summary>
@@ -1241,7 +1487,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <section>
     <h2>Alle Fundorte durchsuchen</h2>
     <div class="tool" id="loc-tool">
-    <div class="tool-head"><span class="tool-tag">Werkzeug</span><h3>Fundort-Suche: Wo finde ich …?</h3></div>
+    <div class="tool-head"><span class="tool-tag">Werkzeug</span><h3>Erz- und Fundort-Suche</h3></div>
     <div class="head" style="gap:10px">
       <div class="search">
         <input id="locq" class="tool-input" type="search" placeholder="Erz oder Ort suchen, z. B. „Hadanit“, „Gold“ oder „Daymar“" aria-label="Fundorte durchsuchen">
@@ -1251,9 +1497,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <div class="chips" id="locmeth" role="group" aria-label="Abbauart"></div>
     </div>
     <div class="loc-start" id="locstart">
-      <p>Such nach einem Erz oder Ort, oder wähl oben ein System oder eine Abbauart. Schnellstart:</p>
+      <p>Such nach einem Erz oder Ort, oder wähl oben ein System oder eine Abbauart. Suchst du ein Erz, zeigt der Steckbrief die besten Raffinerien und Verkaufsorte. Schnellstart:</p>
       <div class="chips" id="locsugg"></div>
     </div>
+    <div class="ore-card" id="locore" hidden></div>
     <div class="table-wrap" id="locwrap" style="margin-top:10px" hidden>
       <table class="loc-table">
         <thead><tr><th>Erz</th><th>Abbau</th><th>Ort</th><th>System</th><th>Häufigkeit</th><th>Wert pro SCU</th><th>Raffinerie</th></tr></thead>
@@ -1266,21 +1513,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   </section>
 
   <section>
-    <h2>Raffinieren: so funktioniert ein Work Order</h2>
+    <h2>Raffinieren: Methoden und Ausbeute</h2>
+    <p class="small" style="font-size:14px;margin-top:0">Wie ein Work Order Schritt für Schritt abläuft, zeigt das <a href="#t-mining">Mining-Tutorial</a>. Welche Station bei welchem Erz einen Bonus gibt, siehst du im Erz-Steckbrief der Fundort-Suche oben.</p>
     <div class="two">
-      <div class="card-plain">
-        <h3>Schritt für Schritt</h3>
-        <ol>
-          <li>Mit dem Erz im Schiff an einer Station mit Raffinerie <i class="gb">Refinery Deck</i> landen.</li>
-          <li>Im Verarbeitungsbereich <i class="gb">Processing Center</i> zum Raffinerie-Terminal <i class="gb">Refinery Terminal</i> gehen.</li>
-          <li>Das Schiff mit dem Erz auswählen. Erz aus dem Rucksack liegt im Lager der Station und lässt sich dort auch auswählen.</li>
-          <li>Erze ankreuzen und eine Methode <i class="gb">Method</i> wählen.</li>
-          <li>Angebot <i class="gb">Quote</i> anfordern: Es zeigt Ausbeute, Kosten und Dauer. Passt alles, bestätigen.</li>
-          <li><b>Warten:</b> Der Auftrag läuft in Echtzeit weiter, auch wenn du ausloggst.</li>
-          <li>Fertig: Am Terminal abholen und über den Frachtaufzug <i class="gb">Freight Elevator</i> in ein Schiff laden.</li>
-          <li>Am Handelsterminal <i class="gb">Commodity Kiosk</i> verkaufen. Die Raffinerie zahlt nichts automatisch aus.</li>
-        </ol>
-      </div>
       <div class="card-plain">
         <h3>Welche Methode?</h3>
         <ul>
@@ -1330,11 +1565,12 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 <!-- ============ SALVAGE ============ -->
 <section class="view" id="view-salvage" data-view="salvage" hidden>
   <div class="head">
-    <div class="stamp"><span>Kapitel 4</span><span>Stand Alpha 4.10.1</span><span>Preise schwanken</span></div>
+    <div class="stamp"><span>Nachschlagen</span><span>Stand Alpha 4.10.2</span><span>Preise schwanken</span></div>
     <h1>Salvage</h1>
-    <p class="lede">Bergung heißt: Wracks finden, die Hülle zu Recycling-Material abkratzen, den Rest zerlegen und alles verkaufen. Nichts kann explodieren, Aufträge kosten keine Gebühr, und ein Schiff reicht für eine Person.</p>
+    <p class="lede">Bergung heißt: Wracks finden, die Hülle zu Recycling-Material abkratzen, den Rest zerlegen und alles verkaufen. Hier findest du Schiffe, Preise, Baumaterial und die Regeln rund um Bauteile.</p>
     <p class="small">Grau dahinter steht jeweils der englische Begriff, wie er im Spiel heißt.</p>
   </div>
+  <div class="learn"><strong>Neu im Salvage?</strong> <span>Das Tutorial zeigt dir eine ganze Runde mit der Salvation, vom Auftrag bis zum Verkauf.</span> <a class="btn" href="#t-salvage">Salvage lernen</a></div>
 
   <section>
     <h2>Was du dabei gewinnst</h2>
@@ -1366,7 +1602,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
             <th><a class="ship-a" href="#s-rsi-salvation">RSI Salvation</a><small>Einsteiger-Schiff</small></th>
             <td>1</td><td class="num">6 SCU</td><td class="num">Miete ~31.200 aUEC/Tag<br>Kauf ~1,19 Mio. aUEC</td>
             <td>Abkratzen und Zerlegen bis Freelancer-Größe. Günstigster Einstieg.</td>
-            <td><span class="pill go">Hast du, hier starten</span></td>
+            <td><span class="pill go">Einstieg</span></td>
           </tr>
           <tr>
             <th><a class="ship-a" href="#s-misc-fortune">MISC Fortune</a><small>Solo-Bergung</small></th>
@@ -1404,65 +1640,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <p class="small" style="margin-top:8px">Preise aus unseren Schiffsdaten (günstigster bekannter Händler, Patch 4.10.2). Alle Schiffe mit Bild und 3D findest du im Tab <a href="#schiffe">Schiffe</a>.</p>
   </section>
 
-  <div class="two">
-    <div class="card-plain">
-      <h3>Los geht’s mit deiner <a class="ship-a" href="#s-rsi-salvation">Salvation</a> <span class="pill go">hier starten</span></h3>
-      <ol>
-        <li><b>Auftrag holen:</b> <kbd>F1</kbd> mobiGlas → Verträge <i class="gb">Contracts</i> → Reiter Salvage. Bergungsaufträge kosten keine Gebühr und markieren ein Wrack.</li>
-        <li><b>Besitzer prüfen</b> <i class="gb">Owner</i><b>:</b> <kbd>V</kbd> Scan-Modus <i class="gb">Scanning Mode</i>, auf das Wrack zielen, <kbd>LMB</kbd> halten. Steht als Besitzer „Gamerules“, ist es frei. Steht dort ein Spielername: Finger weg.</li>
-        <li><b>Hülle abkratzen:</b> <kbd>M</kbd> Bergungsmodus <i class="gb">Salvage Mode</i>, nah ran, <kbd>LMB</kbd> feuern. Die Schilde des Wracks müssen aus sein.</li>
-        <li><b>Puffer leeren</b> <i class="gb">Buffer</i><b>:</b> Ist der Puffer voll, kommt das Material in Kisten. Wie das bei deinem Schiff geht, steht unten unter „Verarbeitung“.</li>
-        <li><b>Struktur zerlegen</b> <i class="gb">Structural Salvage</i><b>:</b> Erst Bauteile abnehmen und abkratzen, dann das Wrack zerbrechen <i class="gb">Fracture</i> und die Teile zerlegen <i class="gb">Disintegrate</i>.</li>
-        <li><b>Verkaufen:</b> RMC direkt, Baumaterial erst nach der Raffinerie. Den Ablauf findest du unten unter „Verarbeitung“.</li>
-      </ol>
-    </div>
-
-    <div class="card-plain">
-      <h3>Nebenbei: Bergung zu Fuß <span class="pill later">optional</span></h3>
-      <ol>
-        <li><b>Ausrüstung kaufen:</b> Pyro RYT Multitool mit Cambio-Lite-SRT-Aufsatz (Bergung) und TruHold-Aufsatz (Traktorstrahl <i class="gb">Tractor Beam</i>).</li>
-        <li><b>Wrack suchen:</b> zerstörte Schiffe nach Kämpfen, an Absturzstellen oder aus Bergungsaufträgen <i class="gb">Salvage Contracts</i>.</li>
-        <li><kbd>4</kbd> Multitool ziehen, auf die Hülle zielen, <kbd>LMB</kbd> halten. Das RMC landet in einem Kanister.</li>
-        <li><b>Bauteile abnehmen:</b> Mit dem Traktorstrahl Waffen und andere Teile lösen und mitnehmen. Bei Wracks mit Besitzer „Gamerules“ sind die Teile meist gebrickt <i class="gb">Bricked</i> und wertlos, siehe unten.</li>
-        <li><b>Verkaufen:</b> Bauteile in Läden, die sie auch anbieten.</li>
-      </ol>
-      <div class="oops"><strong>Wichtig:</strong> RMC aus dem Kanister zu verkaufen lohnt sich nicht. Der Kanister ist zum Reparieren eurer eigenen Hülle gedacht. Das Geld steckt zu Fuß in den Bauteilen.</div>
-    </div>
-  </div>
-
   <section>
-    <h2>Verarbeitung: vom Wrack zum Geld</h2>
-    <p class="small" style="font-size:14px">Es gibt zwei Wege, je nachdem, was du geborgen hast. RMC verkaufst du direkt, Baumaterial muss erst in die Raffinerie.</p>
-    <div class="flow">
-      <div class="flow-lane"><span class="pill go">Weg A · RMC</span><div class="flow-row"><div class="flow-step">Hülle abkratzen <i class="gb">Hull Scraping</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Puffer <i class="gb">Buffer</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Kisten <i class="gb">SCU Boxes</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">landen &amp; verkaufen <i class="gb">Commodity Kiosk</i></div></div></div>
-      <div class="flow-lane"><span class="pill later">Weg B · Baumaterial</span><div class="flow-row"><div class="flow-step">zerbrechen &amp; zerlegen <i class="gb">Fracture / Disintegrate</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">rohes Material in Kisten</div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Raffinerie <i class="gb">Work Order</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">abholen <i class="gb">Freight Elevator</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">verkaufen <i class="gb">TDD</i></div></div></div>
-    </div>
-
-    <div class="two" style="margin-top:12px">
-      <div class="card-plain">
-        <h3>Weg A: RMC verkaufen <span class="pill go">ohne Raffinerie</span></h3>
-        <ol>
-          <li>RMC braucht keine Raffinerie. Du kannst es direkt verkaufen.</li>
-          <li><b>Vorher prüfen:</b> Nicht jedes Terminal kauft RMC. Die besten Orte stehen unten unter „Wo RMC am meisten bringt“.</li>
-          <li>Dort landen. Das Schiff mit den Kisten bleibt im Hangar oder auf dem Landeplatz.</li>
-          <li>Am Handelsterminal <i class="gb">Commodity Kiosk</i> oder beim TDD „Verkaufen“ <i class="gb">Sell</i> wählen und dein Schiff als Quelle angeben. Das Terminal muss auf die Fracht deines Schiffs zugreifen können.</li>
-          <li>Menge wählen und verkaufen. Das Geld ist sofort da.</li>
-        </ol>
-      </div>
-      <div class="card-plain">
-        <h3>Weg B: Baumaterial verkaufen <span class="pill later">mit Raffinerie</span></h3>
-        <ol>
-          <li>Rohes Baumaterial lässt sich nicht verkaufen.</li>
-          <li>Zu einer Raffinerie fliegen, meist auf den Rastplätzen <i class="gb">Rest Stops</i> an den Lagrange-Punkten.</li>
-          <li>Am Raffinerie-Terminal dein Schiff auswählen. Alternativ die Kisten vorher über den Frachtaufzug <i class="gb">Freight Elevator</i> ins Lager der Station bringen.</li>
-          <li>Work Order starten: Methode wählen, Angebot <i class="gb">Quote</i> prüfen, bestätigen. Welche Methode passt, steht im <a href="#mining">Mining-Kapitel unter „Raffinieren“</a>.</li>
-          <li>Wenn der Auftrag fertig ist: abholen und über den Frachtaufzug in dein Schiff laden.</li>
-          <li>Beim TDD in einer Stadt verkaufen, in Lorville beim CBD.</li>
-        </ol>
-      </div>
-    </div>
-
-    <h3 class="sub-h">So kommt das Material aus dem Puffer in Kisten</h3>
+    <h2>Puffer leeren: so geht’s je Schiff</h2>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Schiff</th><th>Puffer → Kisten</th><th>Gut zu wissen</th></tr></thead>
@@ -1531,7 +1710,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <h2>Salvage oder Mining?</h2>
     <div class="two">
       <div class="card-plain"><h3>Salvage passt, wenn …</h3><ul><li>du lieber ruhig und ohne Explosionsgefahr arbeitest</li><li>du allein spielst und Aufträge ohne Gebühr magst</li><li>du gern mit Bauteilen handelst</li></ul></div>
-      <div class="card-plain"><h3>Mining passt, wenn …</h3><ul><li>dir das Feintuning mit dem Laser Spaß macht</li><li>du auf seltene, wertvolle Erze aus bist</li><li>du mit deinem Golem gleich loslegen willst</li></ul><p class="small"><a href="#mining">Zum Mining-Kapitel →</a></p></div>
+      <div class="card-plain"><h3>Mining passt, wenn …</h3><ul><li>dir das Feintuning mit dem Laser Spaß macht</li><li>du auf seltene, wertvolle Erze aus bist</li><li>du schon zu Fuß oder mit einem kleinen Schiff wie dem Golem loslegen willst</li></ul><p class="small"><a href="#mining">Zum Mining-Kapitel →</a></p></div>
     </div>
   </section>
 </section>
@@ -1539,11 +1718,12 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 <!-- ============ CRAFTING ============ -->
 <section class="view" id="view-crafting" data-view="crafting" hidden>
   <div class="head">
-    <div class="stamp"><span>Kapitel 5</span><span>Stand Alpha 4.10.2</span><span>Crafting seit 4.7</span></div>
+    <div class="stamp"><span>Nachschlagen</span><span>Stand Alpha 4.10.2</span><span>Crafting seit 4.7</span></div>
     <h1>Crafting</h1>
     <p class="lede">Seit Alpha 4.7 kannst du Waffen, Rüstung, Munition und Schiffsteile selbst herstellen. Du brauchst drei Dinge: einen Bauplan, das passende Material und eine Werkbank. Je besser das Material, desto besser das Ergebnis.</p>
     <p class="small">Grau dahinter steht jeweils der englische Begriff, wie er im Spiel heißt.</p>
   </div>
+  <div class="learn"><strong>Zum ersten Mal am Fabricator?</strong> <span>Das Tutorial führt dich vom Bauplan bis zum fertigen Gegenstand.</span> <a class="btn" href="#t-crafting">Crafting lernen</a></div>
 
   <section>
     <h2>Was du brauchst</h2>
@@ -1562,49 +1742,6 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       </div>
     </div>
   </section>
-
-  <section>
-    <h2>Der Ablauf im Überblick</h2>
-    <div class="flow">
-      <div class="flow-lane"><span class="pill go">Vom Auftrag zum fertigen Gegenstand</span><div class="flow-row"><div class="flow-step">Auftrag erledigen <i class="gb">Contract</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Bauplan erhalten <i class="gb">Blueprint</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Material besorgen <i class="gb">Mining / Salvage</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Fabricator aufstellen <i class="gb">Item Fabricator</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Job starten <i class="gb">Craft</i></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step">Gegenstand abholen</div></div></div>
-    </div>
-  </section>
-
-  <div class="two">
-    <div class="card-plain">
-      <h3>1. Bauplan bekommen</h3>
-      <ol>
-        <li><kbd>F1</kbd> mobiGlas → Verträge <i class="gb">Contracts</i>. Viele Aufträge haben einen Pool an Bauplänen als Belohnung.</li>
-        <li>Pro abgeschlossenem Auftrag gibt es <b>einen zufälligen Bauplan</b> aus diesem Pool. Für einen bestimmten Bauplan musst du den Auftrag eventuell mehrmals machen.</li>
-        <li>Manche Baupläne setzen Ruf <i class="gb">Reputation</i> bei einer Fraktion voraus.</li>
-        <li>Deine Baupläne siehst du in der Bibliothek am Fabricator <i class="gb">Blueprint Library</i>.</li>
-      </ol>
-      <div class="hint">Welcher Auftrag welchen Bauplan gibt, zeigen Community-Tools wie der Blueprint Finder (Link unten).</div>
-    </div>
-    <div class="card-plain">
-      <h3>2. Fabricator aufstellen</h3>
-      <ol>
-        <li><b>Kaufen:</b> bei Kel-To und Dumper's Depot in Stanton oder in den Raffinerie-Shops in Pyro. Das Angebot kann wechseln.</li>
-        <li><b>Abholen:</b> über den Frachtaufzug <i class="gb">Freight Elevator</i>.</li>
-        <li><b>Aufstellen:</b> im eigenen Hangar oder auf dem Frachtgitter <i class="gb">Cargo Grid</i> eines Schiffs, das groß genug ist.</li>
-        <li><b>Bewegen:</b> mit dem Traktorstrahl <i class="gb">Tractor Beam</i>. Vorher die Tür des Fabricators schließen.</li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="card-plain" style="margin-top:16px">
-    <h3>3. Am Fabricator herstellen</h3>
-    <ol>
-      <li>Fabricator öffnen und einen Bauplan auswählen.</li>
-      <li>Für jede Zutat Menge und Mindestqualität <i class="gb">Minimum Quality</i> prüfen.</li>
-      <li>Material von Hand zuweisen oder automatisch füllen lassen <i class="gb">Auto-Fill</i>.</li>
-      <li>Die vorhergesagten Werte ansehen: Was bewirkt dein Material?</li>
-      <li>Lieferort <i class="gb">Delivery Location</i> wählen.</li>
-      <li>Job starten und in der Warteschlange <i class="gb">Queue</i> verfolgen. Ein Job dauert im Schnitt etwa 3 bis 4 Minuten.</li>
-      <li>Gegenstand abholen und prüfen.</li>
-    </ol>
-    <div class="oops"><strong>Achtung:</strong> Material unter der Mindestqualität nimmt der Fabricator nicht an, auch wenn Sorte und Menge stimmen.</div>
-  </div>
 
   <section>
     <h2>Qualität: was dein Material bewirkt</h2>
@@ -1750,7 +1887,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 <!-- ============ TRAINING ============ -->
 <section class="view" id="view-training" data-view="training" hidden>
   <div class="head">
-    <div class="stamp"><span>Testbereich</span><span>Beta</span><span>am PC mit Tastatur</span></div>
+    <div class="stamp"><span>Tutorial</span><span>Beta</span><span>am PC mit Tastatur</span></div>
     <h1>Training</h1>
     <p class="lede">Tasten lernen, bevor du im Cockpit sitzt. Drei Übungen zum Ausprobieren.</p>
   </div>
@@ -1872,12 +2009,28 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   var views = Array.prototype.slice.call(document.querySelectorAll('[data-view]'));
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs a'));
   var names = views.map(function (v) { return v.dataset.view; });
+  /* Untermenü „Tutorials“: in einem Tutorial fest sichtbar, sonst beim Darüberfahren als zweite Reihe */
+  var TUT = ['tutorial', 'erste-schritte', 'heimat', 't-mining', 't-salvage', 't-crafting', 'training'];
+  var sub = document.getElementById('subnav'), tutTab = document.getElementById('tut-tab'), pinned = false, hideT = null;
+  function subState(open) {
+    clearTimeout(hideT);
+    sub.hidden = !(pinned || open);
+    sub.classList.toggle('float', !pinned);
+  }
+  if (window.matchMedia('(hover: hover)').matches) {
+    tutTab.addEventListener('mouseenter', function () { subState(true); });
+    sub.addEventListener('mouseenter', function () { clearTimeout(hideT); });
+    [tutTab, sub].forEach(function (el) {
+      el.addEventListener('mouseleave', function () { hideT = setTimeout(function () { subState(false); }, 250); });
+    });
+  }
+  tutTab.addEventListener('focus', function () { subState(true); });
+  sub.addEventListener('focusout', function (e) { if (!sub.contains(e.relatedTarget) && e.relatedTarget !== tutTab) subState(false); });
   function show() {
     var h = (location.hash || '#start').slice(1);
     if (h === 'hotas') h = 'hosas';
     /* #s-<slug> öffnet ein Schiff in der Schiffsübersicht */
-    var keepScroll = false, anchor = null;
-    if (h === 'heimat') { h = 'erste-schritte'; anchor = 'wohnort'; }
+    var keepScroll = false;
     if (h.indexOf('s-') === 0) { keepScroll = !document.getElementById('view-schiffe').hidden; h = 'schiffe'; }
     if (names.indexOf(h) === -1) h = 'start';
     views.forEach(function (v) { v.hidden = v.dataset.view !== h; });
@@ -1885,10 +2038,15 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     });
-    var titles = { start: 'Roonys Star Citizen Handbuch', news: 'News · SC Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', crafting: 'Crafting · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
+    var titles = { start: 'Star Citizen Handbuch', news: 'News · SC Handbuch', tutorial: 'Tutorials · SC Handbuch', heimat: 'Heimatstadt · SC Handbuch', 't-mining': 'Mining lernen · SC Handbuch', 't-salvage': 'Salvage lernen · SC Handbuch', 't-crafting': 'Crafting lernen · SC Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', crafting: 'Crafting · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
     document.title = titles[h];
-    if (anchor) document.getElementById(anchor).scrollIntoView();
-    else if (!keepScroll) window.scrollTo(0, 0);
+    var inTut = TUT.indexOf(h) !== -1;
+    if (inTut) tutTab.setAttribute('aria-current', 'page');
+    Array.prototype.forEach.call(sub.querySelectorAll('a'), function (a) {
+      if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    pinned = inTut; subState(false);
+    if (!keepScroll) window.scrollTo(0, 0);
     document.dispatchEvent(new CustomEvent('viewchange', { detail: h }));
   }
   window.addEventListener('hashchange', show);
@@ -3073,6 +3231,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 /* ---------- RS-Rechner (Mining) ---------- */
 (function () {
   var ORES = [[3170,"Quantanium","Quantainium",200000],[3185,"Stileron","Stileron",140000],[3200,"Savrilium","Savrilium",0],[3370,"Ouratit","Ouratite",0],[3385,"Riccit","Riccite",66000],[3400,"Lindinium","Lindinium",24000],[3540,"Beryll","Beryl",4700],[3555,"Taranit","Taranite",22000],[3570,"Borase","Borase",25000],[3585,"Gold","Gold",32000],[3600,"Bexalit","Bexalite",18000],[3825,"Laranit","Laranite",9100],[3840,"Aslarit","Aslarite",0],[3855,"Titan","Titanium",8300],[3870,"Wolfram","Tungsten",10000],[3885,"Agricium","Agricium",11000],[3900,"Torit","Torite",7900],[4180,"Hephaestanit","Hephaestanite",4000],[4195,"Zinn","Tin",4000],[4210,"Quarz","Quartz",1700],[4225,"Korund","Corundum",3700],[4240,"Kupfer","Copper",3700],[4255,"Silizium","Silicon",2200],[4270,"Eisen","Iron",3400],[4285,"Aluminium","Aluminum",3800],[4300,"Eis","Ice",5100]];
+  window.SC_ORES = ORES;
   var GROUND = [[3000, 'Kleines Vorkommen (Handabbau)', 'FPS deposit'], [4000, 'Großes Vorkommen (ROC oder ATLS GEO)', 'ROC deposit']];
   var inp = document.getElementById('rsq'), out = document.getElementById('rsout');
   if (!inp) return;
@@ -3089,7 +3248,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     if (!hits.length) { out.innerHTML = '<span class="small">Kein bekanntes Mineral passt genau. Prüf die Zahl noch einmal, oder es ist kein Gestein (z. B. ein Schiff oder Trümmer).</span>'; return; }
     out.innerHTML = hits.slice(0, 4).map(function (h, i) {
       var o = h.o, val = o[3] ? 'Basiswert ' + fmt(o[3]) + ' aUEC/SCU' : (o[4] ? 'Mineral zeigt erst der Scan' : 'Basiswert unbekannt');
-      return '<div class="rs-hit' + (i === 0 ? ' top' : '') + '"><span><b>' + h.n + ' × ' + o[1] + '</b> <i class="gb">' + o[2] + '</i><br><span class="small">Grundwert ' + fmt(o[0]) + ' · ' + val + '</span></span></div>';
+      var nm = o[4] ? o[1] : '<a href="#mining" data-loc="' + o[1] + '">' + o[1] + '</a>';
+      return '<div class="rs-hit' + (i === 0 ? ' top' : '') + '"><span><b>' + h.n + ' × ' + nm + '</b> <i class="gb">' + o[2] + '</i><br><span class="small">Grundwert ' + fmt(o[0]) + ' · ' + val + '</span></span></div>';
     }).join('') + (hits.length > 1 ? '<span class="small">Mehrere Möglichkeiten: Der Detail-Scan (V, linke Maustaste halten) klärt es.</span>' : '');
   });
 })();
@@ -3116,7 +3276,54 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   chips(document.getElementById('locsys'), [['alle', 'Alle Systeme'], ['stanton', 'Stanton'], ['pyro', 'Pyro'], ['nyx', 'Nyx']], function () { return sys; }, function (v) { sys = v; });
   chips(document.getElementById('locmeth'), [['alle', 'Alle Abbauarten'], ['ship', 'Schiff'], ['fps', 'Handabbau'], ['roc', 'ROC']], function () { return meth; }, function (v) { meth = v; });
   ROWS.forEach(function (r) { r.t = (r[0] + ' ' + r[1] + ' ' + r[3] + ' ' + SYS[r[4]] + ' ' + METH[r[2]]).toLowerCase(); });
-  var wrap = document.getElementById('locwrap'), start = document.getElementById('locstart');
+  var wrap = document.getElementById('locwrap'), start = document.getElementById('locstart'), oreBox = document.getElementById('locore');
+  /* Erznamen (deutsch und englisch) für die exakte Suche */
+  var ORE_NAMES = {};
+  ROWS.forEach(function (r) { ORE_NAMES[r[0].toLowerCase()] = r[0]; ORE_NAMES[r[1].toLowerCase()] = r[0]; });
+  /* Raffinerie-Boni und Verkaufspreise (UEX), werden beim ersten Steckbrief geladen */
+  var MD = null, mdP = null;
+  function loadMD() {
+    if (!mdP) mdP = fetch('mining.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }).then(function (d) { MD = d; return d; });
+    return mdP;
+  }
+  function oreCard(name) {
+    var rows = ROWS.filter(function (r) { return r[0] === name; });
+    var r0 = rows[0], key = r0[1].toLowerCase(), gem = r0[2] !== 'ship';
+    var sig = (window.SC_ORES || []).filter(function (o) { return o[2].toLowerCase() === key; })[0];
+    var best = rows.slice().sort(function (a, b) { return b[5] - a[5]; }).slice(0, 4);
+    var y = MD && MD.yields ? (MD.yields[key] || []) : null, sl = MD && MD.sell ? (MD.sell[key] || {}) : null;
+    var li = function (a) { return a.map(function (x) { return '<li>' + x + '</li>'; }).join(''); };
+    var h = '<div class="oc-head"><b>' + esc(name) + '</b> <i class="gb">' + esc(r0[1]) + '</i>' +
+      (r0[6] ? '<span class="pill go">' + fmt(r0[6]) + ' aUEC/SCU</span>' : '') + (sig ? '<span class="pill no">Signatur ' + fmt(sig[0]) + '</span>' : '') + '</div><div class="oc-grid">';
+    h += '<div><h4>Beste Fundorte</h4><ol>' + li(best.map(function (r) { return esc(r[3]) + ' <span class="small">' + SYS[r[4]] + ' · ' + fmt(r[5]) + ' %</span>'; })) + '</ol></div>';
+    if (gem) {
+      h += '<div><h4>Raffinerie</h4><p class="small">Nicht nötig. Edelsteine aus Handabbau und ROC verkaufst du direkt.</p></div>';
+    } else if (!y) {
+      h += '<div><h4>Beste Raffinerien</h4><p class="small">Lade Daten …</p></div>';
+    } else {
+      var up = y.filter(function (x) { return x[2] > 0; }).slice(0, 5), down = y.filter(function (x) { return x[2] < 0; });
+      h += '<div><h4>Beste Raffinerien</h4>' + (up.length ? '<ol>' + li(up.map(function (x) { return esc(x[0]) + ' <b class="up">+' + x[2] + ' %</b>'; })) + '</ol>' : '<p class="small">Keine Station mit Bonus gemeldet.</p>') +
+        (down.length ? '<p class="small">Mit Abzug: ' + down.slice().reverse().slice(0, 4).map(function (x) { return esc(x[0]) + ' <b class="down">−' + (-x[2]) + ' %</b>'; }).join(', ') +
+          (down.length > 4 ? ' und ' + (down.length - 4) + ' weitere' : '') + '</p>' : '') + '</div>';
+    }
+    if (sl) {
+      var sell = gem ? (sl.raw || sl.ref) : sl.ref;
+      h += '<div><h4>' + (gem ? 'Verkaufen' : 'Raffiniert verkaufen') + '</h4>' + (sell ? '<ol>' + li(sell.slice(0, 4).map(function (x) { return esc(x[1]) + ' <span class="small">' + fmt(x[0]) + ' aUEC</span>'; })) + '</ol>' : '<p class="small">Keine Preise gemeldet.</p>') +
+        (!gem && sl.raw ? '<p class="small">Roh: bis ' + fmt(sl.raw[0][0]) + ' aUEC bei ' + esc(sl.raw[0][1]) + '</p>' : '') + '</div>';
+    }
+    h += '</div>' + (MD ? '<p class="small" style="margin:0">Raffinerie-Boni und Preise laut <a href="https://uexcorp.space" target="_blank" rel="noopener">UEX</a> (Spielermeldungen), Stand ' + new Date(MD.updated).toLocaleDateString('de-DE') + '. Der Bonus gilt auf die Ausbeute der gewählten Methode.</p>' : '');
+    return h;
+  }
+  function showOre(name) {
+    if (!name) { oreBox.hidden = true; oreBox.innerHTML = ''; return; }
+    oreBox.innerHTML = oreCard(name); oreBox.hidden = false;
+    if (!MD) loadMD().then(function () { if (!oreBox.hidden && oreBox.dataset.ore === name) oreBox.innerHTML = oreCard(name); });
+    oreBox.dataset.ore = name;
+  }
+  body.addEventListener('click', function (e) {
+    var b = e.target.closest('.ore-link');
+    if (b) { q.value = b.dataset.ore; draw(); q.scrollIntoView({ block: 'start' }); }
+  });
   /* Vorschläge: ein Klick füllt die Suche */
   ['Quantanium', 'Gold', 'Taranit', 'Hadanit', 'Daymar', 'Aaron Halo', 'Pyro IV'].forEach(function (w) {
     var b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.textContent = w;
@@ -3124,7 +3331,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     document.getElementById('locsugg').appendChild(b);
   });
   function draw() {
-    var v = q.value.trim().toLowerCase();
+    var v = q.value.trim().toLowerCase(), exact = ORE_NAMES[v] || null;
+    showOre(exact);
     /* Liste erst zeigen, wenn gesucht oder gefiltert wird */
     var active = v.length >= 2 || sys !== 'alle' || meth !== 'alle';
     wrap.hidden = !active; start.hidden = active;
@@ -3132,10 +3340,11 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     var list = ROWS.filter(function (r) {
       if (sys !== 'alle' && r[4] !== sys) return false;
       if (meth !== 'alle' && r[2] !== meth) return false;
+      if (exact) return r[0] === exact;
       return !v || r.t.indexOf(v) !== -1;
     }).sort(function (a, b) { return (b[6] - a[6]) || (b[5] - a[5]) || a[0].localeCompare(b[0]); });
     body.innerHTML = list.map(function (r) {
-      return '<tr><th>' + esc(r[0]) + ' <i class="gb">' + esc(r[1]) + '</i></th><td>' + METH[r[2]] + '</td><td>' + esc(r[3]) + '</td><td>' + SYS[r[4]] +
+      return '<tr><th><button type="button" class="ore-link" data-ore="' + esc(r[0]) + '">' + esc(r[0]) + '</button> <i class="gb">' + esc(r[1]) + '</i></th><td>' + METH[r[2]] + '</td><td>' + esc(r[3]) + '</td><td>' + SYS[r[4]] +
         '</td><td class="pct"><span class="loc-bar"><i style="width:' + Math.min(100, r[5]) + '%"></i></span>' + fmt(r[5]) + ' %</td><td class="num">' +
         (r[6] ? fmt(r[6]) + ' aUEC' : '–') + '</td><td>' + esc(r[7]) + '</td></tr>';
     }).join('');

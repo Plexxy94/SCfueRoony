@@ -1,0 +1,1786 @@
+{
+ "yields": {
+  "agricium": [
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "MIC-L1",
+    "Stanton",
+    8
+   ],
+   [
+    "Terra Gateway (Stanton)",
+    "Stanton",
+    8
+   ],
+   [
+    "HUR-L2",
+    "Stanton",
+    -2
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    -4
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    -8
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    -8
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    -8
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    -8
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    -8
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    -8
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    -8
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    -8
+   ]
+  ],
+  "aluminum": [
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "MIC-L1",
+    "Stanton",
+    7
+   ],
+   [
+    "Terra Gateway (Stanton)",
+    "Stanton",
+    7
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    -3
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    -4
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    -4
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    -4
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    -4
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    -4
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    -4
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    -4
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    -4
+   ],
+   [
+    "ARC-L1",
+    "Stanton",
+    -5
+   ],
+   [
+    "Nyx Gateway (Stanton)",
+    "Stanton",
+    -5
+   ]
+  ],
+  "beryl": [
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "ARC-L1",
+    "Stanton",
+    7
+   ],
+   [
+    "CRU-L1",
+    "Stanton",
+    7
+   ],
+   [
+    "MIC-L5",
+    "Stanton",
+    7
+   ],
+   [
+    "Nyx Gateway (Stanton)",
+    "Stanton",
+    7
+   ],
+   [
+    "Pyro Gateway (Stanton)",
+    "Stanton",
+    7
+   ],
+   [
+    "HUR-L2",
+    "Stanton",
+    1
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    -4
+   ],
+   [
+    "MIC-L1",
+    "Stanton",
+    -6
+   ],
+   [
+    "Terra Gateway (Stanton)",
+    "Stanton",
+    -6
+   ],
+   [
+    "MIC-L2",
+    "Stanton",
+    -8
+   ]
+  ],
+  "bexalite": [
+   [
+    "MIC-L5",
+    "Stanton",
+    12
+   ],
+   [
+    "MIC-L2",
+    "Stanton",
+    9
+   ],
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "ARC-L2",
+    "Stanton",
+    2
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    -2
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    -2
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    -2
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    -2
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    -2
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    -2
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    -2
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    -2
+   ],
+   [
+    "CRU-L1",
+    "Stanton",
+    -6
+   ],
+   [
+    "Pyro Gateway (Stanton)",
+    "Stanton",
+    -6
+   ]
+  ],
+  "borase": [
+   [
+    "MIC-L5",
+    "Stanton",
+    9
+   ],
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "ARC-L2",
+    "Stanton",
+    2
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    1
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    1
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    1
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    1
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    1
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    1
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    1
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    1
+   ],
+   [
+    "MIC-L2",
+    "Stanton",
+    -3
+   ]
+  ],
+  "copper": [
+   [
+    "MIC-L5",
+    "Stanton",
+    9
+   ],
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "ARC-L2",
+    "Stanton",
+    6
+   ],
+   [
+    "MIC-L1",
+    "Stanton",
+    4
+   ],
+   [
+    "Terra Gateway (Stanton)",
+    "Stanton",
+    4
+   ],
+   [
+    "MIC-L2",
+    "Stanton",
+    2
+   ],
+   [
+    "HUR-L2",
+    "Stanton",
+    -3
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    -4
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    -5
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    -5
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    -5
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    -5
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    -5
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    -5
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    -5
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    -5
+   ]
+  ],
+  "corundum": [
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "CRU-L1",
+    "Stanton",
+    7
+   ],
+   [
+    "Pyro Gateway (Stanton)",
+    "Stanton",
+    7
+   ],
+   [
+    "MIC-L2",
+    "Stanton",
+    6
+   ],
+   [
+    "MIC-L1",
+    "Stanton",
+    2
+   ],
+   [
+    "Terra Gateway (Stanton)",
+    "Stanton",
+    2
+   ],
+   [
+    "HUR-L2",
+    "Stanton",
+    1
+   ],
+   [
+    "ARC-L2",
+    "Stanton",
+    -3
+   ],
+   [
+    "ARC-L1",
+    "Stanton",
+    -4
+   ],
+   [
+    "Nyx Gateway (Stanton)",
+    "Stanton",
+    -4
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    -5
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    -5
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    -5
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    -5
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    -5
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    -5
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    -5
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    -5
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    -9
+   ]
+  ],
+  "gold": [
+   [
+    "MIC-L2",
+    "Stanton",
+    9
+   ],
+   [
+    "ARC-L2",
+    "Stanton",
+    7
+   ],
+   [
+    "Levski",
+    "Nyx",
+    5
+   ],
+   [
+    "HUR-L2",
+    "Stanton",
+    1
+   ],
+   [
+    "MIC-L1",
+    "Stanton",
+    1
+   ],
+   [
+    "Terra Gateway (Stanton)",
+    "Stanton",
+    1
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    -3
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    -3
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    -3
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    -3
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    -3
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    -3
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    -3
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    -3
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    -4
+   ],
+   [
+    "CRU-L1",
+    "Stanton",
+    -6
+   ],
+   [
+    "Pyro Gateway (Stanton)",
+    "Stanton",
+    -6
+   ]
+  ],
+  "hephaestanite": [
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "MIC-L5",
+    "Stanton",
+    8
+   ],
+   [
+    "CRU-L1",
+    "Stanton",
+    -2
+   ],
+   [
+    "Pyro Gateway (Stanton)",
+    "Stanton",
+    -2
+   ],
+   [
+    "ARC-L1",
+    "Stanton",
+    -4
+   ],
+   [
+    "Nyx Gateway (Stanton)",
+    "Stanton",
+    -4
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    -5
+   ],
+   [
+    "ARC-L2",
+    "Stanton",
+    -8
+   ]
+  ],
+  "ice": [
+   [
+    "Levski",
+    "Nyx",
+    10
+   ]
+  ],
+  "iron": [
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "MIC-L5",
+    "Stanton",
+    8
+   ],
+   [
+    "CRU-L1",
+    "Stanton",
+    2
+   ],
+   [
+    "Pyro Gateway (Stanton)",
+    "Stanton",
+    2
+   ],
+   [
+    "ARC-L1",
+    "Stanton",
+    1
+   ],
+   [
+    "Nyx Gateway (Stanton)",
+    "Stanton",
+    1
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    -5
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    -5
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    -5
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    -5
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    -5
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    -5
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    -5
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    -5
+   ]
+  ],
+  "laranite": [
+   [
+    "Levski",
+    "Nyx",
+    7
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    2
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    2
+   ],
+   [
+    "MIC-L1",
+    "Stanton",
+    2
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    2
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    2
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    2
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    2
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    2
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    2
+   ],
+   [
+    "Terra Gateway (Stanton)",
+    "Stanton",
+    2
+   ],
+   [
+    "HUR-L2",
+    "Stanton",
+    -1
+   ],
+   [
+    "MIC-L2",
+    "Stanton",
+    -1
+   ],
+   [
+    "ARC-L1",
+    "Stanton",
+    -2
+   ],
+   [
+    "Nyx Gateway (Stanton)",
+    "Stanton",
+    -2
+   ],
+   [
+    "CRU-L1",
+    "Stanton",
+    -8
+   ],
+   [
+    "Pyro Gateway (Stanton)",
+    "Stanton",
+    -8
+   ]
+  ],
+  "lindinium": [
+   [
+    "MIC-L5",
+    "Stanton",
+    7
+   ],
+   [
+    "Levski",
+    "Nyx",
+    4
+   ]
+  ],
+  "quantainium": [
+   [
+    "Levski",
+    "Nyx",
+    5
+   ],
+   [
+    "ARC-L1",
+    "Stanton",
+    3
+   ],
+   [
+    "ARC-L2",
+    "Stanton",
+    3
+   ],
+   [
+    "Nyx Gateway (Stanton)",
+    "Stanton",
+    3
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    2
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    2
+   ],
+   [
+    "HUR-L2",
+    "Stanton",
+    2
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    2
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    2
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    2
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    2
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    2
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    2
+   ],
+   [
+    "MIC-L2",
+    "Stanton",
+    1
+   ]
+  ],
+  "quartz": [
+   [
+    "ARC-L1",
+    "Stanton",
+    11
+   ],
+   [
+    "Nyx Gateway (Stanton)",
+    "Stanton",
+    11
+   ],
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    -2
+   ],
+   [
+    "MIC-L1",
+    "Stanton",
+    -3
+   ],
+   [
+    "Terra Gateway (Stanton)",
+    "Stanton",
+    -3
+   ],
+   [
+    "MIC-L2",
+    "Stanton",
+    -5
+   ]
+  ],
+  "savrilium": [
+   [
+    "MIC-L5",
+    "Stanton",
+    6
+   ],
+   [
+    "Levski",
+    "Nyx",
+    1
+   ]
+  ],
+  "silicon": [
+   [
+    "Levski",
+    "Nyx",
+    8
+   ]
+  ],
+  "taranite": [
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    5
+   ],
+   [
+    "HUR-L2",
+    "Stanton",
+    -3
+   ],
+   [
+    "ARC-L1",
+    "Stanton",
+    -6
+   ],
+   [
+    "Nyx Gateway (Stanton)",
+    "Stanton",
+    -6
+   ]
+  ],
+  "tin": [
+   [
+    "Levski",
+    "Nyx",
+    9
+   ]
+  ],
+  "titanium": [
+   [
+    "MIC-L5",
+    "Stanton",
+    13
+   ],
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "MIC-L2",
+    "Stanton",
+    6
+   ],
+   [
+    "ARC-L1",
+    "Stanton",
+    5
+   ],
+   [
+    "Nyx Gateway (Stanton)",
+    "Stanton",
+    5
+   ],
+   [
+    "ARC-L2",
+    "Stanton",
+    3
+   ],
+   [
+    "CRU-L1",
+    "Stanton",
+    -1
+   ],
+   [
+    "Pyro Gateway (Stanton)",
+    "Stanton",
+    -1
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    -2
+   ]
+  ],
+  "torite": [
+   [
+    "MIC-L5",
+    "Stanton",
+    8
+   ],
+   [
+    "Levski",
+    "Nyx",
+    1
+   ]
+  ],
+  "tungsten": [
+   [
+    "MIC-L2",
+    "Stanton",
+    9
+   ],
+   [
+    "Levski",
+    "Nyx",
+    8
+   ],
+   [
+    "Checkmate Station",
+    "Pyro",
+    4
+   ],
+   [
+    "HUR-L1",
+    "Stanton",
+    4
+   ],
+   [
+    "Nyx Gateway (Pyro)",
+    "Pyro",
+    4
+   ],
+   [
+    "Orbituary",
+    "Pyro",
+    4
+   ],
+   [
+    "Pyro Gateway (Nyx)",
+    "Nyx",
+    4
+   ],
+   [
+    "Ruin Station",
+    "Pyro",
+    4
+   ],
+   [
+    "Stanton Gateway (Nyx)",
+    "Nyx",
+    4
+   ],
+   [
+    "Stanton Gateway (Pyro)",
+    "Pyro",
+    4
+   ],
+   [
+    "CRU-L1",
+    "Stanton",
+    2
+   ],
+   [
+    "Pyro Gateway (Stanton)",
+    "Stanton",
+    2
+   ],
+   [
+    "ARC-L4",
+    "Stanton",
+    -5
+   ],
+   [
+    "ARC-L2",
+    "Stanton",
+    -6
+   ]
+  ]
+ },
+ "sell": {
+  "agricium": {
+   "ref": [
+    [
+     12000,
+     "ARC-L4"
+    ],
+    [
+     11000,
+     "Rod's Fuel"
+    ],
+    [
+     10000,
+     "TDD Area 18"
+    ],
+    [
+     10000,
+     "TDD New Babbage"
+    ],
+    [
+     10000,
+     "CBD Lorville"
+    ]
+   ]
+  },
+  "aluminum": {
+   "ref": [
+    [
+     4600,
+     "Port Tressler"
+    ],
+    [
+     4200,
+     "Terra Gateway (Stanton)"
+    ],
+    [
+     4200,
+     "Everus Harbor"
+    ],
+    [
+     3800,
+     "TDD Area 18"
+    ],
+    [
+     3800,
+     "TDD New Babbage"
+    ]
+   ]
+  },
+  "aslarite": {
+   "ref": [
+    [
+     5100,
+     "TDD Area 18"
+    ],
+    [
+     5100,
+     "Levski"
+    ],
+    [
+     5100,
+     "Ruin Station"
+    ],
+    [
+     5100,
+     "CBD Lorville"
+    ],
+    [
+     5100,
+     "TDD New Babbage"
+    ]
+   ]
+  },
+  "beryl": {
+   "ref": [
+    [
+     24000,
+     "Rod's Fuel"
+    ],
+    [
+     23000,
+     "HUR-L3"
+    ],
+    [
+     22000,
+     "HUR-L1"
+    ],
+    [
+     22000,
+     "HUR-L4"
+    ],
+    [
+     22000,
+     "HUR-L5"
+    ]
+   ]
+  },
+  "bexalite": {
+   "ref": [
+    [
+     32000,
+     "The Golden Riviera"
+    ],
+    [
+     30000,
+     "Patch City"
+    ],
+    [
+     30000,
+     "Endgame"
+    ],
+    [
+     30000,
+     "Jackson's Swap"
+    ],
+    [
+     30000,
+     "Dudley & Daughters"
+    ]
+   ]
+  },
+  "borase": {
+   "ref": [
+    [
+     33000,
+     "Gaslight"
+    ],
+    [
+     31000,
+     "MIC-L1"
+    ],
+    [
+     31000,
+     "MIC-L3"
+    ],
+    [
+     30000,
+     "Rod's Fuel"
+    ],
+    [
+     28000,
+     "TDD Area 18"
+    ]
+   ],
+   "raw": [
+    [
+     14000,
+     "PSS Theta"
+    ]
+   ]
+  },
+  "copper": {
+   "ref": [
+    [
+     4700,
+     "Terra Gateway (Stanton)"
+    ],
+    [
+     4400,
+     "Rod's Fuel"
+    ],
+    [
+     4400,
+     "Stanton Gateway (Pyro)"
+    ],
+    [
+     4300,
+     "Pyro Gateway (Stanton)"
+    ],
+    [
+     4200,
+     "Rat's Nest"
+    ]
+   ],
+   "raw": [
+    [
+     1200,
+     "Rappel"
+    ],
+    [
+     1200,
+     "Pickers Field"
+    ],
+    [
+     1200,
+     "Dunboro"
+    ]
+   ]
+  },
+  "corundum": {
+   "ref": [
+    [
+     4400,
+     "Rod's Fuel"
+    ],
+    [
+     4400,
+     "Orbituary"
+    ],
+    [
+     4100,
+     "Terra Gateway (Stanton)"
+    ],
+    [
+     4100,
+     "Everus Harbor"
+    ],
+    [
+     3700,
+     "TDD Area 18"
+    ]
+   ]
+  },
+  "diamond": {
+   "ref": [
+    [
+     8300,
+     "ARC-L5"
+    ],
+    [
+     7800,
+     "Rod's Fuel"
+    ],
+    [
+     7700,
+     "TDD New Babbage"
+    ],
+    [
+     7700,
+     "CBD Lorville"
+    ],
+    [
+     7700,
+     "Pickers Field"
+    ]
+   ]
+  },
+  "gold": {
+   "ref": [
+    [
+     31000,
+     "TDD Area 18"
+    ],
+    [
+     31000,
+     "Pyro Gateway (Nyx)"
+    ],
+    [
+     30000,
+     "TDD New Babbage"
+    ],
+    [
+     30000,
+     "CBD Lorville"
+    ],
+    [
+     30000,
+     "ARC-L1"
+    ]
+   ]
+  },
+  "hephaestanite": {
+   "ref": [
+    [
+     6000,
+     "MIC-L5"
+    ],
+    [
+     5400,
+     "TDD New Babbage"
+    ],
+    [
+     4800,
+     "TDD Area 18"
+    ],
+    [
+     4800,
+     "CBD Lorville"
+    ],
+    [
+     4800,
+     "TDD Orison"
+    ]
+   ]
+  },
+  "iron": {
+   "ref": [
+    [
+     4000,
+     "Terra Gateway (Stanton)"
+    ],
+    [
+     3900,
+     "Endgame"
+    ],
+    [
+     3900,
+     "Gaslight"
+    ],
+    [
+     3600,
+     "Rod's Fuel"
+    ],
+    [
+     3600,
+     "Megumi"
+    ]
+   ],
+   "raw": [
+    [
+     1000,
+     "Rappel"
+    ],
+    [
+     1000,
+     "Dunboro"
+    ],
+    [
+     1000,
+     "Pickers Field"
+    ]
+   ]
+  },
+  "jaclium": {
+   "raw": [
+    [
+     23000000,
+     "HDMS-Norgaard"
+    ],
+    [
+     23000000,
+     "HDMS-Anderson"
+    ],
+    [
+     22000000,
+     "ArcCorp 045"
+    ]
+   ]
+  },
+  "laranite": {
+   "ref": [
+    [
+     9600,
+     "CRU-L1"
+    ],
+    [
+     9200,
+     "Stanton Gateway (Nyx)"
+    ],
+    [
+     8900,
+     "CBD Lorville"
+    ],
+    [
+     8700,
+     "Ruin Station"
+    ],
+    [
+     8700,
+     "Patch City"
+    ]
+   ]
+  },
+  "lindinium": {
+   "ref": [
+    [
+     51000,
+     "TDD New Babbage"
+    ],
+    [
+     51000,
+     "TDD Area 18"
+    ],
+    [
+     50000,
+     "TDD Orison"
+    ],
+    [
+     46000,
+     "Megumi"
+    ],
+    [
+     43000,
+     "Levski"
+    ]
+   ]
+  },
+  "quantainium": {
+   "ref": [
+    [
+     170000,
+     "ArcCorp 141"
+    ],
+    [
+     170000,
+     "Fallow Field"
+    ],
+    [
+     170000,
+     "Canard View"
+    ],
+    [
+     160000,
+     "Ashland"
+    ],
+    [
+     160000,
+     "TDD Orison"
+    ]
+   ]
+  },
+  "quartz": {
+   "ref": [
+    [
+     5300,
+     "Stanton Gateway (Pyro)"
+    ],
+    [
+     5300,
+     "Nyx Gateway (Stanton)"
+    ],
+    [
+     5200,
+     "Pyro Gateway (Stanton)"
+    ],
+    [
+     4700,
+     "Seraphim"
+    ],
+    [
+     4600,
+     "Patch City"
+    ]
+   ]
+  },
+  "riccite": {
+   "ref": [
+    [
+     91000,
+     "ArcCorp 141"
+    ],
+    [
+     91000,
+     "ArcCorp 157"
+    ],
+    [
+     84000,
+     "Ashland"
+    ],
+    [
+     77000,
+     "Levski"
+    ],
+    [
+     74000,
+     "The Golden Riviera"
+    ]
+   ]
+  },
+  "sadaryx": {
+   "ref": [
+    [
+     500000,
+     "TDD Area 18"
+    ],
+    [
+     500000,
+     "TDD Orison"
+    ],
+    [
+     500000,
+     "TDD New Babbage"
+    ],
+    [
+     500000,
+     "CBD Lorville"
+    ]
+   ]
+  },
+  "savrilium": {
+   "ref": [
+    [
+     150000,
+     "The Golden Riviera"
+    ],
+    [
+     130000,
+     "TDD Orison"
+    ],
+    [
+     130000,
+     "Sacren's Plot"
+    ],
+    [
+     130000,
+     "Bueno Ravine"
+    ],
+    [
+     130000,
+     "PSS Delta"
+    ]
+   ]
+  },
+  "silicon": {
+   "ref": [
+    [
+     2900,
+     "Patch City"
+    ],
+    [
+     2600,
+     "Gaslight"
+    ],
+    [
+     2600,
+     "Rat's Nest"
+    ],
+    [
+     2400,
+     "Seraphim"
+    ],
+    [
+     2400,
+     "CBD Lorville"
+    ]
+   ]
+  },
+  "stileron": {
+   "ref": [
+    [
+     170000,
+     "Nyx Gateway (Pyro)"
+    ],
+    [
+     150000,
+     "Deakins Research"
+    ],
+    [
+     140000,
+     "CBD Lorville"
+    ],
+    [
+     140000,
+     "TDD Area 18"
+    ],
+    [
+     140000,
+     "Rayari Kaltag"
+    ]
+   ]
+  },
+  "taranite": {
+   "ref": [
+    [
+     28000,
+     "TDD New Babbage"
+    ],
+    [
+     28000,
+     "TDD Orison"
+    ],
+    [
+     28000,
+     "Fallow Field"
+    ],
+    [
+     28000,
+     "Levski"
+    ],
+    [
+     27000,
+     "TDD Area 18"
+    ]
+   ]
+  },
+  "tin": {
+   "ref": [
+    [
+     4600,
+     "Dudley & Daughters"
+    ],
+    [
+     4500,
+     "Baijini Point"
+    ],
+    [
+     4500,
+     "Port Tressler"
+    ],
+    [
+     4300,
+     "Megumi"
+    ],
+    [
+     4300,
+     "Gaslight"
+    ]
+   ]
+  },
+  "titanium": {
+   "ref": [
+    [
+     9200,
+     "Starlight Service"
+    ],
+    [
+     8300,
+     "TDD Area 18"
+    ],
+    [
+     8300,
+     "TDD New Babbage"
+    ],
+    [
+     8300,
+     "CBD Lorville"
+    ],
+    [
+     8300,
+     "Ruin Station"
+    ]
+   ]
+  },
+  "torite": {
+   "ref": [
+    [
+     8500,
+     "Port Tressler"
+    ],
+    [
+     7700,
+     "TDD Orison"
+    ],
+    [
+     7700,
+     "TDD New Babbage"
+    ],
+    [
+     7700,
+     "TDD Area 18"
+    ],
+    [
+     6900,
+     "Ruin Station"
+    ]
+   ]
+  },
+  "tungsten": {
+   "ref": [
+    [
+     12000,
+     "Megumi"
+    ],
+    [
+     11000,
+     "Stanton Gateway (Pyro)"
+    ],
+    [
+     11000,
+     "Nyx Gateway (Stanton)"
+    ],
+    [
+     11000,
+     "Pyro Gateway (Stanton)"
+    ],
+    [
+     10000,
+     "TDD Area 18"
+    ]
+   ]
+  }
+ },
+ "updated": "2026-10-30T10:14:10+00:00"
+}
