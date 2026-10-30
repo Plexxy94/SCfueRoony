@@ -1041,6 +1041,28 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   </div>
 
   <section>
+    <h2>Wo fange ich an?</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gebiet</th><th>Typische Erze</th><th>Nächste Raffinerie</th><th>Für dich</th></tr></thead>
+        <tbody>
+          <tr class="rec"><th>Daymar<small>Mond von Crusader</small></th><td>Quarz, Silizium, Hephaestanit, dazu Handabbau</td><td>CRU-L1</td><td><span class="pill go">zum Üben</span></td></tr>
+          <tr class="rec"><th>Aberdeen<small>Mond von Hurston</small></th><td>Agricium, Titan, Aslarit, Korund, selten Quantanium</td><td>HUR-L1, HUR-L2</td><td><span class="pill go">gut</span></td></tr>
+          <tr class="rec"><th>Cellin<small>Mond von Crusader</small></th><td>Taranit, Agricium, Titan</td><td>CRU-L1</td><td><span class="pill go">gut</span></td></tr>
+          <tr class="rec"><th>Wala<small>Mond von ArcCorp</small></th><td>Laranit, Wolfram, Beryll</td><td>ARC-L1, ARC-L2, ARC-L4</td><td><span class="pill go">gut</span></td></tr>
+          <tr><th>Clio, Euterpe<small>Monde von microTech</small></th><td>Taranit, Eis, Zinn, Kupfer, selten Quantanium</td><td>MIC-L1, MIC-L2, MIC-L5</td><td><span class="pill later">gut, aber kalt</span></td></tr>
+          <tr><th>Hurston<small>Planet</small></th><td>Zinn, Aluminium, Kupfer, Korund</td><td>HUR-L1</td><td><span class="pill no">einfach, wenig wert</span></td></tr>
+          <tr><th>Aaron Halo<small>Asteroidengürtel in Stanton</small></th><td>Beryll, Agricium, Titan, selten Quantanium</td><td>nächste L-Station</td><td><span class="pill later">später</span></td></tr>
+          <tr><th>Pyro III, Pyro IV<small>System Pyro</small></th><td>Gold, Borase, Bexalit, auf Pyro III auch Riccit</td><td>Orbituary, Checkmate, Ruin Station</td><td><span class="pill no">nur zu zweit</span></td></tr>
+          <tr><th>Akiro Cluster<small>System Pyro</small></th><td>Torit, Riccit, selten Stileron</td><td>Pyro-Stationen</td><td><span class="pill no">gefährlich</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Fundorte laut Community-Datenbanken (Patch 4.10.2). Die Raffinerie-Zuordnung ist die nächstgelegene Station am selben Planeten. Raffinerien gibt es in Stanton auf ARC-L1, ARC-L2, ARC-L4, CRU-L1, HUR-L1, HUR-L2, MIC-L1, MIC-L2 und MIC-L5, dazu in Pyro und Nyx auf Levski, Orbituary, Checkmate, Ruin Station und an allen Gateway-Stationen (laut UEX, Stand Oktober 2026).</p>
+    <p class="small" style="margin-top:4px">Alle Fundorte mit Raffinerie-Boni und Verkaufsorten findest du in der <a href="#mining">Erz- und Fundort-Suche im Mining-Kapitel</a>.</p>
+  </section>
+
+  <section>
     <h2>Scannen: Steine finden und einschätzen</h2>
     <div class="card-plain">
         <h3>So findest du Gestein</h3>
@@ -1367,57 +1389,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <div class="learn"><strong>Neu im Mining?</strong> <span>Das Tutorial zeigt dir Schritt für Schritt eine ganze Runde mit dem Golem, vom Scannen bis zum Verkauf.</span> <a class="btn" href="#t-mining">Mining lernen</a></div>
 
   <section>
-    <h2>Sechs Wege ins Mining</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Weg</th><th>Crew</th><th>Fracht</th><th>Kosten (ca.)</th><th>Gut für</th><th>Einstufung</th></tr>
-        </thead>
-        <tbody>
-          <tr class="rec">
-            <th><a class="ship-a" href="#s-drak-golem">Drake Golem</a><small>Einsteiger-Schiff</small></th>
-            <td>1</td><td class="num">32 SCU</td><td class="num">Miete ~15.100 aUEC/Tag<br>Kauf ~1,01 Mio. aUEC</td>
-            <td>Günstigster Einstieg ins Schiffs-Mining. Schnell und wendig.</td>
-            <td><span class="pill go">Einstieg</span></td>
-          </tr>
-          <tr class="rec">
-            <th><a class="ship-a" href="#s-misc-prospector">MISC Prospector</a><small>Solo-Klassiker</small></th>
-            <td>1</td><td class="num">32 SCU</td><td class="num">Miete ~69.600 aUEC/Tag<br>Kauf ~2,78 Mio. aUEC</td>
-            <td>Das Standard-Schiff für Solo-Miner. Stärkerer Laser, austauschbar.</td>
-            <td><span class="pill later">Upgrade</span></td>
-          </tr>
-          <tr>
-            <th>Zu Fuß<small>Multitool + OreBit</small></th>
-            <td>1</td><td>Rucksack</td><td class="num">gering</td>
-            <td>Edelsteine in Höhlen und am Boden. Lernen ohne Risiko.</td>
-            <td><span class="pill later">Nebenbei</span></td>
-          </tr>
-          <tr>
-            <th><a class="ship-a" href="#s-argo-atls-geo">ARGO ATLS GEO</a><small>Mining-Anzug <i class="gb">Power Suit</i></small></th>
-            <td>1</td><td>0,1 SCU</td><td class="num">Kauf ~86.000 aUEC</td>
-            <td>Laser am rechten Arm, Jetpack im Rücken. Baut Handabbau- und ROC-Vorkommen ab, für kleine Steine lässt sich die Leistung drosseln. Nur am Boden, nicht im All.</td>
-            <td><span class="pill later">Nebenbei</span></td>
-          </tr>
-          <tr>
-            <th><a class="ship-a" href="#s-grin-roc">Greycat ROC</a><small>Bodenfahrzeug</small></th>
-            <td>1</td><td class="num">1,2 SCU</td><td class="num">Miete ~2.500 aUEC/Tag<br>Kauf ~99.000 aUEC</td>
-            <td>Edelsteine auf Monden. Braucht ein Schiff, das den ROC transportiert.</td>
-            <td><span class="pill no">Überspringen</span></td>
-          </tr>
-          <tr>
-            <th><a class="ship-a" href="#s-argo-mole">ARGO MOLE</a><small>Crew-Schiff</small></th>
-            <td>2–4</td><td class="num">96 SCU</td><td class="num">Miete ~223.000 aUEC/Tag<br>Kauf ~8,48 Mio. aUEC</td>
-            <td>Drei Laser-Türme. Lohnt sich nur mit Freunden.</td>
-            <td><span class="pill no">Später, mit Crew</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="small" style="margin-top:8px">Preise aus unseren Schiffsdaten (günstigster bekannter Händler laut UEX, Patch 4.10.2), im Spiel am Terminal prüfen. Golem und Prospector fassen beide 32 SCU. Der Prospector hat dafür den stärkeren Laser.</p>
-  </section>
-
-  <section>
-    <h2>Scannen: Steine finden und einschätzen</h2>
+    <h2>Scannen: Signatur auswerten</h2>
     <div class="tool" id="rs-tool">
       <div class="tool-head"><span class="tool-tag">Werkzeug</span><h3>RS-Rechner: Signatur auswerten</h3></div>
       <p class="tool-lede">Nach dem Ping (<kbd>Tab</kbd> halten) stehen Zahlen im HUD. Tipp eine davon ein, und du siehst sofort, welches Erz und wie viele Steine dahinterstecken und was es wert ist.</p>
@@ -1463,27 +1435,6 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     </div>
     <p class="small" style="margin-top:8px">Grundwerte und Basispreise pro SCU laut Community-Datenbanken mit Spieldaten von Patch 4.10.2 (Stand 9. Oktober 2026). Der Basispreis ist kein garantierter Verkaufserlös. Faustregel: <b>3.100–3.600</b> ist wertvoll, <b>3.800–3.900</b> solide, <b>4.180–4.300</b> billige Masse. Flüchtige Erze werden im Laderaum instabil.</p>
     </details>
-  </section>
-
-  <section>
-    <h2>Empfohlene Gebiete für den Anfang</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Gebiet</th><th>Typische Erze</th><th>Nächste Raffinerie</th><th>Für dich</th></tr></thead>
-        <tbody>
-          <tr class="rec"><th>Daymar<small>Mond von Crusader</small></th><td>Quarz, Silizium, Hephaestanit, dazu Handabbau</td><td>CRU-L1</td><td><span class="pill go">zum Üben</span></td></tr>
-          <tr class="rec"><th>Aberdeen<small>Mond von Hurston</small></th><td>Agricium, Titan, Aslarit, Korund, selten Quantanium</td><td>HUR-L1, HUR-L2</td><td><span class="pill go">gut</span></td></tr>
-          <tr class="rec"><th>Cellin<small>Mond von Crusader</small></th><td>Taranit, Agricium, Titan</td><td>CRU-L1</td><td><span class="pill go">gut</span></td></tr>
-          <tr class="rec"><th>Wala<small>Mond von ArcCorp</small></th><td>Laranit, Wolfram, Beryll</td><td>ARC-L1, ARC-L2, ARC-L4</td><td><span class="pill go">gut</span></td></tr>
-          <tr><th>Clio, Euterpe<small>Monde von microTech</small></th><td>Taranit, Eis, Zinn, Kupfer, selten Quantanium</td><td>MIC-L1, MIC-L2, MIC-L5</td><td><span class="pill later">gut, aber kalt</span></td></tr>
-          <tr><th>Hurston<small>Planet</small></th><td>Zinn, Aluminium, Kupfer, Korund</td><td>HUR-L1</td><td><span class="pill no">einfach, wenig wert</span></td></tr>
-          <tr><th>Aaron Halo<small>Asteroidengürtel in Stanton</small></th><td>Beryll, Agricium, Titan, selten Quantanium</td><td>nächste L-Station</td><td><span class="pill later">später</span></td></tr>
-          <tr><th>Pyro III, Pyro IV<small>System Pyro</small></th><td>Gold, Borase, Bexalit, auf Pyro III auch Riccit</td><td>Orbituary, Checkmate, Ruin Station</td><td><span class="pill no">nur zu zweit</span></td></tr>
-          <tr><th>Akiro Cluster<small>System Pyro</small></th><td>Torit, Riccit, selten Stileron</td><td>Pyro-Stationen</td><td><span class="pill no">gefährlich</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="small" style="margin-top:8px">Fundorte laut Community-Datenbanken (Patch 4.10.2). Die Raffinerie-Zuordnung ist die nächstgelegene Station am selben Planeten. Raffinerien gibt es in Stanton auf ARC-L1, ARC-L2, ARC-L4, CRU-L1, HUR-L1, HUR-L2, MIC-L1, MIC-L2 und MIC-L5, dazu in Pyro und Nyx auf Levski, Orbituary, Checkmate, Ruin Station und an allen Gateway-Stationen (laut UEX, Stand Oktober 2026).</p>
   </section>
 
   <section>
@@ -1561,6 +1512,57 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <div class="fact"><strong>Piraten</strong><p>Volle Mining-Schiffe sind beliebte Ziele, besonders in Pyro. Für den Anfang in Stanton bleiben.</p></div>
       <div class="fact"><strong>Hand-Mining in Höhlen</strong><p>Taschenlampe <kbd>T</kbd> an, Essen und Trinken mitnehmen. Manche Höhlen haben Tiere oder andere Spieler.</p></div>
     </div>
+  </section>
+
+  <section>
+    <h2>Schiffe und Wege ins Mining</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Weg</th><th>Crew</th><th>Fracht</th><th>Kosten (ca.)</th><th>Gut für</th><th>Einstufung</th></tr>
+        </thead>
+        <tbody>
+          <tr class="rec">
+            <th><a class="ship-a" href="#s-drak-golem">Drake Golem</a><small>Einsteiger-Schiff</small></th>
+            <td>1</td><td class="num">32–40 SCU<br><span class="small">40 mit MC-4-Behältern</span></td><td class="num">Miete ~15.100 aUEC/Tag<br>Kauf ~1,01 Mio. aUEC</td>
+            <td>Günstigster Einstieg ins Schiffs-Mining. Schnell und wendig.</td>
+            <td><span class="pill go">Einstieg</span></td>
+          </tr>
+          <tr class="rec">
+            <th><a class="ship-a" href="#s-misc-prospector">MISC Prospector</a><small>Solo-Klassiker</small></th>
+            <td>1</td><td class="num">32–60 SCU<br><span class="small">48 mit Argo-, 60 mit MISC-Enhanced-Behältern</span></td><td class="num">Miete ~69.600 aUEC/Tag<br>Kauf ~2,78 Mio. aUEC</td>
+            <td>Das Standard-Schiff für Solo-Miner. Stärkerer Laser, austauschbar.</td>
+            <td><span class="pill later">Upgrade</span></td>
+          </tr>
+          <tr>
+            <th>Zu Fuß<small>Multitool + OreBit</small></th>
+            <td>1</td><td>Rucksack</td><td class="num">gering</td>
+            <td>Edelsteine in Höhlen und am Boden. Lernen ohne Risiko.</td>
+            <td><span class="pill later">Nebenbei</span></td>
+          </tr>
+          <tr>
+            <th><a class="ship-a" href="#s-argo-atls-geo">ARGO ATLS GEO</a><small>Mining-Anzug <i class="gb">Power Suit</i></small></th>
+            <td>1</td><td>0,1 SCU</td><td class="num">Kauf ~86.000 aUEC</td>
+            <td>Laser am rechten Arm, Jetpack im Rücken. Baut Handabbau- und ROC-Vorkommen ab, für kleine Steine lässt sich die Leistung drosseln. Nur am Boden, nicht im All.</td>
+            <td><span class="pill later">Nebenbei</span></td>
+          </tr>
+          <tr>
+            <th><a class="ship-a" href="#s-grin-roc">Greycat ROC</a><small>Bodenfahrzeug</small></th>
+            <td>1</td><td class="num">1,2 SCU</td><td class="num">Miete ~2.500 aUEC/Tag<br>Kauf ~99.000 aUEC</td>
+            <td>Edelsteine auf Monden. Braucht ein Schiff, das den ROC transportiert.</td>
+            <td><span class="pill no">Überspringen</span></td>
+          </tr>
+          <tr>
+            <th><a class="ship-a" href="#s-argo-mole">ARGO MOLE</a><small>Crew-Schiff</small></th>
+            <td>2–4</td><td class="num">96–120 SCU<br><span class="small">120 mit MISC-Enhanced-Behältern</span></td><td class="num">Miete ~223.000 aUEC/Tag<br>Kauf ~8,48 Mio. aUEC</td>
+            <td>Drei Laser-Türme. Lohnt sich nur mit Freunden.</td>
+            <td><span class="pill no">Später, mit Crew</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Preise aus unseren Schiffsdaten (günstigster bekannter Händler laut UEX, Patch 4.10.2), im Spiel am Terminal prüfen. Golem und Prospector fassen ab Werk beide 32 SCU, der Prospector hat dafür den stärkeren Laser.</p>
+    <p class="small" style="margin-top:4px"><b>Mehr Platz:</b> Die Erzbehälter <i class="gb">Ore Pods</i> lassen sich tauschen. Argo-Behälter (12 SCU) kosten rund 20.000 aUEC pro Stück in Raffinerie-Shops. MISC Enhanced (15 SCU) und GOLEM MC-4 (20 SCU) bekommst du nur über Crafting. Der Prospector hat 4 Behälter, der Golem 2, die MOLE nutzt 8 gleichzeitig. Fassungsvermögen laut Spieldaten 4.10.2 (Star Citizen Wiki API). Ob ein Behälter passt, zeigt das Spiel beim Einbauen.</p>
   </section>
 </section>
 
@@ -2119,7 +2121,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   var G = [
     ['aUEC', 'geld', 'Alpha-UEC. Die Spielwährung im Persistent Universe. Wird bei großen Wipes zurückgesetzt.'],
     ['UEC', 'geld', 'United Earth Credits. Im Pledge-Store mit Echtgeld kaufbar, für Ingame-Käufe im Spiel ist aUEC entscheidend.'],
-    ['SCU', 'geld', 'Standard Cargo Unit. Maßeinheit für Fracht. Ein SCU ist ein Würfel von 1,25 m Kantenlänge. Golem und Prospector fassen je 32 SCU.'],
+    ['SCU', 'geld', 'Standard Cargo Unit. Maßeinheit für Fracht. Ein SCU ist ein Würfel von 1,25 m Kantenlänge. Golem und Prospector fassen ab Werk je 32 SCU.'],
     ['TDD', 'geld', 'Trade & Development Division. Große Handelsbörsen in den Städten, dort verkauft man raffiniertes Erz und Fracht.'],
     ['Raffinerie', 'geld', 'Verarbeitet rohes Erz zu reinem Material. Bringt deutlich mehr Geld als rohes Erz, dauert aber eine Weile.'],
     ['Blueprint', 'spiel', 'Bauplan fürs Crafting. Gibt es als Auftragsbelohnung, bleibt beim Herstellen erhalten und gehört deinem Konto.'],
