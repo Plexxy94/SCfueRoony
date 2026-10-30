@@ -1138,10 +1138,6 @@
   "aluminum": {
    "ref": [
     [
-     4600,
-     "Port Tressler"
-    ],
-    [
      4200,
      "Terra Gateway (Stanton)"
     ],
@@ -1156,6 +1152,10 @@
     [
      3800,
      "TDD New Babbage"
+    ],
+    [
+     3800,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-10-30T10:14:10+00:00"
+ "updated": "2026-10-30T10:51:57+00:00"
 }
