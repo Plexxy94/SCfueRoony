@@ -546,6 +546,22 @@ details.ref summary { cursor: pointer; font-family: var(--f-display); font-weigh
 .nw-item.patch { border-color: var(--ok); background: linear-gradient(0deg, var(--ok-soft), var(--ok-soft)) padding-box; }
 .nw-more { display: flex; gap: 12px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
 
+.home { scroll-margin-top: 80px; }
+.lede-sm { margin: 0 0 14px; font-size: 15px; max-width: 75ch; }
+.city-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 16px; margin-top: 18px; }
+.city { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.city img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--key-bg); }
+.city-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.city h3 { font-family: var(--f-display); font-size: 21px; font-weight: 600; margin: 0; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.city h3 small { font: 500 13px var(--f-body); color: var(--muted); }
+.city h3 .pill { margin-left: auto; }
+.city-lede { margin: 0; font-size: 14px; color: var(--muted); }
+.city .oops { margin-top: auto; font-size: 13px; }
+.pc { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; font-size: 14px; }
+.pc li { padding-left: 20px; position: relative; }
+.pc li::before { position: absolute; left: 2px; top: 0; font: 700 15px var(--f-mono); }
+.pc .pro::before { content: "+"; color: var(--ok); }
+.pc .con::before { content: "−"; color: var(--warn); }
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -645,6 +661,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <div class="fact"><strong>Es ist eine Alpha</strong><p>Bugs gehören dazu. Hängt etwas, hilft oft neu einloggen oder ein anderer Server.</p></div>
       <div class="fact"><strong>aUEC ist Spielgeld</strong><p>Alles, was du im Spiel kaufst, kann bei einem großen Patch zurückgesetzt werden. Gekaufte Pledge-Schiffe bleiben.</p></div>
       <div class="fact"><strong>Nichts überstürzen</strong><p>Erst mieten, dann kaufen. Mieten kostet einen Bruchteil und zeigt dir, ob dir etwas Spaß macht.</p></div>
+      <div class="fact"><strong>Wo wohnen?</strong><p>Vier Städte zur Wahl, jede mit eigenen Vor- und Nachteilen. <a href="#heimat">Zum Vergleich →</a></p></div>
       <div class="fact"><strong>F halten hilft fast immer</strong><p>Im Interaktionsmodus zeigt dir das Spiel, was du mit einem Objekt machen kannst.</p></div>
     </div>
   </section>
@@ -676,6 +693,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
           <li>Oben im HUD siehst du Hunger und Durst. Kauf dir zu Beginn etwas zu essen und zu trinken und pack es ins Inventar.</li>
         </ol>
         <div class="hint">Tipp: Ein Helm ist im All Pflicht. Ohne Helm stirbst du beim Aussteigen im Vakuum. <kbd>L-Alt</kbd><span class="plus">+</span><kbd>H</kbd> setzt ihn auf.</div>
+        <div class="hint">Noch keine Heimatstadt gewählt? <a href="#heimat">Wo soll ich wohnen? →</a></div>
         <label class="check"><input type="checkbox" id="s1"> Geschafft</label>
       </div>
     </article>
@@ -772,6 +790,112 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     </article>
 
   </div>
+
+  <section class="home" id="wohnort">
+    <h2>Wo soll ich wohnen?</h2>
+    <p class="lede-sm">Beim ersten Login wählst du deine Heimatstadt <i class="gb">Primary Residence</i>. Dort wachst du nach dem Einloggen auf, dort liegt dein Inventar, und dorthin schickt das Spiel Belohnungen. Wechseln kannst du laut Wiki nur beim ersten Login nach einem neuen Patch. Der nächste ist 4.10.3, der gerade getestet wird.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Stadt</th><th>Lage</th><th>Schiffe</th><th>Raffinerie</th><th>Mining nah</th><th>RMC</th><th>Bugs gerade</th></tr></thead>
+        <tbody>
+          <tr><th>Lorville<small>Hurston</small></th><td>zentral, kurze Wege</td><td>kaufen und mieten</td><td>HUR-L1, HUR-L2</td><td><a href="#mining" data-loc="Aberdeen">Aberdeen</a></td><td class="num">~6.000</td><td><span class="pill no">viele Meldungen</span></td></tr>
+          <tr><th>Area18<small>ArcCorp</small></th><td>mittel</td><td>kaufen und mieten</td><td>ARC-L1, ARC-L2, ARC-L4</td><td><a href="#mining" data-loc="Wala">Wala</a></td><td class="num">~6.000</td><td><span class="pill later">einzelne</span></td></tr>
+          <tr><th>New Babbage<small>microTech</small></th><td>am Rand, lange Wege</td><td>nur mieten</td><td>MIC-L1, MIC-L2, MIC-L5</td><td><a href="#mining" data-loc="Clio">Clio</a>, <a href="#mining" data-loc="Euterpe">Euterpe</a></td><td class="num">~6.000</td><td><span class="pill no">viele Meldungen</span></td></tr>
+          <tr class="rec"><th>Orison<small>Crusader</small></th><td>mittel, langer Weg aus der Atmosphäre</td><td>kaufen und mieten</td><td>CRU-L1</td><td><a href="#mining" data-loc="Daymar">Daymar</a>, <a href="#mining" data-loc="Cellin">Cellin</a>, <a href="#mining" data-loc="Yela">Yela</a></td><td class="num">~7.700</td><td><span class="pill go">wenige</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">RMC = bester Ankaufspreis für Recycling-Material in der Stadt, in aUEC pro SCU. Ein Klick auf einen Mond öffnet die Fundort-Suche.</p>
+
+    <div class="city-grid">
+      <article class="city">
+        <img src="https://media.starcitizen.tools/thumb/0/02/Lorville_Temporary_Splashscreen.png/800px-Lorville_Temporary_Splashscreen.png.webp" alt="Lorville auf Hurston" loading="lazy" width="800" height="450" onerror="this.remove()">
+        <div class="city-body">
+          <h3>Lorville <small>Hurston</small> <span class="pill no">viele Bug-Meldungen</span></h3>
+          <p class="city-lede">Die Industriestadt des Konzerns Hurston Dynamics. Düster, verraucht, mitten im System.</p>
+          <ul class="pc">
+            <li class="pro">Kürzeste Wege: Hurston liegt zentral, die meisten Ziele sind schnell erreicht.</li>
+            <li class="pro">Größter Schiffshändler: New Deal verkauft über 100 Schiffe, darunter <a class="ship-a" href="#s-drak-golem">Golem</a>, <a class="ship-a" href="#s-misc-prospector">Prospector</a>, <a class="ship-a" href="#s-drak-vulture">Vulture</a> und <a class="ship-a" href="#s-grin-roc">ROC</a>.</li>
+            <li class="pro">Raffinerien HUR-L1 und HUR-L2 nah, guter Mining-Mond <a href="#mining" data-loc="Aberdeen">Aberdeen</a>.</li>
+            <li class="con">Zum Raumhafen <i class="gb">Teasa Spaceport</i> fährst du mit der Bahn. Das dauert.</li>
+            <li class="con">Rund um Hurston vor allem billige Erze. RMC nur ~6.000.</li>
+          </ul>
+          <div class="oops"><strong>Gerade gemeldet:</strong> Hangar-Aufzüge und ASOP-Terminals streiken (Spielerberichte, 28. Okt.). Laut RSI kann dich die Bahn im Metro Center verletzen.</div>
+        </div>
+      </article>
+
+      <article class="city">
+        <img src="https://media.starcitizen.tools/thumb/0/0f/RSI-Arccorp_03-Min.jpg/800px-RSI-Arccorp_03-Min.jpg.webp" alt="Area18 auf ArcCorp" loading="lazy" width="800" height="338" onerror="this.remove()">
+        <div class="city-body">
+          <h3>Area18 <small>ArcCorp</small> <span class="pill later">einzelne Bug-Meldungen</span></h3>
+          <p class="city-lede">Neonstadt auf ArcCorp, der ganze Planet ist eine einzige Stadt. Dicht, laut, voller Läden.</p>
+          <ul class="pc">
+            <li class="pro">Ausrüstung, Waffen und Rüstung gibt es nah beieinander.</li>
+            <li class="pro">Astro Armada verkauft rund 65 Schiffe, Traveler Rentals vermietet unter anderem <a class="ship-a" href="#s-drak-golem">Golem</a>, <a class="ship-a" href="#s-rsi-salvation">Salvation</a> und <a class="ship-a" href="#s-misc-fortune">Fortune</a>.</li>
+            <li class="pro">Raffinerien ARC-L1, ARC-L2, ARC-L4. Auf <a href="#mining" data-loc="Wala">Wala</a> Laranit, Wolfram und Beryll.</li>
+            <li class="con">Für Neulinge unübersichtlich, man verläuft sich leicht.</li>
+            <li class="con">RMC nur ~6.000.</li>
+          </ul>
+          <div class="oops"><strong>Gerade gemeldet:</strong> Laut RSI bleibst du eventuell bei „Repositioning Player“ hängen, wenn du nach der Landung dein Schiff am ASOP-Terminal im Hangar einlagerst. Tipp: Schiff einfach stehen lassen.</div>
+        </div>
+      </article>
+
+      <article class="city">
+        <img src="https://media.starcitizen.tools/thumb/9/9c/Microtech-new-babbage-cityscape-01.jpg/800px-Microtech-new-babbage-cityscape-01.jpg.webp" alt="New Babbage auf microTech" loading="lazy" width="800" height="450" onerror="this.remove()">
+        <div class="city-body">
+          <h3>New Babbage <small>microTech</small> <span class="pill no">viele Bug-Meldungen</span></h3>
+          <p class="city-lede">Saubere Hightech-Stadt des Konzerns microTech im ewigen Schnee. Ruhig und übersichtlich.</p>
+          <ul class="pc">
+            <li class="pro">Ruhig und gut zu finden.</li>
+            <li class="pro">Drei Raffinerien in der Nähe: MIC-L1, MIC-L2, MIC-L5. Auf <a href="#mining" data-loc="Clio">Clio</a> und <a href="#mining" data-loc="Euterpe">Euterpe</a> gibt es Taranit.</li>
+            <li class="con">Am Rand des Systems: die längsten Wege zu allen anderen Zielen.</li>
+            <li class="con">Kein Schiffshändler, nur ein Mietservice <i class="gb">Regal Luxury Rentals</i>.</li>
+            <li class="con">Draußen eisig. Ohne warme Kleidung frierst du. Der Raumhafen liegt außerhalb und ist mit der Bahn verbunden.</li>
+          </ul>
+          <div class="oops"><strong>Gerade gemeldet:</strong> Aufzüge aus den Wohnquartieren und dem Krankenhaus fahren nicht, manche kommen nicht aus dem Quartier heraus (Spielerberichte, 26. bis 28. Okt.). Hilft nur: Server wechseln oder zu Fuß <kbd>Backspace</kbd> halten. Dann wachst du im Krankenhaus auf.</div>
+        </div>
+      </article>
+
+      <article class="city">
+        <img src="https://media.starcitizen.tools/thumb/5/58/Exploring_deluxe_villas_on_Orison.png/800px-Exploring_deluxe_villas_on_Orison.png.webp" alt="Orison in den Wolken von Crusader" loading="lazy" width="800" height="400" onerror="this.remove()">
+        <div class="city-body">
+          <h3>Orison <small>Crusader</small> <span class="pill go">wenige Bug-Meldungen</span></h3>
+          <p class="city-lede">Schwebende Plattformen mit Gärten in den Wolken des Gasriesen Crusader. Die schönste Stadt im Spiel.</p>
+          <ul class="pc">
+            <li class="pro">Bester RMC-Preis aller Städte: ~7.700 am TDD im Cloudview Center.</li>
+            <li class="pro">Viel Mining nah: <a href="#mining" data-loc="Daymar">Daymar</a> zum Üben, <a href="#mining" data-loc="Cellin">Cellin</a> und <a href="#mining" data-loc="Yela">Yela</a> mit Taranit. Raffinerie CRU-L1.</li>
+            <li class="pro">Traveler Rentals vermietet unter anderem <a class="ship-a" href="#s-drak-golem">Golem</a>, <a class="ship-a" href="#s-rsi-salvation">Salvation</a> und <a class="ship-a" href="#s-misc-fortune">Fortune</a>. Ein Crusader-Showroom verkauft einige Schiffe.</li>
+            <li class="con">Der Weg aus der dichten Atmosphäre von Crusader dauert.</li>
+            <li class="con">Die Plattformen sind mit Shuttles <i class="gb">Skybus</i> verbunden. Zum Raumhafen <i class="gb">August Dunlow Spaceport</i> musst du umsteigen.</li>
+          </ul>
+          <div class="oops"><strong>Gerade gemeldet:</strong> Manchmal laden Teile der Cloudview-Plattform nicht. Vereinzelt hängen Aufzüge (Spielerberichte, 13. und 22. Okt.).</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="tool" style="margin-top:18px">
+      <div class="tool-head"><span class="tool-tag">Empfehlung</span><h3>Für dich: Orison</h3></div>
+      <ul class="pc">
+        <li class="pro"><b>Salvage mit der <a class="ship-a" href="#s-rsi-salvation">Salvation</a>:</b> In keiner Stadt bekommst du mehr für RMC.</li>
+        <li class="pro"><b>Mining mit dem <a class="ship-a" href="#s-drak-golem">Golem</a>:</b> Daymar und Cellin liegen direkt nebenan, die Raffinerie CRU-L1 ist nur ein kurzer Quantensprung entfernt.</li>
+        <li class="pro"><b>Im Moment</b> kommen aus Orison die wenigsten Bug-Meldungen.</li>
+      </ul>
+      <p class="small" style="margin:0">Alternative: Lorville, wenn dir kurze Wege und der große Schiffshändler wichtiger sind. Dort hakt es aber gerade bei Hangars und ASOP.</p>
+    </div>
+
+    <div class="card-plain" style="margin-top:18px">
+      <h3>Was gerade überall hakt <span class="pill no">Stand 30. Okt. 2026 · 4.10.2</span></h3>
+      <ul>
+        <li><b>Schiff lässt sich nicht anfordern:</b> Der Knopf „Retrieve“ am ASOP-Terminal ist grau. Spieler-Tipp: etwas Kleines kaufen (z. B. einen Medpen), dich kurz in ein Med-Bett legen oder neu einloggen.</li>
+        <li><b>Schiff klebt am Landeplatz:</b> einlagern und neu anfordern.</li>
+        <li><b>Im Hangar eines Freundes:</b> Geh vor dem Besitzer raus. Verlässt er zuerst den Hangar, landest du unter der Station. Laut RSI gibt es dafür keine Lösung.</li>
+        <li><b>Aufzug kommt nicht:</b> Erst ein paar Sekunden warten und neu rufen. Hilft das nicht, ausloggen und auf einen anderen Server gehen.</li>
+        <li><b>Frachtaufzug bei Aufträgen:</b> Erst den Kiosk benutzen, dann die Ladung abstellen. Sonst kann sie verschwinden.</li>
+      </ul>
+      <p class="small" style="margin:0">Quellen: <a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754" target="_blank" rel="noopener">Known Issues von RSI</a> und Spielermeldungen auf <a href="https://www.sc-advisory.space/" target="_blank" rel="noopener">sc-advisory.space</a> (Fan-Seite, aktuellster Stand). Bugs ändern sich mit jedem Hotfix. Laut Wiki kannst du auch Levski in Nyx oder Stationen in Pyro als Wohnort wählen. Für den Anfang raten aber alle Guides zu Stanton, Pyro ist gesetzlos.</p>
+    </div>
+  </section>
 </section>
 
 <!-- ============ TASTEN ============ -->
@@ -1734,10 +1858,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <a href="https://starcitizen.tools/Guide:Mining" target="_blank" rel="noopener">Star Citizen Wiki</a>.
   HOSAS-Belegung: Dual-Virpil-Alpha-Profil von <a href="https://www.youtube.com/buzzzkiller" target="_blank" rel="noopener">Buzzzkiller</a> (Vorlage u/yogidragon), Stand 5. Aug 2026.
   Schiffsdaten: <a href="https://api.star-citizen.wiki" target="_blank" rel="noopener">Star Citizen Wiki API</a> (Spielversion 4.10.2), Preise im Spiel über <a href="https://uexcorp.space" target="_blank" rel="noopener">UEX</a>.
-  Schiffsbilder und 3D-Modelle werden von <a href="https://fleetyards.net" target="_blank" rel="noopener">FleetYards.net</a> geladen.
+  Schiffsbilder und 3D-Modelle werden von <a href="https://fleetyards.net" target="_blank" rel="noopener">FleetYards.net</a> geladen, Stadtbilder vom <a href="https://starcitizen.tools" target="_blank" rel="noopener">Star Citizen Wiki</a>.
   Angaben ohne Gewähr.
   <div class="legal">
-    <p>Inoffizielle, nicht-kommerzielle Fan-Seite. Nicht verbunden mit Cloud Imperium Games oder Roberts Space Industries. Alle Spielinhalte, Schiffsbilder und 3D-Modelle © Cloud Imperium Rights LLC und Cloud Imperium Rights Ltd. Star Citizen®, Squadron 42®, Roberts Space Industries® und Cloud Imperium® sind eingetragene Marken von Cloud Imperium Rights LLC.</p>
+    <p>Inoffizielle, nicht-kommerzielle Fan-Seite. Nicht verbunden mit Cloud Imperium Games oder Roberts Space Industries. Alle Spielinhalte, Schiffs- und Stadtbilder sowie 3D-Modelle © Cloud Imperium Rights LLC und Cloud Imperium Rights Ltd. Star Citizen®, Squadron 42®, Roberts Space Industries® und Cloud Imperium® sind eingetragene Marken von Cloud Imperium Rights LLC.</p>
   </div>
 </footer>
 </main>
@@ -1752,7 +1876,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     var h = (location.hash || '#start').slice(1);
     if (h === 'hotas') h = 'hosas';
     /* #s-<slug> öffnet ein Schiff in der Schiffsübersicht */
-    var keepScroll = false;
+    var keepScroll = false, anchor = null;
+    if (h === 'heimat') { h = 'erste-schritte'; anchor = 'wohnort'; }
     if (h.indexOf('s-') === 0) { keepScroll = !document.getElementById('view-schiffe').hidden; h = 'schiffe'; }
     if (names.indexOf(h) === -1) h = 'start';
     views.forEach(function (v) { v.hidden = v.dataset.view !== h; });
@@ -1762,7 +1887,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     });
     var titles = { start: 'Roonys Star Citizen Handbuch', news: 'News · SC Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', crafting: 'Crafting · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
     document.title = titles[h];
-    if (!keepScroll) window.scrollTo(0, 0);
+    if (anchor) document.getElementById(anchor).scrollIntoView();
+    else if (!keepScroll) window.scrollTo(0, 0);
     document.dispatchEvent(new CustomEvent('viewchange', { detail: h }));
   }
   window.addEventListener('hashchange', show);
@@ -3018,6 +3144,11 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     wrap.hidden = list.length === 0;
   }
   q.addEventListener('input', draw);
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[data-loc]');
+    if (!a) return;
+    setTimeout(function () { q.value = a.dataset.loc; draw(); q.scrollIntoView({ block: 'center' }); }, 60);
+  });
   draw();
 })();
 </script>
