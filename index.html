@@ -600,10 +600,27 @@ details.ref summary { cursor: pointer; font-family: var(--f-display); font-weigh
   .tabs { order: 3; flex: 1 0 100%; display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; gap: 0; overflow: visible; }
   .tabs a { font-size: clamp(11px, 3.5vw, 13px); letter-spacing: 0; padding: 6px clamp(3px, 1.2vw, 8px); text-align: center; }
   .tabs a.has-sub::after { display: none; }
+  .tabs a.nav-opt { display: none; }
   .subnav-in { flex-wrap: wrap; overflow: visible; gap: 2px 4px; padding-block: 5px; }
   .subnav a { font-size: 12.5px; padding: 4px 8px; }
   .sub-long { display: none; }
 }
+.xh-now { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.xh-lights { display: flex; gap: 8px; padding: 10px 12px; background: var(--key-bg); border: 1px solid var(--line); border-radius: 10px; }
+.xh-lights i { width: 22px; height: 22px; border-radius: 50%; background: #2a3138; box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .25); }
+.xh-lights i.r { background: #d64545; box-shadow: 0 0 10px rgba(214, 69, 69, .55); }
+.xh-lights i.g { background: #3fbf6a; box-shadow: 0 0 10px rgba(63, 191, 106, .55); }
+.xh-state { display: block; font-family: var(--f-display); font-size: clamp(22px, 4vw, 30px); line-height: 1.1; }
+.xh-state.open { color: var(--ok); }
+.xh-state.shut { color: var(--warn); }
+.xh-sub { display: block; font: 600 15px var(--f-mono); color: var(--muted); margin-top: 4px; }
+.xh-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.xh-check { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; font-size: 14px; }
+.xh-check input { margin-top: 3px; accent-color: var(--accent); }
+.xh-check small { display: block; color: var(--muted); font-size: 12.5px; }
+.xh-check input:checked + span { opacity: .55; text-decoration: line-through; }
+.xh-steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; max-width: 80ch; }
+.xh-steps li::marker { color: var(--accent); font-family: var(--f-mono); }
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -623,8 +640,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <a href="#tutorial" role="listitem" class="has-sub" data-group="tutorial" aria-haspopup="true" aria-controls="subnav">Tutorials</a>
       <a href="#tasten" role="listitem" class="has-sub" data-group="steuerung" aria-haspopup="true" aria-controls="subnav">Steuerung</a>
       <a href="#mining" role="listitem" class="has-sub" data-group="berufe" aria-haspopup="true" aria-controls="subnav">Berufe</a>
+      <a href="#einsaetze" role="listitem" class="has-sub" data-group="einsaetze" aria-haspopup="true" aria-controls="subnav">Einsätze</a>
       <a href="#schiffe" role="listitem">Schiffe</a>
-      <a href="#glossar" role="listitem">Glossar</a>
+      <a href="#glossar" role="listitem" class="nav-opt">Glossar</a>
     </div>
     <a class="nav-news" href="#news">News<span class="news-dot" id="newsdot" title="Neue Beiträge" hidden></span></a>
   </div>
@@ -648,6 +666,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <a href="#mining" role="listitem">Mining</a>
       <a href="#salvage" role="listitem">Salvage</a>
       <a href="#crafting" role="listitem">Crafting</a>
+    </div>
+    <div class="subnav-in" role="list" aria-label="Einsätze" data-group="einsaetze">
+      <a href="#einsaetze" role="listitem">Übersicht</a>
+      <a href="#exec-hangar" role="listitem">Executive Hangar</a>
     </div>
   </div>
 </nav>
@@ -699,6 +721,12 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <h3>Crafting</h3>
       <p>Baupläne, Material und Qualität: was du bauen kannst und was dein Material bewirkt.</p>
       <span class="go">Bauen →</span>
+    </a>
+    <a class="chapter" href="#einsaetze">
+      <span class="no">EINSÄTZE</span>
+      <h3>Executive Hangar</h3>
+      <p>Live-Timer, alle 7 Platinen zum Abhaken, Türen und Karten, Tipps und die möglichen Schiffe.</p>
+      <span class="go">Zum Einsatz →</span>
     </a>
     <a class="chapter" href="#schiffe">
       <span class="no">NACHSCHLAGEN</span>
@@ -1247,6 +1275,162 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <div class="oops"><strong>Achtung:</strong> Material unter der Mindestqualität nimmt der Fabricator nicht an, auch wenn Sorte und Menge stimmen.</div>
   </div>
 
+</section>
+
+<!-- ============ EINSÄTZE: ÜBERSICHT ============ -->
+<section class="view" id="view-einsaetze" data-view="einsaetze" hidden>
+  <div class="head">
+    <div class="stamp"><span>Einsätze</span><span>Stand Alpha 4.10.2</span></div>
+    <h1>Einsätze</h1>
+    <p class="lede">Anleitungen für größere Aktivitäten im Spiel, mit Ablauf, Tipps und aktuellen Bugs. Meist mit Kampf und für eine kleine Gruppe gedacht.</p>
+  </div>
+  <div class="chapters">
+    <a class="chapter first" href="#exec-hangar">
+      <span class="no">PYRO · GRUPPE · PVP</span>
+      <h3>Executive Hangar</h3>
+      <p>Sieben Platinen aus den umkämpften Zonen sammeln, den Hangar öffnen und eines von acht Schiffen dauerhaft behalten. Mit Live-Timer und Abhak-Liste.</p>
+      <span class="go">Zur Anleitung →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ EINSATZ: EXECUTIVE HANGAR ============ -->
+<section class="view" id="view-exec-hangar" data-view="exec-hangar" hidden>
+  <div class="head">
+    <div class="stamp"><span>Einsatz</span><span>Stand Alpha 4.10.2</span><span>PvP-Gebiet</span></div>
+    <h1>Executive Hangar</h1>
+    <p class="lede">In Pyro liegen drei gesicherte Hangars voller Beute. Wer sieben Platinen <i class="gb">Compboards</i> aus den umkämpften Zonen <i class="gb">Contested Zones</i> sammelt, öffnet einen davon und darf eines von acht Schiffen dauerhaft behalten.</p>
+    <p class="small">Grau dahinter steht jeweils der englische Begriff, wie er im Spiel heißt.</p>
+  </div>
+
+  <div class="tool" id="xh-timer">
+    <div class="tool-head"><span class="tool-tag">Live</span><h3>Ist der Hangar gerade offen?</h3></div>
+    <div class="xh-now">
+      <div class="xh-lights" id="xhlights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div><b class="xh-state" id="xhstate">…</b><span class="xh-sub" id="xhsub"></span></div>
+    </div>
+    <p class="small" id="xhnote" style="margin:0"></p>
+    <p class="small" style="margin:0">So funktionieren die fünf Lichter im Hangar: In der Ladephase wird alle 24 Minuten ein rotes Licht grün. Danach ist der Hangar eine Stunde offen, alle 12 Minuten geht ein grünes Licht aus. 5 Minuten nach dem letzten werden alle wieder rot. Ein Durchlauf dauert 185 Minuten. Zählt im Spiel immer, was die Lichter zeigen. Startzeit laut <span id="xhsrc">contestedzonetimers.com</span>.</p>
+  </div>
+
+  <section>
+    <h2>Kurz erklärt</h2>
+    <div class="facts">
+      <div class="fact"><strong>Wo</strong><p>Die Platinen liegen in Checkmate, Orbituary und Ruin Station. Der Hangar ist PYAM-EXHANG-0-1 südwestlich der Sonne von Pyro, von drei Basen ist immer nur eine aktiv.</p></div>
+      <div class="fact"><strong>Belohnung</strong><p>Ein Schiff, das dir dauerhaft gehört. Dazu Bauteile der Klasse A und seltene Waffen im Hangar.</p></div>
+      <div class="fact"><strong>Gefahr</strong><p>Pyro ist gesetzlos. Dich erwarten KI-Gegner und fast immer andere Spieler, die dasselbe wollen.</p></div>
+      <div class="fact"><strong>Am besten in der Gruppe</strong><p>Eine kleine Gruppe mit verteilten Aufgaben: Karten und Platinen holen, Wache halten, fliegen und Beute tragen.</p></div>
+    </div>
+  </section>
+
+  <div class="two" style="margin-top:4px">
+    <div class="card-plain">
+      <h3>Ausrüstung <span class="pill later">zum Abhaken</span></h3>
+      <ul class="xh-list">
+        <li><label class="xh-check"><input type="checkbox" data-xh="g0"><span>Rüstung und Helm, lieber mittel oder schwer</span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="g1"><span>Waffen und genug Munition</span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="g2"><span>Medpens und MedGel, Essen und Trinken</span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="g3"><span>Multitool mit Traktorstrahl <i class="gb">Tractor Beam</i>, für Sicherungen und Beute</span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="g4"><span>Mehrere rote Supervisor-Karten, vorher gedruckt (siehe Schritt 1)</span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="g5"><span>Ein Frachtschiff für die Beute aus dem Hangar</span></label></li>
+      </ul>
+    </div>
+    <div class="card-plain">
+      <h3>Die 7 Platinen <span class="pill go" id="xhcount">0 von 7</span></h3>
+      <ul class="xh-list">
+        <li><label class="xh-check"><input type="checkbox" data-xh="b1"><span><b>Platine 1</b> · Checkmate<small>Sicherungstür, dann rote Tür</small></span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="b2"><span><b>Platine 2</b> · Checkmate, im Hangar der Zone<small>Sicherungstür, rote Tür, blaue Tür. Oder: zwei Sicherungstüren, zwei blaue Türen</small></span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="b3"><span><b>Platine 3</b> · Checkmate, im Hangar der Zone<small>gleicher Weg wie Platine 2</small></span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="b4"><span><b>Platine 4</b> · Orbituary<small>Sicherungstür, rote Tür, zweite Sicherungstür</small></span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="b5"><span><b>Platine 5</b> · Ruin Station, im Tresor<small>Zeitschloss-Tür, dann im zweiten Raum hinter einer weiteren Tür. Dafür die Crypt-Karte</small></span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="b6"><span><b>Platine 6</b> · Ruin Station, im Tresor<small>Zeitschloss-Tür, zweiter Raum, oberhalb der Eingangsebene</small></span></label></li>
+        <li><label class="xh-check"><input type="checkbox" data-xh="b7"><span><b>Platine 7</b> · Orbituary, im Hangar der Zone<small>Sicherungstür, rote Tür, Sicherungstür, zwei blaue Türen</small></span></label></li>
+      </ul>
+      <button type="button" class="btn2" id="xhreset">Liste zurücksetzen</button>
+    </div>
+  </div>
+  <p class="small" style="margin-top:8px">Die Häkchen bleiben in diesem Browser gespeichert. Jede Nummer braucht es genau einmal: Zwei gleiche Platinen ersetzen keine fehlende.</p>
+
+  <section>
+    <h2>Ablauf Schritt für Schritt</h2>
+    <ol class="xh-steps">
+      <li><b>Rote Karten drucken.</b> Die roten Supervisor-Karten <i class="gb">Supervisor Keycard</i> gibt es nur auf zwei Asteroiden-Basen auf der Bahn von Pyro III (Bloom): PYAM-SUPVISR-3-4 und PYAM-SUPVISR-3-5. Die Suche in der Sternenkarte findet sie nicht, du musst sie von Hand auf der Karte suchen. Der Drucker steht in einem geschlossenen Raum: über Kisten klettern und durch einen Gang in der Decke. Nimm mehrere Karten mit, Checkmate und Orbituary brauchen sie.</li>
+      <li><b>Checkmate: Platinen 1 bis 3.</b> Hier stehen auch vier Drucker für blaue Karten <i class="gb">Security Keycard</i>, nur hinter zwei Sicherungstüren. Das ist die einfachste Quelle für Blau.</li>
+      <li><b>Orbituary: Platinen 4 und 7.</b> Für Platine 7 brauchst du zwei blaue Karten und mehrere Sicherungen <i class="gb">Fuses</i>. Die zwei Blau-Drucker hier liegen hinter einer roten Tür, also lieber Blau aus Checkmate mitbringen.</li>
+      <li><b>Ruin Station: Platinen 5 und 6.</b> Vom zentralen Raum <i class="gb">Ghost Arena</i> aus holst du die Karten für Crypt, Wasteland und Last Resort, jede hinter einer eigenen Sicherungstür. Dann in den Tresor <i class="gb">The Vault</i> durch die Zeitschloss-Tür: Sie geht alle 20 Minuten für 1 Minute auf. 30 Sekunden vorher leuchtet im zentralen Raum blaues Licht, beim Öffnen weißes. Platine 6 liegt im zweiten Raum oben, Platine 5 hinter einer weiteren Tür, die die Crypt-Karte öffnet.</li>
+      <li><b>Zum Hangar fliegen,</b> wenn der Timer oben „lädt“ oder „offen“ zeigt. Ziel ist PYAM-EXHANG-0-1. Der Eingang sieht aus wie bei den Supervisor-Basen. Im schwerelosen Bereich hängen die fünf Lichter.</li>
+      <li><b>Platinen einsetzen.</b> Die sieben Schlitze sind an den Rohren bei den Lichtern. Es klappt nur, wenn mindestens ein Licht grün und keines rot ist.</li>
+      <li><b>Rein und Schiff beanspruchen.</b> Die Tür zum Maschinenraum <i class="gb">Engineering</i> bleibt 30 Minuten offen. Am ASOP-Terminal kann genau ein Spieler das Schiff beanspruchen. Danach öffnet sich das Hangartor für 10 Minuten und nie wieder.</li>
+      <li><b>Raus, bevor es schließt.</b> Vor dem Schließen ertönt ein Alarm. Wer dann noch im Hangar oder im Maschinenraum ist, stirbt, Schiffe werden zerstört.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Türen und Karten</h2>
+    <details class="ref">
+      <summary>Sicherungstüren <i class="gb">Fuse Doors</i>: so geht’s</summary>
+      <ul style="margin-top:10px">
+        <li>Sicherungen findest du meist in der Nähe, in roten, funkenden Kästen an der Wand. Sie erscheinen nach ein paar Minuten neu. Salvage-Schiffe wie Vulture, Fortune und Reclaimer können sie auch herstellen.</li>
+        <li><kbd>F</kbd> halten auf die Sicherung, „Tragen“ <i class="gb">Carry</i> wählen. An der Tür erscheint „Sicherung einsetzen“. Die Buchse ist unten, links von der Mitte.</li>
+        <li><b>Kein Einsetzen-Knopf?</b> Sicherung ablegen, mit dem Traktorstrahl aufheben und zur Buchse führen. <kbd>R</kbd> halten und mit Maus und Mausrad drehen: Rückseite zur Tür, Pfeil nach außen und nach unten. Wird der Umriss grün, mit Linksklick einsetzen.</li>
+        <li>Die Tür bleibt 30 bis 60 Sekunden offen. Schließ sie hinter dir am Bedienfeld links, oder zieh die Sicherung wieder heraus und nimm sie mit.</li>
+      </ul>
+    </details>
+    <div class="table-wrap" style="margin-top:12px">
+      <table>
+        <thead><tr><th>Karte</th><th>Wo drucken</th><th>Öffnet</th></tr></thead>
+        <tbody>
+          <tr><th>Supervisor <small>rot</small></th><td>PYAM-SUPVISR-3-4 oder 3-5 bei Pyro III</td><td>Rote Türen in Checkmate und Orbituary</td></tr>
+          <tr><th>Security <small>blau</small></th><td>Checkmate (4 Drucker), Orbituary (2, hinter Rot)</td><td>Blaue Türen zu Platinen 2, 3 und 7</td></tr>
+          <tr><th>Crypt <small>gold-grün</small></th><td>Ruin Station, hinter einer Sicherungstür</td><td>Raum mit Platine 5 im Tresor</td></tr>
+          <tr><th>Wasteland, Last Resort <small>gold</small></th><td>Ruin Station, je hinter einer Sicherungstür</td><td>Räume mit Beute im Tresor</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Alle Kartendrucker brauchen nach dem Drucken 30 Minuten. Ein leerer Drucker ist also meist nur in der Abklingzeit, nicht kaputt.</p>
+  </section>
+
+  <section>
+    <h2>Tipps und Tricks</h2>
+    <div class="facts">
+      <div class="fact"><strong>Rot zuerst</strong><p>Die rote Karte ist der häufigste Grund, warum ein Lauf scheitert. Druck mehrere, bevor du in die Zonen fliegst.</p></div>
+      <div class="fact"><strong>Nicht alles bei einer Person</strong><p>Stirbt jemand oder stürzt das Spiel ab, sind sonst alle Platinen weg. Verteilt Karten und Platinen.</p></div>
+      <div class="fact"><strong>Vor dem Fenster bereit sein</strong><p>Wer erst mit wenigen Minuten Rest ankommt, schafft es meist nicht mehr. Lieber auf den nächsten Durchlauf warten.</p></div>
+      <div class="fact"><strong>Türen schließen</strong><p>Mach Sicherungs- und Kartentüren hinter dir zu. So kommen andere Spieler nicht einfach hinterher.</p></div>
+      <div class="fact"><strong>Auf das Licht achten</strong><p>An der Tresortür in Ruin zählt das blaue Licht im zentralen Raum, nicht ein Countdown im Netz.</p></div>
+      <div class="fact"><strong>Vorher klären, wer das Schiff nimmt</strong><p>Nur ein Spieler kann es am ASOP-Terminal beanspruchen. Streit am Terminal kostet die Minuten, die ihr nicht habt.</p></div>
+      <div class="fact"><strong>Frachtschiff mitbringen</strong><p>Im Hangar liegen Bauteile und Waffen. Das Belohnungsschiff hat oft nicht genug Platz für alles.</p></div>
+      <div class="fact"><strong>Nach dem Schiff verschwinden</strong><p>Sobald das Schiff draußen ist: weg da. Wartende Spieler wissen genau, wann das Tor aufgeht.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mögliche Schiffe</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Schiff</th><th>Ausführung</th><th>Chance</th></tr></thead>
+        <tbody>
+          <tr><th><a class="ship-a" href="#s-rsi-meteor">RSI Meteor</a></th><td>Military</td><td class="num">20 %</td></tr>
+          <tr><th><a class="ship-a" href="#s-mrai-guardian-mx">Mirai Guardian MX</a></th><td>Military</td><td class="num">20 %</td></tr>
+          <tr><th><a class="ship-a" href="#s-rsi-scorpius">RSI Scorpius</a></th><td>Stealth</td><td class="num">10 %</td></tr>
+          <tr><th><a class="ship-a" href="#s-gama-syulen">Gatac Syulen</a></th><td>Military oder Stealth</td><td class="num">je 5 %</td></tr>
+          <tr><th><a class="ship-a" href="#s-drak-cutlass-black">Drake Cutlass Black</a></th><td>Military oder Stealth</td><td class="num">je 5 %</td></tr>
+          <tr><th><a class="ship-a" href="#s-anvl-hornet-f7a-mk2">Anvil F7A Hornet Mk II</a></th><td>Military oder Stealth</td><td class="num">je 5 %</td></tr>
+          <tr><th><a class="ship-a" href="#s-anvl-lightning-f8c">Anvil F8C Lightning</a></th><td>Military oder Stealth</td><td class="num">je 5 %</td></tr>
+          <tr><th><a class="ship-a" href="#s-drak-corsair">Drake Corsair</a></th><td>Military oder Stealth Industrial</td><td class="num">je 5 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small" style="margin-top:8px">Chancen aus den Spieldaten von Patch 4.10.0 laut citizen-starter-guide.com. Das Wiki nennt bei einigen Schiffen andere Namen der Ausführung, etwa „Executive“ oder „Wikelo War Special“. Ein Klick auf den Namen zeigt das Schiff.</p>
+  </section>
+
+  <section>
+    <h2>Gerade gemeldet</h2>
+    <div class="oops"><strong>Kartendrucker hängen bei 00:00 (offiziell, 4.10.2):</strong> Manche Drucker zeigen 00:00 und zählen nicht weiter. Laut RSI hilft nur: Spiel mit <kbd>Alt</kbd><span class="plus">+</span><kbd>F4</kbd> beenden und neu einloggen.</div>
+    <div class="hint" style="margin-top:10px">Manchmal steckt eine Sicherung in der Buchse, ohne einzurasten. Dann mit dem Traktorstrahl drehen, ziehen und schieben, bis sie sich löst, und neu einsetzen.</div>
+  </section>
+
+  <p class="small" style="margin-top:18px">Quellen: <a href="https://starcitizen.tools/Guide:Executive_Hangars" target="_blank" rel="noopener">Star Citizen Wiki (Guide)</a>, <a href="https://citizen-starter-guide.com/star-citizen-contested-zone-timer-ship-list/" target="_blank" rel="noopener">citizen-starter-guide.com</a> (Chancen), <a href="https://expcarry.com/star-citizen-executive-hangar-guide" target="_blank" rel="noopener">expcarry.com</a> (Tipps), <a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754" target="_blank" rel="noopener">Known Issues von RSI</a>. Timer: <a href="https://contestedzonetimers.com/" target="_blank" rel="noopener">contestedzonetimers.com</a>, gegengeprüft mit <a href="https://grimhex.net/tools/exec-hangar" target="_blank" rel="noopener">grimhex.net</a>. Stand 30. Oktober 2026, Patch 4.10.2.</p>
 </section>
 
 <!-- ============ TASTEN ============ -->
@@ -2087,7 +2271,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       var cr = cur.getBoundingClientRect(), br = tabsBox.getBoundingClientRect();
       if (cr.left < br.left) tabsBox.scrollLeft += cr.left - br.left - 8; else if (cr.right > br.right) tabsBox.scrollLeft += cr.right - br.right + 16;
     }
-    var titles = { start: 'Star Citizen Handbuch', news: 'News · SC Handbuch', tutorial: 'Tutorials · SC Handbuch', heimat: 'Heimatstadt · SC Handbuch', 't-mining': 'Mining lernen · SC Handbuch', 't-salvage': 'Salvage lernen · SC Handbuch', 't-crafting': 'Crafting lernen · SC Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', crafting: 'Crafting · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
+    var titles = { start: 'Star Citizen Handbuch', news: 'News · SC Handbuch', tutorial: 'Tutorials · SC Handbuch', einsaetze: 'Einsätze · SC Handbuch', 'exec-hangar': 'Executive Hangar · SC Handbuch', heimat: 'Heimatstadt · SC Handbuch', 't-mining': 'Mining lernen · SC Handbuch', 't-salvage': 'Salvage lernen · SC Handbuch', 't-crafting': 'Crafting lernen · SC Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', crafting: 'Crafting · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
     document.title = titles[h];
     Array.prototype.forEach.call(sub.querySelectorAll('a'), function (a) {
       if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
@@ -3568,6 +3752,71 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   }
   document.addEventListener('viewchange', function (e) { if (e.detail === 'news') start(); });
   if ((location.hash || '') === '#news') start();
+})();
+</script>
+<script>
+/* ---------- Executive Hangar: Live-Timer und Abhak-Listen ---------- */
+(function () {
+  var view = document.getElementById('view-exec-hangar'); if (!view) return;
+  var $ = function (id) { return document.getElementById(id); };
+  /* Startzeit der roten Ladephase (Unix-Sekunden); der stündliche Job hält sie in news.json aktuell */
+  var start = 1792860059, RED = 7200, GREEN = 3600, OFF = 300, CYCLE = RED + GREEN + OFF;
+  fetch('news.json?t=' + Math.floor(Date.now() / 6e4)).then(function (r) { return r.ok ? r.json() : {}; }).then(function (d) {
+    if (d.exec && d.exec.start) { start = d.exec.start; $('xhsrc').textContent = d.exec.src; tick(); }
+  }).catch(function () {});
+  var lights = Array.prototype.slice.call($('xhlights').children);
+  function mmss(sec) {
+    sec = Math.max(0, Math.round(sec));
+    var h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60), x = sec % 60;
+    return (h ? h + ':' + (m < 10 ? '0' : '') : '') + m + ':' + (x < 10 ? '0' : '') + x;
+  }
+  function at(sec) { return new Date(Date.now() + sec * 1000).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' }); }
+  function tick() {
+    var t = ((Date.now() / 1000 - start) % CYCLE + CYCLE) % CYCLE, st = $('xhstate'), sub = $('xhsub'), note = $('xhnote');
+    if (t < RED) {
+      var on = Math.floor(t / 1440);
+      lights.forEach(function (l, i) { l.className = i < on ? 'g' : 'r'; });
+      st.textContent = 'Geschlossen · lädt'; st.className = 'xh-state shut';
+      sub.textContent = 'öffnet in ' + mmss(RED - t) + ' · um ' + at(RED - t) + ' Uhr';
+      note.textContent = RED - t < 1800 ? 'Bald offen: Jetzt mit allen sieben Platinen hinfliegen.' : 'Zeit genug, um Platinen zu sammeln.';
+    } else if (t < RED + GREEN) {
+      var off = Math.floor((t - RED) / 720), left = RED + GREEN - t;
+      lights.forEach(function (l, i) { l.className = i < off ? '' : 'g'; });
+      st.textContent = 'Offen'; st.className = 'xh-state open';
+      sub.textContent = 'noch ' + mmss(left) + ' · bis ' + at(left) + ' Uhr';
+      note.textContent = left < 900 ? 'Nur noch wenig Zeit: Wer jetzt erst losfliegt, schafft es meist nicht mehr.' : 'Platinen einsetzen geht jetzt.';
+    } else {
+      lights.forEach(function (l) { l.className = ''; });
+      st.textContent = 'Neustart'; st.className = 'xh-state shut';
+      sub.textContent = 'Ladephase beginnt in ' + mmss(CYCLE - t);
+      note.textContent = 'Danach dauert es zwei Stunden bis zum nächsten Öffnen.';
+    }
+  }
+  tick();
+  setInterval(function () { if (!view.hidden) tick(); }, 1000);
+
+  /* Abhak-Listen, im Browser gespeichert */
+  var KEY = 'sc-exec-check', saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+  var boxes = Array.prototype.slice.call(view.querySelectorAll('input[data-xh]'));
+  function count() {
+    var n = boxes.filter(function (b) { return b.dataset.xh.charAt(0) === 'b' && b.checked; }).length;
+    $('xhcount').textContent = n + ' von 7';
+  }
+  boxes.forEach(function (b) {
+    b.checked = !!saved[b.dataset.xh];
+    b.addEventListener('change', function () {
+      saved[b.dataset.xh] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+      count();
+    });
+  });
+  $('xhreset').addEventListener('click', function () {
+    boxes.forEach(function (b) { if (b.dataset.xh.charAt(0) === 'b') { b.checked = false; saved[b.dataset.xh] = false; } });
+    try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+    count();
+  });
+  count();
 })();
 </script>
 </body>

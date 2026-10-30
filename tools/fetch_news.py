@@ -3,6 +3,7 @@
 Quellen:
 - RSI-Server-Status (status.robertsspaceindustries.com/index.json)
 - Offizieller YouTube-Kanal (RSS-Feed)
+- Executive-Hangar-Timer: Startzeit des Zyklus von contestedzonetimers.com (Rückfall grimhex.net)
 - RSI Comm-Link: Liste direkt von RSI, genaues Datum aus der Star Citizen Wiki API (nur Titel, Datum, Link).
   Die Wiki hängt manchmal Tage hinterher; Beiträge, die sie noch nicht kennt, bekommen ein geschätztes Datum ("approx").
 
@@ -126,18 +127,31 @@ def commlinks(prev, days=40):
     return out
 
 
+def exec_timer():
+    """Startzeit des 185-Minuten-Zyklus der Executive Hangars (Beginn der roten Ladephase, Unix-Sekunden).
+    Quelle: contestedzonetimers.com, Rückfall: grimhex.net (dort ist der Anker der Öffnungszeitpunkt)."""
+    try:
+        return {"start": int(get("https://contestedzonetimers.com/lib/cfg.dat").decode().strip()), "src": "contestedzonetimers.com"}
+    except Exception as exc:
+        print(f"exec (contestedzonetimers): Fehler {exc}", file=sys.stderr)
+    m = re.search(r'serverAnchor\\?":(\d{13})', get("https://grimhex.net/tools/exec-hangar").decode("utf-8", "replace"))
+    if not m:
+        raise RuntimeError("kein Anker gefunden")
+    return {"start": int(m.group(1)) // 1000 - 2 * 3600, "src": "grimhex.net"}
+
+
 def main(path):
     try:
         old = json.load(open(path, encoding="utf-8"))
     except (OSError, ValueError):
         old = {}
     new = {}
-    for key, fn in (("status", status), ("videos", videos), ("commlinks", lambda: commlinks(old.get("commlinks") or []))):
+    for key, fn in (("status", status), ("videos", videos), ("commlinks", lambda: commlinks(old.get("commlinks") or [])), ("exec", exec_timer)):
         try:
             new[key] = fn()
         except Exception as exc:  # eine Quelle darf ausfallen, die anderen bleiben aktuell
             print(f"{key}: Fehler {exc}", file=sys.stderr)
-    for key in ("status", "videos", "commlinks"):
+    for key in ("status", "videos", "commlinks", "exec"):
         if key not in new and key in old:
             new[key] = old[key]
     if {k: old.get(k) for k in new} == new:
