@@ -570,6 +570,13 @@ details.ref summary { cursor: pointer; font-family: var(--f-display); font-weigh
 .subnav a:hover { color: var(--ink); background: var(--key-bg); }
 .subnav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); }
 .tabs a.has-sub::after { content: "▾"; margin-left: 5px; font-size: 10px; }
+.nav-news {
+  margin-left: auto; position: relative; flex: none; font-family: var(--f-display); font-weight: 600; font-size: 14px; letter-spacing: .03em;
+  text-decoration: none; color: var(--muted); padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; white-space: nowrap;
+}
+.nav-news:hover { color: var(--ink); background: var(--key-bg); }
+.nav-news[aria-current="page"] { color: var(--accent); background: var(--accent-soft); border-color: transparent; }
+.news-dot { position: absolute; top: -4px; right: -4px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 2px var(--panel); }
 .learn { display: flex; gap: 10px 12px; align-items: baseline; flex-wrap: wrap; background: var(--key-bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; font-size: 14px; }
 .learn strong { font-family: var(--f-display); }
 .learn .btn { margin-left: auto; }
@@ -600,20 +607,18 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <div class="nav-in">
     <a class="brand" href="#start">SC<span>/</span><span class="brand-long" style="color:inherit">Handbuch</span></a>
     <div class="tabs" role="list">
-      <a href="#start" role="listitem">Start</a>
-      <a href="#news" role="listitem">News</a>
-      <a href="#tutorial" role="listitem" class="has-sub" id="tut-tab" aria-haspopup="true" aria-controls="subnav">Tutorials</a>
-      <a href="#tasten" role="listitem">Tasten</a>
-      <a href="#mining" role="listitem">Mining</a>
-      <a href="#salvage" role="listitem">Salvage</a>
-      <a href="#crafting" role="listitem">Crafting</a>
+      <a href="#tutorial" role="listitem" class="has-sub" data-group="tutorial" aria-haspopup="true" aria-controls="subnav">Tutorials</a>
+      <a href="#tasten" role="listitem" class="has-sub" data-group="steuerung" aria-haspopup="true" aria-controls="subnav">Steuerung</a>
+      <a href="#mining" role="listitem" class="has-sub" data-group="berufe" aria-haspopup="true" aria-controls="subnav">Berufe</a>
       <a href="#schiffe" role="listitem">Schiffe</a>
       <a href="#glossar" role="listitem">Glossar</a>
-      <a href="#hosas" role="listitem">HOSAS</a>
     </div>
+    <a class="nav-news" href="#news">News<span class="news-dot" id="newsdot" title="Neue Beiträge" hidden></span></a>
   </div>
+  <!-- Zweite Reihe je Gruppe. Neue Gruppe (z. B. „Einsätze“ für Executive Hangar, Contested Zones):
+       eine weitere .subnav-in mit data-group anlegen und oben einen Tab mit gleichem data-group ergänzen. -->
   <div class="subnav" id="subnav" hidden>
-    <div class="subnav-in" role="list" aria-label="Tutorials">
+    <div class="subnav-in" role="list" aria-label="Tutorials" data-group="tutorial">
       <a href="#tutorial" role="listitem">Übersicht</a>
       <a href="#heimat" role="listitem">Heimatstadt</a>
       <a href="#erste-schritte" role="listitem">Erste Schritte</a>
@@ -621,6 +626,15 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <a href="#t-salvage" role="listitem">Salvage lernen</a>
       <a href="#t-crafting" role="listitem">Crafting lernen</a>
       <a href="#training" role="listitem">Training <span class="beta">Beta</span></a>
+    </div>
+    <div class="subnav-in" role="list" aria-label="Steuerung" data-group="steuerung">
+      <a href="#tasten" role="listitem">Tastatur</a>
+      <a href="#hosas" role="listitem">HOSAS</a>
+    </div>
+    <div class="subnav-in" role="list" aria-label="Berufe" data-group="berufe">
+      <a href="#mining" role="listitem">Mining</a>
+      <a href="#salvage" role="listitem">Salvage</a>
+      <a href="#crafting" role="listitem">Crafting</a>
     </div>
   </div>
 </nav>
@@ -2011,25 +2025,36 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 (function () {
   /* Ansichten per #hash */
   var views = Array.prototype.slice.call(document.querySelectorAll('[data-view]'));
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs a'));
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tabs a, .nav-news'));
   var names = views.map(function (v) { return v.dataset.view; });
-  /* Untermenü „Tutorials“: in einem Tutorial fest sichtbar, sonst beim Darüberfahren als zweite Reihe */
-  var TUT = ['tutorial', 'erste-schritte', 'heimat', 't-mining', 't-salvage', 't-crafting', 'training'];
-  var sub = document.getElementById('subnav'), tutTab = document.getElementById('tut-tab'), pinned = false, hideT = null;
-  function subState(open) {
+  /* Gruppen mit zweiter Reihe: in einer Ansicht der Gruppe fest sichtbar, sonst beim Darüberfahren über der Seite */
+  var sub = document.getElementById('subnav'), subRows = Array.prototype.slice.call(sub.querySelectorAll('.subnav-in'));
+  var groupTabs = tabs.filter(function (a) { return a.dataset.group; });
+  var groupOf = {};
+  subRows.forEach(function (r) {
+    Array.prototype.forEach.call(r.querySelectorAll('a'), function (a) { groupOf[a.getAttribute('href').slice(1)] = r.dataset.group; });
+  });
+  var pinned = null, hover = null, hideT = null;
+  function subState() {
     clearTimeout(hideT);
-    sub.hidden = !(pinned || open);
+    var g = hover || pinned;
+    sub.hidden = !g;
+    subRows.forEach(function (r) { r.hidden = r.dataset.group !== g; });
     sub.classList.toggle('float', !pinned);
   }
+  function leave() { hideT = setTimeout(function () { hover = null; subState(); }, 250); }
   if (window.matchMedia('(hover: hover)').matches) {
-    tutTab.addEventListener('mouseenter', function () { subState(true); });
-    sub.addEventListener('mouseenter', function () { clearTimeout(hideT); });
-    [tutTab, sub].forEach(function (el) {
-      el.addEventListener('mouseleave', function () { hideT = setTimeout(function () { subState(false); }, 250); });
+    tabs.forEach(function (a) {
+      a.addEventListener('mouseenter', function () { hover = a.dataset.group || null; subState(); });
+      if (a.dataset.group) a.addEventListener('mouseleave', leave);
     });
+    sub.addEventListener('mouseenter', function () { clearTimeout(hideT); });
+    sub.addEventListener('mouseleave', leave);
   }
-  tutTab.addEventListener('focus', function () { subState(true); });
-  sub.addEventListener('focusout', function (e) { if (!sub.contains(e.relatedTarget) && e.relatedTarget !== tutTab) subState(false); });
+  groupTabs.forEach(function (a) { a.addEventListener('focus', function () { hover = a.dataset.group; subState(); }); });
+  sub.addEventListener('focusout', function (e) {
+    if (!sub.contains(e.relatedTarget) && groupTabs.indexOf(e.relatedTarget) === -1) { hover = null; subState(); }
+  });
   function show() {
     var h = (location.hash || '#start').slice(1);
     if (h === 'hotas') h = 'hosas';
@@ -2038,18 +2063,28 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     if (h.indexOf('s-') === 0) { keepScroll = !document.getElementById('view-schiffe').hidden; h = 'schiffe'; }
     if (names.indexOf(h) === -1) h = 'start';
     views.forEach(function (v) { v.hidden = v.dataset.view !== h; });
+    pinned = groupOf[h] || null; hover = null;
     tabs.forEach(function (a) {
-      if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page');
-      else a.removeAttribute('aria-current');
+      var on = a.dataset.group ? a.dataset.group === pinned : a.getAttribute('href') === '#' + h;
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
+    /* schmale Bildschirme: aktiven Tab in die sichtbare Leiste schieben */
+    var tabsBox = document.querySelector('.tabs'), cur = tabsBox.querySelector('a[aria-current]');
+    if (cur) {
+      var cr = cur.getBoundingClientRect(), br = tabsBox.getBoundingClientRect();
+      if (cr.left < br.left) tabsBox.scrollLeft += cr.left - br.left - 8; else if (cr.right > br.right) tabsBox.scrollLeft += cr.right - br.right + 16;
+    }
     var titles = { start: 'Star Citizen Handbuch', news: 'News · SC Handbuch', tutorial: 'Tutorials · SC Handbuch', heimat: 'Heimatstadt · SC Handbuch', 't-mining': 'Mining lernen · SC Handbuch', 't-salvage': 'Salvage lernen · SC Handbuch', 't-crafting': 'Crafting lernen · SC Handbuch', 'erste-schritte': 'Erste Schritte · SC Handbuch', tasten: 'Tasten · SC Handbuch', mining: 'Mining · SC Handbuch', salvage: 'Salvage · SC Handbuch', crafting: 'Crafting · SC Handbuch', glossar: 'Glossar · SC Handbuch', schiffe: 'Schiffe · SC Handbuch', training: 'Training · SC Handbuch', hosas: 'HOSAS · SC Handbuch' };
     document.title = titles[h];
-    var inTut = TUT.indexOf(h) !== -1;
-    if (inTut) tutTab.setAttribute('aria-current', 'page');
     Array.prototype.forEach.call(sub.querySelectorAll('a'), function (a) {
       if (a.getAttribute('href') === '#' + h) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
-    pinned = inTut; subState(false);
+    subState();
+    var sr = sub.querySelector('.subnav-in:not([hidden])'), sc = sr && sr.querySelector('a[aria-current]');
+    if (sc) {
+      var sa = sc.getBoundingClientRect(), sb = sr.getBoundingClientRect();
+      if (sa.left < sb.left) sr.scrollLeft += sa.left - sb.left - 8; else if (sa.right > sb.right) sr.scrollLeft += sa.right - sb.right + 24;
+    }
     if (!keepScroll) window.scrollTo(0, 0);
     document.dispatchEvent(new CustomEvent('viewchange', { detail: h }));
   }
@@ -3471,6 +3506,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   function stat(s) { return STAT[String(s || '').toLowerCase()] || ['warn', s || 'unbekannt']; }
 
   newsData.then(function (d) {
+    /* Punkt am News-Knopf: neuer Beitrag seit dem letzten Besuch (höchstens 7 Tage alt) */
+    var newest = Math.max.apply(null, (d.commlinks || []).map(function (c) { return new Date(c.date).getTime() || 0; }).concat([0]));
+    if (!started && newest > Math.max(lastSeen, now - 7 * DAY)) $('newsdot').hidden = false;
     var st = d.status;
     if (st) {
       var upd = d.updated ? new Date(d.updated).toLocaleString('de-DE', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }) : '';
@@ -3499,6 +3537,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     loadLive().catch(function () {
       return newsData.then(function (d) { add(d.commlinks || []); source = 'Live-Abruf nicht möglich, zeige gespeicherten Stand.'; });
     }).then(function () { chips(); draw(); try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {} });
+    $('newsdot').hidden = true;
   }
   document.addEventListener('viewchange', function (e) { if (e.detail === 'news') start(); });
   if ((location.hash || '') === '#news') start();
