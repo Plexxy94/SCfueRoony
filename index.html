@@ -591,6 +591,19 @@ details.ref summary { cursor: pointer; font-family: var(--f-display); font-weigh
 .oc-grid .down { color: var(--warn); }
 .ore-link { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px; }
 .ore-link:hover { color: var(--accent); }
+/* Handy: Logo und News in der ersten Zeile, darunter alle Bereiche ohne Scrollen; die Leiste weicht beim Runterscrollen aus */
+.nav { transition: transform .2s ease; }
+.nav.nav-away { transform: translateY(calc(-100% - env(safe-area-inset-top, 0px))); }
+@media (max-width: 640px) {
+  .nav-in { flex-wrap: wrap; row-gap: 4px; padding-block: 8px 6px; }
+  .nav-news { padding: 4px 10px; font-size: 13px; }
+  .tabs { order: 3; flex: 1 0 100%; display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; gap: 0; overflow: visible; }
+  .tabs a { font-size: clamp(11px, 3.5vw, 13px); letter-spacing: 0; padding: 6px clamp(3px, 1.2vw, 8px); text-align: center; }
+  .tabs a.has-sub::after { display: none; }
+  .subnav-in { flex-wrap: wrap; overflow: visible; gap: 2px 4px; padding-block: 5px; }
+  .subnav a { font-size: 12.5px; padding: 4px 8px; }
+  .sub-long { display: none; }
+}
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -622,9 +635,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <a href="#tutorial" role="listitem">Übersicht</a>
       <a href="#heimat" role="listitem">Heimatstadt</a>
       <a href="#erste-schritte" role="listitem">Erste Schritte</a>
-      <a href="#t-mining" role="listitem">Mining lernen</a>
-      <a href="#t-salvage" role="listitem">Salvage lernen</a>
-      <a href="#t-crafting" role="listitem">Crafting lernen</a>
+      <a href="#t-mining" role="listitem">Mining<span class="sub-long"> lernen</span></a>
+      <a href="#t-salvage" role="listitem">Salvage<span class="sub-long"> lernen</span></a>
+      <a href="#t-crafting" role="listitem">Crafting<span class="sub-long"> lernen</span></a>
       <a href="#training" role="listitem">Training <span class="beta">Beta</span></a>
     </div>
     <div class="subnav-in" role="list" aria-label="Steuerung" data-group="steuerung">
@@ -2090,6 +2103,14 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   }
   window.addEventListener('hashchange', show);
   show();
+  /* Handy: Leiste beim Runterscrollen ausblenden, beim Hochscrollen sofort zeigen */
+  var navEl = document.querySelector('.nav'), narrow = window.matchMedia('(max-width: 640px)'), lastY = window.scrollY;
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY, d = y - lastY;
+    if (!narrow.matches || y < 80 || d < -4) navEl.classList.remove('nav-away');
+    else if (d > 6 && !navEl.contains(document.activeElement)) navEl.classList.add('nav-away');
+    if (Math.abs(d) > 4) lastY = y;
+  }, { passive: true });
 
   /* Fortschritt Erste Schritte */
   var KEY = 'sc-handbuch-steps';
