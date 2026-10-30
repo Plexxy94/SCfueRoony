@@ -2289,7 +2289,24 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     sub.hidden = !g;
     subRows.forEach(function (r) { r.hidden = r.dataset.group !== g; });
     sub.classList.toggle('float', !pinned);
+    alignSub(g);
   }
+  /* Breite Bildschirme: die zweite Reihe mittig unter ihren Tab rücken, das spart Mauswege */
+  var wide = window.matchMedia('(min-width: 641px)');
+  function alignSub(g) {
+    var row = subRows.filter(function (r) { return r.dataset.group === g; })[0];
+    var tab = groupTabs.filter(function (a) { return a.dataset.group === g; })[0];
+    if (!row) return;
+    row.style.paddingLeft = '';
+    if (!wide.matches || !tab || !row.firstElementChild) return;
+    var rr = row.getBoundingClientRect(), pad = parseFloat(getComputedStyle(row).paddingLeft);
+    var first = row.firstElementChild.getBoundingClientRect(), last = row.lastElementChild.getBoundingClientRect();
+    var w = last.right - first.left, tr = tab.getBoundingClientRect();
+    var left = Math.max(rr.left + pad, Math.min(tr.left + tr.width / 2 - w / 2, rr.right - pad - w));
+    row.style.paddingLeft = (left - rr.left) + 'px';
+  }
+  window.addEventListener('resize', function () { alignSub(hover || pinned); });
+  if (document.fonts) document.fonts.ready.then(function () { alignSub(hover || pinned); });
   function leave() { hideT = setTimeout(function () { hover = null; subState(); }, 250); }
   if (window.matchMedia('(hover: hover)').matches) {
     tabs.forEach(function (a) {
