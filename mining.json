@@ -1155,7 +1155,7 @@
     ],
     [
      3800,
-     "Everus Harbor"
+     "TDD Orison"
     ]
    ]
   },
@@ -1314,12 +1314,12 @@
      "Terra Gateway (Stanton)"
     ],
     [
-     3700,
-     "TDD Area 18"
+     3900,
+     "Everus Harbor"
     ],
     [
      3700,
-     "TDD New Babbage"
+     "TDD Area 18"
     ]
    ]
   },
@@ -1477,15 +1477,15 @@
    "ref": [
     [
      51000,
+     "TDD Orison"
+    ],
+    [
+     51000,
      "TDD New Babbage"
     ],
     [
      51000,
      "TDD Area 18"
-    ],
-    [
-     50000,
-     "TDD Orison"
     ],
     [
      46000,
@@ -1501,6 +1501,10 @@
    "ref": [
     [
      170000,
+     "TDD Orison"
+    ],
+    [
+     170000,
      "ArcCorp 141"
     ],
     [
@@ -1514,10 +1518,6 @@
     [
      160000,
      "Ashland"
-    ],
-    [
-     160000,
-     "TDD Orison"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-10-30T18:38:35+00:00"
+ "updated": "2026-10-30T22:59:19+00:00"
 }
