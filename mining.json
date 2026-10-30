@@ -1142,10 +1142,6 @@
      "Terra Gateway (Stanton)"
     ],
     [
-     4200,
-     "Everus Harbor"
-    ],
-    [
      3800,
      "TDD Area 18"
     ],
@@ -1156,6 +1152,10 @@
     [
      3800,
      "CBD Lorville"
+    ],
+    [
+     3800,
+     "Everus Harbor"
     ]
    ]
   },
@@ -1269,15 +1269,15 @@
     ],
     [
      4400,
-     "Rod's Fuel"
-    ],
-    [
-     4400,
      "Stanton Gateway (Pyro)"
     ],
     [
      4300,
      "Pyro Gateway (Stanton)"
+    ],
+    [
+     4200,
+     "Rod's Fuel"
     ],
     [
      4200,
@@ -1314,12 +1314,12 @@
      "Terra Gateway (Stanton)"
     ],
     [
-     4100,
-     "Everus Harbor"
+     3700,
+     "TDD Area 18"
     ],
     [
      3700,
-     "TDD Area 18"
+     "TDD New Babbage"
     ]
    ]
   },
@@ -1330,16 +1330,16 @@
      "ARC-L5"
     ],
     [
-     7800,
-     "Rod's Fuel"
-    ],
-    [
      7700,
      "TDD New Babbage"
     ],
     [
      7700,
      "CBD Lorville"
+    ],
+    [
+     7700,
+     "Rod's Fuel"
     ],
     [
      7700,
@@ -1374,7 +1374,7 @@
   "hephaestanite": {
    "ref": [
     [
-     5400,
+     5300,
      "TDD New Babbage"
     ],
     [
@@ -1460,16 +1460,16 @@
      "Stanton Gateway (Nyx)"
     ],
     [
+     9100,
+     "TDD New Babbage"
+    ],
+    [
      8900,
      "CBD Lorville"
     ],
     [
      8700,
      "Ruin Station"
-    ],
-    [
-     8700,
-     "Patch City"
     ]
    ]
   },
@@ -1657,7 +1657,7 @@
     ],
     [
      140000,
-     "Rayari Kaltag"
+     "TDD New Babbage"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-10-30T12:58:16+00:00"
+ "updated": "2026-10-30T18:38:35+00:00"
 }

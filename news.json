@@ -19,6 +19,11 @@
  },
  "videos": [
   {
+   "title": "Sorry I Can't Make It, I Have Plans - Star Citizen",
+   "url": "https://www.youtube.com/shorts/n-i2HEFYnhI",
+   "date": "2026-10-30T14:01:47+00:00"
+  },
+  {
    "title": "First Time Running Storm Breaker - Star Citizen",
    "url": "https://www.youtube.com/shorts/qv5vk7j5_X0",
    "date": "2026-10-26T15:00:40+00:00"
@@ -62,14 +67,16 @@
    "title": "Introducing the RSI Constellation Mk V Centaurus 🚀",
    "url": "https://www.youtube.com/shorts/OlUvdvzzq1U",
    "date": "2026-10-15T16:26:25+00:00"
-  },
-  {
-   "title": "Star Citizen | Introducing the RSI Constellation Mk V Centaurus",
-   "url": "https://www.youtube.com/watch?v=k8L-X-TFMcI",
-   "date": "2026-10-15T16:22:28+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 21427,
+   "title": "Jump Point Now Available! - ISSUE: 14 05 – Constellation of the Heart",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21427-Jump-Point-Now-Available",
+   "date": "2026-10-30T17:39:32+00:00",
+   "approx": true
+  },
   {
    "id": 21421,
    "title": "This Week in Star Citizen - October 26, 2026",
@@ -263,5 +270,5 @@
   "start": 1792860059,
   "src": "contestedzonetimers.com"
  },
- "updated": "2026-10-30T11:01:27+00:00"
+ "updated": "2026-10-30T18:38:34+00:00"
 }
