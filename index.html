@@ -4014,10 +4014,11 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     var w = Math.min(s[0], 1280); cv.width = w; cv.height = Math.round(w * s[1] / s[0]);
     cv.getContext('2d').drawImage(video || img, 0, 0, cv.width, cv.height);
   }
-  /* Ausschnitt holen, vergrößern und in Schwarz auf Weiß umwandeln. HUD-Zahlen sind kleine, helle Schrift
-     in beliebiger HUD-Farbe; gezählt wird, was deutlich heller ist als seine Umgebung (weichgezeichnete Kopie),
-     so stören heller Himmel oder Planetenboden nicht. */
-  function prepare(loose) {
+  /* Ausschnitt holen, vergrößern und in Schwarz auf Weiß umwandeln. Gezählt wird nur, was deutlich heller ist
+     als seine Umgebung (weichgezeichnete Kopie), so stören heller Himmel oder Planetenboden nicht.
+     Durchgang „white“: Die Signatur-Zahlen am Ping-Marker sind weiß, das farbige Symbol und das übrige HUD fallen weg.
+     Durchgang „color“: Rückfall für helle Schrift in HUD-Farbe. */
+  function prepare(mode) {
     var s = srcSize(), r = sel || { x: 0, y: 0, w: 1, h: 1 };
     var sx = Math.round(r.x * s[0]), sy = Math.round(r.y * s[1]), sw = Math.max(1, Math.round(r.w * s[0])), sh = Math.max(1, Math.round(r.h * s[1]));
     var k = Math.min(3, Math.max(1.5, 4000 / sw));
@@ -4033,11 +4034,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       x.filter = 'none';
     }
     for (var i = 0; i < p.length; i += 4) {
-      var g = Math.max(p[i], p[i + 1], p[i + 2]), on = g > 175;
-      if (q) {
-        var b = Math.max(q[i], q[i + 1], q[i + 2]), dist = Math.abs(p[i] - q[i]) + Math.abs(p[i + 1] - q[i + 1]) + Math.abs(p[i + 2] - q[i + 2]);
-        on = g > 110 && (loose ? g - b > 18 || (g >= b && dist > 60) : g - b > 25 || (g >= b && dist > 90));
-      }
+      var g = Math.max(p[i], p[i + 1], p[i + 2]), m = Math.min(p[i], p[i + 1], p[i + 2]);
+      var b = q ? Math.max(q[i], q[i + 1], q[i + 2]) : 0;
+      var on = mode === 'white' ? m > 150 && g - b > 40 : g > 150 && g - b > 60;
       p[i] = p[i + 1] = p[i + 2] = on ? 0 : 255;
     }
     x.putImageData(d, 0, 0);
@@ -4048,7 +4047,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     var out = [], seen = {};
     /* Das Ping-Symbol vor der Zahl wird oft als „1“ gelesen (15,600 → 115,600). Deshalb auch ohne erste Ziffer
        prüfen und die Lesart mit plausibler Steinzahl (bis 12) bevorzugen. */
-    (text.match(/\d{1,4}(?:[.,]\d{3})+|\d{4,6}/g) || []).forEach(function (t) {
+    (text.match(/(?<![\d.,])(?:\d{1,4}(?:[.,]\d{3})+|\d{4,6})(?![\d])/g) || []).forEach(function (t) {
       var d = t.replace(/[.,]/g, ''), best = null;
       [d, d.slice(1)].forEach(function (s) {
         var v = parseInt(s, 10);
@@ -4083,14 +4082,11 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     if (first) say('Texterkennung wird geladen (einmalig ca. 5 MB) …');
     return worker().then(function (w) {
       if (!video && !img) return;
-      /* Zwei Durchgänge: streng (dunkler Grund, viel HUD-Text) und locker (heller Himmel), Ergebnis vereint */
-      var texts = [];
-      return w.recognize(prepare(false)).then(function (r) {
-        texts.push(r.data.text || '');
-        return w.recognize(prepare(true));
-      }).then(function (r) {
-        texts.push(r.data.text || '');
-        var list = parse(texts.join('\n'));
+      /* Erst weiße Schrift lesen; nur wenn dort nichts passt, farbige Schrift (liefert mehr Fehltreffer) */
+      return w.recognize(prepare('white')).then(function (r) {
+        var list = parse(r.data.text || '');
+        return list.length ? list : w.recognize(prepare('color')).then(function (r2) { return parse(r2.data.text || ''); });
+      }).then(function (list) {
         render(list);
         var t = new Date().toLocaleTimeString('de-DE');
         say((list.length ? list.length + (list.length === 1 ? ' Signatur' : ' Signaturen') + ' erkannt' : 'Keine Signatur erkannt') +
