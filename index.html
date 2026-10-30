@@ -621,6 +621,11 @@ details.ref summary { cursor: pointer; font-family: var(--f-display); font-weigh
 .xh-check input:checked + span { opacity: .55; text-decoration: line-through; }
 .xh-steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; max-width: 80ch; }
 .xh-steps li::marker { color: var(--accent); font-family: var(--f-mono); }
+.xh-map { margin: 12px 0 0; display: flex; flex-direction: column; gap: 10px; }
+.xh-map img { width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid var(--line); background: #0d1117; }
+.xh-map figcaption ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.xh-map figcaption p { margin: 6px 0 0; }
+.xh-maplink { white-space: nowrap; font-size: 13px; font-weight: 600; margin-left: 4px; }
 footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 48px; }
 .empty { color: var(--muted); font-style: italic; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -1354,15 +1359,61 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <section>
     <h2>Ablauf Schritt für Schritt</h2>
     <ol class="xh-steps">
-      <li><b>Rote Karten drucken.</b> Die roten Supervisor-Karten <i class="gb">Supervisor Keycard</i> gibt es nur auf zwei Asteroiden-Basen auf der Bahn von Pyro III (Bloom): PYAM-SUPVISR-3-4 und PYAM-SUPVISR-3-5. Die Suche in der Sternenkarte findet sie nicht, du musst sie von Hand auf der Karte suchen. Der Drucker steht in einem geschlossenen Raum: über Kisten klettern und durch einen Gang in der Decke. Nimm mehrere Karten mit, Checkmate und Orbituary brauchen sie.</li>
-      <li><b>Checkmate: Platinen 1 bis 3.</b> Hier stehen auch vier Drucker für blaue Karten <i class="gb">Security Keycard</i>, nur hinter zwei Sicherungstüren. Das ist die einfachste Quelle für Blau.</li>
-      <li><b>Orbituary: Platinen 4 und 7.</b> Für Platine 7 brauchst du zwei blaue Karten und mehrere Sicherungen <i class="gb">Fuses</i>. Die zwei Blau-Drucker hier liegen hinter einer roten Tür, also lieber Blau aus Checkmate mitbringen.</li>
-      <li><b>Ruin Station: Platinen 5 und 6.</b> Vom zentralen Raum <i class="gb">Ghost Arena</i> aus holst du die Karten für Crypt, Wasteland und Last Resort, jede hinter einer eigenen Sicherungstür. Dann in den Tresor <i class="gb">The Vault</i> durch die Zeitschloss-Tür: Sie geht alle 20 Minuten für 1 Minute auf. 30 Sekunden vorher leuchtet im zentralen Raum blaues Licht, beim Öffnen weißes. Platine 6 liegt im zweiten Raum oben, Platine 5 hinter einer weiteren Tür, die die Crypt-Karte öffnet.</li>
+      <li><b>Rote Karten drucken.</b> Die roten Supervisor-Karten <i class="gb">Supervisor Keycard</i> gibt es nur auf zwei Asteroiden-Basen auf der Bahn von Pyro III (Bloom): PYAM-SUPVISR-3-4 und PYAM-SUPVISR-3-5. Die Suche in der Sternenkarte findet sie nicht, du musst sie von Hand auf der Karte suchen. Der Drucker steht in einem geschlossenen Raum: über Kisten klettern und durch einen Gang in der Decke. Tipp: In der Sternenkarte die Markierung PYR3 L4 oder L5 doppelt anklicken, dann erscheint die Basis. Nimm mehrere Karten mit, Checkmate und Orbituary brauchen sie. <a class="xh-maplink" href="#exec-hangar" data-map="sup">Karte ↓</a></li>
+      <li><b>Checkmate: Platinen 1 bis 3.</b> Hier stehen auch vier Drucker für blaue Karten <i class="gb">Security Keycard</i>, nur hinter zwei Sicherungstüren. Das ist die einfachste Quelle für Blau. <a class="xh-maplink" href="#exec-hangar" data-map="chk">Karte ↓</a></li>
+      <li><b>Orbituary: Platinen 4 und 7.</b> Für Platine 7 brauchst du zwei blaue Karten und mehrere Sicherungen <i class="gb">Fuses</i>. Die zwei Blau-Drucker hier liegen hinter einer roten Tür, also lieber Blau aus Checkmate mitbringen. <a class="xh-maplink" href="#exec-hangar" data-map="orb">Karte ↓</a></li>
+      <li><b>Ruin Station: Platinen 5 und 6.</b> Vom zentralen Raum <i class="gb">Ghost Arena</i> aus holst du die Karten für Crypt, Wasteland und Last Resort, jede hinter einer eigenen Sicherungstür. Dann in den Tresor <i class="gb">The Vault</i> durch die Zeitschloss-Tür: Sie geht alle 20 Minuten für 1 Minute auf. 30 Sekunden vorher leuchtet im zentralen Raum blaues Licht, beim Öffnen weißes. Platine 6 liegt im zweiten Raum oben, Platine 5 hinter einer weiteren Tür, die die Crypt-Karte öffnet. <a class="xh-maplink" href="#exec-hangar" data-map="ruin">Karte ↓</a></li>
       <li><b>Zum Hangar fliegen,</b> wenn der Timer oben „lädt“ oder „offen“ zeigt. Ziel ist PYAM-EXHANG-0-1. Der Eingang sieht aus wie bei den Supervisor-Basen. Im schwerelosen Bereich hängen die fünf Lichter.</li>
-      <li><b>Platinen einsetzen.</b> Die sieben Schlitze sind an den Rohren bei den Lichtern. Es klappt nur, wenn mindestens ein Licht grün und keines rot ist.</li>
+      <li><b>Platinen einsetzen.</b> Die sieben Schlitze sind an den Rohren bei den Lichtern. Platinen 1 bis 3 kommen in die Schlitze in der Mitte, 4 bis 6 rechts, 7 links. Es klappt nur, wenn mindestens ein Licht grün und keines rot ist. <a class="xh-maplink" href="#exec-hangar" data-map="xh">Karte ↓</a></li>
       <li><b>Rein und Schiff beanspruchen.</b> Die Tür zum Maschinenraum <i class="gb">Engineering</i> bleibt 30 Minuten offen. Am ASOP-Terminal kann genau ein Spieler das Schiff beanspruchen. Danach öffnet sich das Hangartor für 10 Minuten und nie wieder.</li>
       <li><b>Raus, bevor es schließt.</b> Vor dem Schließen ertönt ein Alarm. Wer dann noch im Hangar oder im Maschinenraum ist, stirbt, Schiffe werden zerstört.</li>
     </ol>
+  </section>
+
+  <section id="xhmaps">
+    <h2>Karten und Laufwege</h2>
+    <p class="small" style="margin-top:0">Wähl einen Ort. Die Karten haben Spieler gezeichnet, die Beschriftung ist englisch. Unter jeder Karte steht das Wichtigste auf Deutsch.</p>
+    <div class="chips" id="xhmapchips" role="group" aria-label="Karte wählen"><button type="button" class="chip" data-map="sup" aria-pressed="true">Rote Karten</button><button type="button" class="chip" data-map="chk" aria-pressed="false">Checkmate</button><button type="button" class="chip" data-map="orb" aria-pressed="false">Orbituary</button><button type="button" class="chip" data-map="ruin" aria-pressed="false">Ruin Station</button><button type="button" class="chip" data-map="xh" aria-pressed="false">Hangar</button></div>
+    <figure class="xh-map" data-map="sup">
+      <a href="https://media.starcitizen.tools/1/1c/PYAM-SUPVISR_Maps.png" target="_blank" rel="noopener" title="Karte in voller Größe öffnen"><img src="https://media.starcitizen.tools/thumb/1/1c/PYAM-SUPVISR_Maps.png/1600px-PYAM-SUPVISR_Maps.png.webp" alt="PYAM-SUPVISR-3-4 und 3-5: Weg zum Drucker für rote Karten" loading="lazy" width="1600" onerror="this.closest('a').hidden=true"></a>
+      <figcaption>
+        <ul><li>Anflug: In der Sternenkarte die Markierung PYR3 L4 oder PYR3 L5 heranzoomen oder doppelt anklicken. Erst dann erscheint PYAM-SUPVISR-3-4 bzw. 3-5 (kleines Bild unten links).</li><li>Vom Eingang geradeaus bis zur Kreuzung. Rechts liegt eine Sicherung (Blitz), links geht es zur Sicherungstür.</li><li>Versteckter Weg zum Drucker: über die zwei Kisten klettern, umdrehen, auf die Kante springen, rechts hochklettern, geradeaus, runter und links. Dann stehst du im Druckerraum.</li><li>Unterwegs warten KI-Gegner (rote Figuren auf der Karte).</li></ul>
+        <p class="small">Grün = frei · Gelb = hinter der Sicherungstür · Blitz = Sicherung · rotes Symbol = Drucker für rote Karten</p>
+        <p class="small">Karte: Kerast, CC BY-SA 4.0, über das <a href="https://starcitizen.tools/Guide:Executive_Hangars" target="_blank" rel="noopener">Star Citizen Wiki</a>. Ein Klick auf die Karte öffnet sie in voller Größe zum Zoomen.</p>
+      </figcaption>
+    </figure>
+    <figure class="xh-map" data-map="chk" hidden>
+      <a href="https://media.starcitizen.tools/b/bd/Contested_Zones_Checkmate_Map_v2.jpg" target="_blank" rel="noopener" title="Karte in voller Größe öffnen"><img src="https://media.starcitizen.tools/thumb/b/bd/Contested_Zones_Checkmate_Map_v2.jpg/1600px-Contested_Zones_Checkmate_Map_v2.jpg.webp" alt="Checkmate: Wege, Türen und Platinen 1 bis 3" loading="lazy" width="1600" onerror="this.closest('a').hidden=true"></a>
+      <figcaption>
+        <ul><li>Zwei Eingänge: Access 1 (rechts) und Access 2 (oben).</li><li>Platine 1 liegt oben, über den roten Weg hinter der roten Tür.</li><li>Platinen 2 und 3 liegen links im Hangar der Zone. Hin geht es über die blauen Wege und einen der beiden Aufzüge, die nur in eine Richtung fahren (oben und unten links).</li><li>Blaue Kartendrucker: die blauen Symbole in der Mitte und unten.</li></ul>
+        <p class="small">Grün = frei begehbar · Blau = nur mit blauer Karte · Rot = nur mit roter Karte · Blitz = Sicherungstür · blaues Kartensymbol = Kartendrucker · pinkes „Tablet“ = Platine · „Extract“ = Ausgang · „One-way lift“ = Aufzug nur in eine Richtung</p>
+        <p class="small">Karte: Terada, CC BY-SA 4.0, über das <a href="https://starcitizen.tools/Guide:Executive_Hangars" target="_blank" rel="noopener">Star Citizen Wiki</a>. Ein Klick auf die Karte öffnet sie in voller Größe zum Zoomen.</p>
+      </figcaption>
+    </figure>
+    <figure class="xh-map" data-map="orb" hidden>
+      <a href="https://media.starcitizen.tools/b/bf/Contested-zones-maps-orbituary-v0-sb4oko35mbde1.png" target="_blank" rel="noopener" title="Karte in voller Größe öffnen"><img src="https://media.starcitizen.tools/thumb/b/bf/Contested-zones-maps-orbituary-v0-sb4oko35mbde1.png/1600px-Contested-zones-maps-orbituary-v0-sb4oko35mbde1.png.webp" alt="Orbituary: Wege, Türen und Platinen 4 und 7" loading="lazy" width="1600" onerror="this.closest('a').hidden=true"></a>
+      <figcaption>
+        <ul><li>Drei Eingänge: A, B und C. Alle Wege treffen sich an der roten Tür in der Mitte.</li><li>Platine 4 liegt links oben, hinter der roten Tür und einer Sicherungstür.</li><li>Platine 7 liegt ganz oben am Frachtaufzug, hinter der blauen Tür.</li><li>Die blauen Kartendrucker sind erst hinter der roten Tür erreichbar.</li></ul>
+        <p class="small">Grün = frei begehbar · Blau = nur mit blauer Karte · Rot = nur mit roter Karte · Blitz = Sicherungstür · blaues Kartensymbol = Kartendrucker · pinkes „Tablet“ = Platine · „Extract“ = Ausgang · „One-way lift“ = Aufzug nur in eine Richtung</p>
+        <p class="small">Karte: Terada, CC BY-SA 4.0, über das <a href="https://starcitizen.tools/Guide:Executive_Hangars" target="_blank" rel="noopener">Star Citizen Wiki</a>. Ein Klick auf die Karte öffnet sie in voller Größe zum Zoomen.</p>
+      </figcaption>
+    </figure>
+    <figure class="xh-map" data-map="ruin" hidden>
+      <a href="https://media.starcitizen.tools/f/f9/Contested-zones-maps-ruin-station-v0-zlozw135mbde1.png" target="_blank" rel="noopener" title="Karte in voller Größe öffnen"><img src="https://media.starcitizen.tools/thumb/f/f9/Contested-zones-maps-ruin-station-v0-zlozw135mbde1.png/1600px-Contested-zones-maps-ruin-station-v0-zlozw135mbde1.png.webp" alt="Ruin Station: Wege, Tresor und Platinen 5 und 6" loading="lazy" width="1600" onerror="this.closest('a').hidden=true"></a>
+      <figcaption>
+        <ul><li>Drei Eingänge: A, B und C. Der große grüne Punkt ist der zentrale Raum (Ghost Arena).</li><li>Die Karten für The Crypt (unten), The Wasteland (rechts) und The Last Resort (unten links) liegen je hinter einer Sicherungstür.</li><li>Oben in der Mitte ist die Zeitschloss-Tür (Timer Door) zum Tresor. Platine 6 liegt dahinter links oben, Platine 5 hinter der Crypt-Tür.</li></ul>
+        <p class="small">Grün = frei begehbar · Blau = nur mit blauer Karte · Rot = nur mit roter Karte · Blitz = Sicherungstür · blaues Kartensymbol = Kartendrucker · pinkes „Tablet“ = Platine · „Extract“ = Ausgang · „One-way lift“ = Aufzug nur in eine Richtung</p>
+        <p class="small">Karte: Terada, CC BY-SA 4.0, über das <a href="https://starcitizen.tools/Guide:Executive_Hangars" target="_blank" rel="noopener">Star Citizen Wiki</a>. Ein Klick auf die Karte öffnet sie in voller Größe zum Zoomen.</p>
+      </figcaption>
+    </figure>
+    <figure class="xh-map" data-map="xh" hidden>
+      <a href="https://media.starcitizen.tools/7/7c/PYAM-EXHANG-0-1_Map.png" target="_blank" rel="noopener" title="Karte in voller Größe öffnen"><img src="https://media.starcitizen.tools/thumb/7/7c/PYAM-EXHANG-0-1_Map.png/1600px-PYAM-EXHANG-0-1_Map.png.webp" alt="PYAM-EXHANG-0-1: Eingang, Platinen-Schlitze und Hangar" loading="lazy" width="1600" onerror="this.closest('a').hidden=true"></a>
+      <figcaption>
+        <ul><li>Lage: nah an der Sonne von Pyro (kleines Bild unten links).</li><li>Vom Haupteingang geradeaus in den schwerelosen Bereich (orange umrandet).</li><li>Platinen-Schlitze: 1 bis 3 in der Mitte, 4 bis 6 rechts, 7 links.</li><li>Durch die Hangartür, dann mit Aufzug A oder B hinauf in den Hangar. Das Schiff beanspruchst du rechts am Schiffsterminal, genau wie an jeder Station.</li></ul>
+        <p class="small">Grün = frei · Gelb = erst nach dem Einsetzen der Platinen · orange = schwereloser Bereich · pink = Platinen-Schlitz · gelbes Symbol = Schiffsterminal</p>
+        <p class="small">Karte: Kerast, CC BY-SA 4.0, über das <a href="https://starcitizen.tools/Guide:Executive_Hangars" target="_blank" rel="noopener">Star Citizen Wiki</a>. Ein Klick auf die Karte öffnet sie in voller Größe zum Zoomen.</p>
+      </figcaption>
+    </figure>
   </section>
 
   <section>
@@ -1430,7 +1481,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <div class="hint" style="margin-top:10px">Manchmal steckt eine Sicherung in der Buchse, ohne einzurasten. Dann mit dem Traktorstrahl drehen, ziehen und schieben, bis sie sich löst, und neu einsetzen.</div>
   </section>
 
-  <p class="small" style="margin-top:18px">Quellen: <a href="https://starcitizen.tools/Guide:Executive_Hangars" target="_blank" rel="noopener">Star Citizen Wiki (Guide)</a>, <a href="https://citizen-starter-guide.com/star-citizen-contested-zone-timer-ship-list/" target="_blank" rel="noopener">citizen-starter-guide.com</a> (Chancen), <a href="https://expcarry.com/star-citizen-executive-hangar-guide" target="_blank" rel="noopener">expcarry.com</a> (Tipps), <a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754" target="_blank" rel="noopener">Known Issues von RSI</a>. Timer: <a href="https://contestedzonetimers.com/" target="_blank" rel="noopener">contestedzonetimers.com</a>, gegengeprüft mit <a href="https://grimhex.net/tools/exec-hangar" target="_blank" rel="noopener">grimhex.net</a>. Stand 30. Oktober 2026, Patch 4.10.2.</p>
+  <p class="small" style="margin-top:18px">Quellen: <a href="https://starcitizen.tools/Guide:Executive_Hangars" target="_blank" rel="noopener">Star Citizen Wiki (Guide)</a>, <a href="https://citizen-starter-guide.com/star-citizen-contested-zone-timer-ship-list/" target="_blank" rel="noopener">citizen-starter-guide.com</a> (Chancen), <a href="https://expcarry.com/star-citizen-executive-hangar-guide" target="_blank" rel="noopener">expcarry.com</a> (Tipps), <a href="https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754" target="_blank" rel="noopener">Known Issues von RSI</a>. Karten: Terada und Kerast (CC BY-SA 4.0) über das Star Citizen Wiki. Timer: <a href="https://contestedzonetimers.com/" target="_blank" rel="noopener">contestedzonetimers.com</a>, gegengeprüft mit <a href="https://grimhex.net/tools/exec-hangar" target="_blank" rel="noopener">grimhex.net</a>. Stand 30. Oktober 2026, Patch 4.10.2.</p>
 </section>
 
 <!-- ============ TASTEN ============ -->
@@ -2210,7 +2261,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <a href="https://starcitizen.tools/Guide:Mining" target="_blank" rel="noopener">Star Citizen Wiki</a>.
   HOSAS-Belegung: Dual-Virpil-Alpha-Profil von <a href="https://www.youtube.com/buzzzkiller" target="_blank" rel="noopener">Buzzzkiller</a> (Vorlage u/yogidragon), Stand 5. Aug 2026.
   Schiffsdaten: <a href="https://api.star-citizen.wiki" target="_blank" rel="noopener">Star Citizen Wiki API</a> (Spielversion 4.10.2), Preise im Spiel über <a href="https://uexcorp.space" target="_blank" rel="noopener">UEX</a>.
-  Schiffsbilder und 3D-Modelle werden von <a href="https://fleetyards.net" target="_blank" rel="noopener">FleetYards.net</a> geladen, Stadtbilder vom <a href="https://starcitizen.tools" target="_blank" rel="noopener">Star Citizen Wiki</a>.
+  Schiffsbilder und 3D-Modelle werden von <a href="https://fleetyards.net" target="_blank" rel="noopener">FleetYards.net</a> geladen, Stadtbilder vom <a href="https://starcitizen.tools" target="_blank" rel="noopener">Star Citizen Wiki</a>. Karten der Contested Zones: Terada und Kerast (CC BY-SA 4.0), ebenfalls über das Wiki.
   Angaben ohne Gewähr.
   <div class="legal">
     <p>Inoffizielle, nicht-kommerzielle Fan-Seite. Nicht verbunden mit Cloud Imperium Games oder Roberts Space Industries. Alle Spielinhalte, Schiffs- und Stadtbilder sowie 3D-Modelle © Cloud Imperium Rights LLC und Cloud Imperium Rights Ltd. Star Citizen®, Squadron 42®, Roberts Space Industries® und Cloud Imperium® sind eingetragene Marken von Cloud Imperium Rights LLC.</p>
@@ -3795,6 +3846,20 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   tick();
   setInterval(function () { if (!view.hidden) tick(); }, 1000);
 
+  /* Karten: Auswahl und Sprung aus dem Ablauf */
+  var mapChips = Array.prototype.slice.call(view.querySelectorAll('#xhmapchips .chip'));
+  var maps = Array.prototype.slice.call(view.querySelectorAll('.xh-map'));
+  function pickMap(k) {
+    mapChips.forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.map === k ? 'true' : 'false'); });
+    maps.forEach(function (m) { m.hidden = m.dataset.map !== k; });
+  }
+  mapChips.forEach(function (c) { c.addEventListener('click', function () { pickMap(c.dataset.map); }); });
+  view.addEventListener('click', function (e) {
+    var a = e.target.closest('.xh-maplink');
+    if (!a) return;
+    e.preventDefault(); pickMap(a.dataset.map);
+    $('xhmaps').scrollIntoView({ block: 'start' });
+  });
   /* Abhak-Listen, im Browser gespeichert */
   var KEY = 'sc-exec-check', saved = {};
   try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
