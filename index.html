@@ -1843,7 +1843,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <div class="nw-list" id="nwvideos"><p class="small">Videos werden geladen …</p></div>
   </section>
 
-  <p class="small">RSI-Beiträge kommen live über die <a href="https://api.star-citizen.wiki" target="_blank" rel="noopener">Star Citizen Wiki API</a>. Server-Status und Videos holt ein automatischer Job jede Stunde ab. Die Einordnung in Kategorien macht die Seite anhand des Titels. Inhalte © Cloud Imperium.</p>
+  <p class="small">RSI-Beiträge, Server-Status und Videos holt ein automatischer Job jede Stunde ab. Die Liste kommt direkt von RSI, das genaue Datum und ältere Beiträge aus der <a href="https://api.star-citizen.wiki" target="_blank" rel="noopener">Star Citizen Wiki API</a>. Die Einordnung in Kategorien macht die Seite anhand des Titels. Inhalte © Cloud Imperium.</p>
 </section>
 
 <!-- ============ SCHIFFE ============ -->
@@ -3419,9 +3419,9 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   try { lastSeen = +localStorage.getItem(KEY) || 0; } catch (e) {}
   var DAY = 864e5, now = Date.now();
   function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
-  function when(iso) {
+  function when(iso, approx) {
     var d = new Date(iso), days = Math.floor((now - d) / DAY);
-    var rel = days <= 0 ? 'heute' : days === 1 ? 'gestern' : 'vor ' + days + ' Tagen';
+    var rel = (approx ? 'etwa ' : '') + (days <= 0 ? 'heute' : days === 1 ? 'gestern' : 'vor ' + days + ' Tagen');
     return d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' }) + '<small>' + rel + '</small>';
   }
   /* Kategorie anhand des Titels */
@@ -3446,7 +3446,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     $('nwlist').innerHTML = list.length ? list.map(function (c) {
       var isNew = lastSeen && new Date(c.date).getTime() > lastSeen;
       return '<a class="nw-item' + (c.k === 'patch' ? ' patch' : '') + '" href="' + esc(c.url) + '" target="_blank" rel="noopener">' +
-        '<span class="nw-date">' + when(c.date) + '</span><span><span class="nw-title">' + esc(c.title) + '</span>' +
+        '<span class="nw-date">' + when(c.date, c.approx) + '</span><span><span class="nw-title">' + esc(c.title) + '</span>' +
         '<span class="nw-meta">' + (isNew ? '<span class="nw-new">Neu</span>' : '') + '<span class="sh-tag' + (c.k === 'patch' ? ' tip' : ' cat') + '">' + LABEL[c.k] + '</span></span></span></a>';
     }).join('') : '<p class="small">In dieser Kategorie gibt es gerade nichts.</p>';
     $('nwsrc').textContent = source;
@@ -3465,7 +3465,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     var seen = {}; items.forEach(function (i) { seen[i.id] = 1; });
     rows.forEach(function (c) {
       if (seen[c.id]) return;
-      items.push({ id: c.id, title: c.title, url: c.url || c.rsi_url, date: c.date || c.created_at, series: c.series, category: c.category });
+      items.push({ id: c.id, title: c.title, url: c.url || c.rsi_url, date: c.date || c.created_at, series: c.series, category: c.category, approx: c.approx });
     });
     items.forEach(function (i) { i.k = cat(i); });
     items.sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
@@ -3534,9 +3534,15 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   var started = false;
   function start() {
     if (started) return; started = true;
-    loadLive().catch(function () {
-      return newsData.then(function (d) { add(d.commlinks || []); source = 'Live-Abruf nicht möglich, zeige gespeicherten Stand.'; });
-    }).then(function () { chips(); draw(); try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {} });
+    /* Liste aus news.json: direkt von RSI, stündlich aktualisiert. Nur wenn die fehlt, live über die Wiki-API. */
+    newsData.then(function (d) {
+      if (!(d.commlinks || []).length) throw new Error('leer');
+      add(d.commlinks); page = 1;
+      source = 'Direkt von RSI, Stand ' + new Date(d.updated).toLocaleString('de-DE', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }) + ' · wird stündlich aktualisiert. „etwa“ = Datum geschätzt.';
+      $('nwmore').hidden = false;
+    }).catch(function () { return loadLive(); })
+      .catch(function () { source = 'Die News konnten gerade nicht geladen werden.'; })
+      .then(function () { chips(); draw(); try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {} });
     $('newsdot').hidden = true;
   }
   document.addEventListener('viewchange', function (e) { if (e.detail === 'news') start(); });

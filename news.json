@@ -71,6 +71,20 @@
  ],
  "commlinks": [
   {
+   "id": 21421,
+   "title": "This Week in Star Citizen - October 26, 2026",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21421-This-Week-In-Star-Citizen",
+   "date": "2026-10-26T12:00:00+00:00",
+   "approx": true
+  },
+  {
+   "id": 21423,
+   "title": "10 From the Community - Technology in Focus",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21423-10-From-The-Community",
+   "date": "2026-10-23T10:50:57+00:00",
+   "approx": true
+  },
+  {
    "id": 21390,
    "title": "Roadmap Roundup - October 21, 2026",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21390-Roadmap-Roundup-October-21-2026",
@@ -96,6 +110,13 @@
    "channel": "Transmission",
    "category": "Undefined",
    "series": "None"
+  },
+  {
+   "id": 20943,
+   "title": "Monthly Store Bundle 2026",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/20943-Monthly-Store-Bundle-2026",
+   "date": "2026-10-16T10:50:57+00:00",
+   "approx": true
   },
   {
    "id": 21381,
@@ -179,6 +200,20 @@
    "series": "None"
   },
   {
+   "id": 21279,
+   "title": "October 2026 Subscriber Promotions",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21279-October-2026-Subscriber-Promotions",
+   "date": "2026-10-09T10:50:57+00:00",
+   "approx": true
+  },
+  {
+   "id": 21276,
+   "title": "RSI Discovery Month Digital Goodies Pack - Available Now!",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21276-RSI-Discovery-Month-Digital-Goodies-Pack",
+   "date": "2026-10-09T10:50:57+00:00",
+   "approx": true
+  },
+  {
    "id": 21373,
    "title": "Star Citizen Monthly Report: September 2026",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21373-Star-Citizen-Monthly-Report-September-2026",
@@ -224,5 +259,5 @@
    "series": "None"
   }
  ],
- "updated": "2026-10-29T12:54:07+00:00"
+ "updated": "2026-10-30T10:50:58+00:00"
 }
