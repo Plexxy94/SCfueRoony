@@ -512,6 +512,18 @@ tr.rec th { color: var(--accent); }
 .search input.tool-input { font: 600 20px var(--f-mono); padding: 12px 16px; border: 2px solid var(--line); border-radius: 8px; }
 .search input.tool-input:focus { border-color: var(--accent); outline: none; }
 .rs-scale { display: flex; flex-wrap: wrap; gap: 6px; }
+.rs-scan { display: flex; flex-direction: column; gap: 10px; border-top: 1px dashed var(--line); padding-top: 12px; }
+.rs-scan-btns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.rs-drop { border: 2px dashed var(--line); border-radius: 8px; padding: 10px 14px; font-size: 14px; color: var(--muted); }
+.rs-drop.over { border-color: var(--accent); background: var(--accent-soft); }
+.rs-stage { position: relative; max-width: 640px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #000; cursor: crosshair; touch-action: none; }
+.rs-stage canvas { display: block; width: 100%; height: auto; }
+.rs-stage .rs-sel { position: absolute; border: 2px solid var(--accent); box-shadow: 0 0 0 9999px rgba(0,0,0,.45); pointer-events: none; }
+.rs-status { font: 500 13px var(--f-mono); color: var(--muted); }
+.rs-found { display: flex; flex-direction: column; gap: 6px; }
+.rs-found button { all: unset; cursor: pointer; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; padding: 8px 12px; border-radius: 6px; background: var(--key-bg); border: 1px solid var(--line); font-size: 14px; }
+.rs-found button:hover, .rs-found button:focus-visible { border-color: var(--accent); }
+.rs-found .sig { font: 700 16px var(--f-mono); min-width: 7ch; }
 .rs-hit { padding: 10px 14px; font-size: 15px; }
 .rs-hit b { font-size: 20px; }
 .rs-hit.top { border-width: 2px; padding: 14px 16px; }
@@ -1922,6 +1934,20 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <div class="search"><input id="rsq" class="tool-input" type="text" inputmode="numeric" placeholder="Signatur eingeben, z. B. 7170" aria-label="Signatur aus dem HUD"></div>
       <div class="chips" id="rsex" aria-label="Beispiele"><span class="small">Beispiele:</span></div>
       <div id="rsout" class="rs-out" aria-live="polite"><span class="small">Noch keine Zahl eingegeben.</span></div>
+      <div class="rs-scan" id="rsscan">
+        <strong>Oder vom Bildschirm lesen lassen</strong>
+        <div class="rs-scan-btns">
+          <button type="button" class="btn2 primary" id="rsshare">Bildschirm teilen</button>
+          <button type="button" class="btn2" id="rsstop" hidden>Teilen beenden</button>
+          <button type="button" class="btn2" id="rsfilebtn">Screenshot hochladen</button>
+          <input type="file" id="rsfile" accept="image/*" hidden>
+        </div>
+        <div class="rs-drop" id="rsdrop">Screenshot hier hineinziehen oder mit <kbd>Strg</kbd>+<kbd>V</kbd> einfügen (Star Citizen: <kbd>Druck</kbd>, landet im Ordner <code>ScreenShots</code>).</div>
+        <p class="small" id="rssharehint">Bildschirm teilen klappt am PC in Chrome, Edge oder Firefox, wenn Star Citizen im Fenster- oder randlosen Modus läuft. Danach kannst du im Vorschaubild einen Bereich aufziehen, dann liest die Seite nur dort und schneller. Alles läuft lokal in deinem Browser, nichts wird hochgeladen.</p>
+        <div class="rs-stage" id="rsstage" hidden><canvas id="rscanvas"></canvas><div class="rs-sel" id="rssel" hidden></div></div>
+        <div class="rs-status" id="rsstatus" aria-live="polite"></div>
+        <div class="rs-found" id="rsfound"></div>
+      </div>
       <div class="rs-scale"><span class="pill go">3.100–3.600 wertvoll</span><span class="pill later">3.800–3.900 solide</span><span class="pill no">4.180–4.300 billige Masse</span><span class="pill no">3.000 / 4.000 Handabbau / ROC</span></div>
     </div>
     <details class="ref">
@@ -3812,15 +3838,19 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   var inp = document.getElementById('rsq'), out = document.getElementById('rsout');
   if (!inp) return;
   var fmt = function (n) { return n.toLocaleString('de-DE'); };
-  inp.addEventListener('input', function () {
-    var v = parseInt(inp.value.replace(/[^0-9]/g, ''), 10);
-    if (!v) { out.innerHTML = '<span class="small">Noch keine Zahl eingegeben.</span>'; return; }
+  function match(v) {
     var hits = [];
     ORES.concat(GROUND.map(function (x) { return [x[0], x[1], x[2], 0, 1]; })).forEach(function (o) {
       var n = Math.round(v / o[0]);
       if (n >= 1 && n <= 40 && Math.abs(n * o[0] - v) <= 3) hits.push({ n: n, o: o });
     });
-    hits.sort(function (a, b) { return a.n - b.n; });
+    return hits.sort(function (a, b) { return a.n - b.n; });
+  }
+  window.SC_RS_MATCH = match;
+  inp.addEventListener('input', function () {
+    var v = parseInt(inp.value.replace(/[^0-9]/g, ''), 10);
+    if (!v) { out.innerHTML = '<span class="small">Noch keine Zahl eingegeben.</span>'; return; }
+    var hits = match(v);
     if (!hits.length) { out.innerHTML = '<span class="small">Kein bekanntes Mineral passt genau. Prüf die Zahl noch einmal, oder es ist kein Gestein (z. B. ein Schiff oder Trümmer).</span>'; return; }
     out.innerHTML = hits.slice(0, 4).map(function (h, i) {
       var o = h.o, val = o[3] ? 'Basiswert ' + fmt(o[3]) + ' aUEC/SCU' : (o[4] ? 'Mineral zeigt erst der Scan' : 'Basiswert unbekannt');
@@ -3944,6 +3974,181 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     var b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.textContent = v;
     b.addEventListener('click', function () { inp.value = v; inp.dispatchEvent(new Event('input')); });
     ex.appendChild(b);
+  });
+})();
+</script>
+<script>
+/* ---------- RS-Rechner: Signaturen vom Bildschirm lesen (Bildschirm teilen, Screenshot) ----------
+   Texterkennung mit Tesseract.js, läuft komplett im Browser. Wird erst beim ersten Gebrauch geladen. */
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var inp = $('rsq'), stage = $('rsstage'), cv = $('rscanvas'), selEl = $('rssel'), status = $('rsstatus'), found = $('rsfound');
+  if (!inp || !stage) return;
+  var shareBtn = $('rsshare'), stopBtn = $('rsstop'), fileIn = $('rsfile'), drop = $('rsdrop');
+  var TESS = 'https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js';
+  var fmt = function (n) { return n.toLocaleString('de-DE'); };
+  var workerP = null, busy = false, again = false, stream = null, video = null, img = null, sel = null, lastKey = '', timer = 0;
+
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getDisplayMedia) {
+    shareBtn.hidden = true;
+    $('rssharehint').textContent = 'Bildschirm teilen geht nur am PC (Chrome, Edge oder Firefox). Ein Screenshot klappt überall.';
+  }
+
+  function say(t) { status.textContent = t; }
+  function worker() {
+    if (!workerP) workerP = new Promise(function (res, rej) {
+      if (window.Tesseract) return res();
+      var s = document.createElement('script'); s.src = TESS; s.onload = res; s.onerror = rej; document.head.appendChild(s);
+    }).then(function () {
+      return Tesseract.createWorker('eng');
+    }).then(function (w) {
+      return w.setParameters({ tessedit_char_whitelist: '0123456789.,', tessedit_pageseg_mode: '11' }).then(function () { return w; });
+    }).catch(function (e) { workerP = null; throw e; });
+    return workerP;
+  }
+
+  /* Quelle (Video oder Bild) in Originalgröße, Auswahl als Anteile 0..1 */
+  function srcSize() { return video ? [video.videoWidth, video.videoHeight] : img ? [img.naturalWidth, img.naturalHeight] : [0, 0]; }
+  function drawPreview() {
+    var s = srcSize(); if (!s[0]) return;
+    var w = Math.min(s[0], 1280); cv.width = w; cv.height = Math.round(w * s[1] / s[0]);
+    cv.getContext('2d').drawImage(video || img, 0, 0, cv.width, cv.height);
+  }
+  /* Ausschnitt holen, vergrößern und in Schwarz auf Weiß umwandeln: HUD-Zahlen sind hell */
+  function prepare() {
+    var s = srcSize(), r = sel || { x: 0, y: 0, w: 1, h: 1 };
+    var sx = Math.round(r.x * s[0]), sy = Math.round(r.y * s[1]), sw = Math.max(1, Math.round(r.w * s[0])), sh = Math.max(1, Math.round(r.h * s[1]));
+    var k = Math.min(3, Math.max(1, 1600 / sw), 2400 / sw);
+    var c = document.createElement('canvas'); c.width = Math.round(sw * k); c.height = Math.round(sh * k);
+    var x = c.getContext('2d', { willReadFrequently: true });
+    x.imageSmoothingQuality = 'high';
+    x.drawImage(video || img, sx, sy, sw, sh, 0, 0, c.width, c.height);
+    var d = x.getImageData(0, 0, c.width, c.height), p = d.data;
+    for (var i = 0; i < p.length; i += 4) {
+      var v = Math.max(p[i], p[i + 1], p[i + 2]) > 175 ? 0 : 255;
+      p[i] = p[i + 1] = p[i + 2] = v;
+    }
+    x.putImageData(d, 0, 0);
+    return c;
+  }
+  function parse(text) {
+    var out = [], seen = {};
+    (text.match(/\d{1,3}(?:[.,]\d{3})+|\d{4,6}/g) || []).forEach(function (t) {
+      var v = parseInt(t.replace(/[.,]/g, ''), 10);
+      if (v < 2900 || v > 180000 || seen[v]) return;
+      var hits = window.SC_RS_MATCH ? window.SC_RS_MATCH(v) : [];
+      if (!hits.length) return;
+      seen[v] = 1; out.push({ v: v, hits: hits });
+    });
+    return out;
+  }
+  function render(list) {
+    var key = list.map(function (x) { return x.v; }).join(',');
+    if (key === lastKey) return;
+    lastKey = key;
+    found.innerHTML = '';
+    list.forEach(function (f) {
+      var h = f.hits[0], b = document.createElement('button'); b.type = 'button';
+      b.innerHTML = '<span class="sig">' + fmt(f.v) + '</span><span><b>' + h.n + ' × ' + h.o[1] + '</b>' +
+        (f.hits.length > 1 ? ' <span class="small">oder ' + f.hits.slice(1, 3).map(function (o) { return o.n + ' × ' + o.o[1]; }).join(', ') + '</span>' : '') + '</span>';
+      b.title = 'Im Rechner oben genauer anzeigen';
+      b.addEventListener('click', function () { inp.value = fmt(f.v); inp.dispatchEvent(new Event('input')); inp.scrollIntoView({ block: 'center', behavior: 'smooth' }); });
+      found.appendChild(b);
+    });
+  }
+  function read() {
+    if (busy) { again = !!img; return Promise.resolve(); }
+    if (!srcSize()[0]) return Promise.resolve();
+    busy = true; again = false;
+    var first = !workerP;
+    if (first) say('Texterkennung wird geladen (einmalig ca. 5 MB) …');
+    return worker().then(function (w) {
+      if (!video && !img) return;
+      return w.recognize(prepare()).then(function (r) {
+        var list = parse(r.data.text || '');
+        render(list);
+        var t = new Date().toLocaleTimeString('de-DE');
+        say((list.length ? list.length + (list.length === 1 ? ' Signatur' : ' Signaturen') + ' erkannt' : 'Keine Signatur erkannt') +
+          (video ? ' · live, zuletzt ' + t : '') + (!list.length && !sel ? '. Tipp: Bereich im Bild aufziehen.' : ''));
+      });
+    }).catch(function () {
+      say('Texterkennung konnte nicht geladen werden. Prüf die Internetverbindung oder tipp die Zahl oben ein.');
+    }).then(function () { busy = false; if (again && img) read(); });
+  }
+
+  /* Bildschirm teilen: Vorschau läuft flüssig, gelesen wird nach jedem Durchgang mit kurzer Pause */
+  function loop() {
+    if (!video) return;
+    drawPreview();
+    read().then(function () { if (video) timer = setTimeout(loop, 700); });
+  }
+  function stop() {
+    clearTimeout(timer);
+    if (stream) stream.getTracks().forEach(function (t) { t.stop(); });
+    stream = null; video = null;
+    stopBtn.hidden = true; shareBtn.hidden = false;
+    if (!img) stage.hidden = true;
+    say('Teilen beendet.');
+  }
+  shareBtn.addEventListener('click', function () {
+    navigator.mediaDevices.getDisplayMedia({ video: { frameRate: 5 }, audio: false }).then(function (s) {
+      img = null; sel = null; selEl.hidden = true; lastKey = ''; found.innerHTML = '';
+      stream = s; video = document.createElement('video'); video.muted = true; video.playsInline = true; video.srcObject = s;
+      s.getVideoTracks()[0].addEventListener('ended', stop);
+      return video.play().then(function () {
+        stage.hidden = false; shareBtn.hidden = true; stopBtn.hidden = false;
+        say('Bild läuft. Im Spiel Tab halten (Ping), die Zahlen erscheinen hier.');
+        (function preview() { if (!video) return; drawPreview(); setTimeout(preview, 250); })();
+        loop();
+      });
+    }).catch(function () { say('Teilen wurde abgebrochen.'); });
+  });
+  stopBtn.addEventListener('click', stop);
+
+  /* Screenshot: hochladen, hineinziehen oder einfügen */
+  function loadFile(f) {
+    if (!f || !/^image\//.test(f.type)) return;
+    if (video) stop();
+    var u = URL.createObjectURL(f), i = new Image();
+    i.onload = function () {
+      img = i; sel = null; selEl.hidden = true; lastKey = ''; found.innerHTML = '';
+      stage.hidden = false; drawPreview(); say('Lese Screenshot …'); read();
+    };
+    i.onerror = function () { say('Das Bild konnte nicht geöffnet werden.'); };
+    i.src = u;
+  }
+  $('rsfilebtn').addEventListener('click', function () { fileIn.click(); });
+  fileIn.addEventListener('change', function () { loadFile(fileIn.files[0]); fileIn.value = ''; });
+  ['dragenter', 'dragover'].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add('over'); }); });
+  ['dragleave', 'drop'].forEach(function (ev) { drop.addEventListener(ev, function () { drop.classList.remove('over'); }); });
+  drop.addEventListener('drop', function (e) { e.preventDefault(); loadFile(e.dataTransfer.files[0]); });
+  document.addEventListener('paste', function (e) {
+    if ($('view-mining').hidden) return;
+    var it = [].filter.call((e.clipboardData || {}).items || [], function (x) { return /^image\//.test(x.type); })[0];
+    if (!it) return;
+    e.preventDefault(); loadFile(it.getAsFile());
+    stage.scrollIntoView({ block: 'nearest' });
+  });
+
+  /* Bereich aufziehen: nur dort lesen. Ein Klick ohne Ziehen hebt die Auswahl auf. */
+  var start = null;
+  function pos(e) {
+    var b = cv.getBoundingClientRect();
+    return { x: Math.min(1, Math.max(0, (e.clientX - b.left) / b.width)), y: Math.min(1, Math.max(0, (e.clientY - b.top) / b.height)) };
+  }
+  function show(r) {
+    selEl.hidden = !r; if (!r) return;
+    selEl.style.left = r.x * 100 + '%'; selEl.style.top = r.y * 100 + '%';
+    selEl.style.width = r.w * 100 + '%'; selEl.style.height = r.h * 100 + '%';
+  }
+  function rect(a, b) { return { x: Math.min(a.x, b.x), y: Math.min(a.y, b.y), w: Math.abs(a.x - b.x), h: Math.abs(a.y - b.y) }; }
+  stage.addEventListener('pointerdown', function (e) { start = pos(e); stage.setPointerCapture(e.pointerId); });
+  stage.addEventListener('pointermove', function (e) { if (start) show(rect(start, pos(e))); });
+  stage.addEventListener('pointerup', function (e) {
+    if (!start) return;
+    var r = rect(start, pos(e)); start = null;
+    sel = r.w > 0.02 && r.h > 0.02 ? r : null; show(sel); lastKey = '';
+    if (img) { say('Lese Ausschnitt …'); read(); }
   });
 })();
 </script>
