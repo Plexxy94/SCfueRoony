@@ -1138,6 +1138,10 @@
   "aluminum": {
    "ref": [
     [
+     4200,
+     "Everus Harbor"
+    ],
+    [
      3800,
      "TDD Area 18"
     ],
@@ -1152,10 +1156,6 @@
     [
      3800,
      "TDD Orison"
-    ],
-    [
-     3800,
-     "Stanton Gateway (Nyx)"
     ]
    ]
   },
@@ -1276,12 +1276,12 @@
      "Rat's Nest"
     ],
     [
-     3900,
-     "Baijini Point"
+     4000,
+     "Terra Gateway (Stanton)"
     ],
     [
-     3700,
-     "TDD Area 18"
+     3900,
+     "Baijini Point"
     ]
    ],
    "raw": [
@@ -1314,7 +1314,7 @@
      "Terra Gateway (Stanton)"
     ],
     [
-     3900,
+     4000,
      "Everus Harbor"
     ],
     [
@@ -1456,10 +1456,6 @@
      "CRU-L1"
     ],
     [
-     9200,
-     "Stanton Gateway (Nyx)"
-    ],
-    [
      9100,
      "TDD New Babbage"
     ],
@@ -1470,6 +1466,10 @@
     [
      8700,
      "Ruin Station"
+    ],
+    [
+     8700,
+     "Rod's Fuel"
     ]
    ]
   },
@@ -1712,7 +1712,7 @@
   "titanium": {
    "ref": [
     [
-     9200,
+     8700,
      "Starlight Service"
     ],
     [
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-10-31T09:41:00+00:00"
+ "updated": "2026-10-31T15:44:48+00:00"
 }
