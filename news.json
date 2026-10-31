@@ -261,20 +261,11 @@
    "channel": "Transmission",
    "category": "Undefined",
    "series": "None"
-  },
-  {
-   "id": 21339,
-   "title": "This Week in Star Citizen",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21339-This-Week-In-Star-Citizen",
-   "date": "2026-09-21T20:00:00+00:00",
-   "channel": "Transmission",
-   "category": "Undefined",
-   "series": "None"
   }
  ],
  "exec": {
   "start": 1792860059,
   "src": "contestedzonetimers.com"
  },
- "updated": "2026-10-31T02:24:46+00:00"
+ "updated": "2026-10-31T20:00:17+00:00"
 }
