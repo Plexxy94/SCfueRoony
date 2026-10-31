@@ -72,24 +72,30 @@
  "commlinks": [
   {
    "id": 21427,
-   "title": "Jump Point Now Available! - ISSUE: 14 05 – Constellation of the Heart",
+   "title": "Jump Point Now Available!",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21427-Jump-Point-Now-Available",
-   "date": "2026-10-30T17:39:32+00:00",
-   "approx": true
-  },
-  {
-   "id": 21421,
-   "title": "This Week in Star Citizen - October 26, 2026",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21421-This-Week-In-Star-Citizen",
-   "date": "2026-10-26T12:00:00+00:00",
-   "approx": true
+   "date": "2026-10-30T19:00:00+00:00",
+   "channel": "Transmission",
+   "category": "Undefined",
+   "series": "None"
   },
   {
    "id": 21423,
-   "title": "10 From the Community - Technology in Focus",
+   "title": "10 From the Community",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21423-10-From-The-Community",
-   "date": "2026-10-23T10:50:57+00:00",
-   "approx": true
+   "date": "2026-10-30T19:00:00+00:00",
+   "channel": "Transmission",
+   "category": "Undefined",
+   "series": "None"
+  },
+  {
+   "id": 21421,
+   "title": "This Week in Star Citizen",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21421-This-Week-In-Star-Citizen",
+   "date": "2026-10-30T19:00:00+00:00",
+   "channel": "Transmission",
+   "category": "Undefined",
+   "series": "None"
   },
   {
    "id": 21390,
@@ -270,5 +276,5 @@
   "start": 1792860059,
   "src": "contestedzonetimers.com"
  },
- "updated": "2026-10-30T18:38:34+00:00"
+ "updated": "2026-10-31T02:24:46+00:00"
 }

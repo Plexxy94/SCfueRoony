@@ -1268,10 +1268,6 @@
      "Terra Gateway (Stanton)"
     ],
     [
-     4400,
-     "Stanton Gateway (Pyro)"
-    ],
-    [
      4300,
      "Pyro Gateway (Stanton)"
     ],
@@ -1282,6 +1278,10 @@
     [
      4200,
      "Rat's Nest"
+    ],
+    [
+     3900,
+     "Baijini Point"
     ]
    ],
    "raw": [
@@ -1524,12 +1524,8 @@
   "quartz": {
    "ref": [
     [
-     5300,
+     5500,
      "Stanton Gateway (Pyro)"
-    ],
-    [
-     5300,
-     "Nyx Gateway (Stanton)"
     ],
     [
      5200,
@@ -1542,6 +1538,10 @@
     [
      4600,
      "Patch City"
+    ],
+    [
+     4600,
+     "Nyx Gateway (Stanton)"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-10-30T22:59:19+00:00"
+ "updated": "2026-10-31T02:24:47+00:00"
 }
