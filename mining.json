@@ -1138,10 +1138,6 @@
   "aluminum": {
    "ref": [
     [
-     4200,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      3800,
      "TDD Area 18"
     ],
@@ -1156,6 +1152,10 @@
     [
      3800,
      "TDD Orison"
+    ],
+    [
+     3800,
+     "Stanton Gateway (Nyx)"
     ]
    ]
   },
@@ -1264,10 +1264,6 @@
   "copper": {
    "ref": [
     [
-     4700,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      4300,
      "Pyro Gateway (Stanton)"
     ],
@@ -1282,6 +1278,10 @@
     [
      3900,
      "Baijini Point"
+    ],
+    [
+     3700,
+     "TDD Area 18"
     ]
    ],
    "raw": [
@@ -1549,15 +1549,15 @@
    "ref": [
     [
      91000,
-     "ArcCorp 141"
-    ],
-    [
-     91000,
      "ArcCorp 157"
     ],
     [
      84000,
      "Ashland"
+    ],
+    [
+     83000,
+     "ArcCorp 141"
     ],
     [
      77000,
@@ -1640,10 +1640,6 @@
   "stileron": {
    "ref": [
     [
-     170000,
-     "Nyx Gateway (Pyro)"
-    ],
-    [
      150000,
      "Deakins Research"
     ],
@@ -1658,6 +1654,10 @@
     [
      140000,
      "TDD New Babbage"
+    ],
+    [
+     140000,
+     "Rayari Kaltag"
     ]
    ]
   },
@@ -1773,14 +1773,14 @@
     ],
     [
      11000,
-     "Pyro Gateway (Stanton)"
+     "Terra Gateway (Stanton)"
     ],
     [
-     10000,
-     "TDD Area 18"
+     11000,
+     "Pyro Gateway (Stanton)"
     ]
    ]
   }
  },
- "updated": "2026-10-31T02:24:47+00:00"
+ "updated": "2026-10-31T09:41:00+00:00"
 }
