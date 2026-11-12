@@ -71,6 +71,13 @@
  ],
  "commlinks": [
   {
+   "id": 21420,
+   "title": "Star Citizen Alpha 4.10.3 Vanduul Incursion - Nyx Needs You",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21420-Star-Citizen-Alpha-4103-Vanduul-Incursion",
+   "date": "2026-11-12T16:50:23+00:00",
+   "approx": true
+  },
+  {
    "id": 9575984,
    "title": "IAE 2956 - Choose Your Adventure - FAQ",
    "src": "Spectrum",
@@ -373,9 +380,9 @@
   "src": "contestedzonetimers.com"
  },
  "issues": {
-  "title": "Star Citizen Alpha 4.10.2 Known Issues",
-  "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-2-Known-Issues",
-  "updated": "2026-10-09T14:38:10Z",
+  "title": "Star Citizen Alpha 4.10.3 Known Issues",
+  "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+  "updated": "2026-11-12T17:58:33Z",
   "cats": [
    {
     "name": "Technical Issues",
@@ -423,9 +430,21 @@
     "name": "Ship Issues",
     "items": [
      {
+      "t": "890 Jumps Can Lose Ability to Interact With Everything",
+      "id": "h_01M789CDE8JG50G78VZCTX0ZQX",
+      "wa": true
+     },
+     {
+      "t": "Cargo Grids in Ground Vehicles Are Not Functioning Properly",
+      "id": "h_01M789XWHDV5G87D6BE6EJWFTV",
+      "wa": false,
+      "new": true
+     },
+     {
       "t": "Docked Ships Inside Another Ship Despawn After a Bed Log",
       "id": "h_01M0JHWA5V1Q0A9JN4QQ8D9SAG",
-      "wa": false
+      "wa": false,
+      "new": true
      },
      {
       "t": "Quantum Snares and Dampeners Are Absent From the Vehicle Console",
@@ -540,12 +559,6 @@
       "wa": true
      },
      {
-      "t": "Items Have Been Replaced with Fire Extinguishers",
-      "id": "h_01KXNX5XCJDP3T8XYSF2DSQ98S",
-      "wa": false,
-      "new": true
-     },
-     {
       "t": "Hand-Held Items Are Gone When Returning to the Game",
       "id": "h_01KXNYGR98R988C29T15CCAMF1",
       "wa": true
@@ -649,6 +662,6 @@
    }
   ]
  },
- "updated": "2026-11-12T13:01:33+00:00",
- "checked": "2026-11-12T13:02:11+00:00"
+ "updated": "2026-11-12T20:50:26+00:00",
+ "checked": "2026-11-12T20:50:26+00:00"
 }
