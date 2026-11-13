@@ -1,6 +1,6 @@
 {
- "checked": "2026-11-13T14:44:26+00:00",
- "threads": 17,
+ "checked": "2026-11-13T22:02:02+00:00",
+ "threads": 18,
  "errors": [],
  "hits": [
   {
@@ -34,15 +34,56 @@
    "ccu": 5,
    "value": 25,
    "saving": 20
+  },
+  {
+   "id": "raised-244-400",
+   "type": "raised",
+   "ship": "Galaxy",
+   "ship_id": 244,
+   "old": 380,
+   "new": 400,
+   "now": 400,
+   "first_seen": "2026-11-13",
+   "done": true,
+   "src": {
+    "title": "Preisvergleich mit dem Vortag",
+    "url": "https://robertsspaceindustries.com/pledge/ship-upgrades",
+    "date": "2026-11-13",
+    "site": "Pledge-Store"
+   }
   }
  ],
  "warbond": [
+  {
+   "ship": "Galaxy",
+   "mfr": "Roberts Space Industries",
+   "msrp": 400,
+   "wb": 360,
+   "from": "Constellation Mk IV Phoenix",
+   "from_msrp": 350,
+   "ccu": 10,
+   "value": 50,
+   "saving": 40,
+   "new": true
+  },
+  {
+   "ship": "Meteor",
+   "mfr": "Roberts Space Industries",
+   "msrp": 260,
+   "wb": 240,
+   "from": "Scorpius Antares",
+   "from_msrp": 230,
+   "ccu": 10,
+   "value": 30,
+   "saving": 20,
+   "new": true
+  },
   {
    "ship": "Constellation Mk V Centaurus",
    "mfr": "Roberts Space Industries",
    "msrp": 300,
    "wb": 275,
-   "from": "Meteor",
+   "from": "Apollo Triage",
    "from_msrp": 260,
    "ccu": 15,
    "value": 40,

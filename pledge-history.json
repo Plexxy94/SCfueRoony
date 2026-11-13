@@ -1,1 +1,170 @@
-[]
+[
+ {
+  "d": "2026-11-13",
+  "id": 71,
+  "name": "Orion",
+  "k": "sku+",
+  "sku": 16328,
+  "title": "Standard Edition",
+  "new": 650
+ },
+ {
+  "d": "2026-11-13",
+  "id": 116,
+  "name": "Polaris",
+  "k": "sku+",
+  "sku": 17639,
+  "title": "Standard Edition",
+  "new": 975
+ },
+ {
+  "d": "2026-11-13",
+  "id": 166,
+  "name": "Apollo Triage",
+  "k": "sku+",
+  "sku": 18447,
+  "title": "Standard Edition",
+  "new": 260
+ },
+ {
+  "d": "2026-11-13",
+  "id": 167,
+  "name": "Apollo Medivac",
+  "k": "sku+",
+  "sku": 18446,
+  "title": "Standard Edition",
+  "new": 290
+ },
+ {
+  "d": "2026-11-13",
+  "id": 217,
+  "name": "Perseus",
+  "k": "sku+",
+  "sku": 18657,
+  "title": "Standard Edition",
+  "new": 800
+ },
+ {
+  "d": "2026-11-13",
+  "id": 221,
+  "name": "Scorpius",
+  "k": "sku+",
+  "sku": 15682,
+  "title": "Standard Edition",
+  "new": 240
+ },
+ {
+  "d": "2026-11-13",
+  "id": 243,
+  "name": "Scorpius Antares",
+  "k": "sku+",
+  "sku": 15622,
+  "title": "Standard Edition",
+  "new": 230
+ },
+ {
+  "d": "2026-11-13",
+  "id": 244,
+  "name": "Galaxy",
+  "k": "msrp",
+  "old": 380,
+  "new": 400
+ },
+ {
+  "d": "2026-11-13",
+  "id": 244,
+  "name": "Galaxy",
+  "k": "sku+",
+  "sku": 19828,
+  "title": "Standard Edition",
+  "new": 400
+ },
+ {
+  "d": "2026-11-13",
+  "id": 244,
+  "name": "Galaxy",
+  "k": "sku+",
+  "sku": 19829,
+  "title": "Warbond Edition",
+  "new": 360
+ },
+ {
+  "d": "2026-11-13",
+  "id": 245,
+  "name": "Lynx",
+  "k": "sku+",
+  "sku": 15948,
+  "title": "Standard Edition",
+  "new": 60
+ },
+ {
+  "d": "2026-11-13",
+  "id": 251,
+  "name": "Zeus Mk II ES",
+  "k": "sku+",
+  "sku": 17417,
+  "title": "Standard Edition",
+  "new": 175
+ },
+ {
+  "d": "2026-11-13",
+  "id": 256,
+  "name": "Zeus Mk II MR",
+  "k": "sku+",
+  "sku": 16239,
+  "title": "Standard Edition",
+  "new": 190
+ },
+ {
+  "d": "2026-11-13",
+  "id": 257,
+  "name": "Zeus Mk II CL",
+  "k": "sku+",
+  "sku": 17420,
+  "title": "Standard Edition",
+  "new": 175
+ },
+ {
+  "d": "2026-11-13",
+  "id": 260,
+  "name": "Arrastra",
+  "k": "sku+",
+  "sku": 16343,
+  "title": "Standard Edition",
+  "new": 575
+ },
+ {
+  "d": "2026-11-13",
+  "id": 273,
+  "name": "Ursa Medivac",
+  "k": "sku+",
+  "sku": 16882,
+  "title": "Standard Edition",
+  "new": 60
+ },
+ {
+  "d": "2026-11-13",
+  "id": 301,
+  "name": "Meteor",
+  "k": "sku+",
+  "sku": 18750,
+  "title": "Warbond Edition",
+  "new": 240
+ },
+ {
+  "d": "2026-11-13",
+  "id": 310,
+  "name": "Hermes",
+  "k": "sku+",
+  "sku": 18868,
+  "title": "Standard Edition",
+  "new": 220
+ },
+ {
+  "d": "2026-11-13",
+  "id": 326,
+  "name": "Skylark",
+  "k": "new",
+  "new": 45
+ }
+]
