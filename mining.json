@@ -1131,12 +1131,16 @@
     ],
     [
      10000,
-     "ARC-L4"
+     "HUR-L3"
     ]
    ]
   },
   "aluminum": {
    "ref": [
+    [
+     4000,
+     "Dudley & Daughters"
+    ],
     [
      3900,
      "Port Tressler"
@@ -1152,10 +1156,6 @@
     [
      3800,
      "CBD Lorville"
-    ],
-    [
-     3800,
-     "TDD Orison"
     ]
    ]
   },
@@ -1210,14 +1210,6 @@
   "bexalite": {
    "ref": [
     [
-     34000,
-     "Rat's Nest"
-    ],
-    [
-     32000,
-     "The Golden Riviera"
-    ],
-    [
      30000,
      "Rod's Fuel"
     ],
@@ -1228,6 +1220,14 @@
     [
      30000,
      "Endgame"
+    ],
+    [
+     30000,
+     "Jackson's Swap"
+    ],
+    [
+     30000,
+     "Dudley & Daughters"
     ]
    ]
   },
@@ -1374,7 +1374,7 @@
   "hephaestanite": {
    "ref": [
     [
-     5400,
+     4900,
      "TDD New Babbage"
     ],
     [
@@ -1456,8 +1456,8 @@
      "Rod's Fuel"
     ],
     [
-     9100,
-     "CBD Lorville"
+     9200,
+     "Stanton Gateway (Nyx)"
     ],
     [
      8700,
@@ -1592,10 +1592,6 @@
   "savrilium": {
    "ref": [
     [
-     140000,
-     "The Golden Riviera"
-    ],
-    [
      130000,
      "TDD Orison"
     ],
@@ -1610,6 +1606,10 @@
     [
      130000,
      "PSS Delta"
+    ],
+    [
+     110000,
+     "Levski"
     ]
    ]
   },
@@ -1640,10 +1640,6 @@
   "stileron": {
    "ref": [
     [
-     160000,
-     "Levski"
-    ],
-    [
      150000,
      "Deakins Research"
     ],
@@ -1658,15 +1654,15 @@
     [
      140000,
      "TDD New Babbage"
+    ],
+    [
+     140000,
+     "Rayari Kaltag"
     ]
    ]
   },
   "taranite": {
    "ref": [
-    [
-     28000,
-     "TDD New Babbage"
-    ],
     [
      28000,
      "Fallow Field"
@@ -1678,6 +1674,10 @@
     [
      27000,
      "TDD Area 18"
+    ],
+    [
+     27000,
+     "TDD New Babbage"
     ],
     [
      27000,
@@ -1712,10 +1712,6 @@
   "titanium": {
    "ref": [
     [
-     9200,
-     "Starlight Service"
-    ],
-    [
      8300,
      "TDD Area 18"
     ],
@@ -1730,6 +1726,10 @@
     [
      8300,
      "Ruin Station"
+    ],
+    [
+     8300,
+     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-13T01:50:35+00:00"
+ "updated": "2026-11-13T09:33:50+00:00"
 }
