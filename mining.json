@@ -1131,16 +1131,12 @@
     ],
     [
      10000,
-     "HUR-L3"
+     "ARC-L4"
     ]
    ]
   },
   "aluminum": {
    "ref": [
-    [
-     4000,
-     "Everus Harbor"
-    ],
     [
      3900,
      "Port Tressler"
@@ -1156,6 +1152,10 @@
     [
      3800,
      "CBD Lorville"
+    ],
+    [
+     3800,
+     "TDD Orison"
     ]
    ]
   },
@@ -1219,15 +1219,15 @@
     ],
     [
      30000,
+     "Rod's Fuel"
+    ],
+    [
+     30000,
      "Patch City"
     ],
     [
      30000,
      "Endgame"
-    ],
-    [
-     30000,
-     "Jackson's Swap"
     ]
    ]
   },
@@ -1264,12 +1264,8 @@
   "copper": {
    "ref": [
     [
-     4700,
+     4300,
      "Rod's Fuel"
-    ],
-    [
-     4200,
-     "Pyro Gateway (Stanton)"
     ],
     [
      4200,
@@ -1282,6 +1278,10 @@
     [
      3700,
      "TDD Area 18"
+    ],
+    [
+     3700,
+     "TDD New Babbage"
     ]
    ],
    "raw": [
@@ -1303,15 +1303,11 @@
    "ref": [
     [
      4400,
-     "Orbituary"
-    ],
-    [
-     4300,
      "Rod's Fuel"
     ],
     [
-     4100,
-     "Everus Harbor"
+     4400,
+     "Orbituary"
     ],
     [
      3700,
@@ -1320,6 +1316,10 @@
     [
      3700,
      "TDD New Babbage"
+    ],
+    [
+     3700,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1330,25 +1330,29 @@
      "HUR-L1"
     ],
     [
+     8600,
+     "ARC-L5"
+    ],
+    [
+     8200,
+     "Rod's Fuel"
+    ],
+    [
      7700,
      "TDD New Babbage"
     ],
     [
      7700,
      "CBD Lorville"
-    ],
-    [
-     7700,
-     "Pickers Field"
-    ],
-    [
-     7700,
-     "Rappel"
     ]
    ]
   },
   "gold": {
    "ref": [
+    [
+     33000,
+     "Pyro Gateway (Stanton)"
+    ],
     [
      31000,
      "TDD Area 18"
@@ -1364,10 +1368,6 @@
     [
      30000,
      "CBD Lorville"
-    ],
-    [
-     30000,
-     "ARC-L1"
     ]
    ]
   },
@@ -1452,12 +1452,12 @@
   "laranite": {
    "ref": [
     [
-     9100,
-     "CBD Lorville"
+     9700,
+     "Rod's Fuel"
     ],
     [
-     8900,
-     "Rod's Fuel"
+     9100,
+     "CBD Lorville"
     ],
     [
      8700,
@@ -1528,6 +1528,10 @@
      "Stanton Gateway (Pyro)"
     ],
     [
+     4900,
+     "Pyro Gateway (Stanton)"
+    ],
+    [
      4600,
      "Patch City"
     ],
@@ -1538,10 +1542,6 @@
     [
      4400,
      "TDD Area 18"
-    ],
-    [
-     4400,
-     "TDD New Babbage"
     ]
    ]
   },
@@ -1560,12 +1560,12 @@
      "ArcCorp 141"
     ],
     [
-     74000,
-     "The Golden Riviera"
+     77000,
+     "Levski"
     ],
     [
      74000,
-     "Sacren's Plot"
+     "The Golden Riviera"
     ]
    ]
   },
@@ -1616,7 +1616,7 @@
   "silicon": {
    "ref": [
     [
-     2700,
+     2900,
      "Patch City"
     ],
     [
@@ -1640,6 +1640,10 @@
   "stileron": {
    "ref": [
     [
+     160000,
+     "Levski"
+    ],
+    [
      150000,
      "Deakins Research"
     ],
@@ -1654,10 +1658,6 @@
     [
      140000,
      "TDD New Babbage"
-    ],
-    [
-     140000,
-     "Rayari Kaltag"
     ]
    ]
   },
@@ -1712,7 +1712,7 @@
   "titanium": {
    "ref": [
     [
-     9000,
+     9200,
      "Starlight Service"
     ],
     [
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-12T13:02:12+00:00"
+ "updated": "2026-11-13T01:50:35+00:00"
 }
