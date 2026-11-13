@@ -19,6 +19,21 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | RSI Galaxy: IAE 2956 Day 1",
+   "url": "https://www.youtube.com/shorts/hNdtr8H2_Io",
+   "date": "2026-11-13T17:02:12+00:00"
+  },
+  {
+   "title": "Star Citizen | RSI: IAE 2956 Day 1",
+   "url": "https://www.youtube.com/shorts/_MNmMqVnnAc",
+   "date": "2026-11-13T16:05:44+00:00"
+  },
+  {
+   "title": "Star Citizen | Galactic Gear: RSI Galaxy",
+   "url": "https://www.youtube.com/watch?v=XspOuBBVlaw",
+   "date": "2026-11-13T16:00:12+00:00"
+  },
+  {
    "title": "Star Citizen | Behind the Ships: RSI Galaxy",
    "url": "https://www.youtube.com/shorts/yFQ6H0gKric",
    "date": "2026-11-10T19:01:05+00:00"
@@ -52,24 +67,58 @@
    "title": "Every RSI Ship in Star Citizen 🚀",
    "url": "https://www.youtube.com/shorts/2-7zd_Kzics",
    "date": "2026-11-02T15:01:46+00:00"
-  },
-  {
-   "title": "Sorry I Can't Make It, I Have Plans - Star Citizen",
-   "url": "https://www.youtube.com/shorts/n-i2HEFYnhI",
-   "date": "2026-10-30T14:01:47+00:00"
-  },
-  {
-   "title": "First Time Running Storm Breaker - Star Citizen",
-   "url": "https://www.youtube.com/shorts/qv5vk7j5_X0",
-   "date": "2026-10-26T15:00:40+00:00"
-  },
-  {
-   "title": "Star Citizen | Your Favourite Spot in the ‘Verse 🚀",
-   "url": "https://www.youtube.com/shorts/VpGf_L_sJgU",
-   "date": "2026-10-24T14:00:41+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 9575988,
+   "title": "IAE 2956: Choose Your Adventure",
+   "src": "Spectrum",
+   "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/iae-2956-choose-your-adventure",
+   "date": "2026-11-13T15:56:00+00:00"
+  },
+  {
+   "id": 21448,
+   "title": "Q&A: IAE 2956 New Ships",
+   "url": "https://robertsspaceindustries.com/en/comm-link/engineering/21448-Q-A-IAE-2956-New-Ships",
+   "date": "2026-11-13T15:45:33+00:00",
+   "approx": true
+  },
+  {
+   "id": 21415,
+   "title": "IAE 2956 Merchandise",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21415-IAE-2956-Merchandise",
+   "date": "2026-11-13T15:45:33+00:00",
+   "approx": true
+  },
+  {
+   "id": 21414,
+   "title": "IAE 2956 About",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21414-IAE-2956-About",
+   "date": "2026-11-13T15:45:33+00:00",
+   "approx": true
+  },
+  {
+   "id": 21412,
+   "title": "IAE 2956 RSI",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21412-IAE-2956-RSI",
+   "date": "2026-11-13T15:45:33+00:00",
+   "approx": true
+  },
+  {
+   "id": 21347,
+   "title": "RSI Skylark - A Little Goes a Long Way",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21347-RSI-Skylark",
+   "date": "2026-11-13T15:45:33+00:00",
+   "approx": true
+  },
+  {
+   "id": 21346,
+   "title": "RSI Galaxy - Mission Made",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21346-RSI-Galaxy",
+   "date": "2026-11-13T15:45:33+00:00",
+   "approx": true
+  },
   {
    "id": 21420,
    "title": "Star Citizen Alpha 4.10.3 Vanduul Incursion - Nyx Needs You",
@@ -264,20 +313,6 @@
    "channel": "Transmission",
    "category": "Undefined",
    "series": "None"
-  },
-  {
-   "id": 21279,
-   "title": "October 2026 Subscriber Promotions",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21279-October-2026-Subscriber-Promotions",
-   "date": "2026-10-13T13:01:30+00:00",
-   "approx": true
-  },
-  {
-   "id": 21276,
-   "title": "RSI Discovery Month Digital Goodies Pack - Available Now!",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21276-RSI-Discovery-Month-Digital-Goodies-Pack",
-   "date": "2026-10-13T13:01:30+00:00",
-   "approx": true
   },
   {
    "id": 21374,
@@ -662,6 +697,6 @@
    }
   ]
  },
- "updated": "2026-11-12T20:50:26+00:00",
- "checked": "2026-11-13T09:33:49+00:00"
+ "updated": "2026-11-13T17:45:36+00:00",
+ "checked": "2026-11-13T17:45:36+00:00"
 }

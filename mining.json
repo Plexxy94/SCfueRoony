@@ -1114,12 +1114,12 @@
   "agricium": {
    "ref": [
     [
-     10000,
-     "TDD Area 18"
+     11000,
+     "Rod's Fuel"
     ],
     [
      10000,
-     "TDD New Babbage"
+     "TDD Area 18"
     ],
     [
      10000,
@@ -1142,7 +1142,7 @@
      "Dudley & Daughters"
     ],
     [
-     3900,
+     4000,
      "Port Tressler"
     ],
     [
@@ -1374,12 +1374,16 @@
   "hephaestanite": {
    "ref": [
     [
-     4900,
-     "TDD New Babbage"
+     6000,
+     "MIC-L4"
     ],
     [
      4800,
      "TDD Area 18"
+    ],
+    [
+     4800,
+     "TDD New Babbage"
     ],
     [
      4800,
@@ -1388,10 +1392,6 @@
     [
      4800,
      "TDD Orison"
-    ],
-    [
-     4800,
-     "CRU-L1"
     ]
    ]
   },
@@ -1456,12 +1456,8 @@
      "Rod's Fuel"
     ],
     [
-     9200,
-     "Stanton Gateway (Nyx)"
-    ],
-    [
-     8700,
-     "TDD New Babbage"
+     9000,
+     "Dudley & Daughters"
     ],
     [
      8700,
@@ -1470,6 +1466,10 @@
     [
      8700,
      "Patch City"
+    ],
+    [
+     8700,
+     "Endgame"
     ]
    ]
   },
@@ -1528,6 +1528,10 @@
      "Stanton Gateway (Pyro)"
     ],
     [
+     5400,
+     "Nyx Gateway (Stanton)"
+    ],
+    [
      4900,
      "Pyro Gateway (Stanton)"
     ],
@@ -1538,10 +1542,6 @@
     [
      4600,
      "Seraphim"
-    ],
-    [
-     4400,
-     "TDD Area 18"
     ]
    ]
   },
@@ -1560,7 +1560,7 @@
      "ArcCorp 141"
     ],
     [
-     77000,
+     76000,
      "Levski"
     ],
     [
@@ -1640,8 +1640,16 @@
   "stileron": {
    "ref": [
     [
+     170000,
+     "Nyx Gateway (Pyro)"
+    ],
+    [
      150000,
      "Deakins Research"
+    ],
+    [
+     150000,
+     "Levski"
     ],
     [
      140000,
@@ -1649,15 +1657,7 @@
     ],
     [
      140000,
-     "TDD Area 18"
-    ],
-    [
-     140000,
      "TDD New Babbage"
-    ],
-    [
-     140000,
-     "Rayari Kaltag"
     ]
    ]
   },
@@ -1677,11 +1677,11 @@
     ],
     [
      27000,
-     "TDD New Babbage"
+     "CBD Lorville"
     ],
     [
      27000,
-     "CBD Lorville"
+     "TDD Orison"
     ]
    ]
   },
@@ -1712,8 +1712,8 @@
   "titanium": {
    "ref": [
     [
-     8300,
-     "TDD Area 18"
+     9900,
+     "Megumi"
     ],
     [
      8300,
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-13T09:33:50+00:00"
+ "updated": "2026-11-13T17:45:38+00:00"
 }
