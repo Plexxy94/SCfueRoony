@@ -17,58 +17,6 @@
   ],
   "url": "https://status.robertsspaceindustries.com/"
  },
- "videos": [
-  {
-   "title": "Star Citizen | RSI Galaxy: IAE 2956 Day 1",
-   "url": "https://www.youtube.com/shorts/hNdtr8H2_Io",
-   "date": "2026-11-13T17:02:12+00:00"
-  },
-  {
-   "title": "Star Citizen | RSI: IAE 2956 Day 1",
-   "url": "https://www.youtube.com/shorts/_MNmMqVnnAc",
-   "date": "2026-11-13T16:05:44+00:00"
-  },
-  {
-   "title": "Star Citizen | Galactic Gear: RSI Galaxy",
-   "url": "https://www.youtube.com/watch?v=XspOuBBVlaw",
-   "date": "2026-11-13T16:00:12+00:00"
-  },
-  {
-   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
-   "url": "https://www.youtube.com/shorts/yFQ6H0gKric",
-   "date": "2026-11-10T19:01:05+00:00"
-  },
-  {
-   "title": "November 2026 Store Bundle | Star Citizen",
-   "url": "https://www.youtube.com/shorts/1kSI49DoMNk",
-   "date": "2026-11-10T16:04:25+00:00"
-  },
-  {
-   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
-   "url": "https://www.youtube.com/watch?v=1YzZqThl2k8",
-   "date": "2026-11-09T16:39:01+00:00"
-  },
-  {
-   "title": "IAE 2956 - Save The Date | Star Citizen",
-   "url": "https://www.youtube.com/shorts/hoUiT9gU7Sg",
-   "date": "2026-11-06T16:03:53+00:00"
-  },
-  {
-   "title": "Cargo Hauling - Day 1 vs. Day 432 | Star Citizen 📦",
-   "url": "https://www.youtube.com/shorts/2Lhm7Dg46w0",
-   "date": "2026-11-05T18:00:57+00:00"
-  },
-  {
-   "title": "Mining Tips - Laser Heads | Star Citizen",
-   "url": "https://www.youtube.com/shorts/7RulM0blyhY",
-   "date": "2026-11-04T18:01:48+00:00"
-  },
-  {
-   "title": "Every RSI Ship in Star Citizen 🚀",
-   "url": "https://www.youtube.com/shorts/2-7zd_Kzics",
-   "date": "2026-11-02T15:01:46+00:00"
-  }
- ],
  "commlinks": [
   {
    "id": 9575988,
@@ -169,6 +117,13 @@
    "approx": true
   },
   {
+   "id": 21311,
+   "title": "November 2026 Subscriber Promotions",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21311-November-2026-Subscriber-Promotions",
+   "date": "2026-11-06T23:36:06+00:00",
+   "approx": true
+  },
+  {
    "id": 9574567,
    "title": "Intergalactic Aerospace Expo 2956: Save the Date!",
    "src": "Spectrum",
@@ -194,13 +149,6 @@
    "title": "Roadmap Roundup - November 4, 2026",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21422-Roadmap-Roundup-November-4-2026",
    "date": "2026-11-04T12:00:00+00:00",
-   "approx": true
-  },
-  {
-   "id": 21311,
-   "title": "November 2026 Subscriber Promotions",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21311-November-2026-Subscriber-Promotions",
-   "date": "2026-11-03T18:59:22+00:00",
    "approx": true
   },
   {
@@ -697,6 +645,58 @@
    }
   ]
  },
- "updated": "2026-11-13T17:45:36+00:00",
- "checked": "2026-11-13T17:45:36+00:00"
+ "videos": [
+  {
+   "title": "Star Citizen | RSI Galaxy: IAE 2956 Day 1",
+   "url": "https://www.youtube.com/shorts/hNdtr8H2_Io",
+   "date": "2026-11-13T17:02:12+00:00"
+  },
+  {
+   "title": "Star Citizen | RSI: IAE 2956 Day 1",
+   "url": "https://www.youtube.com/shorts/_MNmMqVnnAc",
+   "date": "2026-11-13T16:05:44+00:00"
+  },
+  {
+   "title": "Star Citizen | Galactic Gear: RSI Galaxy",
+   "url": "https://www.youtube.com/watch?v=XspOuBBVlaw",
+   "date": "2026-11-13T16:00:12+00:00"
+  },
+  {
+   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
+   "url": "https://www.youtube.com/shorts/yFQ6H0gKric",
+   "date": "2026-11-10T19:01:05+00:00"
+  },
+  {
+   "title": "November 2026 Store Bundle | Star Citizen",
+   "url": "https://www.youtube.com/shorts/1kSI49DoMNk",
+   "date": "2026-11-10T16:04:25+00:00"
+  },
+  {
+   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
+   "url": "https://www.youtube.com/watch?v=1YzZqThl2k8",
+   "date": "2026-11-09T16:39:01+00:00"
+  },
+  {
+   "title": "IAE 2956 - Save The Date | Star Citizen",
+   "url": "https://www.youtube.com/shorts/hoUiT9gU7Sg",
+   "date": "2026-11-06T16:03:53+00:00"
+  },
+  {
+   "title": "Cargo Hauling - Day 1 vs. Day 432 | Star Citizen 📦",
+   "url": "https://www.youtube.com/shorts/2Lhm7Dg46w0",
+   "date": "2026-11-05T18:00:57+00:00"
+  },
+  {
+   "title": "Mining Tips - Laser Heads | Star Citizen",
+   "url": "https://www.youtube.com/shorts/7RulM0blyhY",
+   "date": "2026-11-04T18:01:48+00:00"
+  },
+  {
+   "title": "Every RSI Ship in Star Citizen 🚀",
+   "url": "https://www.youtube.com/shorts/2-7zd_Kzics",
+   "date": "2026-11-02T15:01:46+00:00"
+  }
+ ],
+ "updated": "2026-11-13T23:36:08+00:00",
+ "checked": "2026-11-13T23:36:08+00:00"
 }
