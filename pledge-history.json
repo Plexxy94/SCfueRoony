@@ -166,5 +166,131 @@
   "name": "Skylark",
   "k": "new",
   "new": 45
+ },
+ {
+  "d": "2026-11-14",
+  "id": 10,
+  "name": "350r",
+  "k": "sku+",
+  "sku": 12996,
+  "title": "Standard Edition",
+  "new": 125
+ },
+ {
+  "d": "2026-11-14",
+  "id": 22,
+  "name": "M50",
+  "k": "sku+",
+  "sku": 13003,
+  "title": "Standard Edition",
+  "new": 100
+ },
+ {
+  "d": "2026-11-14",
+  "id": 123,
+  "name": "85X",
+  "k": "sku+",
+  "sku": 13070,
+  "title": "Standard Edition",
+  "new": 50
+ },
+ {
+  "d": "2026-11-14",
+  "id": 140,
+  "name": "600i Touring",
+  "k": "sku+",
+  "sku": 13085,
+  "title": "Standard Edition",
+  "new": 435
+ },
+ {
+  "d": "2026-11-14",
+  "id": 140,
+  "name": "600i Touring",
+  "k": "sku+",
+  "sku": 19790,
+  "title": "Warbond Edition",
+  "new": 410
+ },
+ {
+  "d": "2026-11-14",
+  "id": 141,
+  "name": "600i Explorer",
+  "k": "sku+",
+  "sku": 13086,
+  "title": "Standard Edition",
+  "new": 475
+ },
+ {
+  "d": "2026-11-14",
+  "id": 145,
+  "name": "X1 Velocity",
+  "k": "sku+",
+  "sku": 16667,
+  "title": "Standard Edition",
+  "new": 50
+ },
+ {
+  "d": "2026-11-14",
+  "id": 147,
+  "name": "X1 Force",
+  "k": "sku+",
+  "sku": 16664,
+  "title": "Standard Edition",
+  "new": 55
+ },
+ {
+  "d": "2026-11-14",
+  "id": 208,
+  "name": "G12",
+  "k": "sku+",
+  "sku": 13424,
+  "title": "Standard Edition",
+  "new": 60
+ },
+ {
+  "d": "2026-11-14",
+  "id": 209,
+  "name": "G12r",
+  "k": "sku+",
+  "sku": 13425,
+  "title": "Standard Edition",
+  "new": 60
+ },
+ {
+  "d": "2026-11-14",
+  "id": 210,
+  "name": "G12a",
+  "k": "sku+",
+  "sku": 13426,
+  "title": "Standard Edition",
+  "new": 65
+ },
+ {
+  "d": "2026-11-14",
+  "id": 223,
+  "name": "400i",
+  "k": "sku+",
+  "sku": 14744,
+  "title": "Standard Edition",
+  "new": 250
+ },
+ {
+  "d": "2026-11-14",
+  "id": 301,
+  "name": "Meteor",
+  "k": "sku-",
+  "sku": 18750,
+  "title": "Warbond Edition",
+  "old": 240
+ },
+ {
+  "d": "2026-11-14",
+  "id": 315,
+  "name": "M80",
+  "k": "sku+",
+  "sku": 19184,
+  "title": "Standard Edition",
+  "new": 300
  }
 ]

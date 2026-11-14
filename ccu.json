@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-14T13:40:33+00:00",
+ "checked": "2026-11-14T20:47:16+00:00",
  "threads": 17,
  "errors": [],
  "hits": [
@@ -67,15 +67,15 @@
    "new": true
   },
   {
-   "ship": "Meteor",
-   "mfr": "Roberts Space Industries",
-   "msrp": 260,
-   "wb": 240,
-   "from": "Scorpius Antares",
-   "from_msrp": 230,
+   "ship": "600i Touring",
+   "mfr": "Origin Jumpworks",
+   "msrp": 435,
+   "wb": 410,
+   "from": "Galaxy",
+   "from_msrp": 400,
    "ccu": 10,
-   "value": 30,
-   "saving": 20,
+   "value": 35,
+   "saving": 25,
    "new": true
   },
   {
