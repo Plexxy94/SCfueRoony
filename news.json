@@ -19,6 +19,16 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | Getting to IAE 2956",
+   "url": "https://www.youtube.com/shorts/nB8SsUPkKB0",
+   "date": "2026-11-14T16:51:52+00:00"
+  },
+  {
+   "title": "Star Citizen | Origin: IAE 2956 - Day 2",
+   "url": "https://www.youtube.com/shorts/Up9o7aPPPrM",
+   "date": "2026-11-14T16:04:14+00:00"
+  },
+  {
    "title": "Star Citizen | RSI Skylark: IAE 2956 Day 1",
    "url": "https://www.youtube.com/shorts/WqFZzjhOJzI",
    "date": "2026-11-13T20:00:26+00:00"
@@ -57,19 +67,16 @@
    "title": "Star Citizen | Behind the Ships: RSI Galaxy",
    "url": "https://www.youtube.com/watch?v=1YzZqThl2k8",
    "date": "2026-11-09T16:39:01+00:00"
-  },
-  {
-   "title": "IAE 2956 - Save The Date | Star Citizen",
-   "url": "https://www.youtube.com/shorts/hoUiT9gU7Sg",
-   "date": "2026-11-06T16:03:53+00:00"
-  },
-  {
-   "title": "Cargo Hauling - Day 1 vs. Day 432 | Star Citizen 📦",
-   "url": "https://www.youtube.com/shorts/2Lhm7Dg46w0",
-   "date": "2026-11-05T18:00:57+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 21411,
+   "title": "IAE 2956 Origin Jumpworks",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21411-IAE-2956-Origin-Jumpworks",
+   "date": "2026-11-14T16:11:14+00:00",
+   "approx": true
+  },
   {
    "id": 9575988,
    "title": "IAE 2956: Choose Your Adventure",
@@ -390,24 +397,6 @@
    "src": "Spectrum",
    "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/rsi-launcher-2-18-release-notes",
    "date": "2026-10-06T17:20:00+00:00"
-  },
-  {
-   "id": 21352,
-   "title": "This Week in Star Citizen",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21352-This-Week-In-Star-Citizen",
-   "date": "2026-10-05T19:00:00+00:00",
-   "channel": "Transmission",
-   "category": "Undefined",
-   "series": "None"
-  },
-  {
-   "id": 21355,
-   "title": "10 From the Community",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21355-10-From-The-Community",
-   "date": "2026-10-05T18:00:00+00:00",
-   "channel": "Transmission",
-   "category": "Undefined",
-   "series": "None"
   }
  ],
  "exec": {
@@ -697,6 +686,6 @@
    }
   ]
  },
- "updated": "2026-11-14T14:10:29+00:00",
- "checked": "2026-11-14T14:10:29+00:00"
+ "updated": "2026-11-14T19:11:15+00:00",
+ "checked": "2026-11-14T19:11:15+00:00"
 }
