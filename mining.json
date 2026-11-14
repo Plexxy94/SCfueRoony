@@ -1114,10 +1114,6 @@
   "agricium": {
    "ref": [
     [
-     11000,
-     "Rod's Fuel"
-    ],
-    [
      10000,
      "TDD Area 18"
     ],
@@ -1132,6 +1128,10 @@
     [
      10000,
      "HUR-L3"
+    ],
+    [
+     10000,
+     "HUR-L4"
     ]
    ]
   },
@@ -1140,10 +1140,6 @@
     [
      4100,
      "Everus Harbor"
-    ],
-    [
-     4000,
-     "Dudley & Daughters"
     ],
     [
      3800,
@@ -1156,6 +1152,10 @@
     [
      3800,
      "CBD Lorville"
+    ],
+    [
+     3800,
+     "TDD Orison"
     ]
    ]
   },
@@ -1186,10 +1186,6 @@
   "beryl": {
    "ref": [
     [
-     24000,
-     "Rod's Fuel"
-    ],
-    [
      22000,
      "HUR-L1"
     ],
@@ -1200,6 +1196,10 @@
     [
      22000,
      "HUR-L5"
+    ],
+    [
+     21000,
+     "Rod's Fuel"
     ],
     [
      21000,
@@ -1223,11 +1223,11 @@
     ],
     [
      30000,
-     "Dudley & Daughters"
+     "Canard View"
     ],
     [
-     30000,
-     "Canard View"
+     29000,
+     "Rat's Nest"
     ]
    ]
   },
@@ -1264,16 +1264,16 @@
   "copper": {
    "ref": [
     [
-     4300,
-     "Rod's Fuel"
-    ],
-    [
      4200,
      "Rat's Nest"
     ],
     [
+     4000,
+     "Terra Gateway (Stanton)"
+    ],
+    [
      3900,
-     "Baijini Point"
+     "Rod's Fuel"
     ],
     [
      3700,
@@ -1303,11 +1303,15 @@
    "ref": [
     [
      4400,
-     "Rod's Fuel"
+     "Orbituary"
     ],
     [
-     4400,
-     "Orbituary"
+     4100,
+     "Terra Gateway (Stanton)"
+    ],
+    [
+     3900,
+     "Rod's Fuel"
     ],
     [
      3700,
@@ -1316,19 +1320,11 @@
     [
      3700,
      "TDD New Babbage"
-    ],
-    [
-     3700,
-     "CBD Lorville"
     ]
    ]
   },
   "diamond": {
    "ref": [
-    [
-     7800,
-     "Rod's Fuel"
-    ],
     [
      7700,
      "TDD New Babbage"
@@ -1344,6 +1340,10 @@
     [
      7700,
      "Rappel"
+    ],
+    [
+     7700,
+     "Dunboro"
     ]
    ]
   },
@@ -1411,7 +1411,7 @@
     ],
     [
      3600,
-     "Rod's Fuel"
+     "Megumi"
     ],
     [
      3600,
@@ -1452,8 +1452,8 @@
   "laranite": {
    "ref": [
     [
-     9000,
-     "Dudley & Daughters"
+     8800,
+     "TDD New Babbage"
     ],
     [
      8700,
@@ -1465,11 +1465,11 @@
     ],
     [
      8700,
-     "Gaslight"
+     "Starlight Service"
     ],
     [
      8700,
-     "Rat's Nest"
+     "Gaslight"
     ]
    ]
   },
@@ -1528,6 +1528,10 @@
      "Stanton Gateway (Pyro)"
     ],
     [
+     5100,
+     "Nyx Gateway (Stanton)"
+    ],
+    [
      4900,
      "Pyro Gateway (Stanton)"
     ],
@@ -1538,10 +1542,6 @@
     [
      4600,
      "Seraphim"
-    ],
-    [
-     4500,
-     "Nyx Gateway (Stanton)"
     ]
    ]
   },
@@ -1549,15 +1549,15 @@
    "ref": [
     [
      91000,
+     "ArcCorp 141"
+    ],
+    [
+     91000,
      "ArcCorp 157"
     ],
     [
      79000,
      "Ashland"
-    ],
-    [
-     77000,
-     "ArcCorp 141"
     ],
     [
      76000,
@@ -1712,6 +1712,10 @@
   "titanium": {
    "ref": [
     [
+     9100,
+     "Megumi"
+    ],
+    [
      8300,
      "TDD Area 18"
     ],
@@ -1726,10 +1730,6 @@
     [
      8300,
      "Ruin Station"
-    ],
-    [
-     8300,
-     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-14T19:11:16+00:00"
+ "updated": "2026-11-14T22:59:19+00:00"
 }

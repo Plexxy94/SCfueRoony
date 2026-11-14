@@ -17,58 +17,6 @@
   ],
   "url": "https://status.robertsspaceindustries.com/"
  },
- "videos": [
-  {
-   "title": "Star Citizen | Getting to IAE 2956",
-   "url": "https://www.youtube.com/shorts/nB8SsUPkKB0",
-   "date": "2026-11-14T16:51:52+00:00"
-  },
-  {
-   "title": "Star Citizen | Origin: IAE 2956 - Day 2",
-   "url": "https://www.youtube.com/shorts/Up9o7aPPPrM",
-   "date": "2026-11-14T16:04:14+00:00"
-  },
-  {
-   "title": "Star Citizen | RSI Skylark: IAE 2956 Day 1",
-   "url": "https://www.youtube.com/shorts/WqFZzjhOJzI",
-   "date": "2026-11-13T20:00:26+00:00"
-  },
-  {
-   "title": "Star Citizen | Galactic Gear: RSI Galaxy",
-   "url": "https://www.youtube.com/shorts/cqLF-XBwNOU",
-   "date": "2026-11-13T18:01:42+00:00"
-  },
-  {
-   "title": "Star Citizen | RSI Galaxy: IAE 2956 Day 1",
-   "url": "https://www.youtube.com/shorts/hNdtr8H2_Io",
-   "date": "2026-11-13T17:02:12+00:00"
-  },
-  {
-   "title": "Star Citizen | RSI: IAE 2956 Day 1",
-   "url": "https://www.youtube.com/shorts/_MNmMqVnnAc",
-   "date": "2026-11-13T16:05:44+00:00"
-  },
-  {
-   "title": "Star Citizen | Galactic Gear: RSI Galaxy",
-   "url": "https://www.youtube.com/watch?v=XspOuBBVlaw",
-   "date": "2026-11-13T16:00:12+00:00"
-  },
-  {
-   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
-   "url": "https://www.youtube.com/shorts/yFQ6H0gKric",
-   "date": "2026-11-10T19:01:05+00:00"
-  },
-  {
-   "title": "November 2026 Store Bundle | Star Citizen",
-   "url": "https://www.youtube.com/shorts/1kSI49DoMNk",
-   "date": "2026-11-10T16:04:25+00:00"
-  },
-  {
-   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
-   "url": "https://www.youtube.com/watch?v=1YzZqThl2k8",
-   "date": "2026-11-09T16:39:01+00:00"
-  }
- ],
  "commlinks": [
   {
    "id": 21411,
@@ -176,6 +124,13 @@
    "approx": true
   },
   {
+   "id": 21432,
+   "title": "Star Citizen Monthly Report: October 2026",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21432-Star-Citizen-Monthly-Report-October-2026",
+   "date": "2026-11-07T22:59:14+00:00",
+   "approx": true
+  },
+  {
    "id": 21311,
    "title": "November 2026 Subscriber Promotions",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21311-November-2026-Subscriber-Promotions",
@@ -194,13 +149,6 @@
    "title": "Countdown to IAE 2956 - The Ultimate Ship Show Returns",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21389-Countdown-To-IAE-2956",
    "date": "2026-11-06T15:30:31+00:00",
-   "approx": true
-  },
-  {
-   "id": 21432,
-   "title": "Star Citizen Monthly Report: October 2026",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21432-Star-Citizen-Monthly-Report-October-2026",
-   "date": "2026-11-04T22:29:36+00:00",
    "approx": true
   },
   {
@@ -686,6 +634,58 @@
    }
   ]
  },
- "updated": "2026-11-14T19:11:15+00:00",
- "checked": "2026-11-14T19:11:15+00:00"
+ "videos": [
+  {
+   "title": "Star Citizen | Getting to IAE 2956",
+   "url": "https://www.youtube.com/shorts/nB8SsUPkKB0",
+   "date": "2026-11-14T16:51:52+00:00"
+  },
+  {
+   "title": "Star Citizen | Origin: IAE 2956 - Day 2",
+   "url": "https://www.youtube.com/shorts/Up9o7aPPPrM",
+   "date": "2026-11-14T16:04:14+00:00"
+  },
+  {
+   "title": "Star Citizen | RSI Skylark: IAE 2956 Day 1",
+   "url": "https://www.youtube.com/shorts/WqFZzjhOJzI",
+   "date": "2026-11-13T20:00:26+00:00"
+  },
+  {
+   "title": "Star Citizen | Galactic Gear: RSI Galaxy",
+   "url": "https://www.youtube.com/shorts/cqLF-XBwNOU",
+   "date": "2026-11-13T18:01:42+00:00"
+  },
+  {
+   "title": "Star Citizen | RSI Galaxy: IAE 2956 Day 1",
+   "url": "https://www.youtube.com/shorts/hNdtr8H2_Io",
+   "date": "2026-11-13T17:02:12+00:00"
+  },
+  {
+   "title": "Star Citizen | RSI: IAE 2956 Day 1",
+   "url": "https://www.youtube.com/shorts/_MNmMqVnnAc",
+   "date": "2026-11-13T16:05:44+00:00"
+  },
+  {
+   "title": "Star Citizen | Galactic Gear: RSI Galaxy",
+   "url": "https://www.youtube.com/watch?v=XspOuBBVlaw",
+   "date": "2026-11-13T16:00:12+00:00"
+  },
+  {
+   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
+   "url": "https://www.youtube.com/shorts/yFQ6H0gKric",
+   "date": "2026-11-10T19:01:05+00:00"
+  },
+  {
+   "title": "November 2026 Store Bundle | Star Citizen",
+   "url": "https://www.youtube.com/shorts/1kSI49DoMNk",
+   "date": "2026-11-10T16:04:25+00:00"
+  },
+  {
+   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
+   "url": "https://www.youtube.com/watch?v=1YzZqThl2k8",
+   "date": "2026-11-09T16:39:01+00:00"
+  }
+ ],
+ "updated": "2026-11-14T22:59:16+00:00",
+ "checked": "2026-11-14T22:59:16+00:00"
 }
