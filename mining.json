@@ -1138,6 +1138,10 @@
   "aluminum": {
    "ref": [
     [
+     4200,
+     "Terra Gateway (Stanton)"
+    ],
+    [
      4100,
      "Everus Harbor"
     ],
@@ -1152,10 +1156,6 @@
     [
      3800,
      "CBD Lorville"
-    ],
-    [
-     3800,
-     "TDD Orison"
     ]
    ]
   },
@@ -1227,7 +1227,7 @@
     ],
     [
      29000,
-     "Rat's Nest"
+     "TDD New Babbage"
     ]
    ]
   },
@@ -1264,12 +1264,16 @@
   "copper": {
    "ref": [
     [
+     4600,
+     "Terra Gateway (Stanton)"
+    ],
+    [
      4200,
      "Rat's Nest"
     ],
     [
-     4000,
-     "Terra Gateway (Stanton)"
+     4100,
+     "Pyro Gateway (Stanton)"
     ],
     [
      3900,
@@ -1278,10 +1282,6 @@
     [
      3700,
      "TDD Area 18"
-    ],
-    [
-     3700,
-     "TDD New Babbage"
     ]
    ],
    "raw": [
@@ -1306,10 +1306,6 @@
      "Orbituary"
     ],
     [
-     4100,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      3900,
      "Rod's Fuel"
     ],
@@ -1320,6 +1316,10 @@
     [
      3700,
      "TDD New Babbage"
+    ],
+    [
+     3700,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1452,7 +1452,7 @@
   "laranite": {
    "ref": [
     [
-     8800,
+     9000,
      "TDD New Babbage"
     ],
     [
@@ -1524,16 +1524,12 @@
   "quartz": {
    "ref": [
     [
-     5400,
-     "Stanton Gateway (Pyro)"
-    ],
-    [
-     5100,
+     5500,
      "Nyx Gateway (Stanton)"
     ],
     [
-     4900,
-     "Pyro Gateway (Stanton)"
+     5400,
+     "Stanton Gateway (Pyro)"
     ],
     [
      4600,
@@ -1542,6 +1538,10 @@
     [
      4600,
      "Seraphim"
+    ],
+    [
+     4400,
+     "TDD Area 18"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-14T22:59:19+00:00"
+ "updated": "2026-11-15T02:41:26+00:00"
 }
