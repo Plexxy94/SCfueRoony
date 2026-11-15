@@ -1138,10 +1138,6 @@
   "aluminum": {
    "ref": [
     [
-     4200,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      4100,
      "Everus Harbor"
     ],
@@ -1156,6 +1152,10 @@
     [
      3800,
      "CBD Lorville"
+    ],
+    [
+     3800,
+     "TDD Orison"
     ]
    ]
   },
@@ -1227,7 +1227,7 @@
     ],
     [
      29000,
-     "TDD New Babbage"
+     "TDD Area 18"
     ]
    ]
   },
@@ -1264,16 +1264,12 @@
   "copper": {
    "ref": [
     [
-     4600,
-     "Terra Gateway (Stanton)"
+     4200,
+     "Pyro Gateway (Stanton)"
     ],
     [
      4200,
      "Rat's Nest"
-    ],
-    [
-     4100,
-     "Pyro Gateway (Stanton)"
     ],
     [
      3900,
@@ -1282,6 +1278,10 @@
     [
      3700,
      "TDD Area 18"
+    ],
+    [
+     3700,
+     "TDD New Babbage"
     ]
    ],
    "raw": [
@@ -1306,6 +1306,10 @@
      "Orbituary"
     ],
     [
+     4000,
+     "Terra Gateway (Stanton)"
+    ],
+    [
      3900,
      "Rod's Fuel"
     ],
@@ -1316,10 +1320,6 @@
     [
      3700,
      "TDD New Babbage"
-    ],
-    [
-     3700,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1452,10 +1452,6 @@
   "laranite": {
    "ref": [
     [
-     9000,
-     "TDD New Babbage"
-    ],
-    [
      8700,
      "Ruin Station"
     ],
@@ -1470,6 +1466,10 @@
     [
      8700,
      "Gaslight"
+    ],
+    [
+     8700,
+     "Rat's Nest"
     ]
    ]
   },
@@ -1620,6 +1620,10 @@
      "Patch City"
     ],
     [
+     2900,
+     "Terra Gateway (Stanton)"
+    ],
+    [
      2600,
      "Gaslight"
     ],
@@ -1630,10 +1634,6 @@
     [
      2400,
      "Seraphim"
-    ],
-    [
-     2400,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1712,10 +1712,6 @@
   "titanium": {
    "ref": [
     [
-     9100,
-     "Megumi"
-    ],
-    [
      8300,
      "TDD Area 18"
     ],
@@ -1730,6 +1726,10 @@
     [
      8300,
      "Ruin Station"
+    ],
+    [
+     8300,
+     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-15T02:41:26+00:00"
+ "updated": "2026-11-15T10:56:43+00:00"
 }
