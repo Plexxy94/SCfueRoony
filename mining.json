@@ -1114,8 +1114,8 @@
   "agricium": {
    "ref": [
     [
-     10000,
-     "TDD Area 18"
+     12000,
+     "ARC-L4"
     ],
     [
      10000,
@@ -1142,16 +1142,16 @@
      "Everus Harbor"
     ],
     [
+     3900,
+     "Port Tressler"
+    ],
+    [
      3800,
      "TDD Area 18"
     ],
     [
      3800,
      "TDD New Babbage"
-    ],
-    [
-     3800,
-     "CBD Lorville"
     ],
     [
      3800,
@@ -1215,10 +1215,6 @@
     ],
     [
      30000,
-     "Endgame"
-    ],
-    [
-     30000,
      "Jackson's Swap"
     ],
     [
@@ -1228,6 +1224,10 @@
     [
      29000,
      "TDD Area 18"
+    ],
+    [
+     29000,
+     "TDD New Babbage"
     ]
    ]
   },
@@ -1264,24 +1264,24 @@
   "copper": {
    "ref": [
     [
-     4200,
-     "Pyro Gateway (Stanton)"
+     4400,
+     "Stanton Gateway (Pyro)"
     ],
     [
      4200,
      "Rat's Nest"
     ],
     [
+     4000,
+     "Terra Gateway (Stanton)"
+    ],
+    [
      3900,
      "Rod's Fuel"
     ],
     [
-     3700,
-     "TDD Area 18"
-    ],
-    [
-     3700,
-     "TDD New Babbage"
+     3800,
+     "Pyro Gateway (Stanton)"
     ]
    ],
    "raw": [
@@ -1306,12 +1306,12 @@
      "Orbituary"
     ],
     [
-     4000,
-     "Terra Gateway (Stanton)"
+     4200,
+     "Rod's Fuel"
     ],
     [
-     3900,
-     "Rod's Fuel"
+     4100,
+     "Terra Gateway (Stanton)"
     ],
     [
      3700,
@@ -1374,10 +1374,6 @@
   "hephaestanite": {
    "ref": [
     [
-     5300,
-     "TDD New Babbage"
-    ],
-    [
      4800,
      "TDD Area 18"
     ],
@@ -1391,6 +1387,10 @@
     ],
     [
      4800,
+     "CRU-L1"
+    ],
+    [
+     4800,
      "ARC-L4"
     ]
    ]
@@ -1398,16 +1398,12 @@
   "iron": {
    "ref": [
     [
-     4000,
-     "Terra Gateway (Stanton)"
+     3900,
+     "Endgame"
     ],
     [
      3900,
      "Gaslight"
-    ],
-    [
-     3800,
-     "Endgame"
     ],
     [
      3600,
@@ -1416,6 +1412,10 @@
     [
      3600,
      "Dudley & Daughters"
+    ],
+    [
+     3500,
+     "Nyx Gateway (Stanton)"
     ]
    ],
    "raw": [
@@ -1465,7 +1465,7 @@
     ],
     [
      8700,
-     "Gaslight"
+     "Endgame"
     ],
     [
      8700,
@@ -1524,14 +1524,6 @@
   "quartz": {
    "ref": [
     [
-     5500,
-     "Nyx Gateway (Stanton)"
-    ],
-    [
-     5400,
-     "Stanton Gateway (Pyro)"
-    ],
-    [
      4600,
      "Patch City"
     ],
@@ -1542,6 +1534,14 @@
     [
      4400,
      "TDD Area 18"
+    ],
+    [
+     4400,
+     "TDD New Babbage"
+    ],
+    [
+     4400,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1552,15 +1552,15 @@
      "ArcCorp 141"
     ],
     [
-     91000,
-     "ArcCorp 157"
-    ],
-    [
      79000,
      "Ashland"
     ],
     [
-     76000,
+     75000,
+     "ArcCorp 157"
+    ],
+    [
+     75000,
      "Levski"
     ],
     [
@@ -1620,10 +1620,6 @@
      "Patch City"
     ],
     [
-     2900,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      2600,
      "Gaslight"
     ],
@@ -1634,6 +1630,10 @@
     [
      2400,
      "Seraphim"
+    ],
+    [
+     2400,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1644,12 +1644,12 @@
      "Nyx Gateway (Pyro)"
     ],
     [
-     150000,
-     "Deakins Research"
+     160000,
+     "Levski"
     ],
     [
      150000,
-     "Levski"
+     "Deakins Research"
     ],
     [
      140000,
@@ -1669,6 +1669,10 @@
     ],
     [
      28000,
+     "TDD Orison"
+    ],
+    [
+     28000,
      "Fallow Field"
     ],
     [
@@ -1678,10 +1682,6 @@
     [
      27000,
      "TDD Area 18"
-    ],
-    [
-     27000,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1692,7 +1692,7 @@
      "Dudley & Daughters"
     ],
     [
-     4500,
+     4536,
      "Baijini Point"
     ],
     [
@@ -1712,6 +1712,10 @@
   "titanium": {
    "ref": [
     [
+     10000,
+     "Megumi"
+    ],
+    [
      8300,
      "TDD Area 18"
     ],
@@ -1726,10 +1730,6 @@
     [
      8300,
      "Ruin Station"
-    ],
-    [
-     8300,
-     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-15T10:56:43+00:00"
+ "updated": "2026-11-15T17:43:53+00:00"
 }
