@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-15T14:08:03+00:00",
+ "checked": "2026-11-15T21:05:54+00:00",
  "threads": 17,
  "errors": [],
  "hits": [
@@ -51,15 +51,44 @@
     "date": "2026-11-13",
     "site": "Pledge-Store"
    }
+  },
+  {
+   "id": "raised-224-600",
+   "type": "raised",
+   "ship": "Liberator",
+   "ship_id": 224,
+   "old": 575,
+   "new": 600,
+   "now": 600,
+   "first_seen": "2026-11-15",
+   "done": true,
+   "src": {
+    "title": "Preisvergleich mit dem Vortag",
+    "url": "https://robertsspaceindustries.com/pledge/ship-upgrades",
+    "date": "2026-11-15",
+    "site": "Pledge-Store"
+   }
   }
  ],
  "warbond": [
+  {
+   "ship": "Liberator",
+   "mfr": "Anvil Aerospace",
+   "msrp": 600,
+   "wb": 525,
+   "from": "600i Explorer",
+   "from_msrp": 475,
+   "ccu": 50,
+   "value": 125,
+   "saving": 75,
+   "new": true
+  },
   {
    "ship": "Galaxy",
    "mfr": "Roberts Space Industries",
    "msrp": 400,
    "wb": 360,
-   "from": "Constellation Mk IV Phoenix",
+   "from": "Asgard",
    "from_msrp": 350,
    "ccu": 10,
    "value": 50,
@@ -67,15 +96,15 @@
    "new": true
   },
   {
-   "ship": "600i Touring",
-   "mfr": "Origin Jumpworks",
-   "msrp": 435,
-   "wb": 410,
-   "from": "Galaxy",
-   "from_msrp": 400,
+   "ship": "F7C-M Super Hornet Mk II",
+   "mfr": "Anvil Aerospace",
+   "msrp": 240,
+   "wb": 220,
+   "from": "Hurricane",
+   "from_msrp": 210,
    "ccu": 10,
-   "value": 35,
-   "saving": 25,
+   "value": 30,
+   "saving": 20,
    "new": true
   },
   {

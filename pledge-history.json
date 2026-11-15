@@ -292,5 +292,184 @@
   "sku": 19184,
   "title": "Standard Edition",
   "new": 300
+ },
+ {
+  "d": "2026-11-15",
+  "id": 62,
+  "name": "Carrack",
+  "k": "sku+",
+  "sku": 13375,
+  "title": "Standard Edition",
+  "new": 600
+ },
+ {
+  "d": "2026-11-15",
+  "id": 64,
+  "name": "Gladiator",
+  "k": "sku+",
+  "sku": 13024,
+  "title": "Standard Edition",
+  "new": 165
+ },
+ {
+  "d": "2026-11-15",
+  "id": 103,
+  "name": "Crucible",
+  "k": "sku+",
+  "sku": 13053,
+  "title": "Standard Edition",
+  "new": 350
+ },
+ {
+  "d": "2026-11-15",
+  "id": 115,
+  "name": "Terrapin",
+  "k": "sku+",
+  "sku": 13064,
+  "title": "Standard Edition",
+  "new": 220
+ },
+ {
+  "d": "2026-11-15",
+  "id": 128,
+  "name": "Hurricane",
+  "k": "sku+",
+  "sku": 15980,
+  "title": "Standard Edition",
+  "new": 210
+ },
+ {
+  "d": "2026-11-15",
+  "id": 140,
+  "name": "600i Touring",
+  "k": "sku-",
+  "sku": 19790,
+  "title": "Warbond Edition",
+  "old": 410
+ },
+ {
+  "d": "2026-11-15",
+  "id": 150,
+  "name": "Hawk",
+  "k": "sku+",
+  "sku": 13090,
+  "title": "Standard Edition",
+  "new": 100
+ },
+ {
+  "d": "2026-11-15",
+  "id": 169,
+  "name": "Valkyrie",
+  "k": "sku+",
+  "sku": 13107,
+  "title": "Standard Edition",
+  "new": 375
+ },
+ {
+  "d": "2026-11-15",
+  "id": 224,
+  "name": "Liberator",
+  "k": "msrp",
+  "old": 575,
+  "new": 600
+ },
+ {
+  "d": "2026-11-15",
+  "id": 224,
+  "name": "Liberator",
+  "k": "sku+",
+  "sku": 19764,
+  "title": "Standard Edition",
+  "new": 600
+ },
+ {
+  "d": "2026-11-15",
+  "id": 224,
+  "name": "Liberator",
+  "k": "sku+",
+  "sku": 19765,
+  "title": "Warbond Edition",
+  "new": 525
+ },
+ {
+  "d": "2026-11-15",
+  "id": 225,
+  "name": "Spartan",
+  "k": "sku+",
+  "sku": 14867,
+  "title": "Standard Edition",
+  "new": 80
+ },
+ {
+  "d": "2026-11-15",
+  "id": 232,
+  "name": "Legionnaire",
+  "k": "sku+",
+  "sku": 15256,
+  "title": "Standard Edition",
+  "new": 120
+ },
+ {
+  "d": "2026-11-15",
+  "id": 282,
+  "name": "Paladin",
+  "k": "sku+",
+  "sku": 18602,
+  "title": "Standard Edition",
+  "new": 350
+ },
+ {
+  "d": "2026-11-15",
+  "id": 283,
+  "name": "Terrapin Medic",
+  "k": "sku+",
+  "sku": 17710,
+  "title": "Standard Edition",
+  "new": 220
+ },
+ {
+  "d": "2026-11-15",
+  "id": 284,
+  "name": "F7C-R Hornet Tracker Mk II",
+  "k": "sku+",
+  "sku": 17683,
+  "title": "Standard Edition",
+  "new": 185
+ },
+ {
+  "d": "2026-11-15",
+  "id": 285,
+  "name": "F7C-S Hornet Ghost Mk II",
+  "k": "sku+",
+  "sku": 17679,
+  "title": "Standard Edition",
+  "new": 185
+ },
+ {
+  "d": "2026-11-15",
+  "id": 293,
+  "name": "F7C-M Super Hornet Mk II",
+  "k": "sku+",
+  "sku": 17974,
+  "title": "Standard Edition",
+  "new": 240
+ },
+ {
+  "d": "2026-11-15",
+  "id": 293,
+  "name": "F7C-M Super Hornet Mk II",
+  "k": "sku+",
+  "sku": 19321,
+  "title": "Warbond Edition",
+  "new": 220
+ },
+ {
+  "d": "2026-11-15",
+  "id": 299,
+  "name": "Asgard",
+  "k": "sku+",
+  "sku": 18236,
+  "title": "Standard Edition",
+  "new": 350
  }
 ]
