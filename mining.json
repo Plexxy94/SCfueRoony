@@ -1114,10 +1114,6 @@
   "agricium": {
    "ref": [
     [
-     12000,
-     "ARC-L4"
-    ],
-    [
      10000,
      "TDD New Babbage"
     ],
@@ -1132,15 +1128,15 @@
     [
      10000,
      "HUR-L4"
+    ],
+    [
+     10000,
+     "TDD Orison"
     ]
    ]
   },
   "aluminum": {
    "ref": [
-    [
-     4100,
-     "Everus Harbor"
-    ],
     [
      3900,
      "Port Tressler"
@@ -1156,6 +1152,10 @@
     [
      3800,
      "TDD Orison"
+    ],
+    [
+     3800,
+     "Stanton Gateway (Nyx)"
     ]
    ]
   },
@@ -1203,7 +1203,7 @@
     ],
     [
      21000,
-     "Endgame"
+     "HUR-L3"
     ]
    ]
   },
@@ -1227,7 +1227,7 @@
     ],
     [
      29000,
-     "TDD New Babbage"
+     "CBD Lorville"
     ]
    ]
   },
@@ -1314,21 +1314,17 @@
      "Terra Gateway (Stanton)"
     ],
     [
-     3700,
-     "TDD Area 18"
+     4100,
+     "Everus Harbor"
     ],
     [
      3700,
-     "TDD New Babbage"
+     "TDD Area 18"
     ]
    ]
   },
   "diamond": {
    "ref": [
-    [
-     7700,
-     "TDD New Babbage"
-    ],
     [
      7700,
      "CBD Lorville"
@@ -1344,6 +1340,10 @@
     [
      7700,
      "Dunboro"
+    ],
+    [
+     7700,
+     "TDD Orison"
     ]
    ]
   },
@@ -1402,7 +1402,7 @@
      "Endgame"
     ],
     [
-     3900,
+     3700,
      "Gaslight"
     ],
     [
@@ -1469,7 +1469,7 @@
     ],
     [
      8700,
-     "Rat's Nest"
+     "Gaslight"
     ]
    ]
   },
@@ -1524,12 +1524,12 @@
   "quartz": {
    "ref": [
     [
-     4600,
-     "Patch City"
+     4700,
+     "Seraphim"
     ],
     [
      4600,
-     "Seraphim"
+     "Patch City"
     ],
     [
      4400,
@@ -1665,10 +1665,6 @@
    "ref": [
     [
      28000,
-     "TDD New Babbage"
-    ],
-    [
-     28000,
      "TDD Orison"
     ],
     [
@@ -1682,6 +1678,10 @@
     [
      27000,
      "TDD Area 18"
+    ],
+    [
+     27000,
+     "TDD New Babbage"
     ]
    ]
   },
@@ -1712,8 +1712,8 @@
   "titanium": {
    "ref": [
     [
-     10000,
-     "Megumi"
+     9000,
+     "Starlight Service"
     ],
     [
      8300,
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-15T17:43:53+00:00"
+ "updated": "2026-11-15T22:50:38+00:00"
 }
