@@ -1142,6 +1142,10 @@
      "Terra Gateway (Stanton)"
     ],
     [
+     3900,
+     "Everus Harbor"
+    ],
+    [
      3800,
      "TDD Area 18"
     ],
@@ -1152,10 +1156,6 @@
     [
      3800,
      "TDD Orison"
-    ],
-    [
-     3800,
-     "Stanton Gateway (Nyx)"
     ]
    ]
   },
@@ -1310,16 +1310,16 @@
      "Terra Gateway (Stanton)"
     ],
     [
-     4100,
-     "Everus Harbor"
-    ],
-    [
      3700,
      "TDD Area 18"
     ],
     [
      3700,
      "TDD New Babbage"
+    ],
+    [
+     3700,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1461,15 +1461,15 @@
     ],
     [
      8700,
-     "TDD Area 18"
-    ],
-    [
-     8700,
      "Ruin Station"
     ],
     [
      8700,
      "Patch City"
+    ],
+    [
+     8700,
+     "Starlight Service"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-16T11:23:43+00:00"
+ "updated": "2026-11-16T22:05:44+00:00"
 }

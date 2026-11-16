@@ -19,6 +19,16 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | Crusader: IAE 2956 - Day 4",
+   "url": "https://www.youtube.com/shorts/6IF8-2WcQ7A",
+   "date": "2026-11-16T16:03:54+00:00"
+  },
+  {
+   "title": "Star Citizen | Anvil Liberator - IAE 2956",
+   "url": "https://www.youtube.com/shorts/qtmtpeG7VsE",
+   "date": "2026-11-16T15:00:41+00:00"
+  },
+  {
    "title": "Star Citizen | Behind the Ships: Anvil Liberator",
    "url": "https://www.youtube.com/shorts/MGEWc6Y31BI",
    "date": "2026-11-15T16:42:45+00:00"
@@ -57,19 +67,23 @@
    "title": "Star Citizen | RSI Skylark: IAE 2956 Day 1",
    "url": "https://www.youtube.com/shorts/WqFZzjhOJzI",
    "date": "2026-11-13T20:00:26+00:00"
-  },
-  {
-   "title": "Star Citizen | Galactic Gear: RSI Galaxy",
-   "url": "https://www.youtube.com/shorts/cqLF-XBwNOU",
-   "date": "2026-11-13T18:01:42+00:00"
-  },
-  {
-   "title": "Star Citizen | RSI Galaxy: IAE 2956 Day 1",
-   "url": "https://www.youtube.com/shorts/hNdtr8H2_Io",
-   "date": "2026-11-13T17:02:12+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 21409,
+   "title": "IAE 2956 Crusader Industries",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21409-IAE-2956-Crusader-Industries",
+   "date": "2026-11-16T16:05:39+00:00",
+   "approx": true
+  },
+  {
+   "id": 21408,
+   "title": "IAE 2956 Tumbril Land Systems",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21408-IAE-2956-Tumbril-Land-Systems",
+   "date": "2026-11-16T16:05:39+00:00",
+   "approx": true
+  },
   {
    "id": 21452,
    "title": "Star Citizen | Behind the Ships: Anvil Liberator",
@@ -169,6 +183,13 @@
    "approx": true
   },
   {
+   "id": 21389,
+   "title": "Countdown to IAE 2956 - The Ultimate Ship Show Returns",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21389-Countdown-To-IAE-2956",
+   "date": "2026-11-09T22:05:39+00:00",
+   "approx": true
+  },
+  {
    "id": 21434,
    "title": "Twitch Drops: IAE 2956",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21434-Twitch-Drops-IAE-2956",
@@ -216,13 +237,6 @@
    "src": "Spectrum",
    "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/intergalactic-aerospace-expo-2956-save-the-date",
    "date": "2026-11-06T15:40:00+00:00"
-  },
-  {
-   "id": 21389,
-   "title": "Countdown to IAE 2956 - The Ultimate Ship Show Returns",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21389-Countdown-To-IAE-2956",
-   "date": "2026-11-06T15:30:31+00:00",
-   "approx": true
   },
   {
    "id": 21422,
@@ -402,15 +416,6 @@
    "src": "Spectrum",
    "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/alpha-4-10-2-rsi-discovery-month",
    "date": "2026-10-09T13:55:00+00:00"
-  },
-  {
-   "id": 21373,
-   "title": "Star Citizen Monthly Report: September 2026",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21373-Star-Citizen-Monthly-Report-September-2026",
-   "date": "2026-10-07T21:00:00+00:00",
-   "channel": "Transmission",
-   "category": "Undefined",
-   "series": "None"
   }
  ],
  "exec": {
@@ -700,6 +705,6 @@
    }
   ]
  },
- "updated": "2026-11-15T17:43:52+00:00",
- "checked": "2026-11-16T11:23:41+00:00"
+ "updated": "2026-11-16T22:05:42+00:00",
+ "checked": "2026-11-16T22:05:42+00:00"
 }
