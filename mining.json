@@ -1115,6 +1115,10 @@
    "ref": [
     [
      10000,
+     "TDD Area 18"
+    ],
+    [
+     10000,
      "TDD New Babbage"
     ],
     [
@@ -1128,18 +1132,14 @@
     [
      10000,
      "HUR-L3"
-    ],
-    [
-     10000,
-     "HUR-L4"
     ]
    ]
   },
   "aluminum": {
    "ref": [
     [
-     3900,
-     "Port Tressler"
+     4300,
+     "Terra Gateway (Stanton)"
     ],
     [
      3800,
@@ -1276,12 +1276,12 @@
      "Rat's Nest"
     ],
     [
-     4000,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      3800,
      "Pyro Gateway (Stanton)"
+    ],
+    [
+     3700,
+     "TDD Area 18"
     ]
    ],
    "raw": [
@@ -1452,8 +1452,16 @@
   "laranite": {
    "ref": [
     [
+     9800,
+     "HUR-L1"
+    ],
+    [
      9700,
      "Rod's Fuel"
+    ],
+    [
+     8700,
+     "TDD Area 18"
     ],
     [
      8700,
@@ -1462,14 +1470,6 @@
     [
      8700,
      "Patch City"
-    ],
-    [
-     8700,
-     "Starlight Service"
-    ],
-    [
-     8700,
-     "Endgame"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-16T02:44:53+00:00"
+ "updated": "2026-11-16T11:23:43+00:00"
 }
