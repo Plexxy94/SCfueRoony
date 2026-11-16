@@ -1123,15 +1123,15 @@
     ],
     [
      10000,
+     "Rod's Fuel"
+    ],
+    [
+     10000,
      "HUR-L3"
     ],
     [
      10000,
      "HUR-L4"
-    ],
-    [
-     10000,
-     "TDD Orison"
     ]
    ]
   },
@@ -1186,6 +1186,10 @@
   "beryl": {
    "ref": [
     [
+     24000,
+     "Rod's Fuel"
+    ],
+    [
      22000,
      "HUR-L1"
     ],
@@ -1199,16 +1203,20 @@
     ],
     [
      21000,
-     "Rod's Fuel"
-    ],
-    [
-     21000,
      "HUR-L3"
     ]
    ]
   },
   "bexalite": {
    "ref": [
+    [
+     34000,
+     "Rat's Nest"
+    ],
+    [
+     30000,
+     "Rod's Fuel"
+    ],
     [
      30000,
      "Patch City"
@@ -1220,14 +1228,6 @@
     [
      30000,
      "Canard View"
-    ],
-    [
-     29000,
-     "TDD Area 18"
-    ],
-    [
-     29000,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1269,15 +1269,15 @@
     ],
     [
      4200,
+     "Rod's Fuel"
+    ],
+    [
+     4100,
      "Rat's Nest"
     ],
     [
      4000,
      "Terra Gateway (Stanton)"
-    ],
-    [
-     3900,
-     "Rod's Fuel"
     ],
     [
      3800,
@@ -1306,10 +1306,6 @@
      "Orbituary"
     ],
     [
-     4200,
-     "Rod's Fuel"
-    ],
-    [
      4100,
      "Terra Gateway (Stanton)"
     ],
@@ -1320,11 +1316,19 @@
     [
      3700,
      "TDD Area 18"
+    ],
+    [
+     3700,
+     "TDD New Babbage"
     ]
    ]
   },
   "diamond": {
    "ref": [
+    [
+     8200,
+     "Rod's Fuel"
+    ],
     [
      7700,
      "CBD Lorville"
@@ -1340,10 +1344,6 @@
     [
      7700,
      "Dunboro"
-    ],
-    [
-     7700,
-     "TDD Orison"
     ]
    ]
   },
@@ -1407,15 +1407,15 @@
     ],
     [
      3600,
+     "Rod's Fuel"
+    ],
+    [
+     3600,
      "Megumi"
     ],
     [
      3600,
      "Dudley & Daughters"
-    ],
-    [
-     3500,
-     "Nyx Gateway (Stanton)"
     ]
    ],
    "raw": [
@@ -1452,6 +1452,10 @@
   "laranite": {
    "ref": [
     [
+     9700,
+     "Rod's Fuel"
+    ],
+    [
      8700,
      "Ruin Station"
     ],
@@ -1466,10 +1470,6 @@
     [
      8700,
      "Endgame"
-    ],
-    [
-     8700,
-     "Gaslight"
     ]
    ]
   },
@@ -1532,16 +1532,16 @@
      "Patch City"
     ],
     [
+     4600,
+     "Nyx Gateway (Stanton)"
+    ],
+    [
      4400,
      "TDD Area 18"
     ],
     [
      4400,
      "TDD New Babbage"
-    ],
-    [
-     4400,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1552,12 +1552,12 @@
      "ArcCorp 141"
     ],
     [
-     79000,
-     "Ashland"
+     91000,
+     "ArcCorp 157"
     ],
     [
-     75000,
-     "ArcCorp 157"
+     79000,
+     "Ashland"
     ],
     [
      75000,
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-15T22:50:38+00:00"
+ "updated": "2026-11-16T02:44:53+00:00"
 }
