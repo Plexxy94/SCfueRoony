@@ -471,5 +471,203 @@
   "sku": 18236,
   "title": "Standard Edition",
   "new": 350
+ },
+ {
+  "d": "2026-11-16",
+  "id": 91,
+  "name": "Genesis",
+  "k": "sku+",
+  "sku": 13041,
+  "title": "Standard Edition",
+  "new": 400
+ },
+ {
+  "d": "2026-11-16",
+  "id": 135,
+  "name": "Cyclone TR",
+  "k": "sku+",
+  "sku": 13080,
+  "title": "Standard Edition",
+  "new": 65
+ },
+ {
+  "d": "2026-11-16",
+  "id": 136,
+  "name": "Cyclone RC",
+  "k": "sku+",
+  "sku": 13081,
+  "title": "Standard Edition",
+  "new": 65
+ },
+ {
+  "d": "2026-11-16",
+  "id": 137,
+  "name": "Cyclone RN",
+  "k": "sku+",
+  "sku": 13082,
+  "title": "Standard Edition",
+  "new": 65
+ },
+ {
+  "d": "2026-11-16",
+  "id": 138,
+  "name": "Cyclone AA",
+  "k": "sku+",
+  "sku": 13083,
+  "title": "Standard Edition",
+  "new": 80
+ },
+ {
+  "d": "2026-11-16",
+  "id": 154,
+  "name": "Nova",
+  "k": "sku+",
+  "sku": 14443,
+  "title": "Standard Edition",
+  "new": 120
+ },
+ {
+  "d": "2026-11-16",
+  "id": 162,
+  "name": "C2 Hercules",
+  "k": "sku+",
+  "sku": 14445,
+  "title": "Standard Edition",
+  "new": 400
+ },
+ {
+  "d": "2026-11-16",
+  "id": 162,
+  "name": "C2 Hercules",
+  "k": "sku+",
+  "sku": 19795,
+  "title": "Warbond Edition",
+  "new": 360
+ },
+ {
+  "d": "2026-11-16",
+  "id": 163,
+  "name": "M2 Hercules",
+  "k": "sku+",
+  "sku": 14446,
+  "title": "Standard Edition",
+  "new": 520
+ },
+ {
+  "d": "2026-11-16",
+  "id": 164,
+  "name": "A2 Hercules",
+  "k": "sku+",
+  "sku": 14609,
+  "title": "Standard Edition",
+  "new": 750
+ },
+ {
+  "d": "2026-11-16",
+  "id": 168,
+  "name": "Mercury",
+  "k": "sku+",
+  "sku": 14348,
+  "title": "Standard Edition",
+  "new": 260
+ },
+ {
+  "d": "2026-11-16",
+  "id": 180,
+  "name": "Ranger RC",
+  "k": "sku+",
+  "sku": 13115,
+  "title": "Standard Edition",
+  "new": 35
+ },
+ {
+  "d": "2026-11-16",
+  "id": 181,
+  "name": "Ranger TR",
+  "k": "sku+",
+  "sku": 13116,
+  "title": "Standard Edition",
+  "new": 40
+ },
+ {
+  "d": "2026-11-16",
+  "id": 182,
+  "name": "Ranger CV",
+  "k": "sku+",
+  "sku": 13117,
+  "title": "Standard Edition",
+  "new": 35
+ },
+ {
+  "d": "2026-11-16",
+  "id": 198,
+  "name": "Ares Inferno",
+  "k": "sku+",
+  "sku": 14762,
+  "title": "Standard Edition",
+  "new": 250
+ },
+ {
+  "d": "2026-11-16",
+  "id": 200,
+  "name": "Ares Ion",
+  "k": "sku+",
+  "sku": 14761,
+  "title": "Standard Edition",
+  "new": 250
+ },
+ {
+  "d": "2026-11-16",
+  "id": 218,
+  "name": "Cyclone MT",
+  "k": "sku+",
+  "sku": 14174,
+  "title": "Standard Edition",
+  "new": 75
+ },
+ {
+  "d": "2026-11-16",
+  "id": 237,
+  "name": "A1 Spirit",
+  "k": "sku+",
+  "sku": 16642,
+  "title": "Standard Edition",
+  "new": 200
+ },
+ {
+  "d": "2026-11-16",
+  "id": 239,
+  "name": "E1 Spirit",
+  "k": "sku+",
+  "sku": 17765,
+  "title": "Standard Edition",
+  "new": 150
+ },
+ {
+  "d": "2026-11-16",
+  "id": 249,
+  "name": "Storm",
+  "k": "sku+",
+  "sku": 16283,
+  "title": "Standard Edition",
+  "new": 90
+ },
+ {
+  "d": "2026-11-16",
+  "id": 264,
+  "name": "Storm AA",
+  "k": "sku+",
+  "sku": 16286,
+  "title": "Standard Edition",
+  "new": 100
+ },
+ {
+  "d": "2026-11-16",
+  "id": 293,
+  "name": "F7C-M Super Hornet Mk II",
+  "k": "sku-",
+  "sku": 19321,
+  "title": "Warbond Edition",
+  "old": 220
  }
 ]

@@ -1,6 +1,6 @@
 {
- "checked": "2026-11-16T02:14:37+00:00",
- "threads": 17,
+ "checked": "2026-11-16T16:07:11+00:00",
+ "threads": 16,
  "errors": [],
  "hits": [
   {
@@ -29,7 +29,8 @@
     "fly": true
    },
    "alts": [
-    "Mantis"
+    "Mantis",
+    "E1 Spirit"
    ],
    "ccu": 5,
    "value": 25,
@@ -76,11 +77,23 @@
    "mfr": "Anvil Aerospace",
    "msrp": 600,
    "wb": 525,
-   "from": "600i Explorer",
-   "from_msrp": 475,
-   "ccu": 50,
-   "value": 125,
+   "from": "M2 Hercules",
+   "from_msrp": 520,
+   "ccu": 5,
+   "value": 80,
    "saving": 75,
+   "new": true
+  },
+  {
+   "ship": "C2 Hercules",
+   "mfr": "Crusader Industries",
+   "msrp": 400,
+   "wb": 360,
+   "from": "Asgard",
+   "from_msrp": 350,
+   "ccu": 10,
+   "value": 50,
+   "saving": 40,
    "new": true
   },
   {
@@ -93,18 +106,6 @@
    "ccu": 10,
    "value": 50,
    "saving": 40,
-   "new": true
-  },
-  {
-   "ship": "F7C-M Super Hornet Mk II",
-   "mfr": "Anvil Aerospace",
-   "msrp": 240,
-   "wb": 220,
-   "from": "Hurricane",
-   "from_msrp": 210,
-   "ccu": 10,
-   "value": 30,
-   "saving": 20,
    "new": true
   },
   {
