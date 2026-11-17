@@ -1131,12 +1131,16 @@
     ],
     [
      10000,
-     "HUR-L3"
+     "ARC-L3"
     ]
    ]
   },
   "aluminum": {
    "ref": [
+    [
+     4600,
+     "Port Tressler"
+    ],
     [
      4300,
      "Terra Gateway (Stanton)"
@@ -1152,10 +1156,6 @@
     [
      3800,
      "TDD New Babbage"
-    ],
-    [
-     3800,
-     "TDD Orison"
     ]
    ]
   },
@@ -1186,8 +1186,8 @@
   "beryl": {
    "ref": [
     [
-     24000,
-     "Rod's Fuel"
+     23000,
+     "HUR-L3"
     ],
     [
      22000,
@@ -1202,8 +1202,8 @@
      "HUR-L5"
     ],
     [
-     21000,
-     "HUR-L3"
+     20000,
+     "TDD Area 18"
     ]
    ]
   },
@@ -1223,11 +1223,11 @@
     ],
     [
      30000,
-     "Jackson's Swap"
+     "Endgame"
     ],
     [
      30000,
-     "Canard View"
+     "Jackson's Swap"
     ]
    ]
   },
@@ -1268,7 +1268,7 @@
      "Stanton Gateway (Pyro)"
     ],
     [
-     4200,
+     4100,
      "Rod's Fuel"
     ],
     [
@@ -1280,8 +1280,8 @@
      "Pyro Gateway (Stanton)"
     ],
     [
-     3700,
-     "TDD Area 18"
+     3800,
+     "Baijini Point"
     ]
    ],
    "raw": [
@@ -1326,10 +1326,6 @@
   "diamond": {
    "ref": [
     [
-     8200,
-     "Rod's Fuel"
-    ],
-    [
      7700,
      "CBD Lorville"
     ],
@@ -1344,6 +1340,10 @@
     [
      7700,
      "Dunboro"
+    ],
+    [
+     7700,
+     "TDD Orison"
     ]
    ]
   },
@@ -1387,11 +1387,11 @@
     ],
     [
      4800,
-     "CRU-L1"
+     "ARC-L4"
     ],
     [
      4800,
-     "ARC-L4"
+     "CRU-L5"
     ]
    ]
   },
@@ -1456,7 +1456,7 @@
      "HUR-L1"
     ],
     [
-     9700,
+     9500,
      "Rod's Fuel"
     ],
     [
@@ -1692,7 +1692,7 @@
      "Dudley & Daughters"
     ],
     [
-     4536,
+     4500,
      "Baijini Point"
     ],
     [
@@ -1712,8 +1712,12 @@
   "titanium": {
    "ref": [
     [
-     9000,
-     "Starlight Service"
+     10000,
+     "Megumi"
+    ],
+    [
+     8700,
+     "ARC-L3"
     ],
     [
      8300,
@@ -1726,10 +1730,6 @@
     [
      8300,
      "CBD Lorville"
-    ],
-    [
-     8300,
-     "Ruin Station"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-16T22:05:44+00:00"
+ "updated": "2026-11-17T04:30:03+00:00"
 }
