@@ -19,6 +19,26 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | Drake Marauder - IAE 2956 Day 5",
+   "url": "https://www.youtube.com/shorts/tSJF-E_V0yw",
+   "date": "2026-11-17T20:01:14+00:00"
+  },
+  {
+   "title": "Star Citizen | Galactic Gear: Drake Marauder",
+   "url": "https://www.youtube.com/shorts/HRJocGU7vZ4",
+   "date": "2026-11-17T18:02:22+00:00"
+  },
+  {
+   "title": "Star Citizen | Drake Interplanetary - IAE 2956 Day 5",
+   "url": "https://www.youtube.com/shorts/A-tslUAWm4k",
+   "date": "2026-11-17T16:03:43+00:00"
+  },
+  {
+   "title": "Star Citizen | Galactic Gear: Drake Marauder",
+   "url": "https://www.youtube.com/watch?v=kmc4k7FOyfo",
+   "date": "2026-11-17T16:03:22+00:00"
+  },
+  {
    "title": "Star Citizen | Crusader: IAE 2956 - Day 4",
    "url": "https://www.youtube.com/shorts/6IF8-2WcQ7A",
    "date": "2026-11-16T16:03:54+00:00"
@@ -47,29 +67,30 @@
    "title": "Star Citizen | Behind the Ships: Anvil Liberator",
    "url": "https://www.youtube.com/watch?v=A5G9beD9Lko",
    "date": "2026-11-15T16:01:03+00:00"
-  },
-  {
-   "title": "Star Citizen | Galactic Gear: Anvil Liberator",
-   "url": "https://www.youtube.com/watch?v=nQiSzl9YMWg",
-   "date": "2026-11-15T16:00:53+00:00"
-  },
-  {
-   "title": "Star Citizen | Getting to IAE 2956",
-   "url": "https://www.youtube.com/shorts/nB8SsUPkKB0",
-   "date": "2026-11-14T16:51:52+00:00"
-  },
-  {
-   "title": "Star Citizen | Origin: IAE 2956 - Day 2",
-   "url": "https://www.youtube.com/shorts/Up9o7aPPPrM",
-   "date": "2026-11-14T16:04:14+00:00"
-  },
-  {
-   "title": "Star Citizen | RSI Skylark: IAE 2956 Day 1",
-   "url": "https://www.youtube.com/shorts/WqFZzjhOJzI",
-   "date": "2026-11-13T20:00:26+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 21448,
+   "title": "Q&A: IAE 2956 New Ships",
+   "url": "https://robertsspaceindustries.com/en/comm-link/engineering/21448-Q-A-IAE-2956-New-Ships",
+   "date": "2026-11-17T15:54:19+00:00",
+   "approx": true
+  },
+  {
+   "id": 21407,
+   "title": "IAE 2956 Drake Interplanetary",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21407-IAE-2956-Drake-Interplanetary",
+   "date": "2026-11-17T15:54:19+00:00",
+   "approx": true
+  },
+  {
+   "id": 21345,
+   "title": "Drake Marauder - Welcome to the Gun Show",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21345-Drake-Marauder",
+   "date": "2026-11-17T15:54:19+00:00",
+   "approx": true
+  },
   {
    "id": 21409,
    "title": "IAE 2956 Crusader Industries",
@@ -125,13 +146,6 @@
    "src": "Spectrum",
    "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/iae-2956-choose-your-adventure",
    "date": "2026-11-13T15:56:00+00:00"
-  },
-  {
-   "id": 21448,
-   "title": "Q&A: IAE 2956 New Ships",
-   "url": "https://robertsspaceindustries.com/en/comm-link/engineering/21448-Q-A-IAE-2956-New-Ships",
-   "date": "2026-11-13T15:45:33+00:00",
-   "approx": true
   },
   {
    "id": 21415,
@@ -712,6 +726,6 @@
    }
   ]
  },
- "updated": "2026-11-17T04:30:00+00:00",
- "checked": "2026-11-17T14:27:39+00:00"
+ "updated": "2026-11-17T22:54:20+00:00",
+ "checked": "2026-11-17T22:54:20+00:00"
 }
