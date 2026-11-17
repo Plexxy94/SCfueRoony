@@ -1,6 +1,6 @@
 {
- "checked": "2026-11-17T00:18:03+00:00",
- "threads": 16,
+ "checked": "2026-11-17T16:16:05+00:00",
+ "threads": 15,
  "errors": [],
  "hits": [
   {
@@ -23,14 +23,15 @@
    "deadline_text": "MISC Day of IAE",
    "done": false,
    "from": {
-    "name": "Freelancer MAX",
+    "name": "Clipper",
     "msrp": 150,
     "std": true,
     "fly": true
    },
    "alts": [
+    "Freelancer MAX",
     "Mantis",
-    "E1 Spirit"
+    "Marauder"
    ],
    "ccu": 5,
    "value": 25,
@@ -85,15 +86,15 @@
    "new": true
   },
   {
-   "ship": "C2 Hercules",
-   "mfr": "Crusader Industries",
-   "msrp": 400,
-   "wb": 360,
-   "from": "Asgard",
-   "from_msrp": 350,
+   "ship": "Cutlass Steel",
+   "mfr": "Drake Interplanetary",
+   "msrp": 235,
+   "wb": 210,
+   "from": "A1 Spirit",
+   "from_msrp": 200,
    "ccu": 10,
-   "value": 50,
-   "saving": 40,
+   "value": 35,
+   "saving": 25,
    "new": true
   },
   {
@@ -118,6 +119,18 @@
    "ccu": 15,
    "value": 40,
    "saving": 25,
+   "new": false
+  },
+  {
+   "ship": "Marauder",
+   "mfr": "Drake Interplanetary",
+   "msrp": 150,
+   "wb": 135,
+   "from": "350r",
+   "from_msrp": 125,
+   "ccu": 10,
+   "value": 25,
+   "saving": 15,
    "new": false
   }
  ]

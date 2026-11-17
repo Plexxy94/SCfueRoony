@@ -669,5 +669,156 @@
   "sku": 19321,
   "title": "Warbond Edition",
   "old": 220
+ },
+ {
+  "d": "2026-11-17",
+  "id": 24,
+  "name": "Caterpillar",
+  "k": "sku+",
+  "sku": 14892,
+  "title": "Standard Edition",
+  "new": 330
+ },
+ {
+  "d": "2026-11-17",
+  "id": 57,
+  "name": "Cutlass Red",
+  "k": "sku+",
+  "sku": 15978,
+  "title": "Standard Edition",
+  "new": 135
+ },
+ {
+  "d": "2026-11-17",
+  "id": 58,
+  "name": "Cutlass Blue",
+  "k": "sku+",
+  "sku": 13517,
+  "title": "Standard Edition",
+  "new": 175
+ },
+ {
+  "d": "2026-11-17",
+  "id": 61,
+  "name": "Herald",
+  "k": "sku+",
+  "sku": 13022,
+  "title": "Standard Edition",
+  "new": 85
+ },
+ {
+  "d": "2026-11-17",
+  "id": 110,
+  "name": "Buccaneer",
+  "k": "sku+",
+  "sku": 13059,
+  "title": "Standard Edition",
+  "new": 110
+ },
+ {
+  "d": "2026-11-17",
+  "id": 162,
+  "name": "C2 Hercules",
+  "k": "sku-",
+  "sku": 19795,
+  "title": "Warbond Edition",
+  "old": 360
+ },
+ {
+  "d": "2026-11-17",
+  "id": 178,
+  "name": "Corsair",
+  "k": "sku+",
+  "sku": 15599,
+  "title": "Standard Edition",
+  "new": 250
+ },
+ {
+  "d": "2026-11-17",
+  "id": 228,
+  "name": "Cutlass Steel",
+  "k": "sku+",
+  "sku": 15063,
+  "title": "Standard Edition",
+  "new": 235
+ },
+ {
+  "d": "2026-11-17",
+  "id": 228,
+  "name": "Cutlass Steel",
+  "k": "sku+",
+  "sku": 19870,
+  "title": "Warbond Edition",
+  "new": 210
+ },
+ {
+  "d": "2026-11-17",
+  "id": 259,
+  "name": "Cutter Scout",
+  "k": "sku+",
+  "sku": 16250,
+  "title": "Standard Edition",
+  "new": 50
+ },
+ {
+  "d": "2026-11-17",
+  "id": 266,
+  "name": "Cutter Rambler",
+  "k": "sku+",
+  "sku": 16567,
+  "title": "Standard Edition",
+  "new": 50
+ },
+ {
+  "d": "2026-11-17",
+  "id": 274,
+  "name": "Ironclad",
+  "k": "sku+",
+  "sku": 19088,
+  "title": "Standard Edition",
+  "new": 600
+ },
+ {
+  "d": "2026-11-17",
+  "id": 275,
+  "name": "Ironclad Assault",
+  "k": "sku+",
+  "sku": 19098,
+  "title": "Standard Edition",
+  "new": 650
+ },
+ {
+  "d": "2026-11-17",
+  "id": 308,
+  "name": "Clipper",
+  "k": "sku+",
+  "sku": 18702,
+  "title": "Standard Edition",
+  "new": 150
+ },
+ {
+  "d": "2026-11-17",
+  "id": 309,
+  "name": "Golem OX",
+  "k": "sku+",
+  "sku": 18668,
+  "title": "Standard Edition",
+  "new": 90
+ },
+ {
+  "d": "2026-11-17",
+  "id": 318,
+  "name": "Pitbull",
+  "k": "sku+",
+  "sku": 19205,
+  "title": "Standard Edition",
+  "new": 55
+ },
+ {
+  "d": "2026-11-17",
+  "id": 329,
+  "name": "Marauder",
+  "k": "new",
+  "new": 150
  }
 ]
