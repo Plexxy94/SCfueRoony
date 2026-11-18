@@ -1138,10 +1138,6 @@
   "aluminum": {
    "ref": [
     [
-     4300,
-     "Port Tressler"
-    ],
-    [
      4000,
      "Dudley & Daughters"
     ],
@@ -1156,6 +1152,10 @@
     [
      3800,
      "CBD Lorville"
+    ],
+    [
+     3800,
+     "TDD Orison"
     ]
    ]
   },
@@ -1276,12 +1276,12 @@
      "Rat's Nest"
     ],
     [
-     4000,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      3900,
      "Pyro Gateway (Stanton)"
+    ],
+    [
+     3800,
+     "Terra Gateway (Stanton)"
     ]
    ],
    "raw": [
@@ -1310,16 +1310,16 @@
      "Everus Harbor"
     ],
     [
+     4000,
+     "Terra Gateway (Stanton)"
+    ],
+    [
      3900,
      "Rod's Fuel"
     ],
     [
      3700,
      "TDD Area 18"
-    ],
-    [
-     3700,
-     "TDD New Babbage"
     ]
    ]
   },
@@ -1374,6 +1374,10 @@
   "hephaestanite": {
    "ref": [
     [
+     4900,
+     "CRU-L4"
+    ],
+    [
      4800,
      "TDD Area 18"
     ],
@@ -1387,24 +1391,12 @@
     ],
     [
      4800,
-     "ARC-L4"
-    ],
-    [
-     4800,
-     "CRU-L5"
+     "CRU-L1"
     ]
    ]
   },
   "iron": {
    "ref": [
-    [
-     3900,
-     "Terra Gateway (Stanton)"
-    ],
-    [
-     3700,
-     "Endgame"
-    ],
     [
      3700,
      "Gaslight"
@@ -1416,6 +1408,14 @@
     [
      3600,
      "Megumi"
+    ],
+    [
+     3500,
+     "Nyx Gateway (Stanton)"
+    ],
+    [
+     3500,
+     "Dudley & Daughters"
     ]
    ],
    "raw": [
@@ -1524,14 +1524,6 @@
   "quartz": {
    "ref": [
     [
-     5500,
-     "Pyro Gateway (Stanton)"
-    ],
-    [
-     5400,
-     "Nyx Gateway (Stanton)"
-    ],
-    [
      4700,
      "Seraphim"
     ],
@@ -1542,6 +1534,14 @@
     [
      4400,
      "TDD Area 18"
+    ],
+    [
+     4400,
+     "TDD New Babbage"
+    ],
+    [
+     4400,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1616,8 +1616,8 @@
   "silicon": {
    "ref": [
     [
-     3100,
-     "Terra Gateway (Stanton)"
+     2900,
+     "Patch City"
     ],
     [
      2600,
@@ -1629,7 +1629,7 @@
     ],
     [
      2400,
-     "Patch City"
+     "Terra Gateway (Stanton)"
     ],
     [
      2400,
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-18T04:24:00+00:00"
+ "updated": "2026-11-18T14:01:34+00:00"
 }
