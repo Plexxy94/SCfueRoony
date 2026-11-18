@@ -1115,6 +1115,10 @@
    "ref": [
     [
      11000,
+     "Rod's Fuel"
+    ],
+    [
+     11000,
      "ARC-L4"
     ],
     [
@@ -1128,10 +1132,6 @@
     [
      10000,
      "CBD Lorville"
-    ],
-    [
-     10000,
-     "Rod's Fuel"
     ]
    ]
   },
@@ -1139,11 +1139,7 @@
    "ref": [
     [
      4300,
-     "Terra Gateway (Stanton)"
-    ],
-    [
-     4200,
-     "Everus Harbor"
+     "Port Tressler"
     ],
     [
      4000,
@@ -1156,6 +1152,10 @@
     [
      3800,
      "TDD New Babbage"
+    ],
+    [
+     3800,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1186,7 +1186,7 @@
   "beryl": {
    "ref": [
     [
-     23000,
+     24000,
      "Rod's Fuel"
     ],
     [
@@ -1215,6 +1215,10 @@
     ],
     [
      30000,
+     "Rod's Fuel"
+    ],
+    [
+     30000,
      "Patch City"
     ],
     [
@@ -1224,10 +1228,6 @@
     [
      30000,
      "Jackson's Swap"
-    ],
-    [
-     30000,
-     "Dudley & Daughters"
     ]
    ]
   },
@@ -1276,12 +1276,12 @@
      "Rat's Nest"
     ],
     [
-     3700,
-     "TDD Area 18"
+     4000,
+     "Terra Gateway (Stanton)"
     ],
     [
-     3700,
-     "TDD New Babbage"
+     3900,
+     "Pyro Gateway (Stanton)"
     ]
    ],
    "raw": [
@@ -1303,32 +1303,28 @@
    "ref": [
     [
      4400,
-     "Rod's Fuel"
-    ],
-    [
-     4400,
      "Orbituary"
     ],
     [
      4100,
-     "Terra Gateway (Stanton)"
+     "Everus Harbor"
     ],
     [
-     4000,
-     "Everus Harbor"
+     3900,
+     "Rod's Fuel"
     ],
     [
      3700,
      "TDD Area 18"
+    ],
+    [
+     3700,
+     "TDD New Babbage"
     ]
    ]
   },
   "diamond": {
    "ref": [
-    [
-     8200,
-     "Rod's Fuel"
-    ],
     [
      7700,
      "TDD New Babbage"
@@ -1344,6 +1340,10 @@
     [
      7700,
      "Rappel"
+    ],
+    [
+     7700,
+     "Dunboro"
     ]
    ]
   },
@@ -1398,6 +1398,10 @@
   "iron": {
    "ref": [
     [
+     3900,
+     "Terra Gateway (Stanton)"
+    ],
+    [
      3700,
      "Endgame"
     ],
@@ -1412,10 +1416,6 @@
     [
      3600,
      "Megumi"
-    ],
-    [
-     3500,
-     "Nyx Gateway (Stanton)"
     ]
    ],
    "raw": [
@@ -1456,6 +1456,10 @@
      "Dudley & Daughters"
     ],
     [
+     9200,
+     "Rod's Fuel"
+    ],
+    [
      8700,
      "Patch City"
     ],
@@ -1466,10 +1470,6 @@
     [
      8700,
      "Endgame"
-    ],
-    [
-     8700,
-     "Gaslight"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-17T22:54:21+00:00"
+ "updated": "2026-11-18T04:24:00+00:00"
 }
