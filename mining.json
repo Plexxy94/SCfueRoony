@@ -1119,6 +1119,10 @@
     ],
     [
      11000,
+     "ARC-L3"
+    ],
+    [
+     11000,
      "ARC-L4"
     ],
     [
@@ -1128,10 +1132,6 @@
     [
      10000,
      "TDD New Babbage"
-    ],
-    [
-     10000,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1142,6 +1142,10 @@
      "Dudley & Daughters"
     ],
     [
+     3900,
+     "Everus Harbor"
+    ],
+    [
      3800,
      "TDD Area 18"
     ],
@@ -1152,10 +1156,6 @@
     [
      3800,
      "CBD Lorville"
-    ],
-    [
-     3800,
-     "TDD Orison"
     ]
    ]
   },
@@ -1280,8 +1280,8 @@
      "Pyro Gateway (Stanton)"
     ],
     [
-     3800,
-     "Terra Gateway (Stanton)"
+     3900,
+     "Baijini Point"
     ]
    ],
    "raw": [
@@ -1306,10 +1306,6 @@
      "Orbituary"
     ],
     [
-     4100,
-     "Everus Harbor"
-    ],
-    [
      4000,
      "Terra Gateway (Stanton)"
     ],
@@ -1320,6 +1316,10 @@
     [
      3700,
      "TDD Area 18"
+    ],
+    [
+     3700,
+     "TDD New Babbage"
     ]
    ]
   },
@@ -1374,6 +1374,14 @@
   "hephaestanite": {
    "ref": [
     [
+     6000,
+     "MIC-L5"
+    ],
+    [
+     5200,
+     "MIC-L4"
+    ],
+    [
      4900,
      "CRU-L4"
     ],
@@ -1384,21 +1392,13 @@
     [
      4800,
      "CBD Lorville"
-    ],
-    [
-     4800,
-     "TDD Orison"
-    ],
-    [
-     4800,
-     "CRU-L1"
     ]
    ]
   },
   "iron": {
    "ref": [
     [
-     3700,
+     3900,
      "Gaslight"
     ],
     [
@@ -1524,6 +1524,10 @@
   "quartz": {
    "ref": [
     [
+     5100,
+     "Nyx Gateway (Stanton)"
+    ],
+    [
      4700,
      "Seraphim"
     ],
@@ -1538,10 +1542,6 @@
     [
      4400,
      "TDD New Babbage"
-    ],
-    [
-     4400,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1712,10 +1712,6 @@
   "titanium": {
    "ref": [
     [
-     8700,
-     "ARC-L3"
-    ],
-    [
      8300,
      "TDD Area 18"
     ],
@@ -1730,6 +1726,10 @@
     [
      8300,
      "Ruin Station"
+    ],
+    [
+     8300,
+     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-18T14:01:34+00:00"
+ "updated": "2026-11-18T21:58:19+00:00"
 }
