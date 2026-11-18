@@ -820,5 +820,140 @@
   "name": "Marauder",
   "k": "new",
   "new": 150
+ },
+ {
+  "d": "2026-11-18",
+  "id": 69,
+  "name": "Mustang Delta",
+  "k": "sku+",
+  "sku": 13028,
+  "title": "Standard Edition",
+  "new": 65
+ },
+ {
+  "d": "2026-11-18",
+  "id": 113,
+  "name": "MPUV Personnel",
+  "k": "sku+",
+  "sku": 13062,
+  "title": "Standard Edition",
+  "new": 40
+ },
+ {
+  "d": "2026-11-18",
+  "id": 114,
+  "name": "MPUV Cargo",
+  "k": "sku+",
+  "sku": 13063,
+  "title": "Standard Edition",
+  "new": 35
+ },
+ {
+  "d": "2026-11-18",
+  "id": 176,
+  "name": "SRV",
+  "k": "sku+",
+  "sku": 16267,
+  "title": "Standard Edition",
+  "new": 165
+ },
+ {
+  "d": "2026-11-18",
+  "id": 201,
+  "name": "MOLE",
+  "k": "sku+",
+  "sku": 15530,
+  "title": "Warbond Edition",
+  "new": 295
+ },
+ {
+  "d": "2026-11-18",
+  "id": 226,
+  "name": "RAFT",
+  "k": "sku+",
+  "sku": 18722,
+  "title": "Standard Edition",
+  "new": 190
+ },
+ {
+  "d": "2026-11-18",
+  "id": 228,
+  "name": "Cutlass Steel",
+  "k": "sku-",
+  "sku": 19870,
+  "title": "Warbond Edition",
+  "old": 210
+ },
+ {
+  "d": "2026-11-18",
+  "id": 229,
+  "name": "HoverQuad",
+  "k": "sku+",
+  "sku": 15162,
+  "title": "Standard Edition",
+  "new": 30
+ },
+ {
+  "d": "2026-11-18",
+  "id": 268,
+  "name": "MPUV Tractor",
+  "k": "sku+",
+  "sku": 16897,
+  "title": "Standard Edition",
+  "new": 40
+ },
+ {
+  "d": "2026-11-18",
+  "id": 281,
+  "name": "CSV-SM",
+  "k": "sku+",
+  "sku": 17559,
+  "title": "Standard Edition",
+  "new": 45
+ },
+ {
+  "d": "2026-11-18",
+  "id": 297,
+  "name": "MTC",
+  "k": "sku+",
+  "sku": 18065,
+  "title": "Standard Edition",
+  "new": 50
+ },
+ {
+  "d": "2026-11-18",
+  "id": 304,
+  "name": "Shiv",
+  "k": "sku+",
+  "sku": 18613,
+  "title": "Standard Edition",
+  "new": 150
+ },
+ {
+  "d": "2026-11-18",
+  "id": 306,
+  "name": "MDC",
+  "k": "sku+",
+  "sku": 18545,
+  "title": "Standard Edition",
+  "new": 50
+ },
+ {
+  "d": "2026-11-18",
+  "id": 311,
+  "name": "MOTH",
+  "k": "sku+",
+  "sku": 18894,
+  "title": "Standard Edition",
+  "new": 315
+ },
+ {
+  "d": "2026-11-18",
+  "id": 321,
+  "name": "Basher",
+  "k": "sku+",
+  "sku": 19431,
+  "title": "Standard Edition",
+  "new": 110
  }
 ]
