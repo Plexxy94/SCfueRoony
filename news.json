@@ -19,6 +19,11 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | Day 7 of IAE 2956 is Underway",
+   "url": "https://www.youtube.com/shorts/Iw9fOCjhIZU",
+   "date": "2026-11-19T16:07:49+00:00"
+  },
+  {
    "title": "Star Citizen | IAE 2956 - Day 6 Is Here!",
    "url": "https://www.youtube.com/shorts/W_joKVvGetA",
    "date": "2026-11-18T16:06:36+00:00"
@@ -62,14 +67,30 @@
    "title": "Star Citizen | Galactic Gear: Anvil Liberator",
    "url": "https://www.youtube.com/shorts/DP8s3Fr519Q",
    "date": "2026-11-15T16:11:40+00:00"
-  },
-  {
-   "title": "Star Citizen | Anvil: IAE 2956 - Day 3",
-   "url": "https://www.youtube.com/shorts/pRiSsnWy-3s",
-   "date": "2026-11-15T16:08:55+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 21402,
+   "title": "IAE 2956 MISC",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21402-IAE-2956-MISC",
+   "date": "2026-11-19T15:37:23+00:00",
+   "approx": true
+  },
+  {
+   "id": 21401,
+   "title": "IAE 2956 Mirai",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21401-IAE-2956-Mirai",
+   "date": "2026-11-19T15:37:23+00:00",
+   "approx": true
+  },
+  {
+   "id": 21400,
+   "title": "IAE 2956 Kruger Intergalactic",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21400-IAE-2956-Kruger-Intergalactic",
+   "date": "2026-11-19T15:37:23+00:00",
+   "approx": true
+  },
   {
    "id": 21406,
    "title": "IAE 2956 Argo Astronautics",
@@ -218,6 +239,27 @@
    "approx": true
   },
   {
+   "id": 21447,
+   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21447-Star-Citizen-Behind-The-Ships-RSI-Galaxy",
+   "date": "2026-11-12T21:37:23+00:00",
+   "approx": true
+  },
+  {
+   "id": 21434,
+   "title": "Twitch Drops: IAE 2956",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21434-Twitch-Drops-IAE-2956",
+   "date": "2026-11-12T21:37:23+00:00",
+   "approx": true
+  },
+  {
+   "id": 21386,
+   "title": "Intergalactic Aerospace Expo 2956 Free Fly and Manufacturer Schedule - Try Star Citizen for Free",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21386-Intergalactic-Aerospace-Expo-2956-Free-Fly-And-Manufacturer-Schedule",
+   "date": "2026-11-12T21:37:23+00:00",
+   "approx": true
+  },
+  {
    "id": 21420,
    "title": "Star Citizen Alpha 4.10.3 Vanduul Incursion - Nyx Needs You",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21420-Star-Citizen-Alpha-4103-Vanduul-Incursion",
@@ -246,45 +288,10 @@
    "approx": true
   },
   {
-   "id": 21434,
-   "title": "Twitch Drops: IAE 2956",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21434-Twitch-Drops-IAE-2956",
-   "date": "2026-11-09T18:24:06+00:00",
-   "approx": true
-  },
-  {
-   "id": 21386,
-   "title": "Intergalactic Aerospace Expo 2956 Free Fly and Manufacturer Schedule - Try Star Citizen for Free",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21386-Intergalactic-Aerospace-Expo-2956-Free-Fly-And-Manufacturer-Schedule",
-   "date": "2026-11-09T17:24:06+00:00",
-   "approx": true
-  },
-  {
-   "id": 21447,
-   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21447-Star-Citizen-Behind-The-Ships-RSI-Galaxy",
-   "date": "2026-11-09T16:24:06+00:00",
-   "approx": true
-  },
-  {
    "id": 21445,
    "title": "This Week in Star Citizen - November 9, 2026",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21445-This-Week-In-Star-Citizen",
    "date": "2026-11-09T12:00:00+00:00",
-   "approx": true
-  },
-  {
-   "id": 21432,
-   "title": "Star Citizen Monthly Report: October 2026",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21432-Star-Citizen-Monthly-Report-October-2026",
-   "date": "2026-11-07T22:59:14+00:00",
-   "approx": true
-  },
-  {
-   "id": 21311,
-   "title": "November 2026 Subscriber Promotions",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21311-November-2026-Subscriber-Promotions",
-   "date": "2026-11-06T23:36:06+00:00",
    "approx": true
   },
   {
@@ -293,13 +300,6 @@
    "src": "Spectrum",
    "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/intergalactic-aerospace-expo-2956-save-the-date",
    "date": "2026-11-06T15:40:00+00:00"
-  },
-  {
-   "id": 21422,
-   "title": "Roadmap Roundup - November 4, 2026",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21422-Roadmap-Roundup-November-4-2026",
-   "date": "2026-11-04T12:00:00+00:00",
-   "approx": true
   },
   {
    "id": 9575799,
@@ -718,6 +718,6 @@
    }
   ]
  },
- "updated": "2026-11-18T21:58:17+00:00",
- "checked": "2026-11-19T13:12:22+00:00"
+ "updated": "2026-11-19T21:37:24+00:00",
+ "checked": "2026-11-19T21:37:24+00:00"
 }

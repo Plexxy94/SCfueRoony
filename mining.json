@@ -1115,15 +1115,7 @@
    "ref": [
     [
      11000,
-     "Rod's Fuel"
-    ],
-    [
-     11000,
      "ARC-L3"
-    ],
-    [
-     11000,
-     "ARC-L4"
     ],
     [
      10000,
@@ -1132,6 +1124,14 @@
     [
      10000,
      "TDD New Babbage"
+    ],
+    [
+     10000,
+     "CBD Lorville"
+    ],
+    [
+     10000,
+     "Rod's Fuel"
     ]
    ]
   },
@@ -1202,8 +1202,8 @@
      "HUR-L5"
     ],
     [
-     20000,
-     "TDD Area 18"
+     21000,
+     "Rod's Fuel"
     ]
    ]
   },
@@ -1272,16 +1272,16 @@
      "Stanton Gateway (Pyro)"
     ],
     [
-     4200,
-     "Rat's Nest"
-    ],
-    [
      3900,
      "Pyro Gateway (Stanton)"
     ],
     [
      3900,
      "Baijini Point"
+    ],
+    [
+     3800,
+     "Rod's Fuel"
     ]
    ],
    "raw": [
@@ -1306,10 +1306,6 @@
      "Orbituary"
     ],
     [
-     4100,
-     "Rod's Fuel"
-    ],
-    [
      3800,
      "Everus Harbor"
     ],
@@ -1320,6 +1316,10 @@
     [
      3700,
      "TDD New Babbage"
+    ],
+    [
+     3700,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1327,6 +1327,10 @@
    "ref": [
     [
      8200,
+     "ARC-L5"
+    ],
+    [
+     7900,
      "Rod's Fuel"
     ],
     [
@@ -1340,10 +1344,6 @@
     [
      7700,
      "Pickers Field"
-    ],
-    [
-     7700,
-     "Rappel"
     ]
    ]
   },
@@ -1374,10 +1374,6 @@
   "hephaestanite": {
    "ref": [
     [
-     6000,
-     "MIC-L5"
-    ],
-    [
      5200,
      "MIC-L4"
     ],
@@ -1392,6 +1388,10 @@
     [
      4800,
      "CBD Lorville"
+    ],
+    [
+     4800,
+     "TDD Orison"
     ]
    ]
   },
@@ -1453,6 +1453,10 @@
    "ref": [
     [
      9700,
+     "Rod's Fuel"
+    ],
+    [
+     9700,
      "Dudley & Daughters"
     ],
     [
@@ -1466,10 +1470,6 @@
     [
      8700,
      "Patch City"
-    ],
-    [
-     8700,
-     "Starlight Service"
     ]
    ]
   },
@@ -1712,10 +1712,6 @@
   "titanium": {
    "ref": [
     [
-     9200,
-     "Megumi"
-    ],
-    [
      8300,
      "TDD Area 18"
     ],
@@ -1730,6 +1726,10 @@
     [
      8300,
      "Ruin Station"
+    ],
+    [
+     8300,
+     "Checkmate"
     ]
    ]
   },
@@ -1760,7 +1760,7 @@
   "tungsten": {
    "ref": [
     [
-     12000,
+     11000,
      "Megumi"
     ],
     [
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-19T13:12:24+00:00"
+ "updated": "2026-11-19T21:37:25+00:00"
 }
