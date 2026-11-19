@@ -1138,10 +1138,6 @@
   "aluminum": {
    "ref": [
     [
-     4100,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      4000,
      "Dudley & Daughters"
     ],
@@ -1156,6 +1152,10 @@
     [
      3800,
      "CBD Lorville"
+    ],
+    [
+     3800,
+     "Port Tressler"
     ]
    ]
   },
@@ -1186,10 +1186,6 @@
   "beryl": {
    "ref": [
     [
-     24000,
-     "Rod's Fuel"
-    ],
-    [
      23000,
      "HUR-L3"
     ],
@@ -1204,6 +1200,10 @@
     [
      22000,
      "HUR-L5"
+    ],
+    [
+     20000,
+     "TDD Area 18"
     ]
    ]
   },
@@ -1264,8 +1264,8 @@
   "copper": {
    "ref": [
     [
-     4700,
-     "Rod's Fuel"
+     4500,
+     "Terra Gateway (Stanton)"
     ],
     [
      4400,
@@ -1306,7 +1306,7 @@
      "Orbituary"
     ],
     [
-     3900,
+     4100,
      "Rod's Fuel"
     ],
     [
@@ -1326,6 +1326,10 @@
   "diamond": {
    "ref": [
     [
+     8200,
+     "Rod's Fuel"
+    ],
+    [
      7700,
      "TDD New Babbage"
     ],
@@ -1340,10 +1344,6 @@
     [
      7700,
      "Rappel"
-    ],
-    [
-     7700,
-     "Dunboro"
     ]
    ]
   },
@@ -1399,10 +1399,6 @@
    "ref": [
     [
      3600,
-     "Rod's Fuel"
-    ],
-    [
-     3600,
      "Megumi"
     ],
     [
@@ -1412,6 +1408,10 @@
     [
      3500,
      "Nyx Gateway (Stanton)"
+    ],
+    [
+     3500,
+     "Rod's Fuel"
     ],
     [
      3500,
@@ -1456,8 +1456,8 @@
      "Dudley & Daughters"
     ],
     [
-     9200,
-     "Rod's Fuel"
+     9100,
+     "CBD Lorville"
     ],
     [
      8700,
@@ -1556,7 +1556,7 @@
      "ArcCorp 157"
     ],
     [
-     79000,
+     84000,
      "Ashland"
     ],
     [
@@ -1649,15 +1649,15 @@
     ],
     [
      140000,
-     "CBD Lorville"
-    ],
-    [
-     140000,
      "TDD Area 18"
     ],
     [
      140000,
      "TDD New Babbage"
+    ],
+    [
+     140000,
+     "Rayari Kaltag"
     ]
    ]
   },
@@ -1712,6 +1712,10 @@
   "titanium": {
    "ref": [
     [
+     9200,
+     "Megumi"
+    ],
+    [
      8300,
      "TDD Area 18"
     ],
@@ -1726,10 +1730,6 @@
     [
      8300,
      "Ruin Station"
-    ],
-    [
-     8300,
-     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-19T03:31:35+00:00"
+ "updated": "2026-11-19T13:12:24+00:00"
 }
