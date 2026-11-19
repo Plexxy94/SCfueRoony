@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-18T22:58:08+00:00",
+ "checked": "2026-11-19T15:54:22+00:00",
  "threads": 14,
  "errors": [],
  "hits": [
@@ -74,18 +74,6 @@
  ],
  "warbond": [
   {
-   "ship": "Liberator",
-   "mfr": "Anvil Aerospace",
-   "msrp": 600,
-   "wb": 525,
-   "from": "M2 Hercules",
-   "from_msrp": 520,
-   "ccu": 5,
-   "value": 80,
-   "saving": 75,
-   "new": true
-  },
-  {
    "ship": "MOLE",
    "mfr": "Argo Astronautics",
    "msrp": 315,
@@ -96,6 +84,18 @@
    "value": 25,
    "saving": 20,
    "new": true
+  },
+  {
+   "ship": "Liberator",
+   "mfr": "Anvil Aerospace",
+   "msrp": 600,
+   "wb": 525,
+   "from": "M2 Hercules",
+   "from_msrp": 520,
+   "ccu": 5,
+   "value": 80,
+   "saving": 75,
+   "new": false
   },
   {
    "ship": "Galaxy",
