@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-19T15:54:22+00:00",
+ "checked": "2026-11-19T23:06:22+00:00",
  "threads": 14,
  "errors": [],
  "hits": [
@@ -9,7 +9,7 @@
    "ship": "Prospector",
    "mfr": "MISC",
    "ship_id": 109,
-   "now": 155,
+   "now": 175,
    "old": 155,
    "new": 175,
    "src": {
@@ -21,7 +21,8 @@
    "first_seen": "2026-11-12",
    "deadline": "2026-11-19",
    "deadline_text": "MISC Day of IAE",
-   "done": false,
+   "done": true,
+   "done_since": "2026-11-19",
    "from": {
     "name": "Clipper",
     "msrp": 150,
@@ -74,15 +75,15 @@
  ],
  "warbond": [
   {
-   "ship": "MOLE",
-   "mfr": "Argo Astronautics",
-   "msrp": 315,
-   "wb": 295,
-   "from": "Apollo Medivac",
-   "from_msrp": 290,
+   "ship": "Guardian",
+   "mfr": "Mirai",
+   "msrp": 250,
+   "wb": 235,
+   "from": "Scorpius Antares",
+   "from_msrp": 230,
    "ccu": 5,
-   "value": 25,
-   "saving": 20,
+   "value": 20,
+   "saving": 15,
    "new": true
   },
   {
