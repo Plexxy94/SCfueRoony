@@ -1269,5 +1269,203 @@
   "sku": 19461,
   "title": "Standard Edition",
   "new": 175
+ },
+ {
+  "d": "2026-11-20",
+  "id": 51,
+  "name": "Reclaimer",
+  "k": "sku+",
+  "sku": 13015,
+  "title": "Standard Edition",
+  "new": 400
+ },
+ {
+  "d": "2026-11-20",
+  "id": 59,
+  "name": "Redeemer",
+  "k": "sku+",
+  "sku": 16313,
+  "title": "Standard Edition",
+  "new": 330
+ },
+ {
+  "d": "2026-11-20",
+  "id": 75,
+  "name": "Vanguard Warden",
+  "k": "sku+",
+  "sku": 13032,
+  "title": "Standard Edition",
+  "new": 260
+ },
+ {
+  "d": "2026-11-20",
+  "id": 95,
+  "name": "Vanguard Harbinger",
+  "k": "sku+",
+  "sku": 13044,
+  "title": "Standard Edition",
+  "new": 290
+ },
+ {
+  "d": "2026-11-20",
+  "id": 96,
+  "name": "Vanguard Sentinel",
+  "k": "sku+",
+  "sku": 13045,
+  "title": "Standard Edition",
+  "new": 275
+ },
+ {
+  "d": "2026-11-20",
+  "id": 98,
+  "name": "Sabre",
+  "k": "sku+",
+  "sku": 17741,
+  "title": "Standard Edition",
+  "new": 175
+ },
+ {
+  "d": "2026-11-20",
+  "id": 99,
+  "name": "Retaliator",
+  "k": "sku+",
+  "sku": 16951,
+  "title": "Standard Edition",
+  "new": 175
+ },
+ {
+  "d": "2026-11-20",
+  "id": 101,
+  "name": "Avenger Warlock",
+  "k": "sku+",
+  "sku": 13050,
+  "title": "Standard Edition",
+  "new": 85
+ },
+ {
+  "d": "2026-11-20",
+  "id": 120,
+  "name": "Sabre Comet",
+  "k": "sku+",
+  "sku": 13067,
+  "title": "Standard Edition",
+  "new": 185
+ },
+ {
+  "d": "2026-11-20",
+  "id": 121,
+  "name": "Gladius Valiant",
+  "k": "sku+",
+  "sku": 13068,
+  "title": "Standard Edition",
+  "new": 110
+ },
+ {
+  "d": "2026-11-20",
+  "id": 124,
+  "name": "Avenger Titan Renegade",
+  "k": "sku+",
+  "sku": 13051,
+  "title": "Standard Edition",
+  "new": 75
+ },
+ {
+  "d": "2026-11-20",
+  "id": 127,
+  "name": "Vanguard Hoplite",
+  "k": "sku+",
+  "sku": 15973,
+  "title": "Standard Edition",
+  "new": 240
+ },
+ {
+  "d": "2026-11-20",
+  "id": 130,
+  "name": "Eclipse",
+  "k": "sku+",
+  "sku": 13076,
+  "title": "Standard Edition",
+  "new": 300
+ },
+ {
+  "d": "2026-11-20",
+  "id": 151,
+  "name": "Hammerhead",
+  "k": "sku+",
+  "sku": 13091,
+  "title": "Standard Edition",
+  "new": 725
+ },
+ {
+  "d": "2026-11-20",
+  "id": 155,
+  "name": "Vulcan",
+  "k": "sku+",
+  "sku": 13093,
+  "title": "Standard Edition",
+  "new": 200
+ },
+ {
+  "d": "2026-11-20",
+  "id": 186,
+  "name": "Nautilus",
+  "k": "sku+",
+  "sku": 13121,
+  "title": "Standard Edition",
+  "new": 725
+ },
+ {
+  "d": "2026-11-20",
+  "id": 267,
+  "name": "Sabre Firebird",
+  "k": "sku+",
+  "sku": 16994,
+  "title": "Standard Edition",
+  "new": 185
+ },
+ {
+  "d": "2026-11-20",
+  "id": 276,
+  "name": "Sabre Peregrine",
+  "k": "sku+",
+  "sku": 17141,
+  "title": "Standard Edition",
+  "new": 185
+ },
+ {
+  "d": "2026-11-20",
+  "id": 286,
+  "name": "Guardian",
+  "k": "sku-",
+  "sku": 19871,
+  "title": "Warbond Edition",
+  "old": 235
+ },
+ {
+  "d": "2026-11-20",
+  "id": 316,
+  "name": "Tiburon",
+  "k": "sku+",
+  "sku": 19175,
+  "title": "Standard Edition",
+  "new": 775
+ },
+ {
+  "d": "2026-11-20",
+  "id": 316,
+  "name": "Tiburon",
+  "k": "sku+",
+  "sku": 19791,
+  "title": "Warbond Edition",
+  "new": 710
+ },
+ {
+  "d": "2026-11-20",
+  "id": 328,
+  "name": "Sabre Raven EX",
+  "k": "sku+",
+  "sku": 19627,
+  "title": "Standard Edition",
+  "new": 185
  }
 ]

@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-20T15:37:38+00:00",
+ "checked": "2026-11-20T22:42:14+00:00",
  "threads": 14,
  "errors": [],
  "hits": [
@@ -75,15 +75,15 @@
  ],
  "warbond": [
   {
-   "ship": "Guardian",
-   "mfr": "Mirai",
-   "msrp": 250,
-   "wb": 235,
-   "from": "Scorpius Antares",
-   "from_msrp": 230,
-   "ccu": 5,
-   "value": 20,
-   "saving": 15,
+   "ship": "Tiburon",
+   "mfr": "Aegis Dynamics",
+   "msrp": 775,
+   "wb": 710,
+   "from": "Odyssey",
+   "from_msrp": 700,
+   "ccu": 10,
+   "value": 75,
+   "saving": 65,
    "new": true
   },
   {
