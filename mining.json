@@ -1131,7 +1131,7 @@
     ],
     [
      10000,
-     "Rod's Fuel"
+     "HUR-L3"
     ]
    ]
   },
@@ -1202,8 +1202,8 @@
      "HUR-L5"
     ],
     [
-     21000,
-     "Rod's Fuel"
+     20000,
+     "TDD Area 18"
     ]
    ]
   },
@@ -1212,10 +1212,6 @@
     [
      32000,
      "The Golden Riviera"
-    ],
-    [
-     30000,
-     "Rod's Fuel"
     ],
     [
      30000,
@@ -1228,6 +1224,10 @@
     [
      30000,
      "Jackson's Swap"
+    ],
+    [
+     30000,
+     "Dudley & Daughters"
     ]
    ]
   },
@@ -1264,6 +1264,10 @@
   "copper": {
    "ref": [
     [
+     4700,
+     "Rod's Fuel"
+    ],
+    [
      4500,
      "Terra Gateway (Stanton)"
     ],
@@ -1278,10 +1282,6 @@
     [
      3900,
      "Baijini Point"
-    ],
-    [
-     3800,
-     "Rod's Fuel"
     ]
    ],
    "raw": [
@@ -1306,6 +1306,10 @@
      "Orbituary"
     ],
     [
+     4000,
+     "Rod's Fuel"
+    ],
+    [
      3800,
      "Everus Harbor"
     ],
@@ -1316,23 +1320,11 @@
     [
      3700,
      "TDD New Babbage"
-    ],
-    [
-     3700,
-     "CBD Lorville"
     ]
    ]
   },
   "diamond": {
    "ref": [
-    [
-     8200,
-     "ARC-L5"
-    ],
-    [
-     7900,
-     "Rod's Fuel"
-    ],
     [
      7700,
      "TDD New Babbage"
@@ -1344,6 +1336,14 @@
     [
      7700,
      "Pickers Field"
+    ],
+    [
+     7700,
+     "Rappel"
+    ],
+    [
+     7700,
+     "Dunboro"
     ]
    ]
   },
@@ -1453,15 +1453,7 @@
    "ref": [
     [
      9700,
-     "Rod's Fuel"
-    ],
-    [
-     9700,
      "Dudley & Daughters"
-    ],
-    [
-     9100,
-     "CBD Lorville"
     ],
     [
      8700,
@@ -1470,6 +1462,14 @@
     [
      8700,
      "Patch City"
+    ],
+    [
+     8700,
+     "Starlight Service"
+    ],
+    [
+     8700,
+     "Endgame"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-19T21:37:25+00:00"
+ "updated": "2026-11-20T03:19:03+00:00"
 }
