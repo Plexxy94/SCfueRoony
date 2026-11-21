@@ -1467,5 +1467,147 @@
   "sku": 19627,
   "title": "Standard Edition",
   "new": 185
+ },
+ {
+  "d": "2026-11-21",
+  "id": 35,
+  "name": "Khartu-al",
+  "k": "sku+",
+  "sku": 17736,
+  "title": "Standard Edition",
+  "new": 175
+ },
+ {
+  "d": "2026-11-21",
+  "id": 36,
+  "name": "Merchantman",
+  "k": "sku+",
+  "sku": 15524,
+  "title": "Standard Edition",
+  "new": 650
+ },
+ {
+  "d": "2026-11-21",
+  "id": 108,
+  "name": "Blade",
+  "k": "sku+",
+  "sku": 13057,
+  "title": "Standard Edition",
+  "new": 275
+ },
+ {
+  "d": "2026-11-21",
+  "id": 117,
+  "name": "Prowler",
+  "k": "sku+",
+  "sku": 13391,
+  "title": "Standard Edition",
+  "new": 440
+ },
+ {
+  "d": "2026-11-21",
+  "id": 129,
+  "name": "Defender",
+  "k": "sku+",
+  "sku": 13075,
+  "title": "Standard Edition",
+  "new": 220
+ },
+ {
+  "d": "2026-11-21",
+  "id": 131,
+  "name": "Nox",
+  "k": "sku+",
+  "sku": 13077,
+  "title": "Standard Edition",
+  "new": 45
+ },
+ {
+  "d": "2026-11-21",
+  "id": 174,
+  "name": "San'tok.yāi",
+  "k": "sku+",
+  "sku": 16580,
+  "title": "Standard Edition",
+  "new": 240
+ },
+ {
+  "d": "2026-11-21",
+  "id": 211,
+  "name": "Talon",
+  "k": "sku+",
+  "sku": 14104,
+  "title": "Standard Edition",
+  "new": 115
+ },
+ {
+  "d": "2026-11-21",
+  "id": 211,
+  "name": "Talon",
+  "k": "sku+",
+  "sku": 19792,
+  "title": "Warbond Edition",
+  "new": 105
+ },
+ {
+  "d": "2026-11-21",
+  "id": 212,
+  "name": "Talon Shrike",
+  "k": "sku+",
+  "sku": 14103,
+  "title": "Standard Edition",
+  "new": 115
+ },
+ {
+  "d": "2026-11-21",
+  "id": 222,
+  "name": "Railen",
+  "k": "sku+",
+  "sku": 19388,
+  "title": "Standard Edition",
+  "new": 400
+ },
+ {
+  "d": "2026-11-21",
+  "id": 300,
+  "name": "Prowler Utility",
+  "k": "sku+",
+  "sku": 18262,
+  "title": "Standard Edition",
+  "new": 300
+ },
+ {
+  "d": "2026-11-21",
+  "id": 303,
+  "name": "Stinger",
+  "k": "sku+",
+  "sku": 18489,
+  "title": "Standard Edition",
+  "new": 315
+ },
+ {
+  "d": "2026-11-21",
+  "id": 316,
+  "name": "Tiburon",
+  "k": "sku-",
+  "sku": 19791,
+  "title": "Warbond Edition",
+  "old": 710
+ },
+ {
+  "d": "2026-11-21",
+  "id": 320,
+  "name": "Tyilui",
+  "k": "sku+",
+  "sku": 19337,
+  "title": "Standard Edition",
+  "new": 425
+ },
+ {
+  "d": "2026-11-21",
+  "id": 330,
+  "name": "Hyūn",
+  "k": "new",
+  "new": 220
  }
 ]

@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-21T14:48:00+00:00",
+ "checked": "2026-11-21T21:42:22+00:00",
  "threads": 14,
  "errors": [],
  "hits": [
@@ -75,15 +75,15 @@
  ],
  "warbond": [
   {
-   "ship": "Tiburon",
-   "mfr": "Aegis Dynamics",
-   "msrp": 775,
-   "wb": 710,
-   "from": "Odyssey",
-   "from_msrp": 700,
-   "ccu": 10,
-   "value": 75,
-   "saving": 65,
+   "ship": "Talon",
+   "mfr": "Esperia",
+   "msrp": 115,
+   "wb": 105,
+   "from": "Hawk",
+   "from_msrp": 100,
+   "ccu": 5,
+   "value": 15,
+   "saving": 10,
    "new": true
   },
   {
@@ -120,6 +120,18 @@
    "ccu": 15,
    "value": 40,
    "saving": 25,
+   "new": false
+  },
+  {
+   "ship": "Hyūn",
+   "mfr": "Gatac Manufacture",
+   "msrp": 220,
+   "wb": 200,
+   "from": "RAFT",
+   "from_msrp": 190,
+   "ccu": 10,
+   "value": 30,
+   "saving": 20,
    "new": false
   },
   {
