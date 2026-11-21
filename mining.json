@@ -1138,8 +1138,8 @@
   "aluminum": {
    "ref": [
     [
-     4000,
-     "Everus Harbor"
+     4600,
+     "Terra Gateway (Stanton)"
     ],
     [
      3800,
@@ -1155,7 +1155,7 @@
     ],
     [
      3800,
-     "Port Tressler"
+     "TDD Orison"
     ]
    ]
   },
@@ -1198,17 +1198,21 @@
      "HUR-L5"
     ],
     [
-     20000,
-     "TDD Area 18"
+     21000,
+     "Rod's Fuel"
     ],
     [
      20000,
-     "TDD New Babbage"
+     "TDD Area 18"
     ]
    ]
   },
   "bexalite": {
    "ref": [
+    [
+     36000,
+     "Sacren's Plot"
+    ],
     [
      30000,
      "Rod's Fuel"
@@ -1224,10 +1228,6 @@
     [
      30000,
      "Jackson's Swap"
-    ],
-    [
-     30000,
-     "Dudley & Daughters"
     ]
    ]
   },
@@ -1264,7 +1264,11 @@
   "copper": {
    "ref": [
     [
-     4700,
+     4600,
+     "Terra Gateway (Stanton)"
+    ],
+    [
+     4500,
      "Rod's Fuel"
     ],
     [
@@ -1278,10 +1282,6 @@
     [
      3900,
      "Baijini Point"
-    ],
-    [
-     3800,
-     "Rat's Nest"
     ]
    ],
    "raw": [
@@ -1303,23 +1303,23 @@
    "ref": [
     [
      4400,
-     "Rod's Fuel"
-    ],
-    [
-     4400,
      "Orbituary"
     ],
     [
-     4000,
-     "Terra Gateway (Stanton)"
+     4300,
+     "Rod's Fuel"
     ],
     [
-     4000,
-     "Everus Harbor"
+     4100,
+     "Terra Gateway (Stanton)"
     ],
     [
      3700,
      "TDD Area 18"
+    ],
+    [
+     3700,
+     "TDD New Babbage"
     ]
    ]
   },
@@ -1399,14 +1399,6 @@
    "ref": [
     [
      3600,
-     "Terra Gateway (Stanton)"
-    ],
-    [
-     3600,
-     "Rod's Fuel"
-    ],
-    [
-     3600,
      "Megumi"
     ],
     [
@@ -1416,6 +1408,14 @@
     [
      3600,
      "Gaslight"
+    ],
+    [
+     3500,
+     "Rod's Fuel"
+    ],
+    [
+     3500,
+     "PSS Theta"
     ]
    ],
    "raw": [
@@ -1452,12 +1452,12 @@
   "laranite": {
    "ref": [
     [
-     9000,
-     "TDD Area 18"
+     9200,
+     "Rod's Fuel"
     ],
     [
-     8800,
-     "Stanton Gateway (Nyx)"
+     9000,
+     "TDD Area 18"
     ],
     [
      8700,
@@ -1524,8 +1524,16 @@
   "quartz": {
    "ref": [
     [
+     5500,
+     "Pyro Gateway (Stanton)"
+    ],
+    [
      4600,
      "Patch City"
+    ],
+    [
+     4600,
+     "Seraphim"
     ],
     [
      4400,
@@ -1534,14 +1542,6 @@
     [
      4400,
      "TDD New Babbage"
-    ],
-    [
-     4400,
-     "CBD Lorville"
-    ],
-    [
-     4400,
-     "Seraphim"
     ]
    ]
   },
@@ -1550,6 +1550,10 @@
     [
      84000,
      "Ashland"
+    ],
+    [
+     76000,
+     "Levski"
     ],
     [
      75000,
@@ -1562,10 +1566,6 @@
     [
      74000,
      "Sacren's Plot"
-    ],
-    [
-     72000,
-     "ArcCorp 141"
     ]
    ]
   },
@@ -1616,6 +1616,10 @@
   "silicon": {
    "ref": [
     [
+     3100,
+     "Terra Gateway (Stanton)"
+    ],
+    [
      2900,
      "Patch City"
     ],
@@ -1630,19 +1634,11 @@
     [
      2400,
      "Seraphim"
-    ],
-    [
-     2400,
-     "CBD Lorville"
     ]
    ]
   },
   "stileron": {
    "ref": [
-    [
-     170000,
-     "Nyx Gateway (Pyro)"
-    ],
     [
      150000,
      "Deakins Research"
@@ -1658,6 +1654,10 @@
     [
      140000,
      "Rayari Kaltag"
+    ],
+    [
+     140000,
+     "Terra Mills"
     ]
    ]
   },
@@ -1712,8 +1712,16 @@
   "titanium": {
    "ref": [
     [
+     9200,
+     "Starlight Service"
+    ],
+    [
      8300,
      "TDD Area 18"
+    ],
+    [
+     8300,
+     "TDD New Babbage"
     ],
     [
      8300,
@@ -1722,14 +1730,6 @@
     [
      8300,
      "Ruin Station"
-    ],
-    [
-     8300,
-     "Checkmate"
-    ],
-    [
-     8300,
-     "Rod's Fuel"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-21T11:05:43+00:00"
+ "updated": "2026-11-21T17:58:44+00:00"
 }

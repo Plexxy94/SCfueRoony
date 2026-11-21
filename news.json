@@ -19,6 +19,26 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | Galactic Gear: Gatac Hyūn",
+   "url": "https://www.youtube.com/shorts/jGthN4Dk2Zc",
+   "date": "2026-11-21T17:09:13+00:00"
+  },
+  {
+   "title": "Star Citizen | Day 9 of IAE 2956 is here!",
+   "url": "https://www.youtube.com/shorts/y92Rq0WqIw4",
+   "date": "2026-11-21T16:09:43+00:00"
+  },
+  {
+   "title": "Star Citizen | Galactic Gear: Gatac Hyūn",
+   "url": "https://www.youtube.com/watch?v=5r8M8FvUNLE",
+   "date": "2026-11-21T16:01:02+00:00"
+  },
+  {
+   "title": "Star Citizen | Behind the Ships: Gatac Hyūn",
+   "url": "https://www.youtube.com/watch?v=SPXJNcLABHE",
+   "date": "2026-11-21T16:00:52+00:00"
+  },
+  {
    "title": "Star Citizen | Day 8 - Aegis Dynamics",
    "url": "https://www.youtube.com/shorts/1pKA2HtAudc",
    "date": "2026-11-20T16:09:58+00:00"
@@ -47,29 +67,58 @@
    "title": "Star Citizen | Drake Interplanetary - IAE 2956 Day 5",
    "url": "https://www.youtube.com/shorts/A-tslUAWm4k",
    "date": "2026-11-17T16:03:43+00:00"
-  },
-  {
-   "title": "Star Citizen | Galactic Gear: Drake Marauder",
-   "url": "https://www.youtube.com/watch?v=kmc4k7FOyfo",
-   "date": "2026-11-17T16:03:22+00:00"
-  },
-  {
-   "title": "Star Citizen | Crusader: IAE 2956 - Day 4",
-   "url": "https://www.youtube.com/shorts/6IF8-2WcQ7A",
-   "date": "2026-11-16T16:03:54+00:00"
-  },
-  {
-   "title": "Star Citizen | Anvil Liberator - IAE 2956",
-   "url": "https://www.youtube.com/shorts/qtmtpeG7VsE",
-   "date": "2026-11-16T15:00:41+00:00"
-  },
-  {
-   "title": "Star Citizen | Behind the Ships: Anvil Liberator",
-   "url": "https://www.youtube.com/shorts/MGEWc6Y31BI",
-   "date": "2026-11-15T16:42:45+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 21462,
+   "title": "Star Citizen | Behind the Ships: Gatac Hyūn",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21462-Star-Citizen-Behind-The-Ships-Gatac-Hy-n",
+   "date": "2026-11-21T15:58:39+00:00",
+   "approx": true
+  },
+  {
+   "id": 21448,
+   "title": "Q&A: IAE 2956 New Ships",
+   "url": "https://robertsspaceindustries.com/en/comm-link/engineering/21448-Q-A-IAE-2956-New-Ships",
+   "date": "2026-11-21T15:58:39+00:00",
+   "approx": true
+  },
+  {
+   "id": 21397,
+   "title": "IAE 2956 Aopoa",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21397-IAE-2956-Aopoa",
+   "date": "2026-11-21T15:58:39+00:00",
+   "approx": true
+  },
+  {
+   "id": 21396,
+   "title": "IAE 2956 Banu",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21396-IAE-2956-Banu",
+   "date": "2026-11-21T15:58:39+00:00",
+   "approx": true
+  },
+  {
+   "id": 21395,
+   "title": "IAE 2956 Esperia",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21395-IAE-2956-Esperia",
+   "date": "2026-11-21T15:58:39+00:00",
+   "approx": true
+  },
+  {
+   "id": 21394,
+   "title": "IAE 2956 Gatac Manufacture",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21394-IAE-2956-Gatac-Manufacture",
+   "date": "2026-11-21T15:58:39+00:00",
+   "approx": true
+  },
+  {
+   "id": 21349,
+   "title": "Gatac Hyūn - Wealth in Opportunity",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21349-Gatac-Hy-n",
+   "date": "2026-11-21T15:58:39+00:00",
+   "approx": true
+  },
   {
    "id": 21398,
    "title": "IAE 2956 Aegis Dynamics",
@@ -131,13 +180,6 @@
    "title": "Roadmap Roundup - November 18, 2026",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21455-Roadmap-Roundup-November-18-2026",
    "date": "2026-11-18T12:00:00+00:00",
-   "approx": true
-  },
-  {
-   "id": 21448,
-   "title": "Q&A: IAE 2956 New Ships",
-   "url": "https://robertsspaceindustries.com/en/comm-link/engineering/21448-Q-A-IAE-2956-New-Ships",
-   "date": "2026-11-17T15:54:19+00:00",
    "approx": true
   },
   {
@@ -204,13 +246,6 @@
    "approx": true
   },
   {
-   "id": 20943,
-   "title": "Monthly Store Bundle 2026",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/20943-Monthly-Store-Bundle-2026",
-   "date": "2026-11-13T21:07:25+00:00",
-   "approx": true
-  },
-  {
    "id": 9575988,
    "title": "IAE 2956: Choose Your Adventure",
    "src": "Spectrum",
@@ -253,46 +288,11 @@
    "approx": true
   },
   {
-   "id": 21447,
-   "title": "Star Citizen | Behind the Ships: RSI Galaxy",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21447-Star-Citizen-Behind-The-Ships-RSI-Galaxy",
-   "date": "2026-11-12T21:37:23+00:00",
-   "approx": true
-  },
-  {
-   "id": 21434,
-   "title": "Twitch Drops: IAE 2956",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21434-Twitch-Drops-IAE-2956",
-   "date": "2026-11-12T21:37:23+00:00",
-   "approx": true
-  },
-  {
-   "id": 21386,
-   "title": "Intergalactic Aerospace Expo 2956 Free Fly and Manufacturer Schedule - Try Star Citizen for Free",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21386-Intergalactic-Aerospace-Expo-2956-Free-Fly-And-Manufacturer-Schedule",
-   "date": "2026-11-12T21:37:23+00:00",
-   "approx": true
-  },
-  {
-   "id": 21420,
-   "title": "Star Citizen Alpha 4.10.3 Vanduul Incursion - Nyx Needs You",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21420-Star-Citizen-Alpha-4103-Vanduul-Incursion",
-   "date": "2026-11-12T16:50:23+00:00",
-   "approx": true
-  },
-  {
    "id": 9575984,
    "title": "IAE 2956 - Choose Your Adventure - FAQ",
    "src": "Spectrum",
    "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/iae-2956-faq-choose-your-adventure",
    "date": "2026-11-10T21:00:00+00:00"
-  },
-  {
-   "id": 21445,
-   "title": "This Week in Star Citizen - November 9, 2026",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21445-This-Week-In-Star-Citizen",
-   "date": "2026-11-09T12:00:00+00:00",
-   "approx": true
   },
   {
    "id": 9574567,
@@ -718,6 +718,6 @@
    }
   ]
  },
- "updated": "2026-11-20T21:07:27+00:00",
- "checked": "2026-11-21T11:05:42+00:00"
+ "updated": "2026-11-21T17:58:41+00:00",
+ "checked": "2026-11-21T17:58:41+00:00"
 }
