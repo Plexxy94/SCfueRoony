@@ -1211,6 +1211,10 @@
    "ref": [
     [
      30000,
+     "Rod's Fuel"
+    ],
+    [
+     30000,
      "Patch City"
     ],
     [
@@ -1224,10 +1228,6 @@
     [
      30000,
      "Dudley & Daughters"
-    ],
-    [
-     30000,
-     "Canard View"
     ]
    ]
   },
@@ -1264,7 +1264,7 @@
   "copper": {
    "ref": [
     [
-     4600,
+     4700,
      "Rod's Fuel"
     ],
     [
@@ -1272,7 +1272,7 @@
      "Stanton Gateway (Pyro)"
     ],
     [
-     4100,
+     4000,
      "Pyro Gateway (Stanton)"
     ],
     [
@@ -1326,8 +1326,8 @@
   "diamond": {
    "ref": [
     [
-     7700,
-     "TDD New Babbage"
+     8200,
+     "HUR-L1"
     ],
     [
      7700,
@@ -1374,16 +1374,8 @@
   "hephaestanite": {
    "ref": [
     [
-     5300,
-     "TDD New Babbage"
-    ],
-    [
      5200,
      "MIC-L4"
-    ],
-    [
-     4900,
-     "CRU-L4"
     ],
     [
      4800,
@@ -1391,7 +1383,15 @@
     ],
     [
      4800,
+     "TDD New Babbage"
+    ],
+    [
+     4800,
      "CBD Lorville"
+    ],
+    [
+     4800,
+     "TDD Orison"
     ]
    ]
   },
@@ -1400,6 +1400,10 @@
     [
      3600,
      "Terra Gateway (Stanton)"
+    ],
+    [
+     3600,
+     "Rod's Fuel"
     ],
     [
      3600,
@@ -1412,10 +1416,6 @@
     [
      3600,
      "Gaslight"
-    ],
-    [
-     3500,
-     "Rod's Fuel"
     ]
    ],
    "raw": [
@@ -1452,12 +1452,8 @@
   "laranite": {
    "ref": [
     [
-     9600,
-     "Rod's Fuel"
-    ],
-    [
-     8900,
-     "TDD New Babbage"
+     9000,
+     "TDD Area 18"
     ],
     [
      8800,
@@ -1470,6 +1466,10 @@
     [
      8700,
      "Patch City"
+    ],
+    [
+     8700,
+     "Starlight Service"
     ]
    ]
   },
@@ -1524,10 +1524,6 @@
   "quartz": {
    "ref": [
     [
-     4700,
-     "Seraphim"
-    ],
-    [
      4600,
      "Patch City"
     ],
@@ -1542,18 +1538,22 @@
     [
      4400,
      "CBD Lorville"
+    ],
+    [
+     4400,
+     "Seraphim"
     ]
    ]
   },
   "riccite": {
    "ref": [
     [
-     91000,
-     "ArcCorp 157"
-    ],
-    [
      84000,
      "Ashland"
+    ],
+    [
+     75000,
+     "ArcCorp 157"
     ],
     [
      74000,
@@ -1717,10 +1717,6 @@
     ],
     [
      8300,
-     "TDD New Babbage"
-    ],
-    [
-     8300,
      "CBD Lorville"
     ],
     [
@@ -1730,6 +1726,10 @@
     [
      8300,
      "Checkmate"
+    ],
+    [
+     8300,
+     "Rod's Fuel"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-21T02:17:59+00:00"
+ "updated": "2026-11-21T11:05:43+00:00"
 }
