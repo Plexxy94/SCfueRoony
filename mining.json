@@ -1138,8 +1138,8 @@
   "aluminum": {
    "ref": [
     [
-     4600,
-     "Terra Gateway (Stanton)"
+     4200,
+     "Everus Harbor"
     ],
     [
      3800,
@@ -1264,16 +1264,16 @@
   "copper": {
    "ref": [
     [
-     4600,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      4500,
      "Rod's Fuel"
     ],
     [
      4400,
      "Stanton Gateway (Pyro)"
+    ],
+    [
+     4000,
+     "Terra Gateway (Stanton)"
     ],
     [
      4000,
@@ -1311,15 +1311,15 @@
     ],
     [
      4100,
+     "Everus Harbor"
+    ],
+    [
+     3900,
      "Terra Gateway (Stanton)"
     ],
     [
      3700,
      "TDD Area 18"
-    ],
-    [
-     3700,
-     "TDD New Babbage"
     ]
    ]
   },
@@ -1452,6 +1452,10 @@
   "laranite": {
    "ref": [
     [
+     9600,
+     "HUR-L2"
+    ],
+    [
      9200,
      "Rod's Fuel"
     ],
@@ -1466,10 +1470,6 @@
     [
      8700,
      "Patch City"
-    ],
-    [
-     8700,
-     "Starlight Service"
     ]
    ]
   },
@@ -1524,10 +1524,6 @@
   "quartz": {
    "ref": [
     [
-     5500,
-     "Pyro Gateway (Stanton)"
-    ],
-    [
      4600,
      "Patch City"
     ],
@@ -1542,6 +1538,10 @@
     [
      4400,
      "TDD New Babbage"
+    ],
+    [
+     4400,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1550,10 +1550,6 @@
     [
      84000,
      "Ashland"
-    ],
-    [
-     76000,
-     "Levski"
     ],
     [
      75000,
@@ -1566,6 +1562,10 @@
     [
      74000,
      "Sacren's Plot"
+    ],
+    [
+     74000,
+     "Levski"
     ]
    ]
   },
@@ -1712,6 +1712,10 @@
   "titanium": {
    "ref": [
     [
+     9400,
+     "Megumi"
+    ],
+    [
      9200,
      "Starlight Service"
     ],
@@ -1726,10 +1730,6 @@
     [
      8300,
      "CBD Lorville"
-    ],
-    [
-     8300,
-     "Ruin Station"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-21T17:58:44+00:00"
+ "updated": "2026-11-21T23:19:29+00:00"
 }

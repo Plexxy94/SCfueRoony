@@ -19,6 +19,16 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | Behind the Ships: Gatac Hyūn",
+   "url": "https://www.youtube.com/shorts/txhLznjMZAQ",
+   "date": "2026-11-21T20:01:13+00:00"
+  },
+  {
+   "title": "Star Citizen | Hyūn - IAE 2956",
+   "url": "https://www.youtube.com/shorts/f6GfmxAz38w",
+   "date": "2026-11-21T18:00:53+00:00"
+  },
+  {
    "title": "Star Citizen | Galactic Gear: Gatac Hyūn",
    "url": "https://www.youtube.com/shorts/jGthN4Dk2Zc",
    "date": "2026-11-21T17:09:13+00:00"
@@ -57,16 +67,6 @@
    "title": "Star Citizen | Drake Marauder - IAE 2956 Day 5",
    "url": "https://www.youtube.com/shorts/tSJF-E_V0yw",
    "date": "2026-11-17T20:01:14+00:00"
-  },
-  {
-   "title": "Star Citizen | Galactic Gear: Drake Marauder",
-   "url": "https://www.youtube.com/shorts/HRJocGU7vZ4",
-   "date": "2026-11-17T18:02:22+00:00"
-  },
-  {
-   "title": "Star Citizen | Drake Interplanetary - IAE 2956 Day 5",
-   "url": "https://www.youtube.com/shorts/A-tslUAWm4k",
-   "date": "2026-11-17T16:03:43+00:00"
   }
  ],
  "commlinks": [
@@ -411,24 +411,6 @@
    "channel": "Transmission",
    "category": "Undefined",
    "series": "None"
-  },
-  {
-   "id": 21374,
-   "title": "This Week in Star Citizen",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21374-This-Week-In-Star-Citizen",
-   "date": "2026-10-12T22:00:00+00:00",
-   "channel": "Transmission",
-   "category": "Undefined",
-   "series": "None"
-  },
-  {
-   "id": 21341,
-   "title": "Twitch Drops: RSI Discovery Month",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21341-Twitch-Drops-RSI-Discovery-Month",
-   "date": "2026-10-12T19:00:00+00:00",
-   "channel": "Transmission",
-   "category": "Undefined",
-   "series": "None"
   }
  ],
  "exec": {
@@ -718,6 +700,6 @@
    }
   ]
  },
- "updated": "2026-11-21T17:58:41+00:00",
- "checked": "2026-11-21T17:58:41+00:00"
+ "updated": "2026-11-21T23:19:28+00:00",
+ "checked": "2026-11-21T23:19:28+00:00"
 }
