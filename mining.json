@@ -1138,10 +1138,6 @@
   "aluminum": {
    "ref": [
     [
-     4500,
-     "Port Tressler"
-    ],
-    [
      4200,
      "Everus Harbor"
     ],
@@ -1156,6 +1152,10 @@
     [
      3800,
      "CBD Lorville"
+    ],
+    [
+     3800,
+     "TDD Orison"
     ]
    ]
   },
@@ -1276,12 +1276,12 @@
      "Terra Gateway (Stanton)"
     ],
     [
-     3900,
-     "Baijini Point"
+     4000,
+     "Pyro Gateway (Stanton)"
     ],
     [
-     3800,
-     "Rat's Nest"
+     3900,
+     "Baijini Point"
     ]
    ],
    "raw": [
@@ -1326,7 +1326,7 @@
   "diamond": {
    "ref": [
     [
-     8200,
+     8000,
      "HUR-L1"
     ],
     [
@@ -1374,10 +1374,6 @@
   "hephaestanite": {
    "ref": [
     [
-     5400,
-     "TDD New Babbage"
-    ],
-    [
      5200,
      "MIC-L4"
     ],
@@ -1392,6 +1388,10 @@
     [
      4800,
      "TDD Orison"
+    ],
+    [
+     4800,
+     "CRU-L1"
     ]
    ]
   },
@@ -1464,12 +1464,12 @@
      "TDD Area 18"
     ],
     [
-     8700,
-     "Ruin Station"
+     8900,
+     "TDD New Babbage"
     ],
     [
      8700,
-     "Patch City"
+     "Ruin Station"
     ]
    ]
   },
@@ -1649,15 +1649,15 @@
     ],
     [
      140000,
-     "TDD New Babbage"
-    ],
-    [
-     140000,
      "Rayari Kaltag"
     ],
     [
      140000,
      "Terra Mills"
+    ],
+    [
+     140000,
+     "Hickes Research"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-22T06:51:49+00:00"
+ "updated": "2026-11-22T15:20:06+00:00"
 }
