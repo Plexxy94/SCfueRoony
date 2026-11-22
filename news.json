@@ -19,6 +19,16 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | Galactic Gear Highlight",
+   "url": "https://www.youtube.com/shorts/A8r97Lu825M",
+   "date": "2026-11-22T18:00:43+00:00"
+  },
+  {
+   "title": "Star Citizen | Best In Show - IAE 2956",
+   "url": "https://www.youtube.com/shorts/hqWiBPFA380",
+   "date": "2026-11-22T16:05:24+00:00"
+  },
+  {
    "title": "Star Citizen | Behind the Ships: Gatac Hyūn",
    "url": "https://www.youtube.com/shorts/txhLznjMZAQ",
    "date": "2026-11-21T20:01:13+00:00"
@@ -57,19 +67,23 @@
    "title": "Star Citizen | Day 7 of IAE 2956 is Underway",
    "url": "https://www.youtube.com/shorts/Iw9fOCjhIZU",
    "date": "2026-11-19T16:07:49+00:00"
-  },
-  {
-   "title": "Star Citizen | IAE 2956 - Day 6 Is Here!",
-   "url": "https://www.youtube.com/shorts/W_joKVvGetA",
-   "date": "2026-11-18T16:06:36+00:00"
-  },
-  {
-   "title": "Star Citizen | Drake Marauder - IAE 2956 Day 5",
-   "url": "https://www.youtube.com/shorts/tSJF-E_V0yw",
-   "date": "2026-11-17T20:01:14+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 9574568,
+   "title": "IAE 2956 - Best in Show Prizes",
+   "src": "Spectrum",
+   "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/iae-2956-best-in-show-prizes",
+   "date": "2026-11-22T16:00:00+00:00"
+  },
+  {
+   "id": 21393,
+   "title": "IAE 2956 Best In Show",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21393-IAE-2956-Best-In-Show",
+   "date": "2026-11-22T15:47:18+00:00",
+   "approx": true
+  },
   {
    "id": 21462,
    "title": "Star Citizen | Behind the Ships: Gatac Hyūn",
@@ -277,13 +291,6 @@
    "id": 21347,
    "title": "RSI Skylark - A Little Goes a Long Way",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21347-RSI-Skylark",
-   "date": "2026-11-13T15:45:33+00:00",
-   "approx": true
-  },
-  {
-   "id": 21346,
-   "title": "RSI Galaxy - Mission Made",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21346-RSI-Galaxy",
    "date": "2026-11-13T15:45:33+00:00",
    "approx": true
   },
@@ -700,6 +707,6 @@
    }
   ]
  },
- "updated": "2026-11-21T23:19:28+00:00",
- "checked": "2026-11-22T15:20:03+00:00"
+ "updated": "2026-11-22T21:47:19+00:00",
+ "checked": "2026-11-22T21:47:19+00:00"
 }

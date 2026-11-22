@@ -1139,6 +1139,10 @@
    "ref": [
     [
      4200,
+     "Terra Gateway (Stanton)"
+    ],
+    [
+     4200,
      "Everus Harbor"
     ],
     [
@@ -1152,10 +1156,6 @@
     [
      3800,
      "CBD Lorville"
-    ],
-    [
-     3800,
-     "TDD Orison"
     ]
    ]
   },
@@ -1191,15 +1191,15 @@
     ],
     [
      22000,
-     "HUR-L4"
-    ],
-    [
-     22000,
      "HUR-L5"
     ],
     [
      21000,
      "Rod's Fuel"
+    ],
+    [
+     21000,
+     "Endgame"
     ],
     [
      20000,
@@ -1272,16 +1272,16 @@
      "Stanton Gateway (Pyro)"
     ],
     [
-     4000,
-     "Terra Gateway (Stanton)"
-    ],
-    [
-     4000,
+     4200,
      "Pyro Gateway (Stanton)"
     ],
     [
      3900,
      "Baijini Point"
+    ],
+    [
+     3800,
+     "Rat's Nest"
     ]
    ],
    "raw": [
@@ -1314,7 +1314,7 @@
      "Everus Harbor"
     ],
     [
-     3900,
+     3800,
      "Terra Gateway (Stanton)"
     ],
     [
@@ -1383,23 +1383,23 @@
     ],
     [
      4800,
+     "TDD New Babbage"
+    ],
+    [
+     4800,
      "CBD Lorville"
     ],
     [
      4800,
      "TDD Orison"
-    ],
-    [
-     4800,
-     "CRU-L1"
     ]
    ]
   },
   "iron": {
    "ref": [
     [
-     3900,
-     "Gaslight"
+     3700,
+     "Endgame"
     ],
     [
      3600,
@@ -1410,12 +1410,12 @@
      "Dudley & Daughters"
     ],
     [
-     3500,
-     "Rod's Fuel"
+     3600,
+     "Gaslight"
     ],
     [
      3500,
-     "PSS Theta"
+     "Rod's Fuel"
     ]
    ],
    "raw": [
@@ -1452,6 +1452,10 @@
   "laranite": {
    "ref": [
     [
+     9700,
+     "Dudley & Daughters"
+    ],
+    [
      9600,
      "HUR-L2"
     ],
@@ -1460,16 +1464,12 @@
      "Rod's Fuel"
     ],
     [
-     9000,
-     "TDD Area 18"
-    ],
-    [
-     8900,
-     "TDD New Babbage"
+     8700,
+     "Ruin Station"
     ],
     [
      8700,
-     "Ruin Station"
+     "Patch City"
     ]
    ]
   },
@@ -1524,6 +1524,10 @@
   "quartz": {
    "ref": [
     [
+     5200,
+     "Pyro Gateway (Stanton)"
+    ],
+    [
      4600,
      "Patch City"
     ],
@@ -1538,10 +1542,6 @@
     [
      4400,
      "TDD New Babbage"
-    ],
-    [
-     4400,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1564,8 +1564,8 @@
      "Sacren's Plot"
     ],
     [
-     74000,
-     "Levski"
+     72000,
+     "ArcCorp 141"
     ]
    ]
   },
@@ -1649,15 +1649,15 @@
     ],
     [
      140000,
+     "TDD New Babbage"
+    ],
+    [
+     140000,
      "Rayari Kaltag"
     ],
     [
      140000,
      "Terra Mills"
-    ],
-    [
-     140000,
-     "Hickes Research"
     ]
    ]
   },
@@ -1712,12 +1712,12 @@
   "titanium": {
    "ref": [
     [
-     9400,
-     "Megumi"
-    ],
-    [
      9200,
      "Starlight Service"
+    ],
+    [
+     8400,
+     "ARC-L3"
     ],
     [
      8300,
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-22T15:20:06+00:00"
+ "updated": "2026-11-22T21:47:21+00:00"
 }
