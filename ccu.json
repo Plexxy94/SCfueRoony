@@ -1,6 +1,6 @@
 {
- "checked": "2026-11-22T14:44:06+00:00",
- "threads": 15,
+ "checked": "2026-11-22T21:53:56+00:00",
+ "threads": 17,
  "errors": [],
  "hits": [
   {
@@ -75,15 +75,51 @@
  ],
  "warbond": [
   {
-   "ship": "Talon",
-   "mfr": "Esperia",
-   "msrp": 115,
-   "wb": 105,
-   "from": "Hawk",
-   "from_msrp": 100,
+   "ship": "Perseus",
+   "mfr": "Roberts Space Industries",
+   "msrp": 800,
+   "wb": 720,
+   "from": "Odyssey",
+   "from_msrp": 700,
+   "ccu": 20,
+   "value": 100,
+   "saving": 80,
+   "new": true
+  },
+  {
+   "ship": "Ironclad Assault",
+   "mfr": "Drake Interplanetary",
+   "msrp": 650,
+   "wb": 600,
+   "from": "Arrastra",
+   "from_msrp": 575,
+   "ccu": 25,
+   "value": 75,
+   "saving": 50,
+   "new": true
+  },
+  {
+   "ship": "Corsair",
+   "mfr": "Drake Interplanetary",
+   "msrp": 250,
+   "wb": 230,
+   "from": "Defender",
+   "from_msrp": 220,
+   "ccu": 10,
+   "value": 30,
+   "saving": 20,
+   "new": true
+  },
+  {
+   "ship": "M80",
+   "mfr": "Origin Jumpworks",
+   "msrp": 300,
+   "wb": 280,
+   "from": "Blade",
+   "from_msrp": 275,
    "ccu": 5,
-   "value": 15,
-   "saving": 10,
+   "value": 25,
+   "saving": 20,
    "new": true
   },
   {

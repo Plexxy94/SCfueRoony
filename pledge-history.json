@@ -1609,5 +1609,50 @@
   "name": "Hyūn",
   "k": "new",
   "new": 220
+ },
+ {
+  "d": "2026-11-22",
+  "id": 178,
+  "name": "Corsair",
+  "k": "sku+",
+  "sku": 19874,
+  "title": "Warbond Edition",
+  "new": 230
+ },
+ {
+  "d": "2026-11-22",
+  "id": 211,
+  "name": "Talon",
+  "k": "sku-",
+  "sku": 19792,
+  "title": "Warbond Edition",
+  "old": 105
+ },
+ {
+  "d": "2026-11-22",
+  "id": 217,
+  "name": "Perseus",
+  "k": "sku+",
+  "sku": 19872,
+  "title": "Warbond Edition",
+  "new": 720
+ },
+ {
+  "d": "2026-11-22",
+  "id": 275,
+  "name": "Ironclad Assault",
+  "k": "sku+",
+  "sku": 19875,
+  "title": "Warbond Edition",
+  "new": 600
+ },
+ {
+  "d": "2026-11-22",
+  "id": 315,
+  "name": "M80",
+  "k": "sku+",
+  "sku": 19873,
+  "title": "Warbond Edition",
+  "new": 280
  }
 ]
