@@ -1138,6 +1138,10 @@
   "aluminum": {
    "ref": [
     [
+     4500,
+     "Port Tressler"
+    ],
+    [
      4200,
      "Everus Harbor"
     ],
@@ -1152,10 +1156,6 @@
     [
      3800,
      "CBD Lorville"
-    ],
-    [
-     3800,
-     "TDD Orison"
     ]
    ]
   },
@@ -1276,12 +1276,12 @@
      "Terra Gateway (Stanton)"
     ],
     [
-     4000,
-     "Pyro Gateway (Stanton)"
-    ],
-    [
      3900,
      "Baijini Point"
+    ],
+    [
+     3800,
+     "Rat's Nest"
     ]
    ],
    "raw": [
@@ -1331,6 +1331,10 @@
     ],
     [
      7700,
+     "TDD New Babbage"
+    ],
+    [
+     7700,
      "CBD Lorville"
     ],
     [
@@ -1340,10 +1344,6 @@
     [
      7700,
      "Rappel"
-    ],
-    [
-     7700,
-     "Dunboro"
     ]
    ]
   },
@@ -1374,16 +1374,16 @@
   "hephaestanite": {
    "ref": [
     [
+     5400,
+     "TDD New Babbage"
+    ],
+    [
      5200,
      "MIC-L4"
     ],
     [
      4800,
      "TDD Area 18"
-    ],
-    [
-     4800,
-     "TDD New Babbage"
     ],
     [
      4800,
@@ -1398,16 +1398,16 @@
   "iron": {
    "ref": [
     [
+     3900,
+     "Gaslight"
+    ],
+    [
      3600,
      "Megumi"
     ],
     [
      3600,
      "Dudley & Daughters"
-    ],
-    [
-     3600,
-     "Gaslight"
     ],
     [
      3500,
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-21T23:19:29+00:00"
+ "updated": "2026-11-22T06:51:49+00:00"
 }
