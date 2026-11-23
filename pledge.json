@@ -1,4 +1,4 @@
-{"updated": "2026-11-22T21:53:56+00:00", "ships": [
+{"updated": "2026-11-23T18:30:02+00:00", "ships": [
 {"id":1,"name":"Aurora Mk I ES","mfr":"Roberts Space Industries","msrp":20,"fly":true,"skus":[]},
 {"id":3,"name":"Aurora Mk I LX","mfr":"Roberts Space Industries","msrp":35,"fly":true,"skus":[]},
 {"id":4,"name":"Aurora Mk I MR","mfr":"Roberts Space Industries","msrp":30,"fly":true,"skus":[]},
@@ -101,7 +101,7 @@
 {"id":149,"name":"Pioneer","mfr":"Consolidated Outland","msrp":925,"fly":false,"skus":[]},
 {"id":150,"name":"Hawk","mfr":"Anvil Aerospace","msrp":100,"fly":true,"skus":[{"id":13090,"title":"Standard Edition","price":100,"wb":false}]},
 {"id":151,"name":"Hammerhead","mfr":"Aegis Dynamics","msrp":725,"fly":true,"skus":[{"id":13091,"title":"Standard Edition","price":725,"wb":false}]},
-{"id":154,"name":"Nova","mfr":"Tumbril","msrp":120,"fly":true,"skus":[{"id":14443,"title":"Standard Edition","price":120,"wb":false}]},
+{"id":154,"name":"Nova","mfr":"Tumbril","msrp":120,"fly":true,"skus":[{"id":14443,"title":"Standard Edition","price":120,"wb":false},{"id":18774,"title":"Warbond Edition","price":110,"wb":true}]},
 {"id":155,"name":"Vulcan","mfr":"Aegis Dynamics","msrp":200,"fly":false,"skus":[{"id":13093,"title":"Standard Edition","price":200,"wb":false}]},
 {"id":157,"name":"Razor EX","mfr":"Mirai","msrp":155,"fly":true,"skus":[{"id":13095,"title":"Standard Edition","price":155,"wb":false}]},
 {"id":158,"name":"Razor LX","mfr":"Mirai","msrp":150,"fly":true,"skus":[{"id":13096,"title":"Standard Edition","price":150,"wb":false}]},
