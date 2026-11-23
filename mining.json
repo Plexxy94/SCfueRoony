@@ -1138,11 +1138,7 @@
   "aluminum": {
    "ref": [
     [
-     4200,
-     "Terra Gateway (Stanton)"
-    ],
-    [
-     4200,
+     4000,
      "Everus Harbor"
     ],
     [
@@ -1156,6 +1152,10 @@
     [
      3800,
      "CBD Lorville"
+    ],
+    [
+     3800,
+     "TDD Orison"
     ]
    ]
   },
@@ -1276,12 +1276,12 @@
      "Pyro Gateway (Stanton)"
     ],
     [
-     3900,
-     "Baijini Point"
+     4000,
+     "Terra Gateway (Stanton)"
     ],
     [
-     3800,
-     "Rat's Nest"
+     3900,
+     "Baijini Point"
     ]
    ],
    "raw": [
@@ -1310,16 +1310,16 @@
      "Rod's Fuel"
     ],
     [
-     4100,
-     "Everus Harbor"
-    ],
-    [
-     3800,
+     3900,
      "Terra Gateway (Stanton)"
     ],
     [
      3700,
      "TDD Area 18"
+    ],
+    [
+     3700,
+     "TDD New Babbage"
     ]
    ]
   },
@@ -1399,11 +1399,11 @@
    "ref": [
     [
      3700,
-     "Endgame"
+     "Terra Gateway (Stanton)"
     ],
     [
-     3600,
-     "Megumi"
+     3700,
+     "Endgame"
     ],
     [
      3600,
@@ -1452,10 +1452,6 @@
   "laranite": {
    "ref": [
     [
-     9700,
-     "Dudley & Daughters"
-    ],
-    [
      9600,
      "HUR-L2"
     ],
@@ -1470,6 +1466,10 @@
     [
      8700,
      "Patch City"
+    ],
+    [
+     8700,
+     "Starlight Service"
     ]
    ]
   },
@@ -1712,11 +1712,7 @@
   "titanium": {
    "ref": [
     [
-     9200,
-     "Starlight Service"
-    ],
-    [
-     8400,
+     8800,
      "ARC-L3"
     ],
     [
@@ -1730,6 +1726,10 @@
     [
      8300,
      "CBD Lorville"
+    ],
+    [
+     8300,
+     "Ruin Station"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-22T21:47:21+00:00"
+ "updated": "2026-11-23T02:47:37+00:00"
 }
