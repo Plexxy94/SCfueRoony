@@ -1114,6 +1114,10 @@
   "agricium": {
    "ref": [
     [
+     11000,
+     "ARC-L3"
+    ],
+    [
      10000,
      "TDD Area 18"
     ],
@@ -1128,19 +1132,11 @@
     [
      10000,
      "HUR-L4"
-    ],
-    [
-     10000,
-     "TDD Orison"
     ]
    ]
   },
   "aluminum": {
    "ref": [
-    [
-     4000,
-     "Everus Harbor"
-    ],
     [
      3800,
      "TDD Area 18"
@@ -1156,6 +1152,10 @@
     [
      3800,
      "TDD Orison"
+    ],
+    [
+     3800,
+     "Stanton Gateway (Nyx)"
     ]
    ]
   },
@@ -1187,10 +1187,6 @@
    "ref": [
     [
      22000,
-     "HUR-L1"
-    ],
-    [
-     22000,
      "HUR-L5"
     ],
     [
@@ -1204,6 +1200,10 @@
     [
      20000,
      "TDD Area 18"
+    ],
+    [
+     20000,
+     "TDD New Babbage"
     ]
    ]
   },
@@ -1264,6 +1264,10 @@
   "copper": {
    "ref": [
     [
+     4600,
+     "Terra Gateway (Stanton)"
+    ],
+    [
      4500,
      "Rod's Fuel"
     ],
@@ -1274,10 +1278,6 @@
     [
      4200,
      "Pyro Gateway (Stanton)"
-    ],
-    [
-     4000,
-     "Terra Gateway (Stanton)"
     ],
     [
      3900,
@@ -1310,24 +1310,24 @@
      "Rod's Fuel"
     ],
     [
+     4000,
+     "Everus Harbor"
+    ],
+    [
      3900,
      "Terra Gateway (Stanton)"
     ],
     [
      3700,
      "TDD Area 18"
-    ],
-    [
-     3700,
-     "TDD New Babbage"
     ]
    ]
   },
   "diamond": {
    "ref": [
     [
-     8000,
-     "HUR-L1"
+     8600,
+     "ARC-L5"
     ],
     [
      7700,
@@ -1399,10 +1399,6 @@
    "ref": [
     [
      3700,
-     "Terra Gateway (Stanton)"
-    ],
-    [
-     3700,
      "Endgame"
     ],
     [
@@ -1416,6 +1412,10 @@
     [
      3500,
      "Rod's Fuel"
+    ],
+    [
+     3500,
+     "Megumi"
     ]
    ],
    "raw": [
@@ -1712,10 +1712,6 @@
   "titanium": {
    "ref": [
     [
-     8800,
-     "ARC-L3"
-    ],
-    [
      8300,
      "TDD Area 18"
     ],
@@ -1730,6 +1726,10 @@
     [
      8300,
      "Ruin Station"
+    ],
+    [
+     8300,
+     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-23T02:47:37+00:00"
+ "updated": "2026-11-23T12:47:39+00:00"
 }
