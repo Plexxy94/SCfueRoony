@@ -1310,8 +1310,8 @@
      "Rod's Fuel"
     ],
     [
-     3800,
-     "Terra Gateway (Stanton)"
+     4000,
+     "Everus Harbor"
     ],
     [
      3700,
@@ -1325,10 +1325,6 @@
   },
   "diamond": {
    "ref": [
-    [
-     8600,
-     "ARC-L5"
-    ],
     [
      7700,
      "TDD New Babbage"
@@ -1344,6 +1340,10 @@
     [
      7700,
      "Rappel"
+    ],
+    [
+     7700,
+     "Dunboro"
     ]
    ]
   },
@@ -1374,12 +1374,8 @@
   "hephaestanite": {
    "ref": [
     [
-     5400,
+     5100,
      "TDD New Babbage"
-    ],
-    [
-     5200,
-     "MIC-L4"
     ],
     [
      4800,
@@ -1392,11 +1388,19 @@
     [
      4800,
      "MIC-L5"
+    ],
+    [
+     4800,
+     "TDD Orison"
     ]
    ]
   },
   "iron": {
    "ref": [
+    [
+     3800,
+     "Gaslight"
+    ],
     [
      3700,
      "Endgame"
@@ -1406,16 +1410,12 @@
      "Dudley & Daughters"
     ],
     [
-     3600,
-     "Gaslight"
+     3500,
+     "Nyx Gateway (Stanton)"
     ],
     [
      3500,
      "Rod's Fuel"
-    ],
-    [
-     3500,
-     "Megumi"
     ]
    ],
    "raw": [
@@ -1460,16 +1460,16 @@
      "Rod's Fuel"
     ],
     [
+     8900,
+     "TDD Area 18"
+    ],
+    [
      8700,
      "TDD New Babbage"
     ],
     [
      8700,
      "Ruin Station"
-    ],
-    [
-     8700,
-     "Patch City"
     ]
    ]
   },
@@ -1645,6 +1645,10 @@
     ],
     [
      140000,
+     "TDD Area 18"
+    ],
+    [
+     140000,
      "Rayari Kaltag"
     ],
     [
@@ -1654,10 +1658,6 @@
     [
      140000,
      "Hickes Research"
-    ],
-    [
-     140000,
-     "ArcCorp 141"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-24T00:53:29+00:00"
+ "updated": "2026-11-24T10:57:13+00:00"
 }
