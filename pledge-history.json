@@ -1663,5 +1663,23 @@
   "sku": 18774,
   "title": "Warbond Edition",
   "new": 110
+ },
+ {
+  "d": "2026-11-24",
+  "id": 154,
+  "name": "Nova",
+  "k": "sku-",
+  "sku": 18774,
+  "title": "Warbond Edition",
+  "old": 110
+ },
+ {
+  "d": "2026-11-24",
+  "id": 299,
+  "name": "Asgard",
+  "k": "sku+",
+  "sku": 19876,
+  "title": "Warbond Edition",
+  "new": 315
  }
 ]

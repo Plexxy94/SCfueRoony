@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-24T02:56:44+00:00",
+ "checked": "2026-11-24T17:57:40+00:00",
  "threads": 17,
  "errors": [],
  "hits": [
@@ -99,6 +99,18 @@
    "new": true
   },
   {
+   "ship": "Asgard",
+   "mfr": "Anvil Aerospace",
+   "msrp": 350,
+   "wb": 315,
+   "from": "Constellation Mk V Centaurus",
+   "from_msrp": 300,
+   "ccu": 15,
+   "value": 50,
+   "saving": 35,
+   "new": true
+  },
+  {
    "ship": "Corsair",
    "mfr": "Drake Interplanetary",
    "msrp": 250,
@@ -120,18 +132,6 @@
    "ccu": 5,
    "value": 25,
    "saving": 20,
-   "new": true
-  },
-  {
-   "ship": "Nova",
-   "mfr": "Tumbril",
-   "msrp": 120,
-   "wb": 110,
-   "from": "Hawk",
-   "from_msrp": 100,
-   "ccu": 10,
-   "value": 20,
-   "saving": 10,
    "new": true
   },
   {
