@@ -19,6 +19,16 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | IAE 2956 Store Bundle & Deals",
+   "url": "https://www.youtube.com/shorts/FuRcxJs1M7A",
+   "date": "2026-11-23T18:02:01+00:00"
+  },
+  {
+   "title": "Star Citizen | IAE 2956 - Finale Week",
+   "url": "https://www.youtube.com/shorts/QaR2bkumjkE",
+   "date": "2026-11-23T16:04:26+00:00"
+  },
+  {
    "title": "Star Citizen | Galactic Gear Highlight",
    "url": "https://www.youtube.com/shorts/A8r97Lu825M",
    "date": "2026-11-22T18:00:43+00:00"
@@ -57,19 +67,23 @@
    "title": "Star Citizen | Behind the Ships: Gatac Hyūn",
    "url": "https://www.youtube.com/watch?v=SPXJNcLABHE",
    "date": "2026-11-21T16:00:52+00:00"
-  },
-  {
-   "title": "Star Citizen | Day 8 - Aegis Dynamics",
-   "url": "https://www.youtube.com/shorts/1pKA2HtAudc",
-   "date": "2026-11-20T16:09:58+00:00"
-  },
-  {
-   "title": "Star Citizen | Day 7 of IAE 2956 is Underway",
-   "url": "https://www.youtube.com/shorts/Iw9fOCjhIZU",
-   "date": "2026-11-19T16:07:49+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 21392,
+   "title": "IAE 2956 Finale",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21392-IAE-2956-Finale",
+   "date": "2026-11-23T15:53:26+00:00",
+   "approx": true
+  },
+  {
+   "id": 21459,
+   "title": "This Week in Star Citizen - November 23, 2026",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21459-This-Week-In-Star-Citizen",
+   "date": "2026-11-23T12:00:00+00:00",
+   "approx": true
+  },
   {
    "id": 9574568,
    "title": "IAE 2956 - Best in Show Prizes",
@@ -211,6 +225,20 @@
    "approx": true
   },
   {
+   "id": 21415,
+   "title": "IAE 2956 Merchandise",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21415-IAE-2956-Merchandise",
+   "date": "2026-11-17T00:53:26+00:00",
+   "approx": true
+  },
+  {
+   "id": 21412,
+   "title": "IAE 2956 RSI",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21412-IAE-2956-RSI",
+   "date": "2026-11-17T00:53:26+00:00",
+   "approx": true
+  },
+  {
    "id": 21409,
    "title": "IAE 2956 Crusader Industries",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21409-IAE-2956-Crusader-Industries",
@@ -265,34 +293,6 @@
    "src": "Spectrum",
    "url": "https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/iae-2956-choose-your-adventure",
    "date": "2026-11-13T15:56:00+00:00"
-  },
-  {
-   "id": 21415,
-   "title": "IAE 2956 Merchandise",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21415-IAE-2956-Merchandise",
-   "date": "2026-11-13T15:45:33+00:00",
-   "approx": true
-  },
-  {
-   "id": 21414,
-   "title": "IAE 2956 About",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21414-IAE-2956-About",
-   "date": "2026-11-13T15:45:33+00:00",
-   "approx": true
-  },
-  {
-   "id": 21412,
-   "title": "IAE 2956 RSI",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21412-IAE-2956-RSI",
-   "date": "2026-11-13T15:45:33+00:00",
-   "approx": true
-  },
-  {
-   "id": 21347,
-   "title": "RSI Skylark - A Little Goes a Long Way",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21347-RSI-Skylark",
-   "date": "2026-11-13T15:45:33+00:00",
-   "approx": true
   },
   {
    "id": 9575984,
@@ -388,33 +388,6 @@
    "title": "This Week in Star Citizen",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21388-This-Week-In-Star-Citizen",
    "date": "2026-10-19T21:00:00+00:00",
-   "channel": "Transmission",
-   "category": "Undefined",
-   "series": "None"
-  },
-  {
-   "id": 21381,
-   "title": "Star Citizen | Behind the Ships: RSI Constellation Mk V Centaurus : Video",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21381-Star-Citizen-Behind-The-Ships-RSI-Constellation-Mk-V-Centaurus-Video",
-   "date": "2026-10-14T16:00:00+00:00",
-   "channel": "Transmission",
-   "category": "Undefined",
-   "series": "None"
-  },
-  {
-   "id": 21377,
-   "title": "Q&A: RSI Constellation Mk V Centaurus",
-   "url": "https://robertsspaceindustries.com/en/comm-link/engineering/21377-Q-A-RSI-Constellation-Mk-V-Centaurus",
-   "date": "2026-10-14T16:00:00+00:00",
-   "channel": "Engineering",
-   "category": "Development",
-   "series": "Concept Ship Q&A"
-  },
-  {
-   "id": 21335,
-   "title": "RSI Constellation Mk V Centaurus | Star Citizen",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21335-RSI-Constellation-Mk-V-Centaurus",
-   "date": "2026-10-14T16:00:00+00:00",
    "channel": "Transmission",
    "category": "Undefined",
    "series": "None"
@@ -707,6 +680,6 @@
    }
   ]
  },
- "updated": "2026-11-22T21:47:19+00:00",
- "checked": "2026-11-23T12:47:38+00:00"
+ "updated": "2026-11-24T00:53:28+00:00",
+ "checked": "2026-11-24T00:53:28+00:00"
 }

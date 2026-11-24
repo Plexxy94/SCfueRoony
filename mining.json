@@ -1138,6 +1138,14 @@
   "aluminum": {
    "ref": [
     [
+     4200,
+     "Everus Harbor"
+    ],
+    [
+     4000,
+     "Dudley & Daughters"
+    ],
+    [
      3800,
      "TDD Area 18"
     ],
@@ -1148,14 +1156,6 @@
     [
      3800,
      "CBD Lorville"
-    ],
-    [
-     3800,
-     "TDD Orison"
-    ],
-    [
-     3800,
-     "Stanton Gateway (Nyx)"
     ]
    ]
   },
@@ -1198,12 +1198,12 @@
      "Endgame"
     ],
     [
-     20000,
-     "TDD Area 18"
+     21000,
+     "HUR-L4"
     ],
     [
      20000,
-     "TDD New Babbage"
+     "TDD Area 18"
     ]
    ]
   },
@@ -1264,10 +1264,6 @@
   "copper": {
    "ref": [
     [
-     4600,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      4500,
      "Rod's Fuel"
     ],
@@ -1276,12 +1272,16 @@
      "Stanton Gateway (Pyro)"
     ],
     [
-     4200,
-     "Pyro Gateway (Stanton)"
-    ],
-    [
      3900,
      "Baijini Point"
+    ],
+    [
+     3800,
+     "Rat's Nest"
+    ],
+    [
+     3700,
+     "TDD Area 18"
     ]
    ],
    "raw": [
@@ -1310,16 +1310,16 @@
      "Rod's Fuel"
     ],
     [
-     4000,
-     "Everus Harbor"
-    ],
-    [
-     3900,
+     3800,
      "Terra Gateway (Stanton)"
     ],
     [
      3700,
      "TDD Area 18"
+    ],
+    [
+     3700,
+     "TDD New Babbage"
     ]
    ]
   },
@@ -1374,6 +1374,10 @@
   "hephaestanite": {
    "ref": [
     [
+     5400,
+     "TDD New Babbage"
+    ],
+    [
      5200,
      "MIC-L4"
     ],
@@ -1383,15 +1387,11 @@
     ],
     [
      4800,
-     "TDD New Babbage"
-    ],
-    [
-     4800,
      "CBD Lorville"
     ],
     [
      4800,
-     "TDD Orison"
+     "MIC-L5"
     ]
    ]
   },
@@ -1461,15 +1461,15 @@
     ],
     [
      8700,
+     "TDD New Babbage"
+    ],
+    [
+     8700,
      "Ruin Station"
     ],
     [
      8700,
      "Patch City"
-    ],
-    [
-     8700,
-     "Starlight Service"
     ]
    ]
   },
@@ -1524,10 +1524,6 @@
   "quartz": {
    "ref": [
     [
-     5200,
-     "Pyro Gateway (Stanton)"
-    ],
-    [
      4600,
      "Patch City"
     ],
@@ -1542,6 +1538,10 @@
     [
      4400,
      "TDD New Babbage"
+    ],
+    [
+     4400,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1645,19 +1645,19 @@
     ],
     [
      140000,
-     "TDD Area 18"
-    ],
-    [
-     140000,
-     "TDD New Babbage"
-    ],
-    [
-     140000,
      "Rayari Kaltag"
     ],
     [
      140000,
      "Terra Mills"
+    ],
+    [
+     140000,
+     "Hickes Research"
+    ],
+    [
+     140000,
+     "ArcCorp 141"
     ]
    ]
   },
@@ -1712,6 +1712,10 @@
   "titanium": {
    "ref": [
     [
+     9200,
+     "Starlight Service"
+    ],
+    [
      8300,
      "TDD Area 18"
     ],
@@ -1726,10 +1730,6 @@
     [
      8300,
      "Ruin Station"
-    ],
-    [
-     8300,
-     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-23T12:47:39+00:00"
+ "updated": "2026-11-24T00:53:29+00:00"
 }
