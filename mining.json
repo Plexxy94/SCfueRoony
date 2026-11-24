@@ -1114,8 +1114,8 @@
   "agricium": {
    "ref": [
     [
-     11000,
-     "ARC-L3"
+     12000,
+     "ARC-L4"
     ],
     [
      10000,
@@ -1138,12 +1138,8 @@
   "aluminum": {
    "ref": [
     [
-     4200,
-     "Everus Harbor"
-    ],
-    [
-     4000,
-     "Dudley & Daughters"
+     4500,
+     "Port Tressler"
     ],
     [
      3800,
@@ -1156,6 +1152,10 @@
     [
      3800,
      "CBD Lorville"
+    ],
+    [
+     3800,
+     "TDD Orison"
     ]
    ]
   },
@@ -1214,6 +1214,10 @@
      "Sacren's Plot"
     ],
     [
+     32000,
+     "The Golden Riviera"
+    ],
+    [
      30000,
      "Rod's Fuel"
     ],
@@ -1224,10 +1228,6 @@
     [
      30000,
      "Endgame"
-    ],
-    [
-     30000,
-     "Jackson's Swap"
     ]
    ]
   },
@@ -1272,7 +1272,7 @@
      "Stanton Gateway (Pyro)"
     ],
     [
-     3900,
+     3800,
      "Baijini Point"
     ],
     [
@@ -1310,16 +1310,16 @@
      "Rod's Fuel"
     ],
     [
-     4000,
-     "Everus Harbor"
-    ],
-    [
      3700,
      "TDD Area 18"
     ],
     [
      3700,
      "TDD New Babbage"
+    ],
+    [
+     3700,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1374,7 +1374,15 @@
   "hephaestanite": {
    "ref": [
     [
-     5100,
+     6000,
+     "CRU-L4"
+    ],
+    [
+     5800,
+     "MIC-L5"
+    ],
+    [
+     5400,
      "TDD New Babbage"
     ],
     [
@@ -1384,14 +1392,6 @@
     [
      4800,
      "CBD Lorville"
-    ],
-    [
-     4800,
-     "MIC-L5"
-    ],
-    [
-     4800,
-     "TDD Orison"
     ]
    ]
   },
@@ -1402,20 +1402,20 @@
      "Gaslight"
     ],
     [
-     3700,
-     "Endgame"
+     3500,
+     "Rod's Fuel"
     ],
     [
-     3600,
+     3500,
+     "Megumi"
+    ],
+    [
+     3500,
      "Dudley & Daughters"
     ],
     [
      3500,
-     "Nyx Gateway (Stanton)"
-    ],
-    [
-     3500,
-     "Rod's Fuel"
+     "PSS Lambda"
     ]
    ],
    "raw": [
@@ -1452,24 +1452,24 @@
   "laranite": {
    "ref": [
     [
-     9600,
-     "HUR-L2"
-    ],
-    [
      9200,
      "Rod's Fuel"
     ],
     [
-     8900,
-     "TDD Area 18"
+     9200,
+     "Stanton Gateway (Nyx)"
     ],
     [
-     8700,
+     8800,
      "TDD New Babbage"
     ],
     [
      8700,
      "Ruin Station"
+    ],
+    [
+     8700,
+     "Patch City"
     ]
    ]
   },
@@ -1524,6 +1524,10 @@
   "quartz": {
    "ref": [
     [
+     5400,
+     "Nyx Gateway (Stanton)"
+    ],
+    [
      4600,
      "Patch City"
     ],
@@ -1538,10 +1542,6 @@
     [
      4400,
      "TDD New Babbage"
-    ],
-    [
-     4400,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1616,10 +1616,6 @@
   "silicon": {
    "ref": [
     [
-     3100,
-     "Terra Gateway (Stanton)"
-    ],
-    [
      2900,
      "Patch City"
     ],
@@ -1634,6 +1630,10 @@
     [
      2400,
      "Seraphim"
+    ],
+    [
+     2400,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1645,7 +1645,11 @@
     ],
     [
      140000,
-     "TDD Area 18"
+     "CBD Lorville"
+    ],
+    [
+     140000,
+     "TDD New Babbage"
     ],
     [
      140000,
@@ -1654,10 +1658,6 @@
     [
      140000,
      "Terra Mills"
-    ],
-    [
-     140000,
-     "Hickes Research"
     ]
    ]
   },
@@ -1693,11 +1693,11 @@
     ],
     [
      4500,
-     "Baijini Point"
+     "Port Tressler"
     ],
     [
-     4500,
-     "Port Tressler"
+     4400,
+     "Baijini Point"
     ],
     [
      4300,
@@ -1729,7 +1729,7 @@
     ],
     [
      8300,
-     "Ruin Station"
+     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-24T10:57:13+00:00"
+ "updated": "2026-11-24T21:13:41+00:00"
 }
