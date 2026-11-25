@@ -1138,10 +1138,6 @@
   "aluminum": {
    "ref": [
     [
-     4000,
-     "Everus Harbor"
-    ],
-    [
      3800,
      "TDD Area 18"
     ],
@@ -1156,6 +1152,10 @@
     [
      3800,
      "TDD Orison"
+    ],
+    [
+     3800,
+     "Stanton Gateway (Nyx)"
     ]
    ]
   },
@@ -1310,16 +1310,16 @@
      "Rod's Fuel"
     ],
     [
-     3900,
-     "Everus Harbor"
-    ],
-    [
      3700,
      "TDD Area 18"
     ],
     [
      3700,
      "TDD New Babbage"
+    ],
+    [
+     3700,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1456,12 +1456,12 @@
      "Rod's Fuel"
     ],
     [
-     8900,
-     "TDD New Babbage"
+     9000,
+     "TDD Area 18"
     ],
     [
-     8800,
-     "TDD Area 18"
+     8900,
+     "TDD New Babbage"
     ],
     [
      8700,
@@ -1564,8 +1564,8 @@
      "Sacren's Plot"
     ],
     [
-     72000,
-     "ArcCorp 141"
+     74000,
+     "Levski"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-25T04:16:12+00:00"
+ "updated": "2026-11-25T14:34:48+00:00"
 }
