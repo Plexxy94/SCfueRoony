@@ -1138,8 +1138,8 @@
   "aluminum": {
    "ref": [
     [
-     4500,
-     "Port Tressler"
+     4000,
+     "Everus Harbor"
     ],
     [
      3800,
@@ -1310,16 +1310,16 @@
      "Rod's Fuel"
     ],
     [
+     3900,
+     "Everus Harbor"
+    ],
+    [
      3700,
      "TDD Area 18"
     ],
     [
      3700,
      "TDD New Babbage"
-    ],
-    [
-     3700,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1398,7 +1398,7 @@
   "iron": {
    "ref": [
     [
-     3800,
+     3700,
      "Gaslight"
     ],
     [
@@ -1456,12 +1456,12 @@
      "Rod's Fuel"
     ],
     [
-     9200,
-     "Stanton Gateway (Nyx)"
+     8900,
+     "TDD New Babbage"
     ],
     [
      8800,
-     "TDD New Babbage"
+     "TDD Area 18"
     ],
     [
      8700,
@@ -1528,12 +1528,12 @@
      "Nyx Gateway (Stanton)"
     ],
     [
-     4600,
-     "Patch City"
+     4700,
+     "Seraphim"
     ],
     [
      4600,
-     "Seraphim"
+     "Patch City"
     ],
     [
      4400,
@@ -1649,15 +1649,15 @@
     ],
     [
      140000,
+     "TDD Area 18"
+    ],
+    [
+     140000,
      "TDD New Babbage"
     ],
     [
      140000,
      "Rayari Kaltag"
-    ],
-    [
-     140000,
-     "Terra Mills"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-24T21:13:41+00:00"
+ "updated": "2026-11-25T04:16:12+00:00"
 }
