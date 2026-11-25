@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-25T00:52:19+00:00",
+ "checked": "2026-11-25T17:26:23+00:00",
  "threads": 17,
  "errors": [],
  "hits": [
@@ -99,15 +99,15 @@
    "new": true
   },
   {
-   "ship": "Asgard",
-   "mfr": "Anvil Aerospace",
-   "msrp": 350,
-   "wb": 315,
-   "from": "Constellation Mk V Centaurus",
-   "from_msrp": 300,
-   "ccu": 15,
+   "ship": "Railen",
+   "mfr": "Gatac Manufacture",
+   "msrp": 400,
+   "wb": 370,
+   "from": "Asgard",
+   "from_msrp": 350,
+   "ccu": 20,
    "value": 50,
-   "saving": 35,
+   "saving": 30,
    "new": true
   },
   {

@@ -1681,5 +1681,23 @@
   "sku": 19876,
   "title": "Warbond Edition",
   "new": 315
+ },
+ {
+  "d": "2026-11-25",
+  "id": 222,
+  "name": "Railen",
+  "k": "sku+",
+  "sku": 19814,
+  "title": "Warbond Edition",
+  "new": 370
+ },
+ {
+  "d": "2026-11-25",
+  "id": 299,
+  "name": "Asgard",
+  "k": "sku-",
+  "sku": 19876,
+  "title": "Warbond Edition",
+  "old": 315
  }
 ]
