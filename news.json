@@ -19,6 +19,11 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | RSI Galaxy - Galactic Gear",
+   "url": "https://www.youtube.com/shorts/oFTXeEU-8D8",
+   "date": "2026-11-25T16:01:57+00:00"
+  },
+  {
    "title": "Star Citizen | IAE 2956 Store Bundle & Deals",
    "url": "https://www.youtube.com/shorts/FuRcxJs1M7A",
    "date": "2026-11-23T18:02:01+00:00"
@@ -62,11 +67,6 @@
    "title": "Star Citizen | Galactic Gear: Gatac Hyūn",
    "url": "https://www.youtube.com/watch?v=5r8M8FvUNLE",
    "date": "2026-11-21T16:01:02+00:00"
-  },
-  {
-   "title": "Star Citizen | Behind the Ships: Gatac Hyūn",
-   "url": "https://www.youtube.com/watch?v=SPXJNcLABHE",
-   "date": "2026-11-21T16:00:52+00:00"
   }
  ],
  "commlinks": [
@@ -176,6 +176,27 @@
    "approx": true
   },
   {
+   "id": 21452,
+   "title": "Star Citizen | Behind the Ships: Anvil Liberator",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21452-Star-Citizen-Behind-The-Ships-Anvil-Liberator",
+   "date": "2026-11-18T23:38:25+00:00",
+   "approx": true
+  },
+  {
+   "id": 21410,
+   "title": "IAE 2956 Anvil Aerospace",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21410-IAE-2956-Anvil-Aerospace",
+   "date": "2026-11-18T23:38:25+00:00",
+   "approx": true
+  },
+  {
+   "id": 21348,
+   "title": "Anvil Liberator - Load Up Your Loadout",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21348-Anvil-Liberator",
+   "date": "2026-11-18T23:38:25+00:00",
+   "approx": true
+  },
+  {
    "id": 21406,
    "title": "IAE 2956 Argo Astronautics",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21406-IAE-2956-Argo-Astronautics",
@@ -264,27 +285,6 @@
    "title": "This Week in Star Citizen - November 16, 2026",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21454-This-Week-In-Star-Citizen",
    "date": "2026-11-16T12:00:00+00:00",
-   "approx": true
-  },
-  {
-   "id": 21452,
-   "title": "Star Citizen | Behind the Ships: Anvil Liberator",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21452-Star-Citizen-Behind-The-Ships-Anvil-Liberator",
-   "date": "2026-11-15T15:43:50+00:00",
-   "approx": true
-  },
-  {
-   "id": 21410,
-   "title": "IAE 2956 Anvil Aerospace",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21410-IAE-2956-Anvil-Aerospace",
-   "date": "2026-11-15T15:43:50+00:00",
-   "approx": true
-  },
-  {
-   "id": 21348,
-   "title": "Anvil Liberator - Load Up Your Loadout",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21348-Anvil-Liberator",
-   "date": "2026-11-15T15:43:50+00:00",
    "approx": true
   },
   {
@@ -680,6 +680,6 @@
    }
   ]
  },
- "updated": "2026-11-24T21:13:40+00:00",
- "checked": "2026-11-25T14:34:47+00:00"
+ "updated": "2026-11-25T23:38:27+00:00",
+ "checked": "2026-11-25T23:38:27+00:00"
 }
