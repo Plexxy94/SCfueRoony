@@ -1,6 +1,6 @@
 {
- "checked": "2026-11-26T00:31:19+00:00",
- "threads": 17,
+ "checked": "2026-11-26T17:06:43+00:00",
+ "threads": 16,
  "errors": [],
  "hits": [
   {
@@ -75,15 +75,39 @@
  ],
  "warbond": [
   {
-   "ship": "Railen",
-   "mfr": "Gatac Manufacture",
-   "msrp": 400,
-   "wb": 370,
-   "from": "Asgard",
-   "from_msrp": 350,
-   "ccu": 20,
-   "value": 50,
-   "saving": 30,
+   "ship": "Merchantman",
+   "mfr": "Banu",
+   "msrp": 650,
+   "wb": 600,
+   "from": "Arrastra",
+   "from_msrp": 575,
+   "ccu": 25,
+   "value": 75,
+   "saving": 50,
+   "new": true
+  },
+  {
+   "ship": "600i Touring",
+   "mfr": "Origin Jumpworks",
+   "msrp": 435,
+   "wb": 410,
+   "from": "C2 Hercules",
+   "from_msrp": 400,
+   "ccu": 10,
+   "value": 35,
+   "saving": 25,
+   "new": true
+  },
+  {
+   "ship": "Cutlass Steel",
+   "mfr": "Drake Interplanetary",
+   "msrp": 235,
+   "wb": 210,
+   "from": "A1 Spirit",
+   "from_msrp": 200,
+   "ccu": 10,
+   "value": 35,
+   "saving": 25,
    "new": true
   },
   {
