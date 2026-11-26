@@ -74,7 +74,7 @@
    "id": 21392,
    "title": "IAE 2956 Finale",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21392-IAE-2956-Finale",
-   "date": "2026-11-23T15:53:26+00:00",
+   "date": "2026-11-26T16:01:56+00:00",
    "approx": true
   },
   {
@@ -152,6 +152,20 @@
    "title": "IAE 2956 Aegis Dynamics",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21398-IAE-2956-Aegis-Dynamics",
    "date": "2026-11-20T16:07:25+00:00",
+   "approx": true
+  },
+  {
+   "id": 21409,
+   "title": "IAE 2956 Crusader Industries",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21409-IAE-2956-Crusader-Industries",
+   "date": "2026-11-19T19:01:56+00:00",
+   "approx": true
+  },
+  {
+   "id": 21408,
+   "title": "IAE 2956 Tumbril Land Systems",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21408-IAE-2956-Tumbril-Land-Systems",
+   "date": "2026-11-19T19:01:56+00:00",
    "approx": true
   },
   {
@@ -264,20 +278,6 @@
    "title": "IAE 2956 RSI",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21412-IAE-2956-RSI",
    "date": "2026-11-17T00:53:26+00:00",
-   "approx": true
-  },
-  {
-   "id": 21409,
-   "title": "IAE 2956 Crusader Industries",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21409-IAE-2956-Crusader-Industries",
-   "date": "2026-11-16T16:05:39+00:00",
-   "approx": true
-  },
-  {
-   "id": 21408,
-   "title": "IAE 2956 Tumbril Land Systems",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21408-IAE-2956-Tumbril-Land-Systems",
-   "date": "2026-11-16T16:05:39+00:00",
    "approx": true
   },
   {
@@ -680,6 +680,6 @@
    }
   ]
  },
- "updated": "2026-11-25T23:38:27+00:00",
- "checked": "2026-11-26T08:22:30+00:00"
+ "updated": "2026-11-26T19:01:57+00:00",
+ "checked": "2026-11-26T19:01:57+00:00"
 }

@@ -1114,6 +1114,10 @@
   "agricium": {
    "ref": [
     [
+     11000,
+     "ARC-L3"
+    ],
+    [
      10000,
      "TDD Area 18"
     ],
@@ -1128,10 +1132,6 @@
     [
      10000,
      "HUR-L4"
-    ],
-    [
-     10000,
-     "TDD Orison"
     ]
    ]
   },
@@ -1186,6 +1186,10 @@
   "beryl": {
    "ref": [
     [
+     22000,
+     "HUR-L1"
+    ],
+    [
      21000,
      "Rod's Fuel"
     ],
@@ -1200,10 +1204,6 @@
     [
      21000,
      "HUR-L5"
-    ],
-    [
-     20000,
-     "TDD Area 18"
     ]
    ]
   },
@@ -1374,12 +1374,12 @@
   "hephaestanite": {
    "ref": [
     [
-     5400,
-     "TDD New Babbage"
+     4800,
+     "TDD Area 18"
     ],
     [
      4800,
-     "TDD Area 18"
+     "TDD New Babbage"
     ],
     [
      4800,
@@ -1398,8 +1398,8 @@
   "iron": {
    "ref": [
     [
-     3700,
-     "Gaslight"
+     3500,
+     "Nyx Gateway (Stanton)"
     ],
     [
      3500,
@@ -1460,16 +1460,16 @@
      "TDD Area 18"
     ],
     [
-     8900,
-     "TDD New Babbage"
-    ],
-    [
      8700,
      "Ruin Station"
     ],
     [
      8700,
      "Patch City"
+    ],
+    [
+     8700,
+     "Starlight Service"
     ]
    ]
   },
@@ -1552,6 +1552,10 @@
      "Ashland"
     ],
     [
+     76000,
+     "Levski"
+    ],
+    [
      75000,
      "ArcCorp 157"
     ],
@@ -1562,10 +1566,6 @@
     [
      74000,
      "Sacren's Plot"
-    ],
-    [
-     74000,
-     "Levski"
     ]
    ]
   },
@@ -1712,6 +1712,10 @@
   "titanium": {
    "ref": [
     [
+     9000,
+     "ARC-L3"
+    ],
+    [
      8300,
      "TDD Area 18"
     ],
@@ -1726,10 +1730,6 @@
     [
      8300,
      "Ruin Station"
-    ],
-    [
-     8300,
-     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-26T08:22:32+00:00"
+ "updated": "2026-11-26T19:02:00+00:00"
 }
