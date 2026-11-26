@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-25T17:26:23+00:00",
+ "checked": "2026-11-26T00:31:19+00:00",
  "threads": 17,
  "errors": [],
  "hits": [
@@ -75,30 +75,6 @@
  ],
  "warbond": [
   {
-   "ship": "Perseus",
-   "mfr": "Roberts Space Industries",
-   "msrp": 800,
-   "wb": 720,
-   "from": "Odyssey",
-   "from_msrp": 700,
-   "ccu": 20,
-   "value": 100,
-   "saving": 80,
-   "new": true
-  },
-  {
-   "ship": "Ironclad Assault",
-   "mfr": "Drake Interplanetary",
-   "msrp": 650,
-   "wb": 600,
-   "from": "Arrastra",
-   "from_msrp": 575,
-   "ccu": 25,
-   "value": 75,
-   "saving": 50,
-   "new": true
-  },
-  {
    "ship": "Railen",
    "mfr": "Gatac Manufacture",
    "msrp": 400,
@@ -111,28 +87,16 @@
    "new": true
   },
   {
-   "ship": "Corsair",
-   "mfr": "Drake Interplanetary",
-   "msrp": 250,
-   "wb": 230,
-   "from": "Defender",
-   "from_msrp": 220,
-   "ccu": 10,
-   "value": 30,
-   "saving": 20,
-   "new": true
-  },
-  {
-   "ship": "M80",
-   "mfr": "Origin Jumpworks",
-   "msrp": 300,
-   "wb": 280,
-   "from": "Blade",
-   "from_msrp": 275,
-   "ccu": 5,
-   "value": 25,
-   "saving": 20,
-   "new": true
+   "ship": "Perseus",
+   "mfr": "Roberts Space Industries",
+   "msrp": 800,
+   "wb": 720,
+   "from": "Odyssey",
+   "from_msrp": 700,
+   "ccu": 20,
+   "value": 100,
+   "saving": 80,
+   "new": false
   },
   {
    "ship": "Liberator",
@@ -144,6 +108,18 @@
    "ccu": 5,
    "value": 80,
    "saving": 75,
+   "new": false
+  },
+  {
+   "ship": "Ironclad Assault",
+   "mfr": "Drake Interplanetary",
+   "msrp": 650,
+   "wb": 600,
+   "from": "Arrastra",
+   "from_msrp": 575,
+   "ccu": 25,
+   "value": 75,
+   "saving": 50,
    "new": false
   },
   {
@@ -171,6 +147,18 @@
    "new": false
   },
   {
+   "ship": "Corsair",
+   "mfr": "Drake Interplanetary",
+   "msrp": 250,
+   "wb": 230,
+   "from": "Defender",
+   "from_msrp": 220,
+   "ccu": 10,
+   "value": 30,
+   "saving": 20,
+   "new": false
+  },
+  {
    "ship": "Hyūn",
    "mfr": "Gatac Manufacture",
    "msrp": 220,
@@ -179,6 +167,18 @@
    "from_msrp": 190,
    "ccu": 10,
    "value": 30,
+   "saving": 20,
+   "new": false
+  },
+  {
+   "ship": "M80",
+   "mfr": "Origin Jumpworks",
+   "msrp": 300,
+   "wb": 280,
+   "from": "Blade",
+   "from_msrp": 275,
+   "ccu": 5,
+   "value": 25,
    "saving": 20,
    "new": false
   },
