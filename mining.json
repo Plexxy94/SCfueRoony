@@ -1199,11 +1199,11 @@
     ],
     [
      21000,
-     "HUR-L4"
+     "HUR-L5"
     ],
     [
-     21000,
-     "HUR-L5"
+     20000,
+     "TDD Area 18"
     ]
    ]
   },
@@ -1310,16 +1310,16 @@
      "Rod's Fuel"
     ],
     [
+     4000,
+     "Everus Harbor"
+    ],
+    [
      3700,
      "TDD Area 18"
     ],
     [
      3700,
      "TDD New Babbage"
-    ],
-    [
-     3700,
-     "CBD Lorville"
     ]
    ]
   },
@@ -1456,7 +1456,7 @@
      "Rod's Fuel"
     ],
     [
-     9000,
+     8900,
      "TDD Area 18"
     ],
     [
@@ -1528,12 +1528,12 @@
      "Nyx Gateway (Stanton)"
     ],
     [
-     4700,
-     "Seraphim"
+     4600,
+     "Patch City"
     ],
     [
      4600,
-     "Patch City"
+     "Seraphim"
     ],
     [
      4400,
@@ -1664,10 +1664,6 @@
   "taranite": {
    "ref": [
     [
-     29000,
-     "TDD Orison"
-    ],
-    [
      28000,
      "TDD New Babbage"
     ],
@@ -1682,6 +1678,10 @@
     [
      27000,
      "TDD Area 18"
+    ],
+    [
+     27000,
+     "CBD Lorville"
     ]
    ]
   },
@@ -1712,10 +1712,6 @@
   "titanium": {
    "ref": [
     [
-     9000,
-     "ARC-L3"
-    ],
-    [
      8300,
      "TDD Area 18"
     ],
@@ -1730,6 +1726,10 @@
     [
      8300,
      "Ruin Station"
+    ],
+    [
+     8300,
+     "Checkmate"
     ]
    ]
   },
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-26T19:02:00+00:00"
+ "updated": "2026-11-27T02:12:21+00:00"
 }

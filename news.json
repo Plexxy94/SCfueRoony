@@ -19,6 +19,11 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | Anvil Liberator - Galactic Gear",
+   "url": "https://www.youtube.com/shorts/u3jNivUlsDU",
+   "date": "2026-11-26T20:01:32+00:00"
+  },
+  {
    "title": "Star Citizen | RSI Galaxy - Galactic Gear",
    "url": "https://www.youtube.com/shorts/oFTXeEU-8D8",
    "date": "2026-11-25T16:01:57+00:00"
@@ -62,11 +67,6 @@
    "title": "Star Citizen | Day 9 of IAE 2956 is here!",
    "url": "https://www.youtube.com/shorts/y92Rq0WqIw4",
    "date": "2026-11-21T16:09:43+00:00"
-  },
-  {
-   "title": "Star Citizen | Galactic Gear: Gatac Hyūn",
-   "url": "https://www.youtube.com/watch?v=5r8M8FvUNLE",
-   "date": "2026-11-21T16:01:02+00:00"
   }
  ],
  "commlinks": [
@@ -680,6 +680,6 @@
    }
   ]
  },
- "updated": "2026-11-26T19:01:57+00:00",
- "checked": "2026-11-26T19:01:57+00:00"
+ "updated": "2026-11-27T02:12:21+00:00",
+ "checked": "2026-11-27T02:12:21+00:00"
 }
