@@ -1114,6 +1114,10 @@
   "agricium": {
    "ref": [
     [
+     12000,
+     "ARC-L4"
+    ],
+    [
      11000,
      "ARC-L3"
     ],
@@ -1128,19 +1132,11 @@
     [
      10000,
      "CBD Lorville"
-    ],
-    [
-     10000,
-     "ARC-L4"
     ]
    ]
   },
   "aluminum": {
    "ref": [
-    [
-     4000,
-     "Everus Harbor"
-    ],
     [
      3800,
      "TDD Area 18"
@@ -1156,6 +1152,10 @@
     [
      3800,
      "TDD Orison"
+    ],
+    [
+     3800,
+     "Stanton Gateway (Nyx)"
     ]
    ]
   },
@@ -1190,6 +1190,10 @@
      "HUR-L1"
     ],
     [
+     22000,
+     "HUR-L4"
+    ],
+    [
      21000,
      "Rod's Fuel"
     ],
@@ -1200,10 +1204,6 @@
     [
      21000,
      "HUR-L5"
-    ],
-    [
-     20000,
-     "TDD Area 18"
     ]
    ]
   },
@@ -1268,7 +1268,7 @@
      "Rod's Fuel"
     ],
     [
-     3800,
+     3900,
      "Baijini Point"
     ],
     [
@@ -1327,10 +1327,6 @@
    "ref": [
     [
      7700,
-     "TDD New Babbage"
-    ],
-    [
-     7700,
      "CBD Lorville"
     ],
     [
@@ -1344,6 +1340,10 @@
     [
      7700,
      "Dunboro"
+    ],
+    [
+     7700,
+     "TDD Orison"
     ]
    ]
   },
@@ -1374,12 +1374,12 @@
   "hephaestanite": {
    "ref": [
     [
-     4800,
-     "TDD Area 18"
+     5400,
+     "TDD New Babbage"
     ],
     [
      4800,
-     "TDD New Babbage"
+     "TDD Area 18"
     ],
     [
      4800,
@@ -1456,10 +1456,6 @@
      "Rod's Fuel"
     ],
     [
-     8900,
-     "TDD Area 18"
-    ],
-    [
      8700,
      "Ruin Station"
     ],
@@ -1470,6 +1466,10 @@
     [
      8700,
      "Starlight Service"
+    ],
+    [
+     8700,
+     "Endgame"
     ]
    ]
   },
@@ -1665,10 +1665,6 @@
    "ref": [
     [
      28000,
-     "TDD New Babbage"
-    ],
-    [
-     28000,
      "Fallow Field"
     ],
     [
@@ -1678,6 +1674,10 @@
     [
      27000,
      "TDD Area 18"
+    ],
+    [
+     27000,
+     "TDD New Babbage"
     ],
     [
      27000,
@@ -1693,11 +1693,11 @@
     ],
     [
      4500,
-     "Port Tressler"
+     "Baijini Point"
     ],
     [
-     4400,
-     "Baijini Point"
+     4500,
+     "Port Tressler"
     ],
     [
      4300,
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-27T10:54:46+00:00"
+ "updated": "2026-11-27T19:58:36+00:00"
 }

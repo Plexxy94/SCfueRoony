@@ -19,6 +19,16 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | 10 From the Community: Professional Pursuits",
+   "url": "https://www.youtube.com/watch?v=Tho2qES1ZJ0",
+   "date": "2026-11-27T16:01:53+00:00"
+  },
+  {
+   "title": "Star Citizen | Drake Marauder - Galactic Gear",
+   "url": "https://www.youtube.com/shorts/fhqAFPXPVlc",
+   "date": "2026-11-27T16:01:22+00:00"
+  },
+  {
    "title": "Star Citizen | Anvil Liberator - Galactic Gear",
    "url": "https://www.youtube.com/shorts/u3jNivUlsDU",
    "date": "2026-11-26T20:01:32+00:00"
@@ -57,19 +67,16 @@
    "title": "Star Citizen | Hyūn - IAE 2956",
    "url": "https://www.youtube.com/shorts/f6GfmxAz38w",
    "date": "2026-11-21T18:00:53+00:00"
-  },
-  {
-   "title": "Star Citizen | Galactic Gear: Gatac Hyūn",
-   "url": "https://www.youtube.com/shorts/jGthN4Dk2Zc",
-   "date": "2026-11-21T17:09:13+00:00"
-  },
-  {
-   "title": "Star Citizen | Day 9 of IAE 2956 is here!",
-   "url": "https://www.youtube.com/shorts/y92Rq0WqIw4",
-   "date": "2026-11-21T16:09:43+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 21466,
+   "title": "10 From the Community - Professional Pursuits",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21466-10-From-The-Community",
+   "date": "2026-11-27T15:58:33+00:00",
+   "approx": true
+  },
   {
    "id": 21392,
    "title": "IAE 2956 Finale",
@@ -145,6 +152,20 @@
    "title": "Gatac Hyūn - Wealth in Opportunity",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21349-Gatac-Hy-n",
    "date": "2026-11-21T15:58:39+00:00",
+   "approx": true
+  },
+  {
+   "id": 21407,
+   "title": "IAE 2956 Drake Interplanetary",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21407-IAE-2956-Drake-Interplanetary",
+   "date": "2026-11-20T19:58:33+00:00",
+   "approx": true
+  },
+  {
+   "id": 21345,
+   "title": "Drake Marauder - Welcome to the Gun Show",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21345-Drake-Marauder",
+   "date": "2026-11-20T19:58:33+00:00",
    "approx": true
   },
   {
@@ -250,27 +271,6 @@
    "title": "IAE 2956 Origin Jumpworks",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21411-IAE-2956-Origin-Jumpworks",
    "date": "2026-11-17T21:13:38+00:00",
-   "approx": true
-  },
-  {
-   "id": 21407,
-   "title": "IAE 2956 Drake Interplanetary",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21407-IAE-2956-Drake-Interplanetary",
-   "date": "2026-11-17T15:54:19+00:00",
-   "approx": true
-  },
-  {
-   "id": 21345,
-   "title": "Drake Marauder - Welcome to the Gun Show",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21345-Drake-Marauder",
-   "date": "2026-11-17T15:54:19+00:00",
-   "approx": true
-  },
-  {
-   "id": 21415,
-   "title": "IAE 2956 Merchandise",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21415-IAE-2956-Merchandise",
-   "date": "2026-11-17T00:53:26+00:00",
    "approx": true
   },
   {
@@ -680,6 +680,6 @@
    }
   ]
  },
- "updated": "2026-11-27T02:12:21+00:00",
- "checked": "2026-11-27T10:54:45+00:00"
+ "updated": "2026-11-27T19:58:35+00:00",
+ "checked": "2026-11-27T19:58:35+00:00"
 }
