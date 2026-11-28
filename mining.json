@@ -1138,6 +1138,10 @@
   "aluminum": {
    "ref": [
     [
+     4000,
+     "Everus Harbor"
+    ],
+    [
      3800,
      "TDD Area 18"
     ],
@@ -1152,10 +1156,6 @@
     [
      3800,
      "TDD Orison"
-    ],
-    [
-     3800,
-     "Stanton Gateway (Nyx)"
     ]
    ]
   },
@@ -1227,7 +1227,7 @@
     ],
     [
      30000,
-     "Endgame"
+     "Jackson's Swap"
     ]
    ]
   },
@@ -1310,16 +1310,16 @@
      "Rod's Fuel"
     ],
     [
+     4100,
+     "Everus Harbor"
+    ],
+    [
      4000,
      "Terra Gateway (Stanton)"
     ],
     [
      3700,
      "TDD Area 18"
-    ],
-    [
-     3700,
-     "TDD New Babbage"
     ]
    ]
   },
@@ -1398,8 +1398,8 @@
   "iron": {
    "ref": [
     [
-     3900,
-     "Endgame"
+     3500,
+     "Nyx Gateway (Stanton)"
     ],
     [
      3500,
@@ -1411,11 +1411,11 @@
     ],
     [
      3500,
-     "Dudley & Daughters"
+     "Endgame"
     ],
     [
      3500,
-     "PSS Lambda"
+     "Dudley & Daughters"
     ]
    ],
    "raw": [
@@ -1782,5 +1782,5 @@
    ]
   }
  },
- "updated": "2026-11-28T02:42:31+00:00"
+ "updated": "2026-11-28T11:49:18+00:00"
 }
