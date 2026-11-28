@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-27T16:50:12+00:00",
+ "checked": "2026-11-28T00:06:13+00:00",
  "threads": 16,
  "errors": [],
  "hits": [
@@ -39,23 +39,6 @@
    "saving": 20
   },
   {
-   "id": "raised-244-400",
-   "type": "raised",
-   "ship": "Galaxy",
-   "ship_id": 244,
-   "old": 380,
-   "new": 400,
-   "now": 400,
-   "first_seen": "2026-11-13",
-   "done": true,
-   "src": {
-    "title": "Preisvergleich mit dem Vortag",
-    "url": "https://robertsspaceindustries.com/pledge/ship-upgrades",
-    "date": "2026-11-13",
-    "site": "Pledge-Store"
-   }
-  },
-  {
    "id": "raised-224-600",
    "type": "raised",
    "ship": "Liberator",
@@ -75,75 +58,15 @@
  ],
  "warbond": [
   {
-   "ship": "Merchantman",
-   "mfr": "Banu",
-   "msrp": 650,
-   "wb": 600,
-   "from": "Arrastra",
-   "from_msrp": 575,
-   "ccu": 25,
-   "value": 75,
-   "saving": 50,
-   "new": true
-  },
-  {
-   "ship": "600i Touring",
-   "mfr": "Origin Jumpworks",
-   "msrp": 435,
-   "wb": 410,
-   "from": "C2 Hercules",
-   "from_msrp": 400,
-   "ccu": 10,
-   "value": 35,
-   "saving": 25,
-   "new": true
-  },
-  {
-   "ship": "Cutlass Steel",
-   "mfr": "Drake Interplanetary",
-   "msrp": 235,
-   "wb": 210,
-   "from": "A1 Spirit",
-   "from_msrp": 200,
-   "ccu": 10,
-   "value": 35,
-   "saving": 25,
-   "new": true
-  },
-  {
-   "ship": "Perseus",
-   "mfr": "Roberts Space Industries",
-   "msrp": 800,
-   "wb": 720,
-   "from": "Odyssey",
-   "from_msrp": 700,
-   "ccu": 20,
-   "value": 100,
-   "saving": 80,
-   "new": false
-  },
-  {
    "ship": "Liberator",
    "mfr": "Anvil Aerospace",
    "msrp": 600,
    "wb": 525,
-   "from": "M2 Hercules",
-   "from_msrp": 520,
-   "ccu": 5,
-   "value": 80,
+   "from": "Galaxy",
+   "from_msrp": 400,
+   "ccu": 125,
+   "value": 200,
    "saving": 75,
-   "new": false
-  },
-  {
-   "ship": "Ironclad Assault",
-   "mfr": "Drake Interplanetary",
-   "msrp": 650,
-   "wb": 600,
-   "from": "Arrastra",
-   "from_msrp": 575,
-   "ccu": 25,
-   "value": 75,
-   "saving": 50,
    "new": false
   },
   {
@@ -151,7 +74,7 @@
    "mfr": "Roberts Space Industries",
    "msrp": 400,
    "wb": 360,
-   "from": "Asgard",
+   "from": "Constellation Mk IV Phoenix",
    "from_msrp": 350,
    "ccu": 10,
    "value": 50,
@@ -163,7 +86,7 @@
    "mfr": "Roberts Space Industries",
    "msrp": 300,
    "wb": 275,
-   "from": "Apollo Triage",
+   "from": "Meteor",
    "from_msrp": 260,
    "ccu": 15,
    "value": 40,
@@ -171,38 +94,14 @@
    "new": false
   },
   {
-   "ship": "Corsair",
-   "mfr": "Drake Interplanetary",
-   "msrp": 250,
-   "wb": 230,
-   "from": "Defender",
-   "from_msrp": 220,
-   "ccu": 10,
-   "value": 30,
-   "saving": 20,
-   "new": false
-  },
-  {
    "ship": "Hyūn",
    "mfr": "Gatac Manufacture",
    "msrp": 220,
    "wb": 200,
-   "from": "RAFT",
-   "from_msrp": 190,
-   "ccu": 10,
-   "value": 30,
-   "saving": 20,
-   "new": false
-  },
-  {
-   "ship": "M80",
-   "mfr": "Origin Jumpworks",
-   "msrp": 300,
-   "wb": 280,
-   "from": "Blade",
-   "from_msrp": 275,
-   "ccu": 5,
-   "value": 25,
+   "from": "F7C Hornet Mk II",
+   "from_msrp": 175,
+   "ccu": 25,
+   "value": 45,
    "saving": 20,
    "new": false
   },
@@ -211,7 +110,7 @@
    "mfr": "Drake Interplanetary",
    "msrp": 150,
    "wb": 135,
-   "from": "350r",
+   "from": "C1 Spirit",
    "from_msrp": 125,
    "ccu": 10,
    "value": 25,

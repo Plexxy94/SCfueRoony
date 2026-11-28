@@ -1735,5 +1735,1427 @@
   "sku": 19870,
   "title": "Warbond Edition",
   "new": 210
+ },
+ {
+  "d": "2026-11-28",
+  "id": 10,
+  "name": "350r",
+  "k": "sku-",
+  "sku": 12996,
+  "title": "Standard Edition",
+  "old": 125
+ },
+ {
+  "d": "2026-11-28",
+  "id": 22,
+  "name": "M50",
+  "k": "sku-",
+  "sku": 13003,
+  "title": "Standard Edition",
+  "old": 100
+ },
+ {
+  "d": "2026-11-28",
+  "id": 24,
+  "name": "Caterpillar",
+  "k": "sku-",
+  "sku": 14892,
+  "title": "Standard Edition",
+  "old": 330
+ },
+ {
+  "d": "2026-11-28",
+  "id": 33,
+  "name": "Freelancer MIS",
+  "k": "sku-",
+  "sku": 13001,
+  "title": "Standard Edition",
+  "old": 175
+ },
+ {
+  "d": "2026-11-28",
+  "id": 35,
+  "name": "Khartu-al",
+  "k": "sku-",
+  "sku": 17736,
+  "title": "Standard Edition",
+  "old": 175
+ },
+ {
+  "d": "2026-11-28",
+  "id": 36,
+  "name": "Merchantman",
+  "k": "sku-",
+  "sku": 15524,
+  "title": "Standard Edition",
+  "old": 650
+ },
+ {
+  "d": "2026-11-28",
+  "id": 36,
+  "name": "Merchantman",
+  "k": "sku-",
+  "sku": 17613,
+  "title": "Warbond Edition",
+  "old": 600
+ },
+ {
+  "d": "2026-11-28",
+  "id": 41,
+  "name": "Hull C",
+  "k": "sku-",
+  "sku": 16100,
+  "title": "Standard Edition",
+  "old": 500
+ },
+ {
+  "d": "2026-11-28",
+  "id": 51,
+  "name": "Reclaimer",
+  "k": "sku-",
+  "sku": 13015,
+  "title": "Standard Edition",
+  "old": 400
+ },
+ {
+  "d": "2026-11-28",
+  "id": 57,
+  "name": "Cutlass Red",
+  "k": "sku-",
+  "sku": 15978,
+  "title": "Standard Edition",
+  "old": 135
+ },
+ {
+  "d": "2026-11-28",
+  "id": 58,
+  "name": "Cutlass Blue",
+  "k": "sku-",
+  "sku": 13517,
+  "title": "Standard Edition",
+  "old": 175
+ },
+ {
+  "d": "2026-11-28",
+  "id": 59,
+  "name": "Redeemer",
+  "k": "sku-",
+  "sku": 16313,
+  "title": "Standard Edition",
+  "old": 330
+ },
+ {
+  "d": "2026-11-28",
+  "id": 61,
+  "name": "Herald",
+  "k": "sku-",
+  "sku": 13022,
+  "title": "Standard Edition",
+  "old": 85
+ },
+ {
+  "d": "2026-11-28",
+  "id": 62,
+  "name": "Carrack",
+  "k": "sku-",
+  "sku": 13375,
+  "title": "Standard Edition",
+  "old": 600
+ },
+ {
+  "d": "2026-11-28",
+  "id": 64,
+  "name": "Gladiator",
+  "k": "sku-",
+  "sku": 13024,
+  "title": "Standard Edition",
+  "old": 165
+ },
+ {
+  "d": "2026-11-28",
+  "id": 69,
+  "name": "Mustang Delta",
+  "k": "sku-",
+  "sku": 13028,
+  "title": "Standard Edition",
+  "old": 65
+ },
+ {
+  "d": "2026-11-28",
+  "id": 71,
+  "name": "Orion",
+  "k": "sku-",
+  "sku": 16328,
+  "title": "Standard Edition",
+  "old": 650
+ },
+ {
+  "d": "2026-11-28",
+  "id": 75,
+  "name": "Vanguard Warden",
+  "k": "sku-",
+  "sku": 13032,
+  "title": "Standard Edition",
+  "old": 260
+ },
+ {
+  "d": "2026-11-28",
+  "id": 85,
+  "name": "Hull B",
+  "k": "sku-",
+  "sku": 19055,
+  "title": "Standard Edition",
+  "old": 280
+ },
+ {
+  "d": "2026-11-28",
+  "id": 86,
+  "name": "Hull D",
+  "k": "sku-",
+  "sku": 16482,
+  "title": "Standard Edition",
+  "old": 550
+ },
+ {
+  "d": "2026-11-28",
+  "id": 87,
+  "name": "Hull E",
+  "k": "sku-",
+  "sku": 19159,
+  "title": "Standard Edition",
+  "old": 750
+ },
+ {
+  "d": "2026-11-28",
+  "id": 88,
+  "name": "Starfarer",
+  "k": "sku-",
+  "sku": 13037,
+  "title": "Standard Edition",
+  "old": 300
+ },
+ {
+  "d": "2026-11-28",
+  "id": 89,
+  "name": "Starfarer Gemini",
+  "k": "sku-",
+  "sku": 13038,
+  "title": "Standard Edition",
+  "old": 340
+ },
+ {
+  "d": "2026-11-28",
+  "id": 91,
+  "name": "Genesis",
+  "k": "sku-",
+  "sku": 13041,
+  "title": "Standard Edition",
+  "old": 400
+ },
+ {
+  "d": "2026-11-28",
+  "id": 92,
+  "name": "P-52 Merlin",
+  "k": "sku-",
+  "sku": 13042,
+  "title": "Standard Edition",
+  "old": 25
+ },
+ {
+  "d": "2026-11-28",
+  "id": 95,
+  "name": "Vanguard Harbinger",
+  "k": "sku-",
+  "sku": 13044,
+  "title": "Standard Edition",
+  "old": 290
+ },
+ {
+  "d": "2026-11-28",
+  "id": 96,
+  "name": "Vanguard Sentinel",
+  "k": "sku-",
+  "sku": 13045,
+  "title": "Standard Edition",
+  "old": 275
+ },
+ {
+  "d": "2026-11-28",
+  "id": 97,
+  "name": "Endeavor",
+  "k": "sku-",
+  "sku": 13046,
+  "title": "Standard Edition",
+  "old": 350
+ },
+ {
+  "d": "2026-11-28",
+  "id": 98,
+  "name": "Sabre",
+  "k": "sku-",
+  "sku": 17741,
+  "title": "Standard Edition",
+  "old": 175
+ },
+ {
+  "d": "2026-11-28",
+  "id": 99,
+  "name": "Retaliator",
+  "k": "sku-",
+  "sku": 16951,
+  "title": "Standard Edition",
+  "old": 175
+ },
+ {
+  "d": "2026-11-28",
+  "id": 101,
+  "name": "Avenger Warlock",
+  "k": "sku-",
+  "sku": 13050,
+  "title": "Standard Edition",
+  "old": 85
+ },
+ {
+  "d": "2026-11-28",
+  "id": 103,
+  "name": "Crucible",
+  "k": "sku-",
+  "sku": 13053,
+  "title": "Standard Edition",
+  "old": 350
+ },
+ {
+  "d": "2026-11-28",
+  "id": 104,
+  "name": "P-72 Archimedes",
+  "k": "sku-",
+  "sku": 13054,
+  "title": "Standard Edition",
+  "old": 35
+ },
+ {
+  "d": "2026-11-28",
+  "id": 105,
+  "name": "Reliant Mako",
+  "k": "sku-",
+  "sku": 13055,
+  "title": "Standard Edition",
+  "old": 95
+ },
+ {
+  "d": "2026-11-28",
+  "id": 106,
+  "name": "Reliant Sen",
+  "k": "sku-",
+  "sku": 13056,
+  "title": "Standard Edition",
+  "old": 85
+ },
+ {
+  "d": "2026-11-28",
+  "id": 107,
+  "name": "Reliant Tana",
+  "k": "sku-",
+  "sku": 13039,
+  "title": "Standard Edition",
+  "old": 75
+ },
+ {
+  "d": "2026-11-28",
+  "id": 108,
+  "name": "Blade",
+  "k": "sku-",
+  "sku": 13057,
+  "title": "Standard Edition",
+  "old": 275
+ },
+ {
+  "d": "2026-11-28",
+  "id": 110,
+  "name": "Buccaneer",
+  "k": "sku-",
+  "sku": 13059,
+  "title": "Standard Edition",
+  "old": 110
+ },
+ {
+  "d": "2026-11-28",
+  "id": 113,
+  "name": "MPUV Personnel",
+  "k": "sku-",
+  "sku": 13062,
+  "title": "Standard Edition",
+  "old": 40
+ },
+ {
+  "d": "2026-11-28",
+  "id": 114,
+  "name": "MPUV Cargo",
+  "k": "sku-",
+  "sku": 13063,
+  "title": "Standard Edition",
+  "old": 35
+ },
+ {
+  "d": "2026-11-28",
+  "id": 115,
+  "name": "Terrapin",
+  "k": "sku-",
+  "sku": 13064,
+  "title": "Standard Edition",
+  "old": 220
+ },
+ {
+  "d": "2026-11-28",
+  "id": 116,
+  "name": "Polaris",
+  "k": "sku-",
+  "sku": 17639,
+  "title": "Standard Edition",
+  "old": 975
+ },
+ {
+  "d": "2026-11-28",
+  "id": 117,
+  "name": "Prowler",
+  "k": "sku-",
+  "sku": 13391,
+  "title": "Standard Edition",
+  "old": 440
+ },
+ {
+  "d": "2026-11-28",
+  "id": 120,
+  "name": "Sabre Comet",
+  "k": "sku-",
+  "sku": 13067,
+  "title": "Standard Edition",
+  "old": 185
+ },
+ {
+  "d": "2026-11-28",
+  "id": 121,
+  "name": "Gladius Valiant",
+  "k": "sku-",
+  "sku": 13068,
+  "title": "Standard Edition",
+  "old": 110
+ },
+ {
+  "d": "2026-11-28",
+  "id": 123,
+  "name": "85X",
+  "k": "sku-",
+  "sku": 13070,
+  "title": "Standard Edition",
+  "old": 50
+ },
+ {
+  "d": "2026-11-28",
+  "id": 124,
+  "name": "Avenger Titan Renegade",
+  "k": "sku-",
+  "sku": 13051,
+  "title": "Standard Edition",
+  "old": 75
+ },
+ {
+  "d": "2026-11-28",
+  "id": 126,
+  "name": "Razor",
+  "k": "sku-",
+  "sku": 13072,
+  "title": "Standard Edition",
+  "old": 145
+ },
+ {
+  "d": "2026-11-28",
+  "id": 127,
+  "name": "Vanguard Hoplite",
+  "k": "sku-",
+  "sku": 15973,
+  "title": "Standard Edition",
+  "old": 240
+ },
+ {
+  "d": "2026-11-28",
+  "id": 128,
+  "name": "Hurricane",
+  "k": "sku-",
+  "sku": 15980,
+  "title": "Standard Edition",
+  "old": 210
+ },
+ {
+  "d": "2026-11-28",
+  "id": 129,
+  "name": "Defender",
+  "k": "sku-",
+  "sku": 13075,
+  "title": "Standard Edition",
+  "old": 220
+ },
+ {
+  "d": "2026-11-28",
+  "id": 130,
+  "name": "Eclipse",
+  "k": "sku-",
+  "sku": 13076,
+  "title": "Standard Edition",
+  "old": 300
+ },
+ {
+  "d": "2026-11-28",
+  "id": 131,
+  "name": "Nox",
+  "k": "sku-",
+  "sku": 13077,
+  "title": "Standard Edition",
+  "old": 45
+ },
+ {
+  "d": "2026-11-28",
+  "id": 135,
+  "name": "Cyclone TR",
+  "k": "sku-",
+  "sku": 13080,
+  "title": "Standard Edition",
+  "old": 65
+ },
+ {
+  "d": "2026-11-28",
+  "id": 136,
+  "name": "Cyclone RC",
+  "k": "sku-",
+  "sku": 13081,
+  "title": "Standard Edition",
+  "old": 65
+ },
+ {
+  "d": "2026-11-28",
+  "id": 137,
+  "name": "Cyclone RN",
+  "k": "sku-",
+  "sku": 13082,
+  "title": "Standard Edition",
+  "old": 65
+ },
+ {
+  "d": "2026-11-28",
+  "id": 138,
+  "name": "Cyclone AA",
+  "k": "sku-",
+  "sku": 13083,
+  "title": "Standard Edition",
+  "old": 80
+ },
+ {
+  "d": "2026-11-28",
+  "id": 140,
+  "name": "600i Touring",
+  "k": "sku-",
+  "sku": 13085,
+  "title": "Standard Edition",
+  "old": 435
+ },
+ {
+  "d": "2026-11-28",
+  "id": 140,
+  "name": "600i Touring",
+  "k": "sku-",
+  "sku": 19790,
+  "title": "Warbond Edition",
+  "old": 410
+ },
+ {
+  "d": "2026-11-28",
+  "id": 141,
+  "name": "600i Explorer",
+  "k": "sku-",
+  "sku": 13086,
+  "title": "Standard Edition",
+  "old": 475
+ },
+ {
+  "d": "2026-11-28",
+  "id": 145,
+  "name": "X1 Velocity",
+  "k": "sku-",
+  "sku": 16667,
+  "title": "Standard Edition",
+  "old": 50
+ },
+ {
+  "d": "2026-11-28",
+  "id": 147,
+  "name": "X1 Force",
+  "k": "sku-",
+  "sku": 16664,
+  "title": "Standard Edition",
+  "old": 55
+ },
+ {
+  "d": "2026-11-28",
+  "id": 150,
+  "name": "Hawk",
+  "k": "sku-",
+  "sku": 13090,
+  "title": "Standard Edition",
+  "old": 100
+ },
+ {
+  "d": "2026-11-28",
+  "id": 151,
+  "name": "Hammerhead",
+  "k": "sku-",
+  "sku": 13091,
+  "title": "Standard Edition",
+  "old": 725
+ },
+ {
+  "d": "2026-11-28",
+  "id": 154,
+  "name": "Nova",
+  "k": "sku-",
+  "sku": 14443,
+  "title": "Standard Edition",
+  "old": 120
+ },
+ {
+  "d": "2026-11-28",
+  "id": 155,
+  "name": "Vulcan",
+  "k": "sku-",
+  "sku": 13093,
+  "title": "Standard Edition",
+  "old": 200
+ },
+ {
+  "d": "2026-11-28",
+  "id": 157,
+  "name": "Razor EX",
+  "k": "sku-",
+  "sku": 13095,
+  "title": "Standard Edition",
+  "old": 155
+ },
+ {
+  "d": "2026-11-28",
+  "id": 158,
+  "name": "Razor LX",
+  "k": "sku-",
+  "sku": 13096,
+  "title": "Standard Edition",
+  "old": 150
+ },
+ {
+  "d": "2026-11-28",
+  "id": 162,
+  "name": "C2 Hercules",
+  "k": "sku-",
+  "sku": 14445,
+  "title": "Standard Edition",
+  "old": 400
+ },
+ {
+  "d": "2026-11-28",
+  "id": 163,
+  "name": "M2 Hercules",
+  "k": "sku-",
+  "sku": 14446,
+  "title": "Standard Edition",
+  "old": 520
+ },
+ {
+  "d": "2026-11-28",
+  "id": 164,
+  "name": "A2 Hercules",
+  "k": "sku-",
+  "sku": 14609,
+  "title": "Standard Edition",
+  "old": 750
+ },
+ {
+  "d": "2026-11-28",
+  "id": 166,
+  "name": "Apollo Triage",
+  "k": "sku-",
+  "sku": 18447,
+  "title": "Standard Edition",
+  "old": 260
+ },
+ {
+  "d": "2026-11-28",
+  "id": 167,
+  "name": "Apollo Medivac",
+  "k": "sku-",
+  "sku": 18446,
+  "title": "Standard Edition",
+  "old": 290
+ },
+ {
+  "d": "2026-11-28",
+  "id": 168,
+  "name": "Mercury",
+  "k": "sku-",
+  "sku": 14348,
+  "title": "Standard Edition",
+  "old": 260
+ },
+ {
+  "d": "2026-11-28",
+  "id": 169,
+  "name": "Valkyrie",
+  "k": "sku-",
+  "sku": 13107,
+  "title": "Standard Edition",
+  "old": 375
+ },
+ {
+  "d": "2026-11-28",
+  "id": 174,
+  "name": "San'tok.yāi",
+  "k": "sku-",
+  "sku": 16580,
+  "title": "Standard Edition",
+  "old": 240
+ },
+ {
+  "d": "2026-11-28",
+  "id": 176,
+  "name": "SRV",
+  "k": "sku-",
+  "sku": 16267,
+  "title": "Standard Edition",
+  "old": 165
+ },
+ {
+  "d": "2026-11-28",
+  "id": 178,
+  "name": "Corsair",
+  "k": "sku-",
+  "sku": 15599,
+  "title": "Standard Edition",
+  "old": 250
+ },
+ {
+  "d": "2026-11-28",
+  "id": 178,
+  "name": "Corsair",
+  "k": "sku-",
+  "sku": 19874,
+  "title": "Warbond Edition",
+  "old": 230
+ },
+ {
+  "d": "2026-11-28",
+  "id": 180,
+  "name": "Ranger RC",
+  "k": "sku-",
+  "sku": 13115,
+  "title": "Standard Edition",
+  "old": 35
+ },
+ {
+  "d": "2026-11-28",
+  "id": 181,
+  "name": "Ranger TR",
+  "k": "sku-",
+  "sku": 13116,
+  "title": "Standard Edition",
+  "old": 40
+ },
+ {
+  "d": "2026-11-28",
+  "id": 182,
+  "name": "Ranger CV",
+  "k": "sku-",
+  "sku": 13117,
+  "title": "Standard Edition",
+  "old": 35
+ },
+ {
+  "d": "2026-11-28",
+  "id": 186,
+  "name": "Nautilus",
+  "k": "sku-",
+  "sku": 13121,
+  "title": "Standard Edition",
+  "old": 725
+ },
+ {
+  "d": "2026-11-28",
+  "id": 198,
+  "name": "Ares Inferno",
+  "k": "sku-",
+  "sku": 14762,
+  "title": "Standard Edition",
+  "old": 250
+ },
+ {
+  "d": "2026-11-28",
+  "id": 200,
+  "name": "Ares Ion",
+  "k": "sku-",
+  "sku": 14761,
+  "title": "Standard Edition",
+  "old": 250
+ },
+ {
+  "d": "2026-11-28",
+  "id": 208,
+  "name": "G12",
+  "k": "sku-",
+  "sku": 13424,
+  "title": "Standard Edition",
+  "old": 60
+ },
+ {
+  "d": "2026-11-28",
+  "id": 209,
+  "name": "G12r",
+  "k": "sku-",
+  "sku": 13425,
+  "title": "Standard Edition",
+  "old": 60
+ },
+ {
+  "d": "2026-11-28",
+  "id": 210,
+  "name": "G12a",
+  "k": "sku-",
+  "sku": 13426,
+  "title": "Standard Edition",
+  "old": 65
+ },
+ {
+  "d": "2026-11-28",
+  "id": 211,
+  "name": "Talon",
+  "k": "sku-",
+  "sku": 14104,
+  "title": "Standard Edition",
+  "old": 115
+ },
+ {
+  "d": "2026-11-28",
+  "id": 212,
+  "name": "Talon Shrike",
+  "k": "sku-",
+  "sku": 14103,
+  "title": "Standard Edition",
+  "old": 115
+ },
+ {
+  "d": "2026-11-28",
+  "id": 217,
+  "name": "Perseus",
+  "k": "sku-",
+  "sku": 18657,
+  "title": "Standard Edition",
+  "old": 800
+ },
+ {
+  "d": "2026-11-28",
+  "id": 217,
+  "name": "Perseus",
+  "k": "sku-",
+  "sku": 19872,
+  "title": "Warbond Edition",
+  "old": 720
+ },
+ {
+  "d": "2026-11-28",
+  "id": 218,
+  "name": "Cyclone MT",
+  "k": "sku-",
+  "sku": 14174,
+  "title": "Standard Edition",
+  "old": 75
+ },
+ {
+  "d": "2026-11-28",
+  "id": 221,
+  "name": "Scorpius",
+  "k": "sku-",
+  "sku": 15682,
+  "title": "Standard Edition",
+  "old": 240
+ },
+ {
+  "d": "2026-11-28",
+  "id": 222,
+  "name": "Railen",
+  "k": "sku-",
+  "sku": 19388,
+  "title": "Standard Edition",
+  "old": 400
+ },
+ {
+  "d": "2026-11-28",
+  "id": 223,
+  "name": "400i",
+  "k": "sku-",
+  "sku": 14744,
+  "title": "Standard Edition",
+  "old": 250
+ },
+ {
+  "d": "2026-11-28",
+  "id": 225,
+  "name": "Spartan",
+  "k": "sku-",
+  "sku": 14867,
+  "title": "Standard Edition",
+  "old": 80
+ },
+ {
+  "d": "2026-11-28",
+  "id": 226,
+  "name": "RAFT",
+  "k": "sku-",
+  "sku": 18722,
+  "title": "Standard Edition",
+  "old": 190
+ },
+ {
+  "d": "2026-11-28",
+  "id": 227,
+  "name": "Odyssey",
+  "k": "sku-",
+  "sku": 14960,
+  "title": "Standard Edition",
+  "old": 700
+ },
+ {
+  "d": "2026-11-28",
+  "id": 228,
+  "name": "Cutlass Steel",
+  "k": "sku-",
+  "sku": 15063,
+  "title": "Standard Edition",
+  "old": 235
+ },
+ {
+  "d": "2026-11-28",
+  "id": 228,
+  "name": "Cutlass Steel",
+  "k": "sku-",
+  "sku": 19870,
+  "title": "Warbond Edition",
+  "old": 210
+ },
+ {
+  "d": "2026-11-28",
+  "id": 229,
+  "name": "HoverQuad",
+  "k": "sku-",
+  "sku": 15162,
+  "title": "Standard Edition",
+  "old": 30
+ },
+ {
+  "d": "2026-11-28",
+  "id": 230,
+  "name": "Expanse",
+  "k": "sku-",
+  "sku": 15095,
+  "title": "Standard Edition",
+  "old": 150
+ },
+ {
+  "d": "2026-11-28",
+  "id": 232,
+  "name": "Legionnaire",
+  "k": "sku-",
+  "sku": 15256,
+  "title": "Standard Edition",
+  "old": 120
+ },
+ {
+  "d": "2026-11-28",
+  "id": 237,
+  "name": "A1 Spirit",
+  "k": "sku-",
+  "sku": 16642,
+  "title": "Standard Edition",
+  "old": 200
+ },
+ {
+  "d": "2026-11-28",
+  "id": 239,
+  "name": "E1 Spirit",
+  "k": "sku-",
+  "sku": 17765,
+  "title": "Standard Edition",
+  "old": 150
+ },
+ {
+  "d": "2026-11-28",
+  "id": 243,
+  "name": "Scorpius Antares",
+  "k": "sku-",
+  "sku": 15622,
+  "title": "Standard Edition",
+  "old": 230
+ },
+ {
+  "d": "2026-11-28",
+  "id": 245,
+  "name": "Lynx",
+  "k": "sku-",
+  "sku": 15948,
+  "title": "Standard Edition",
+  "old": 60
+ },
+ {
+  "d": "2026-11-28",
+  "id": 246,
+  "name": "Fury",
+  "k": "sku-",
+  "sku": 15888,
+  "title": "Standard Edition",
+  "old": 55
+ },
+ {
+  "d": "2026-11-28",
+  "id": 248,
+  "name": "Fury MX",
+  "k": "sku-",
+  "sku": 15889,
+  "title": "Standard Edition",
+  "old": 55
+ },
+ {
+  "d": "2026-11-28",
+  "id": 249,
+  "name": "Storm",
+  "k": "sku-",
+  "sku": 16283,
+  "title": "Standard Edition",
+  "old": 90
+ },
+ {
+  "d": "2026-11-28",
+  "id": 250,
+  "name": "Fury LX",
+  "k": "sku-",
+  "sku": 16119,
+  "title": "Standard Edition",
+  "old": 55
+ },
+ {
+  "d": "2026-11-28",
+  "id": 251,
+  "name": "Zeus Mk II ES",
+  "k": "sku-",
+  "sku": 17417,
+  "title": "Standard Edition",
+  "old": 175
+ },
+ {
+  "d": "2026-11-28",
+  "id": 256,
+  "name": "Zeus Mk II MR",
+  "k": "sku-",
+  "sku": 16239,
+  "title": "Standard Edition",
+  "old": 190
+ },
+ {
+  "d": "2026-11-28",
+  "id": 257,
+  "name": "Zeus Mk II CL",
+  "k": "sku-",
+  "sku": 17420,
+  "title": "Standard Edition",
+  "old": 175
+ },
+ {
+  "d": "2026-11-28",
+  "id": 259,
+  "name": "Cutter Scout",
+  "k": "sku-",
+  "sku": 16250,
+  "title": "Standard Edition",
+  "old": 50
+ },
+ {
+  "d": "2026-11-28",
+  "id": 260,
+  "name": "Arrastra",
+  "k": "sku-",
+  "sku": 16343,
+  "title": "Standard Edition",
+  "old": 575
+ },
+ {
+  "d": "2026-11-28",
+  "id": 264,
+  "name": "Storm AA",
+  "k": "sku-",
+  "sku": 16286,
+  "title": "Standard Edition",
+  "old": 100
+ },
+ {
+  "d": "2026-11-28",
+  "id": 266,
+  "name": "Cutter Rambler",
+  "k": "sku-",
+  "sku": 16567,
+  "title": "Standard Edition",
+  "old": 50
+ },
+ {
+  "d": "2026-11-28",
+  "id": 267,
+  "name": "Sabre Firebird",
+  "k": "sku-",
+  "sku": 16994,
+  "title": "Standard Edition",
+  "old": 185
+ },
+ {
+  "d": "2026-11-28",
+  "id": 268,
+  "name": "MPUV Tractor",
+  "k": "sku-",
+  "sku": 16897,
+  "title": "Standard Edition",
+  "old": 40
+ },
+ {
+  "d": "2026-11-28",
+  "id": 273,
+  "name": "Ursa Medivac",
+  "k": "sku-",
+  "sku": 16882,
+  "title": "Standard Edition",
+  "old": 60
+ },
+ {
+  "d": "2026-11-28",
+  "id": 274,
+  "name": "Ironclad",
+  "k": "sku-",
+  "sku": 19088,
+  "title": "Standard Edition",
+  "old": 600
+ },
+ {
+  "d": "2026-11-28",
+  "id": 275,
+  "name": "Ironclad Assault",
+  "k": "sku-",
+  "sku": 19098,
+  "title": "Standard Edition",
+  "old": 650
+ },
+ {
+  "d": "2026-11-28",
+  "id": 275,
+  "name": "Ironclad Assault",
+  "k": "sku-",
+  "sku": 19875,
+  "title": "Warbond Edition",
+  "old": 600
+ },
+ {
+  "d": "2026-11-28",
+  "id": 276,
+  "name": "Sabre Peregrine",
+  "k": "sku-",
+  "sku": 17141,
+  "title": "Standard Edition",
+  "old": 185
+ },
+ {
+  "d": "2026-11-28",
+  "id": 278,
+  "name": "Starlancer MAX",
+  "k": "sku-",
+  "sku": 17491,
+  "title": "Standard Edition",
+  "old": 250
+ },
+ {
+  "d": "2026-11-28",
+  "id": 279,
+  "name": "Starlancer TAC",
+  "k": "sku-",
+  "sku": 18192,
+  "title": "Standard Edition",
+  "old": 375
+ },
+ {
+  "d": "2026-11-28",
+  "id": 281,
+  "name": "CSV-SM",
+  "k": "sku-",
+  "sku": 17559,
+  "title": "Standard Edition",
+  "old": 45
+ },
+ {
+  "d": "2026-11-28",
+  "id": 282,
+  "name": "Paladin",
+  "k": "sku-",
+  "sku": 18602,
+  "title": "Standard Edition",
+  "old": 350
+ },
+ {
+  "d": "2026-11-28",
+  "id": 283,
+  "name": "Terrapin Medic",
+  "k": "sku-",
+  "sku": 17710,
+  "title": "Standard Edition",
+  "old": 220
+ },
+ {
+  "d": "2026-11-28",
+  "id": 284,
+  "name": "F7C-R Hornet Tracker Mk II",
+  "k": "sku-",
+  "sku": 17683,
+  "title": "Standard Edition",
+  "old": 185
+ },
+ {
+  "d": "2026-11-28",
+  "id": 285,
+  "name": "F7C-S Hornet Ghost Mk II",
+  "k": "sku-",
+  "sku": 17679,
+  "title": "Standard Edition",
+  "old": 185
+ },
+ {
+  "d": "2026-11-28",
+  "id": 286,
+  "name": "Guardian",
+  "k": "sku-",
+  "sku": 17812,
+  "title": "Standard Edition",
+  "old": 250
+ },
+ {
+  "d": "2026-11-28",
+  "id": 287,
+  "name": "Guardian QI",
+  "k": "sku-",
+  "sku": 17813,
+  "title": "Standard Edition",
+  "old": 260
+ },
+ {
+  "d": "2026-11-28",
+  "id": 288,
+  "name": "Fortune",
+  "k": "sku-",
+  "sku": 17897,
+  "title": "Standard Edition",
+  "old": 175
+ },
+ {
+  "d": "2026-11-28",
+  "id": 293,
+  "name": "F7C-M Super Hornet Mk II",
+  "k": "sku-",
+  "sku": 17974,
+  "title": "Standard Edition",
+  "old": 240
+ },
+ {
+  "d": "2026-11-28",
+  "id": 297,
+  "name": "MTC",
+  "k": "sku-",
+  "sku": 18065,
+  "title": "Standard Edition",
+  "old": 50
+ },
+ {
+  "d": "2026-11-28",
+  "id": 298,
+  "name": "Guardian MX",
+  "k": "sku-",
+  "sku": 18124,
+  "title": "Standard Edition",
+  "old": 290
+ },
+ {
+  "d": "2026-11-28",
+  "id": 299,
+  "name": "Asgard",
+  "k": "sku-",
+  "sku": 18236,
+  "title": "Standard Edition",
+  "old": 350
+ },
+ {
+  "d": "2026-11-28",
+  "id": 300,
+  "name": "Prowler Utility",
+  "k": "sku-",
+  "sku": 18262,
+  "title": "Standard Edition",
+  "old": 300
+ },
+ {
+  "d": "2026-11-28",
+  "id": 303,
+  "name": "Stinger",
+  "k": "sku-",
+  "sku": 18489,
+  "title": "Standard Edition",
+  "old": 315
+ },
+ {
+  "d": "2026-11-28",
+  "id": 304,
+  "name": "Shiv",
+  "k": "sku-",
+  "sku": 18613,
+  "title": "Standard Edition",
+  "old": 150
+ },
+ {
+  "d": "2026-11-28",
+  "id": 305,
+  "name": "L-22 Alpha Wolf",
+  "k": "sku-",
+  "sku": 18524,
+  "title": "Standard Edition",
+  "old": 120
+ },
+ {
+  "d": "2026-11-28",
+  "id": 306,
+  "name": "MDC",
+  "k": "sku-",
+  "sku": 18545,
+  "title": "Standard Edition",
+  "old": 50
+ },
+ {
+  "d": "2026-11-28",
+  "id": 308,
+  "name": "Clipper",
+  "k": "sku-",
+  "sku": 18702,
+  "title": "Standard Edition",
+  "old": 150
+ },
+ {
+  "d": "2026-11-28",
+  "id": 309,
+  "name": "Golem OX",
+  "k": "sku-",
+  "sku": 18668,
+  "title": "Standard Edition",
+  "old": 90
+ },
+ {
+  "d": "2026-11-28",
+  "id": 310,
+  "name": "Hermes",
+  "k": "sku-",
+  "sku": 18868,
+  "title": "Standard Edition",
+  "old": 220
+ },
+ {
+  "d": "2026-11-28",
+  "id": 311,
+  "name": "MOTH",
+  "k": "sku-",
+  "sku": 18894,
+  "title": "Standard Edition",
+  "old": 315
+ },
+ {
+  "d": "2026-11-28",
+  "id": 315,
+  "name": "M80",
+  "k": "sku-",
+  "sku": 19184,
+  "title": "Standard Edition",
+  "old": 300
+ },
+ {
+  "d": "2026-11-28",
+  "id": 315,
+  "name": "M80",
+  "k": "sku-",
+  "sku": 19873,
+  "title": "Warbond Edition",
+  "old": 280
+ },
+ {
+  "d": "2026-11-28",
+  "id": 316,
+  "name": "Tiburon",
+  "k": "sku-",
+  "sku": 19175,
+  "title": "Standard Edition",
+  "old": 775
+ },
+ {
+  "d": "2026-11-28",
+  "id": 318,
+  "name": "Pitbull",
+  "k": "sku-",
+  "sku": 19205,
+  "title": "Standard Edition",
+  "old": 55
+ },
+ {
+  "d": "2026-11-28",
+  "id": 319,
+  "name": "Starlite",
+  "k": "sku-",
+  "sku": 19220,
+  "title": "Standard Edition",
+  "old": 60
+ },
+ {
+  "d": "2026-11-28",
+  "id": 320,
+  "name": "Tyilui",
+  "k": "sku-",
+  "sku": 19337,
+  "title": "Standard Edition",
+  "old": 425
+ },
+ {
+  "d": "2026-11-28",
+  "id": 321,
+  "name": "Basher",
+  "k": "sku-",
+  "sku": 19431,
+  "title": "Standard Edition",
+  "old": 110
+ },
+ {
+  "d": "2026-11-28",
+  "id": 322,
+  "name": "S-65 Stingray",
+  "k": "sku-",
+  "sku": 19461,
+  "title": "Standard Edition",
+  "old": 175
+ },
+ {
+  "d": "2026-11-28",
+  "id": 328,
+  "name": "Sabre Raven EX",
+  "k": "sku-",
+  "sku": 19627,
+  "title": "Standard Edition",
+  "old": 185
  }
 ]
