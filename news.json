@@ -19,6 +19,11 @@
  },
  "videos": [
   {
+   "title": "Star Citizen | IAE2956 - See You Next Time",
+   "url": "https://www.youtube.com/shorts/xPOIizvcNS4",
+   "date": "2026-11-27T20:30:33+00:00"
+  },
+  {
    "title": "Star Citizen | 10 From the Community: Professional Pursuits",
    "url": "https://www.youtube.com/watch?v=Tho2qES1ZJ0",
    "date": "2026-11-27T16:01:53+00:00"
@@ -62,14 +67,16 @@
    "title": "Star Citizen | Behind the Ships: Gatac Hyūn",
    "url": "https://www.youtube.com/shorts/txhLznjMZAQ",
    "date": "2026-11-21T20:01:13+00:00"
-  },
-  {
-   "title": "Star Citizen | Hyūn - IAE 2956",
-   "url": "https://www.youtube.com/shorts/f6GfmxAz38w",
-   "date": "2026-11-21T18:00:53+00:00"
   }
  ],
  "commlinks": [
+  {
+   "id": 21391,
+   "title": "IAE 2956 Farewell",
+   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21391-IAE-2956-Farewell",
+   "date": "2026-11-27T19:42:28+00:00",
+   "approx": true
+  },
   {
    "id": 21466,
    "title": "10 From the Community - Professional Pursuits",
@@ -271,13 +278,6 @@
    "title": "IAE 2956 Origin Jumpworks",
    "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21411-IAE-2956-Origin-Jumpworks",
    "date": "2026-11-17T21:13:38+00:00",
-   "approx": true
-  },
-  {
-   "id": 21412,
-   "title": "IAE 2956 RSI",
-   "url": "https://robertsspaceindustries.com/en/comm-link/transmission/21412-IAE-2956-RSI",
-   "date": "2026-11-17T00:53:26+00:00",
    "approx": true
   },
   {
@@ -680,6 +680,6 @@
    }
   ]
  },
- "updated": "2026-11-27T19:58:35+00:00",
- "checked": "2026-11-27T19:58:35+00:00"
+ "updated": "2026-11-28T02:42:30+00:00",
+ "checked": "2026-11-28T02:42:30+00:00"
 }
